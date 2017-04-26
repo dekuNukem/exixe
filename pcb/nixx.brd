@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="5" unitdist="mil" unit="mil" style="lines" multiple="1" display="no" altdistance="1" altunitdist="mil" altunit="mil"/>
+<grid distance="50" unitdist="mil" unit="mil" style="lines" multiple="1" display="no" altdistance="1" altunitdist="mil" altunit="mil"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -142,10 +142,14 @@
 </layers>
 <board>
 <plain>
-<wire x1="0" y1="0" x2="20" y2="0" width="0" layer="20"/>
-<wire x1="20" y1="0" x2="20" y2="40" width="0" layer="20"/>
-<wire x1="20" y1="40" x2="0" y2="40" width="0" layer="20"/>
-<wire x1="0" y1="40" x2="0" y2="0" width="0" layer="20"/>
+<wire x1="0" y1="38.73" x2="0" y2="1.27" width="0" layer="20"/>
+<wire x1="0" y1="1.27" x2="1.27" y2="0" width="0" layer="20" curve="90"/>
+<wire x1="1.27" y1="0" x2="18.73" y2="0" width="0" layer="20"/>
+<wire x1="18.73" y1="0" x2="20" y2="1.27" width="0" layer="20" curve="90"/>
+<wire x1="20" y1="1.27" x2="20" y2="38.73" width="0" layer="20"/>
+<wire x1="20" y1="38.73" x2="18.73" y2="40" width="0" layer="20" curve="90"/>
+<wire x1="18.73" y1="40" x2="1.27" y2="40" width="0" layer="20"/>
+<wire x1="1.27" y1="40" x2="0" y2="38.73" width="0" layer="20" curve="90"/>
 <polygon width="0.2032" layer="41">
 <vertex x="1.524" y="39.751"/>
 <vertex x="3.302" y="39.751"/>
@@ -180,11 +184,11 @@
 <text x="14.478" y="34.671" size="1.143" layer="25">G</text>
 <text x="1.397" y="3.302" size="0.8128" layer="25" rot="R90">RST</text>
 <text x="5.334" y="3.683" size="0.8128" layer="25" rot="R90">SCK</text>
-<text x="8.636" y="4.445" size="0.8128" layer="25" rot="R180">MISO</text>
-<text x="11.684" y="4.445" size="0.8128" layer="25" rot="R180">MOSI</text>
-<text x="13.335" y="4.445" size="0.8128" layer="25" rot="R180">CS</text>
-<text x="16.129" y="4.445" size="0.8128" layer="25" rot="R180">DIO</text>
-<text x="18.542" y="4.445" size="0.8128" layer="25" rot="R180">CLK</text>
+<text x="5.715" y="3.683" size="0.8128" layer="25">MISO</text>
+<text x="8.89" y="3.683" size="0.8128" layer="25">MOSI</text>
+<text x="11.811" y="3.683" size="0.8128" layer="25">CS</text>
+<text x="14.097" y="3.683" size="0.8128" layer="25">DIO</text>
+<text x="16.637" y="3.683" size="0.8128" layer="25">CLK</text>
 <circle x="10.0076" y="18.796" radius="1.077628125" width="0.3048" layer="21"/>
 <text x="12.192" y="18.923" size="1.016" layer="25" rot="R180">A</text>
 <text x="2.667" y="12.446" size="0.8128" layer="25" rot="R180">SDA</text>
