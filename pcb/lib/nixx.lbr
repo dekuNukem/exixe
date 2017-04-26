@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -303,6 +303,42 @@ RFMicro Device TQFP / LQFP-32 see IPC-SQR.LBR SQFP 5x5-32</description>
 <smd name="32" x="-2.8" y="4.2926" dx="0.5588" dy="1.27" layer="1"/>
 <text x="-2.7686" y="5.08" size="0.8128" layer="25">&gt;NAME</text>
 <text x="-3.0226" y="-1.27" size="0.8128" layer="27">&gt;VALUE</text>
+</package>
+<package name="3528-COMMON-ANODE">
+<wire x1="-2.6" y1="1.6" x2="2.6" y2="1.6" width="0.127" layer="39"/>
+<wire x1="2.6" y1="1.6" x2="2.6" y2="-1.6" width="0.127" layer="39"/>
+<wire x1="2.6" y1="-1.6" x2="-2.6" y2="-1.6" width="0.127" layer="39"/>
+<wire x1="-2.6" y1="-1.6" x2="-2.6" y2="1.6" width="0.127" layer="39"/>
+<wire x1="-1.75" y1="1.4" x2="1.75" y2="1.4" width="0.127" layer="51"/>
+<wire x1="1.75" y1="1.4" x2="1.75" y2="-1.4" width="0.127" layer="51"/>
+<wire x1="1.75" y1="-1.4" x2="-1.75" y2="-1.4" width="0.127" layer="51"/>
+<wire x1="-1.75" y1="-1.4" x2="-1.75" y2="1.4" width="0.127" layer="51"/>
+<wire x1="-0.79375" y1="1.5875" x2="-0.8" y2="0.3" width="0.127" layer="43"/>
+<wire x1="-0.8" y1="0.3" x2="-2.6" y2="0.3" width="0.127" layer="43"/>
+<wire x1="-2.6" y1="0.3" x2="-2.6" y2="-0.3" width="0.127" layer="43"/>
+<wire x1="-2.6" y1="-0.3" x2="-0.8" y2="-0.3" width="0.127" layer="43"/>
+<wire x1="-0.8" y1="-0.3" x2="-0.79375" y2="-1.5875" width="0.127" layer="43"/>
+<wire x1="-0.79375" y1="-1.5875" x2="0.79375" y2="-1.5875" width="0.127" layer="43"/>
+<wire x1="0.79375" y1="-1.5875" x2="0.8" y2="-0.3" width="0.127" layer="43"/>
+<wire x1="0.8" y1="-0.3" x2="2.6" y2="-0.3" width="0.127" layer="43"/>
+<wire x1="2.6" y1="-0.3" x2="2.6" y2="0.3" width="0.127" layer="43"/>
+<wire x1="2.6" y1="0.3" x2="0.8" y2="0.3" width="0.127" layer="43"/>
+<wire x1="0.8" y1="0.3" x2="0.79375" y2="1.5875" width="0.127" layer="43"/>
+<wire x1="0.79375" y1="1.5875" x2="-0.79375" y2="1.5875" width="0.127" layer="43"/>
+<wire x1="-1.75" y1="1.4" x2="1.75" y2="1.4" width="0.127" layer="21"/>
+<wire x1="-1.75" y1="-1.4" x2="1.75" y2="-1.4" width="0.127" layer="21"/>
+<wire x1="-1.75" y1="0.3" x2="-1.75" y2="-0.3" width="0.127" layer="21"/>
+<wire x1="1.75" y1="0.3" x2="1.75" y2="-0.3" width="0.127" layer="21"/>
+<smd name="1" x="1.55" y="0.85" dx="1.5" dy="0.9" layer="1" rot="R180"/>
+<smd name="2" x="1.55" y="-0.85" dx="1.5" dy="0.9" layer="1" rot="R180"/>
+<smd name="3" x="-1.55" y="0.85" dx="1.5" dy="0.9" layer="1" rot="R180"/>
+<smd name="4" x="-1.55" y="-0.85" dx="1.5" dy="0.9" layer="1" rot="R180"/>
+<text x="-2.54" y="2.54" size="1.27" layer="25">&gt;NAME</text>
+<text x="-2.54" y="-3.81" size="1.27" layer="27">&gt;VALUE</text>
+<text x="-3.6" y="0.5" size="0.8128" layer="21">C</text>
+<text x="-3.6" y="-1.3" size="0.8128" layer="21">C</text>
+<text x="2.9" y="-1.4" size="0.8128" layer="21">C</text>
+<text x="2.9" y="0.4" size="0.8128" layer="21">A</text>
 </package>
 <package name="1/6W-RES">
 <description>1/6W Thru-hole Resistor - *UNPROVEN*</description>
@@ -849,21 +885,6 @@ chip</description>
 <text x="-2.54" y="1.905" size="1.27" layer="25">&gt;NAME</text>
 <text x="-2.54" y="-3.175" size="1.27" layer="27">&gt;VALUE</text>
 </package>
-<package name="SOT323">
-<description>&lt;b&gt;Small Outline Transistor&lt;/b&gt;</description>
-<wire x1="-1" y1="-0.55" x2="1" y2="-0.55" width="0.2032" layer="51"/>
-<wire x1="1" y1="-0.55" x2="1" y2="0.55" width="0.2032" layer="21"/>
-<wire x1="1" y1="0.55" x2="-1" y2="0.55" width="0.2032" layer="51"/>
-<wire x1="-1" y1="0.55" x2="-1" y2="-0.55" width="0.2032" layer="21"/>
-<rectangle x1="-0.15" y1="0.65" x2="0.15" y2="1.2" layer="51"/>
-<rectangle x1="-0.8" y1="-1.2" x2="-0.5" y2="-0.65" layer="51"/>
-<rectangle x1="0.5" y1="-1.2" x2="0.8" y2="-0.65" layer="51"/>
-<smd name="1" x="-0.65" y="-0.9" dx="0.5" dy="1" layer="1"/>
-<smd name="2" x="0.65" y="-0.9" dx="0.5" dy="1" layer="1"/>
-<smd name="3" x="0" y="0.9" dx="0.5" dy="1" layer="1"/>
-<text x="1.225" y="0.03" size="1.016" layer="25">&gt;NAME</text>
-<text x="1.225" y="-1.33" size="1.016" layer="27">&gt;VALUE</text>
-</package>
 <package name="1X07">
 <description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
 <wire x1="3.81" y1="0.635" x2="4.445" y2="1.27" width="0.1524" layer="21"/>
@@ -930,6 +951,21 @@ chip</description>
 <pad name="7" x="7.62" y="0" drill="1.016" shape="long" rot="R90"/>
 <text x="-8.9662" y="1.8288" size="1.27" layer="25" ratio="10">&gt;NAME</text>
 <text x="-8.89" y="-3.175" size="1.27" layer="27">&gt;VALUE</text>
+</package>
+<package name="SOT323">
+<description>&lt;b&gt;Small Outline Transistor&lt;/b&gt;</description>
+<wire x1="-1" y1="-0.55" x2="1" y2="-0.55" width="0.2032" layer="51"/>
+<wire x1="1" y1="-0.55" x2="1" y2="0.55" width="0.2032" layer="21"/>
+<wire x1="1" y1="0.55" x2="-1" y2="0.55" width="0.2032" layer="51"/>
+<wire x1="-1" y1="0.55" x2="-1" y2="-0.55" width="0.2032" layer="21"/>
+<rectangle x1="-0.15" y1="0.65" x2="0.15" y2="1.2" layer="51"/>
+<rectangle x1="-0.8" y1="-1.2" x2="-0.5" y2="-0.65" layer="51"/>
+<rectangle x1="0.5" y1="-1.2" x2="0.8" y2="-0.65" layer="51"/>
+<smd name="1" x="-0.65" y="-0.9" dx="0.5" dy="1" layer="1"/>
+<smd name="2" x="0.65" y="-0.9" dx="0.5" dy="1" layer="1"/>
+<smd name="3" x="0" y="0.9" dx="0.5" dy="1" layer="1"/>
+<text x="1.225" y="0.03" size="1.016" layer="25">&gt;NAME</text>
+<text x="1.225" y="-1.33" size="1.016" layer="27">&gt;VALUE</text>
 </package>
 <package name="1X07/90">
 <description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
@@ -1007,11 +1043,11 @@ chip</description>
 </packages>
 <symbols>
 <symbol name="STM32F042K6">
-<wire x1="0" y1="0" x2="0" y2="-66.04" width="0.6096" layer="94"/>
-<wire x1="35.56" y1="0" x2="35.56" y2="-66.04" width="0.6096" layer="94"/>
+<wire x1="0" y1="0" x2="0" y2="-68.58" width="0.6096" layer="94"/>
+<wire x1="35.56" y1="0" x2="35.56" y2="-68.58" width="0.6096" layer="94"/>
 <wire x1="0" y1="0" x2="35.56" y2="0" width="0.6096" layer="94"/>
-<wire x1="0" y1="-66.04" x2="35.56" y2="-66.04" width="0.6096" layer="94"/>
-<pin name="BOOT0" x="-2.54" y="-27.94" length="short"/>
+<wire x1="0" y1="-68.58" x2="35.56" y2="-68.58" width="0.6096" layer="94"/>
+<pin name="PB8" x="38.1" y="-66.04" length="short" rot="R180"/>
 <pin name="NRST" x="-2.54" y="-25.4" length="short"/>
 <pin name="PA0" x="38.1" y="-2.54" length="short" rot="R180"/>
 <pin name="PA1" x="38.1" y="-5.08" length="short" rot="R180"/>
@@ -1040,9 +1076,49 @@ chip</description>
 <pin name="PF1/OSC_OUT" x="-2.54" y="-50.8" length="short"/>
 <pin name="VDD" x="-2.54" y="-2.54" length="short"/>
 <pin name="VDDA" x="-2.54" y="-5.08" length="short"/>
-<pin name="VSS" x="-2.54" y="-63.5" length="short"/>
+<pin name="VSS" x="-2.54" y="-66.04" length="short"/>
 <text x="2.54" y="2.54" size="1.27" layer="95" align="top-left">&gt;NAME</text>
 <text x="2.54" y="-76.2" size="1.27" layer="96">&gt;VALUE</text>
+</symbol>
+<symbol name="WL-SBTW">
+<description>3 LED with common Anode</description>
+<wire x1="4.23" y1="-9" x2="5.73" y2="-9" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="2.54" x2="-2.54" y2="0" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="0" x2="-2.54" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-2.54" x2="2.54" y2="0" width="0.254" layer="94"/>
+<wire x1="2.54" y1="0" x2="-2.54" y2="2.54" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-5.08" x2="-2.54" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-7.62" x2="-2.54" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-10.16" x2="2.54" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="2.54" y1="-7.62" x2="-2.54" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="10.16" x2="-2.54" y2="7.62" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="7.62" x2="-2.54" y2="5.08" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="5.08" x2="2.54" y2="7.62" width="0.254" layer="94"/>
+<wire x1="2.54" y1="7.62" x2="-2.54" y2="10.16" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="7.62" x2="-7.62" y2="7.62" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="7.62" x2="-7.62" y2="0" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="0" x2="-7.62" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-7.62" x2="-2.54" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="0" x2="-7.62" y2="0" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="0" x2="2.54" y2="0" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-7.62" x2="2.54" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="7.62" x2="2.54" y2="7.62" width="0.254" layer="94"/>
+<wire x1="2.54" y1="2.54" x2="2.54" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="2.54" y1="-5.08" x2="2.54" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="2.54" y1="10.16" x2="2.54" y2="5.08" width="0.254" layer="94"/>
+<wire x1="4.23" y1="-1.4" x2="5.73" y2="-1.4" width="0.254" layer="94"/>
+<wire x1="4.33" y1="6.4" x2="5.83" y2="6.4" width="0.254" layer="94"/>
+<wire x1="-12.38" y1="-2.87" x2="-10.88" y2="-2.87" width="0.254" layer="94"/>
+<wire x1="-11.61" y1="-3.64" x2="-11.61" y2="-2.14" width="0.254" layer="94"/>
+<pin name="A" x="-10.16" y="0" length="short"/>
+<pin name="BC" x="5.08" y="-7.62" length="short" rot="R180"/>
+<pin name="GC" x="5.08" y="7.62" length="short" rot="R180"/>
+<pin name="RC" x="5.08" y="0" length="short" rot="R180"/>
+<text x="-3.69" y="11.842" size="1.27" layer="95">&gt;NAME</text>
+<text x="-3.69" y="-13.968" size="1.27" layer="96">&gt;VALUE</text>
+<text x="0.6" y="4.9" size="1.27" layer="94">G</text>
+<text x="0.7" y="-3" size="1.27" layer="94">R</text>
+<text x="0.8" y="-10.5" size="1.27" layer="94">B</text>
 </symbol>
 <symbol name="+3V3">
 <wire x1="1.27" y1="-1.905" x2="0" y2="0" width="0.254" layer="94"/>
@@ -1154,7 +1230,6 @@ chip</description>
 <devices>
 <device name="" package="TQFP32-08">
 <connects>
-<connect gate="G$1" pin="BOOT0" pad="31"/>
 <connect gate="G$1" pin="NRST" pad="4"/>
 <connect gate="G$1" pin="PA0" pad="6"/>
 <connect gate="G$1" pin="PA1" pad="7"/>
@@ -1179,6 +1254,7 @@ chip</description>
 <connect gate="G$1" pin="PB5" pad="28"/>
 <connect gate="G$1" pin="PB6" pad="29"/>
 <connect gate="G$1" pin="PB7" pad="30"/>
+<connect gate="G$1" pin="PB8" pad="31"/>
 <connect gate="G$1" pin="PF0/OSC_IN" pad="2"/>
 <connect gate="G$1" pin="PF1/OSC_OUT" pad="3"/>
 <connect gate="G$1" pin="VDD" pad="1 17"/>
@@ -1191,7 +1267,6 @@ chip</description>
 </device>
 <device name="-LQFP-32" package="LQFP-32">
 <connects>
-<connect gate="G$1" pin="BOOT0" pad="31"/>
 <connect gate="G$1" pin="NRST" pad="4"/>
 <connect gate="G$1" pin="PA0" pad="6"/>
 <connect gate="G$1" pin="PA1" pad="7"/>
@@ -1216,11 +1291,67 @@ chip</description>
 <connect gate="G$1" pin="PB5" pad="28"/>
 <connect gate="G$1" pin="PB6" pad="29"/>
 <connect gate="G$1" pin="PB7" pad="30"/>
+<connect gate="G$1" pin="PB8" pad="31"/>
 <connect gate="G$1" pin="PF0/OSC_IN" pad="2"/>
 <connect gate="G$1" pin="PF1/OSC_OUT" pad="3"/>
 <connect gate="G$1" pin="VDD" pad="1 17"/>
 <connect gate="G$1" pin="VDDA" pad="5"/>
 <connect gate="G$1" pin="VSS" pad="16 32"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="RGB_LED_CA" prefix="D">
+<description>&lt;b&gt;SMD full-color TOP LED
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;&lt;b&gt; Characteristics
+&lt;br&gt;
+&lt;br&gt;&lt;/b&gt;&lt;/b&gt; Low energy consumption
+&lt;br&gt; High reliability
+&lt;br&gt; Low current requirement
+&lt;br&gt; Fast switching
+&lt;br&gt; No UV/IR radiation
+&lt;br&gt; High brightness
+&lt;br&gt; RGB individual control
+&lt;br&gt; Compact package outline
+&lt;br&gt; Black surface
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;&lt;b&gt; Applications
+&lt;br&gt;
+&lt;br&gt;&lt;/b&gt; Flash light
+&lt;br&gt; Switch indicators
+&lt;br&gt; Equipments indicators
+&lt;br&gt; Accent and decorative lighting
+&lt;br&gt; Electronic signage
+&lt;br&gt; Video displays
+&lt;br&gt; Backlight for LCDs, PDAs and TVs
+&lt;br&gt; Oven, microwave
+&lt;br&gt; Street lighting
+&lt;br&gt; Ideal for lateral coupling in light guides
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;&lt;a href="http://katalog.we-online.de/media/images/eipal/WL-SFTW_pf2.jpg" title="Enlarge picture"&gt;
+&lt;img src="http://katalog.we-online.de/media/thumbs2/eipal/thb_WL-SFTW_pf2.jpg" width="320"&gt;&lt;/a&gt;&lt;p&gt;
+Details see: &lt;a href="http://katalog.we-online.de/en/led/WL-SFTW?m"&gt;http://katalog.we-online.de/en/led/WL-SFTW?m&lt;/a&gt;&lt;p&gt;
+
+&lt;/b&gt;Updated   2015-04-10&lt;br&gt;
+&lt;/b&gt;2015 (C) Wurth Elektronik</description>
+<gates>
+<gate name="G$1" symbol="WL-SBTW" x="0" y="0"/>
+</gates>
+<devices>
+<device name="-150141M173100-R&amp;G&amp;B" package="3528-COMMON-ANODE">
+<connects>
+<connect gate="G$1" pin="A" pad="1"/>
+<connect gate="G$1" pin="BC" pad="2"/>
+<connect gate="G$1" pin="GC" pad="4"/>
+<connect gate="G$1" pin="RC" pad="3"/>
 </connects>
 <technologies>
 <technology name=""/>
