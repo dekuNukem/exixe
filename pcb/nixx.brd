@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="50" unitdist="mil" unit="mil" style="lines" multiple="1" display="no" altdistance="1" altunitdist="mil" altunit="mil"/>
+<grid distance="2" unitdist="mil" unit="mil" style="lines" multiple="1" display="no" altdistance="1" altunitdist="mil" altunit="mil"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -184,9 +184,9 @@
 <text x="14.478" y="34.671" size="1.143" layer="25">G</text>
 <text x="1.397" y="3.302" size="0.8128" layer="25" rot="R90">RST</text>
 <text x="5.334" y="3.683" size="0.8128" layer="25" rot="R90">SCK</text>
-<text x="5.715" y="3.683" size="0.8128" layer="25">MISO</text>
-<text x="8.89" y="3.683" size="0.8128" layer="25">MOSI</text>
-<text x="11.811" y="3.683" size="0.8128" layer="25">CS</text>
+<text x="5.9182" y="3.683" size="0.8128" layer="25">MISO</text>
+<text x="8.8392" y="3.683" size="0.8128" layer="25">MOSI</text>
+<text x="11.9126" y="3.683" size="0.8128" layer="25">CS</text>
 <text x="14.097" y="3.683" size="0.8128" layer="25">DIO</text>
 <text x="16.637" y="3.683" size="0.8128" layer="25">CLK</text>
 <circle x="10.0076" y="18.796" radius="1.077628125" width="0.3048" layer="21"/>
@@ -355,13 +355,7 @@ by exp-lbrs.ulp</description>
 <wire x1="-6.985" y1="1.27" x2="-6.35" y2="0.635" width="0.1524" layer="21"/>
 <wire x1="-6.35" y1="0.635" x2="-6.35" y2="-0.635" width="0.1524" layer="21"/>
 <wire x1="-6.35" y1="-0.635" x2="-6.985" y2="-1.27" width="0.1524" layer="21"/>
-<wire x1="-6.35" y1="0.635" x2="-5.715" y2="1.27" width="0.1524" layer="21"/>
-<wire x1="-5.715" y1="1.27" x2="-4.445" y2="1.27" width="0.1524" layer="21"/>
-<wire x1="-4.445" y1="1.27" x2="-3.81" y2="0.635" width="0.1524" layer="21"/>
 <wire x1="-3.81" y1="0.635" x2="-3.81" y2="-0.635" width="0.1524" layer="21"/>
-<wire x1="-3.81" y1="-0.635" x2="-4.445" y2="-1.27" width="0.1524" layer="21"/>
-<wire x1="-4.445" y1="-1.27" x2="-5.715" y2="-1.27" width="0.1524" layer="21"/>
-<wire x1="-5.715" y1="-1.27" x2="-6.35" y2="-0.635" width="0.1524" layer="21"/>
 <wire x1="-8.89" y1="0.635" x2="-8.89" y2="-0.635" width="0.1524" layer="21"/>
 <wire x1="-8.255" y1="1.27" x2="-8.89" y2="0.635" width="0.1524" layer="21"/>
 <wire x1="-8.89" y1="-0.635" x2="-8.255" y2="-1.27" width="0.1524" layer="21"/>
