@@ -655,6 +655,38 @@ RFMicro Device TQFP / LQFP-32 see IPC-SQR.LBR SQFP 5x5-32</description>
 <text x="-4.445" y="-3.81" size="1.27" layer="25" rot="R90">&gt;NAME</text>
 <text x="5.715" y="-3.81" size="1.27" layer="27" rot="R90">&gt;VALUE</text>
 </package>
+<package name="3528-COMMON-ANODE">
+<wire x1="-2.6" y1="1.6" x2="2.6" y2="1.6" width="0.127" layer="39"/>
+<wire x1="2.6" y1="1.6" x2="2.6" y2="-1.6" width="0.127" layer="39"/>
+<wire x1="2.6" y1="-1.6" x2="-2.6" y2="-1.6" width="0.127" layer="39"/>
+<wire x1="-2.6" y1="-1.6" x2="-2.6" y2="1.6" width="0.127" layer="39"/>
+<wire x1="-1.75" y1="1.4" x2="1.75" y2="1.4" width="0.127" layer="51"/>
+<wire x1="1.75" y1="1.4" x2="1.75" y2="-1.4" width="0.127" layer="51"/>
+<wire x1="1.75" y1="-1.4" x2="-1.75" y2="-1.4" width="0.127" layer="51"/>
+<wire x1="-1.75" y1="-1.4" x2="-1.75" y2="1.4" width="0.127" layer="51"/>
+<wire x1="-0.79375" y1="1.5875" x2="-0.8" y2="0.3" width="0.127" layer="43"/>
+<wire x1="-0.8" y1="0.3" x2="-2.6" y2="0.3" width="0.127" layer="43"/>
+<wire x1="-2.6" y1="0.3" x2="-2.6" y2="-0.3" width="0.127" layer="43"/>
+<wire x1="-2.6" y1="-0.3" x2="-0.8" y2="-0.3" width="0.127" layer="43"/>
+<wire x1="-0.8" y1="-0.3" x2="-0.79375" y2="-1.5875" width="0.127" layer="43"/>
+<wire x1="-0.79375" y1="-1.5875" x2="0.79375" y2="-1.5875" width="0.127" layer="43"/>
+<wire x1="0.79375" y1="-1.5875" x2="0.8" y2="-0.3" width="0.127" layer="43"/>
+<wire x1="0.8" y1="-0.3" x2="2.6" y2="-0.3" width="0.127" layer="43"/>
+<wire x1="2.6" y1="-0.3" x2="2.6" y2="0.3" width="0.127" layer="43"/>
+<wire x1="2.6" y1="0.3" x2="0.8" y2="0.3" width="0.127" layer="43"/>
+<wire x1="0.8" y1="0.3" x2="0.79375" y2="1.5875" width="0.127" layer="43"/>
+<wire x1="0.79375" y1="1.5875" x2="-0.79375" y2="1.5875" width="0.127" layer="43"/>
+<wire x1="-1.75" y1="1.4" x2="1.75" y2="1.4" width="0.127" layer="21"/>
+<wire x1="-1.75" y1="-1.4" x2="1.75" y2="-1.4" width="0.127" layer="21"/>
+<wire x1="-1.75" y1="0.3" x2="-1.75" y2="-0.3" width="0.127" layer="21"/>
+<wire x1="1.75" y1="0.3" x2="1.75" y2="-0.3" width="0.127" layer="21"/>
+<smd name="1" x="1.55" y="0.85" dx="1.5" dy="0.9" layer="1" rot="R180"/>
+<smd name="2" x="1.55" y="-0.85" dx="1.5" dy="0.9" layer="1" rot="R180"/>
+<smd name="3" x="-1.55" y="0.85" dx="1.5" dy="0.9" layer="1" rot="R180"/>
+<smd name="4" x="-1.55" y="-0.85" dx="1.5" dy="0.9" layer="1" rot="R180"/>
+<text x="-2.54" y="2.54" size="1.27" layer="25">&gt;NAME</text>
+<text x="-2.54" y="-3.81" size="1.27" layer="27">&gt;VALUE</text>
+</package>
 </packages>
 <symbols>
 <symbol name="NPN">
@@ -731,6 +763,46 @@ RFMicro Device TQFP / LQFP-32 see IPC-SQR.LBR SQFP 5x5-32</description>
 <pin name="VSS" x="-2.54" y="-66.04" length="short"/>
 <text x="2.54" y="2.54" size="1.27" layer="95" align="top-left">&gt;NAME</text>
 <text x="2.54" y="-76.2" size="1.27" layer="96">&gt;VALUE</text>
+</symbol>
+<symbol name="WL-SBTW">
+<description>3 LED with common Anode</description>
+<wire x1="4.23" y1="-9" x2="5.73" y2="-9" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="2.54" x2="-2.54" y2="0" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="0" x2="-2.54" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-2.54" x2="2.54" y2="0" width="0.254" layer="94"/>
+<wire x1="2.54" y1="0" x2="-2.54" y2="2.54" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-5.08" x2="-2.54" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-7.62" x2="-2.54" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-10.16" x2="2.54" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="2.54" y1="-7.62" x2="-2.54" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="10.16" x2="-2.54" y2="7.62" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="7.62" x2="-2.54" y2="5.08" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="5.08" x2="2.54" y2="7.62" width="0.254" layer="94"/>
+<wire x1="2.54" y1="7.62" x2="-2.54" y2="10.16" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="7.62" x2="-7.62" y2="7.62" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="7.62" x2="-7.62" y2="0" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="0" x2="-7.62" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-7.62" x2="-2.54" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="0" x2="-7.62" y2="0" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="0" x2="2.54" y2="0" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-7.62" x2="2.54" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="7.62" x2="2.54" y2="7.62" width="0.254" layer="94"/>
+<wire x1="2.54" y1="2.54" x2="2.54" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="2.54" y1="-5.08" x2="2.54" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="2.54" y1="10.16" x2="2.54" y2="5.08" width="0.254" layer="94"/>
+<wire x1="4.23" y1="-1.4" x2="5.73" y2="-1.4" width="0.254" layer="94"/>
+<wire x1="4.33" y1="6.4" x2="5.83" y2="6.4" width="0.254" layer="94"/>
+<wire x1="-12.38" y1="-2.87" x2="-10.88" y2="-2.87" width="0.254" layer="94"/>
+<wire x1="-11.61" y1="-3.64" x2="-11.61" y2="-2.14" width="0.254" layer="94"/>
+<pin name="A" x="-10.16" y="0" length="short"/>
+<pin name="BC" x="5.08" y="-7.62" length="short" rot="R180"/>
+<pin name="GC" x="5.08" y="7.62" length="short" rot="R180"/>
+<pin name="RC" x="5.08" y="0" length="short" rot="R180"/>
+<text x="-3.69" y="11.842" size="1.27" layer="95">&gt;NAME</text>
+<text x="-3.69" y="-13.968" size="1.27" layer="96">&gt;VALUE</text>
+<text x="0.6" y="4.9" size="1.27" layer="94">G</text>
+<text x="0.7" y="-3" size="1.27" layer="94">R</text>
+<text x="0.8" y="-10.5" size="1.27" layer="94">B</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -860,6 +932,61 @@ RFMicro Device TQFP / LQFP-32 see IPC-SQR.LBR SQFP 5x5-32</description>
 <connect gate="G$1" pin="VDD" pad="1 17"/>
 <connect gate="G$1" pin="VDDA" pad="5"/>
 <connect gate="G$1" pin="VSS" pad="16 32"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="RGB_LED_CA" prefix="D">
+<description>&lt;b&gt;SMD full-color TOP LED
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;&lt;b&gt; Characteristics
+&lt;br&gt;
+&lt;br&gt;&lt;/b&gt;&lt;/b&gt; Low energy consumption
+&lt;br&gt; High reliability
+&lt;br&gt; Low current requirement
+&lt;br&gt; Fast switching
+&lt;br&gt; No UV/IR radiation
+&lt;br&gt; High brightness
+&lt;br&gt; RGB individual control
+&lt;br&gt; Compact package outline
+&lt;br&gt; Black surface
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;&lt;b&gt; Applications
+&lt;br&gt;
+&lt;br&gt;&lt;/b&gt; Flash light
+&lt;br&gt; Switch indicators
+&lt;br&gt; Equipments indicators
+&lt;br&gt; Accent and decorative lighting
+&lt;br&gt; Electronic signage
+&lt;br&gt; Video displays
+&lt;br&gt; Backlight for LCDs, PDAs and TVs
+&lt;br&gt; Oven, microwave
+&lt;br&gt; Street lighting
+&lt;br&gt; Ideal for lateral coupling in light guides
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;&lt;a href="http://katalog.we-online.de/media/images/eipal/WL-SFTW_pf2.jpg" title="Enlarge picture"&gt;
+&lt;img src="http://katalog.we-online.de/media/thumbs2/eipal/thb_WL-SFTW_pf2.jpg" width="320"&gt;&lt;/a&gt;&lt;p&gt;
+Details see: &lt;a href="http://katalog.we-online.de/en/led/WL-SFTW?m"&gt;http://katalog.we-online.de/en/led/WL-SFTW?m&lt;/a&gt;&lt;p&gt;
+
+&lt;/b&gt;Updated   2015-04-10&lt;br&gt;
+&lt;/b&gt;2015 (C) Wurth Elektronik</description>
+<gates>
+<gate name="G$1" symbol="WL-SBTW" x="0" y="0"/>
+</gates>
+<devices>
+<device name="-150141M173100-R&amp;G&amp;B" package="3528-COMMON-ANODE">
+<connects>
+<connect gate="G$1" pin="A" pad="1"/>
+<connect gate="G$1" pin="BC" pad="2"/>
+<connect gate="G$1" pin="GC" pad="4"/>
+<connect gate="G$1" pin="RC" pad="3"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -1888,214 +2015,6 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 </deviceset>
 </devicesets>
 </library>
-<library name="Wurth_Elektronik_Optoelectronics_rev15b">
-<description>&lt;BR&gt;Würth Elektronik --Signal LEDs,White LEDs&lt;br&gt;&lt;Hr&gt;
-&lt;BR&gt;&lt;BR&gt; 
-&lt;TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0&gt;
-&lt;TR&gt;   
-&lt;TD BGCOLOR="#cccccc" ALIGN=CENTER&gt;&lt;FONT FACE=ARIAL SIZE=3&gt;&lt;BR&gt;&lt;br&gt;
-      &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;BR&gt;
-       &lt;BR&gt;
-       &lt;BR&gt;
-       &lt;BR&gt;&lt;BR&gt;&lt;/FONT&gt;
-    &lt;/TD&gt;
-&lt;TD BGCOLOR="#cccccc" ALIGN=CENTER&gt;&lt;FONT FACE=ARIAL SIZE=3&gt;&lt;br&gt;
-      -----&lt;BR&gt;
-      -----&lt;BR&gt;
-      -----&lt;BR&gt;
-      -----&lt;BR&gt;
-      -----&lt;BR&gt;&lt;BR&gt;&lt;/FONT&gt;
-    &lt;/TD&gt;
-    &lt;TD BGCOLOR="#cccccc" ALIGN=CENTER&gt; &lt;FONT FACE=ARIAL SIZE=3&gt;&lt;br&gt;
-      ---------------------------&lt;BR&gt;
-&lt;B&gt;&lt;I&gt;&lt;span style='font-size:26pt;
-  color:#FF6600;'&gt;WE &lt;/span&gt;&lt;/i&gt;&lt;/b&gt;
-&lt;BR&gt;
-      ---------------------------&lt;BR&gt;&lt;b&gt;Würth Elektronik&lt;/b&gt;&lt;/FONT&gt;
-    &lt;/TD&gt;
-    &lt;TD BGCOLOR="#cccccc" ALIGN=CENTER&gt;&lt;FONT FACE=ARIAL SIZE=3&gt;&lt;br&gt;
-      ---------O---&lt;BR&gt;
-      ----O--------&lt;BR&gt;
-      ---------O---&lt;BR&gt;
-      ----O--------&lt;BR&gt;
-      ---------O---&lt;BR&gt;&lt;BR&gt;&lt;/FONT&gt;
-    &lt;/TD&gt;
-   
-&lt;TD BGCOLOR="#cccccc" ALIGN=CENTER&gt;&lt;FONT FACE=ARIAL SIZE=3&gt;&lt;BR&gt;
-      &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;nbsp;&lt;BR&gt;
-       &lt;BR&gt;
-       &lt;BR&gt;
-       &lt;BR&gt;
-       &lt;BR&gt;&lt;BR&gt;&lt;/FONT&gt;
-    &lt;/TD&gt;
-  &lt;/TR&gt;
-
-  &lt;TR&gt;
-    &lt;TD COLSPAN=7&gt;&amp;nbsp;
-    &lt;/TD&gt;
-  &lt;/TR&gt;
-  
-&lt;/TABLE&gt;
-&lt;B&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;More than you expect&lt;BR&gt;&lt;BR&gt;&lt;BR&gt;&lt;/B&gt;
-
-&lt;HR&gt;&lt;BR&gt;
-&lt;b&gt;Würth Elektronik eiSos GmbH &amp; Co. KG&lt;/b&gt;&lt;br&gt;
-EMC &amp; Inductive Solutions&lt;br&gt;
-
-Max-Eyth-Str.1&lt;br&gt;
-D-74638 Waldenburg&lt;br&gt;
-&lt;br&gt;
-Tel: +49 (0)7942-945-0&lt;br&gt;
-Fax:+49 (0)7942-945-405&lt;br&gt;
-&lt;br&gt;
-&lt;a href="http://www.we-online.com/eagle"&gt;http://www.we-online.com/eagle&lt;/a&gt;&lt;br&gt;
-&lt;a href="mailto:libraries@we-online.com"&gt;libraries@we-online.com&lt;/a&gt; &lt;BR&gt;&lt;BR&gt;
-&lt;br&gt;&lt;HR&gt;&lt;BR&gt;
-Neither CadSoft nor WE-eiSos does warrant that this library is error-free or &lt;br&gt;
-that it meets your specific requirements.&lt;br&gt;&lt;BR&gt;
-Please contact us for more information.&lt;br&gt;&lt;BR&gt;&lt;br&gt;
-&lt;hr&gt;
-Eagle Version 6, Library Revision 2015b, 08.04.2015&lt;br&gt;
-&lt;HR&gt;
-Copyright: Würth Elektronik</description>
-<packages>
-<package name="3528-COMMON-ANODE">
-<wire x1="-2.6" y1="1.6" x2="2.6" y2="1.6" width="0.127" layer="39"/>
-<wire x1="2.6" y1="1.6" x2="2.6" y2="-1.6" width="0.127" layer="39"/>
-<wire x1="2.6" y1="-1.6" x2="-2.6" y2="-1.6" width="0.127" layer="39"/>
-<wire x1="-2.6" y1="-1.6" x2="-2.6" y2="1.6" width="0.127" layer="39"/>
-<wire x1="-1.75" y1="1.4" x2="1.75" y2="1.4" width="0.127" layer="51"/>
-<wire x1="1.75" y1="1.4" x2="1.75" y2="-1.4" width="0.127" layer="51"/>
-<wire x1="1.75" y1="-1.4" x2="-1.75" y2="-1.4" width="0.127" layer="51"/>
-<wire x1="-1.75" y1="-1.4" x2="-1.75" y2="1.4" width="0.127" layer="51"/>
-<smd name="3" x="-1.55" y="0.85" dx="1.5" dy="0.9" layer="1" rot="R180"/>
-<smd name="1" x="1.55" y="0.85" dx="1.5" dy="0.9" layer="1" rot="R180"/>
-<smd name="2" x="1.55" y="-0.85" dx="1.5" dy="0.9" layer="1" rot="R180"/>
-<smd name="4" x="-1.55" y="-0.85" dx="1.5" dy="0.9" layer="1" rot="R180"/>
-<text x="-2.54" y="2.54" size="1.27" layer="25">&gt;NAME</text>
-<text x="-2.54" y="-3.81" size="1.27" layer="27">&gt;VALUE</text>
-<text x="-3.6" y="0.5" size="0.8128" layer="21">C</text>
-<text x="-3.6" y="-1.3" size="0.8128" layer="21">C</text>
-<text x="2.9" y="-1.4" size="0.8128" layer="21">C</text>
-<text x="2.9" y="0.4" size="0.8128" layer="21">A</text>
-<wire x1="-0.79375" y1="1.5875" x2="-0.8" y2="0.3" width="0.127" layer="43"/>
-<wire x1="-0.8" y1="0.3" x2="-2.6" y2="0.3" width="0.127" layer="43"/>
-<wire x1="-2.6" y1="0.3" x2="-2.6" y2="-0.3" width="0.127" layer="43"/>
-<wire x1="-2.6" y1="-0.3" x2="-0.8" y2="-0.3" width="0.127" layer="43"/>
-<wire x1="-0.8" y1="-0.3" x2="-0.79375" y2="-1.5875" width="0.127" layer="43"/>
-<wire x1="-0.79375" y1="-1.5875" x2="0.79375" y2="-1.5875" width="0.127" layer="43"/>
-<wire x1="0.79375" y1="-1.5875" x2="0.8" y2="-0.3" width="0.127" layer="43"/>
-<wire x1="0.8" y1="-0.3" x2="2.6" y2="-0.3" width="0.127" layer="43"/>
-<wire x1="2.6" y1="-0.3" x2="2.6" y2="0.3" width="0.127" layer="43"/>
-<wire x1="2.6" y1="0.3" x2="0.8" y2="0.3" width="0.127" layer="43"/>
-<wire x1="0.8" y1="0.3" x2="0.79375" y2="1.5875" width="0.127" layer="43"/>
-<wire x1="0.79375" y1="1.5875" x2="-0.79375" y2="1.5875" width="0.127" layer="43"/>
-<wire x1="-1.75" y1="1.4" x2="1.75" y2="1.4" width="0.127" layer="21"/>
-<wire x1="-1.75" y1="-1.4" x2="1.75" y2="-1.4" width="0.127" layer="21"/>
-<wire x1="-1.75" y1="0.3" x2="-1.75" y2="-0.3" width="0.127" layer="21"/>
-<wire x1="1.75" y1="0.3" x2="1.75" y2="-0.3" width="0.127" layer="21"/>
-</package>
-</packages>
-<symbols>
-<symbol name="WL-SBTW">
-<description>3 LED with common Anode</description>
-<wire x1="4.23" y1="-9" x2="5.73" y2="-9" width="0.254" layer="94"/>
-<wire x1="-2.54" y1="2.54" x2="-2.54" y2="0" width="0.254" layer="94"/>
-<wire x1="-2.54" y1="0" x2="-2.54" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="-2.54" y1="-2.54" x2="2.54" y2="0" width="0.254" layer="94"/>
-<wire x1="2.54" y1="0" x2="-2.54" y2="2.54" width="0.254" layer="94"/>
-<wire x1="-2.54" y1="-5.08" x2="-2.54" y2="-7.62" width="0.254" layer="94"/>
-<wire x1="-2.54" y1="-7.62" x2="-2.54" y2="-10.16" width="0.254" layer="94"/>
-<wire x1="-2.54" y1="-10.16" x2="2.54" y2="-7.62" width="0.254" layer="94"/>
-<wire x1="2.54" y1="-7.62" x2="-2.54" y2="-5.08" width="0.254" layer="94"/>
-<wire x1="-2.54" y1="10.16" x2="-2.54" y2="7.62" width="0.254" layer="94"/>
-<wire x1="-2.54" y1="7.62" x2="-2.54" y2="5.08" width="0.254" layer="94"/>
-<wire x1="-2.54" y1="5.08" x2="2.54" y2="7.62" width="0.254" layer="94"/>
-<wire x1="2.54" y1="7.62" x2="-2.54" y2="10.16" width="0.254" layer="94"/>
-<wire x1="-2.54" y1="7.62" x2="-7.62" y2="7.62" width="0.254" layer="94"/>
-<wire x1="-7.62" y1="7.62" x2="-7.62" y2="0" width="0.254" layer="94"/>
-<wire x1="-7.62" y1="0" x2="-7.62" y2="-7.62" width="0.254" layer="94"/>
-<wire x1="-7.62" y1="-7.62" x2="-2.54" y2="-7.62" width="0.254" layer="94"/>
-<wire x1="-2.54" y1="0" x2="-7.62" y2="0" width="0.254" layer="94"/>
-<wire x1="-2.54" y1="0" x2="2.54" y2="0" width="0.254" layer="94"/>
-<wire x1="-2.54" y1="-7.62" x2="2.54" y2="-7.62" width="0.254" layer="94"/>
-<wire x1="-2.54" y1="7.62" x2="2.54" y2="7.62" width="0.254" layer="94"/>
-<wire x1="2.54" y1="2.54" x2="2.54" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="2.54" y1="-5.08" x2="2.54" y2="-10.16" width="0.254" layer="94"/>
-<wire x1="2.54" y1="10.16" x2="2.54" y2="5.08" width="0.254" layer="94"/>
-<wire x1="4.23" y1="-1.4" x2="5.73" y2="-1.4" width="0.254" layer="94"/>
-<wire x1="4.33" y1="6.4" x2="5.83" y2="6.4" width="0.254" layer="94"/>
-<wire x1="-12.38" y1="-2.87" x2="-10.88" y2="-2.87" width="0.254" layer="94"/>
-<wire x1="-11.61" y1="-3.64" x2="-11.61" y2="-2.14" width="0.254" layer="94"/>
-<text x="-3.69" y="11.842" size="1.27" layer="95">&gt;NAME</text>
-<text x="-3.69" y="-13.968" size="1.27" layer="96">&gt;VALUE</text>
-<text x="0.6" y="4.9" size="1.27" layer="94">G</text>
-<text x="0.7" y="-3" size="1.27" layer="94">R</text>
-<text x="0.8" y="-10.5" size="1.27" layer="94">B</text>
-<pin name="A" x="-10.16" y="0" length="short"/>
-<pin name="BC" x="5.08" y="-7.62" length="short" rot="R180"/>
-<pin name="RC" x="5.08" y="0" length="short" rot="R180"/>
-<pin name="GC" x="5.08" y="7.62" length="short" rot="R180"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="RGB_LED_CA" prefix="D">
-<description>&lt;b&gt;SMD full-color TOP LED
-&lt;br&gt;
-&lt;br&gt;
-&lt;br&gt;&lt;b&gt; Characteristics
-&lt;br&gt;
-&lt;br&gt;&lt;/b&gt;&lt;/b&gt; Low energy consumption
-&lt;br&gt; High reliability
-&lt;br&gt; Low current requirement
-&lt;br&gt; Fast switching
-&lt;br&gt; No UV/IR radiation
-&lt;br&gt; High brightness
-&lt;br&gt; RGB individual control
-&lt;br&gt; Compact package outline
-&lt;br&gt; Black surface
-&lt;br&gt;
-&lt;br&gt;
-&lt;br&gt;&lt;b&gt; Applications
-&lt;br&gt;
-&lt;br&gt;&lt;/b&gt; Flash light
-&lt;br&gt; Switch indicators
-&lt;br&gt; Equipments indicators
-&lt;br&gt; Accent and decorative lighting
-&lt;br&gt; Electronic signage
-&lt;br&gt; Video displays
-&lt;br&gt; Backlight for LCDs, PDAs and TVs
-&lt;br&gt; Oven, microwave
-&lt;br&gt; Street lighting
-&lt;br&gt; Ideal for lateral coupling in light guides
-&lt;br&gt;
-&lt;br&gt;
-&lt;br&gt;
-&lt;br&gt;&lt;a href="http://katalog.we-online.de/media/images/eipal/WL-SFTW_pf2.jpg" title="Enlarge picture"&gt;
-&lt;img src="http://katalog.we-online.de/media/thumbs2/eipal/thb_WL-SFTW_pf2.jpg" width="320"&gt;&lt;/a&gt;&lt;p&gt;
-Details see: &lt;a href="http://katalog.we-online.de/en/led/WL-SFTW?m"&gt;http://katalog.we-online.de/en/led/WL-SFTW?m&lt;/a&gt;&lt;p&gt;
-
-&lt;/b&gt;Updated   2015-04-10&lt;br&gt;
-&lt;/b&gt;2015 (C) Wurth Elektronik</description>
-<gates>
-<gate name="G$1" symbol="WL-SBTW" x="0" y="0"/>
-</gates>
-<devices>
-<device name="-150141M173100-R&amp;G&amp;B" package="3528-COMMON-ANODE">
-<connects>
-<connect gate="G$1" pin="A" pad="1"/>
-<connect gate="G$1" pin="BC" pad="2"/>
-<connect gate="G$1" pin="GC" pad="4"/>
-<connect gate="G$1" pin="RC" pad="3"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 </libraries>
 <attributes>
 </attributes>
@@ -2157,7 +2076,7 @@ Details see: &lt;a href="http://katalog.we-online.de/en/led/WL-SFTW?m"&gt;http:/
 <part name="JP1" library="nixx" deviceset="PINHD-1X7" device=""/>
 <part name="GND15" library="joyAnalog" deviceset="GND" device=""/>
 <part name="+3V3" library="joyAnalog" deviceset="+3V3" device=""/>
-<part name="D1" library="Wurth_Elektronik_Optoelectronics_rev15b" deviceset="RGB_LED_CA" device="-150141M173100-R&amp;G&amp;B"/>
+<part name="D1" library="nixx" deviceset="RGB_LED_CA" device="-150141M173100-R&amp;G&amp;B"/>
 <part name="R13" library="joyAnalog" deviceset="RESISTOR" device="0805-RES"/>
 <part name="+3V4" library="joyAnalog" deviceset="+3V3" device=""/>
 <part name="R14" library="joyAnalog" deviceset="RESISTOR" device="0805-RES"/>
@@ -2166,6 +2085,11 @@ Details see: &lt;a href="http://katalog.we-online.de/en/led/WL-SFTW?m"&gt;http:/
 <part name="TP1" library="joyAnalog" deviceset="TEST-POINT" device="3X4" value="TEST-POINT3X4"/>
 <part name="TP2" library="joyAnalog" deviceset="TEST-POINT" device="3X4" value="TEST-POINT3X4"/>
 <part name="TP3" library="joyAnalog" deviceset="TEST-POINT" device="3X4" value="TEST-POINT3X4"/>
+<part name="R17" library="joyAnalog" deviceset="RESISTOR" device="0805-RES"/>
+<part name="R18" library="joyAnalog" deviceset="RESISTOR" device="0805-RES"/>
+<part name="+3V5" library="joyAnalog" deviceset="+3V3" device=""/>
+<part name="+3V6" library="joyAnalog" deviceset="+3V3" device=""/>
+<part name="C4" library="joyAnalog" deviceset="CAP" device="0805"/>
 </parts>
 <sheets>
 <sheet>
@@ -2232,6 +2156,11 @@ Details see: &lt;a href="http://katalog.we-online.de/en/led/WL-SFTW?m"&gt;http:/
 <instance part="TP1" gate="G$1" x="279.4" y="55.88" rot="R180"/>
 <instance part="TP2" gate="G$1" x="279.4" y="43.18" rot="R180"/>
 <instance part="TP3" gate="G$1" x="383.54" y="45.72"/>
+<instance part="R17" gate="G$1" x="401.32" y="17.78" rot="R90"/>
+<instance part="R18" gate="G$1" x="408.94" y="7.62" rot="R90"/>
+<instance part="+3V5" gate="G$1" x="401.32" y="25.4" rot="MR0"/>
+<instance part="+3V6" gate="G$1" x="408.94" y="15.24" rot="MR0"/>
+<instance part="C4" gate="G$1" x="109.22" y="81.28"/>
 </instances>
 <busses>
 </busses>
@@ -2311,11 +2240,17 @@ Details see: &lt;a href="http://katalog.we-online.de/en/led/WL-SFTW?m"&gt;http:/
 <wire x1="83.82" y1="78.74" x2="99.06" y2="78.74" width="0.1524" layer="91"/>
 <junction x="83.82" y="78.74"/>
 <pinref part="GND14" gate="1" pin="GND"/>
+<pinref part="C4" gate="G$1" pin="2"/>
+<wire x1="99.06" y1="78.74" x2="109.22" y2="78.74" width="0.1524" layer="91"/>
+<junction x="99.06" y="78.74"/>
 </segment>
 <segment>
 <pinref part="JP1" gate="A" pin="6"/>
 <pinref part="GND15" gate="1" pin="GND"/>
 <wire x1="391.16" y1="-43.18" x2="401.32" y2="-43.18" width="0.1524" layer="91"/>
+<pinref part="JP1" gate="A" pin="7"/>
+<wire x1="391.16" y1="-43.18" x2="391.16" y2="-45.72" width="0.1524" layer="91"/>
+<junction x="391.16" y="-43.18"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -2564,6 +2499,9 @@ Details see: &lt;a href="http://katalog.we-online.de/en/led/WL-SFTW?m"&gt;http:/
 <wire x1="83.82" y1="86.36" x2="68.58" y2="86.36" width="0.1524" layer="91"/>
 <junction x="83.82" y="86.36"/>
 <pinref part="+3V2" gate="G$1" pin="+3V3"/>
+<pinref part="C4" gate="G$1" pin="1"/>
+<wire x1="99.06" y1="86.36" x2="109.22" y2="86.36" width="0.1524" layer="91"/>
+<junction x="99.06" y="86.36"/>
 </segment>
 <segment>
 <pinref part="JP1" gate="A" pin="5"/>
@@ -2574,6 +2512,14 @@ Details see: &lt;a href="http://katalog.we-online.de/en/led/WL-SFTW?m"&gt;http:/
 <pinref part="+3V4" gate="G$1" pin="+3V3"/>
 <pinref part="D1" gate="G$1" pin="A"/>
 <wire x1="459.74" y1="0" x2="467.36" y2="0" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="R17" gate="G$1" pin="2"/>
+<pinref part="+3V5" gate="G$1" pin="+3V3"/>
+</segment>
+<segment>
+<pinref part="R18" gate="G$1" pin="2"/>
+<pinref part="+3V6" gate="G$1" pin="+3V3"/>
 </segment>
 </net>
 <net name="SPI_SCK" class="0">
@@ -2617,6 +2563,9 @@ Details see: &lt;a href="http://katalog.we-online.de/en/led/WL-SFTW?m"&gt;http:/
 <pinref part="JP2" gate="A" pin="5"/>
 <wire x1="368.3" y1="2.54" x2="391.16" y2="2.54" width="0.1524" layer="91"/>
 <label x="368.3" y="2.54" size="1.778" layer="95"/>
+<pinref part="R18" gate="G$1" pin="1"/>
+<wire x1="391.16" y1="2.54" x2="408.94" y2="2.54" width="0.1524" layer="91"/>
+<junction x="391.16" y="2.54"/>
 </segment>
 <segment>
 <pinref part="U$2" gate="G$1" pin="PA12"/>
@@ -2658,6 +2607,9 @@ Details see: &lt;a href="http://katalog.we-online.de/en/led/WL-SFTW?m"&gt;http:/
 <pinref part="JP2" gate="A" pin="1"/>
 <wire x1="368.3" y1="12.7" x2="391.16" y2="12.7" width="0.1524" layer="91"/>
 <label x="368.3" y="12.7" size="1.778" layer="95"/>
+<pinref part="R17" gate="G$1" pin="1"/>
+<wire x1="401.32" y1="12.7" x2="391.16" y2="12.7" width="0.1524" layer="91"/>
+<junction x="391.16" y="12.7"/>
 </segment>
 </net>
 <net name="UART_RX" class="0">
@@ -2839,7 +2791,6 @@ Details see: &lt;a href="http://katalog.we-online.de/en/led/WL-SFTW?m"&gt;http:/
 <segment>
 <pinref part="U$2" gate="G$1" pin="PB3"/>
 <wire x1="383.54" y1="45.72" x2="340.36" y2="45.72" width="0.1524" layer="91"/>
-<label x="342.9" y="45.72" size="1.778" layer="95"/>
 <pinref part="TP3" gate="G$1" pin="1"/>
 </segment>
 </net>
