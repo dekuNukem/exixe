@@ -6,10 +6,10 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="2" unitdist="mil" unit="mil" style="lines" multiple="1" display="no" altdistance="1" altunitdist="mil" altunit="mil"/>
+<grid distance="5" unitdist="mil" unit="mil" style="lines" multiple="1" display="no" altdistance="1" altunitdist="mil" altunit="mil"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
-<layer number="16" name="Bottom" color="1" fill="1" visible="no" active="yes"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
 <layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
@@ -756,8 +756,8 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <attribute name="VALUE" x="7.27" y="26.311" size="0.4064" layer="27" rot="R90"/>
 <attribute name="VALUE" x="7.27" y="26.311" size="0.4064" layer="27" rot="R90"/>
 </element>
-<element name="Q6" library="nixx" package="SOT323" value="" x="11.684" y="28.194" smashed="yes" rot="R90">
-<attribute name="VALUE" x="13.014" y="29.419" size="1.016" layer="27" rot="R90"/>
+<element name="Q6" library="nixx" package="SOT323" value="" x="11.684" y="28.321" smashed="yes" rot="R90">
+<attribute name="VALUE" x="13.014" y="29.546" size="1.016" layer="27" rot="R90"/>
 </element>
 <element name="R6" library="joyAnalog" package="0805" value="" x="14.127" y="27.327" smashed="yes" rot="R90">
 <attribute name="NAME" x="14.8925" y="29.3404" size="0.8128" layer="25" rot="R270"/>
@@ -973,8 +973,8 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <signal name="N$8">
 <contactref element="Q6" pad="1"/>
 <contactref element="R6" pad="2"/>
-<wire x1="12.584" y1="27.544" x2="13.444" y2="27.544" width="0.2032" layer="1"/>
-<wire x1="13.444" y1="27.544" x2="14.127" y2="28.227" width="0.2032" layer="1"/>
+<wire x1="14.127" y1="28.227" x2="13.14" y2="28.227" width="0.2032" layer="1"/>
+<wire x1="13.14" y1="28.227" x2="12.584" y2="27.671" width="0.2032" layer="1"/>
 </signal>
 <signal name="N$9">
 <contactref element="Q7" pad="1"/>
@@ -1046,7 +1046,7 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <contactref element="N1" pad="6"/>
 <contactref element="Q6" pad="3"/>
 <wire x1="11.4813" y1="31.0101" x2="10.784" y2="30.3128" width="0.2032" layer="1"/>
-<wire x1="10.784" y1="30.3128" x2="10.784" y2="28.194" width="0.2032" layer="1"/>
+<wire x1="10.784" y1="30.3128" x2="10.784" y2="28.321" width="0.2032" layer="1"/>
 </signal>
 <signal name="NIXIE_7">
 <contactref element="N1" pad="7"/>
