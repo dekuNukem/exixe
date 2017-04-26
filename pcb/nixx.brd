@@ -9,7 +9,7 @@
 <grid distance="2" unitdist="mil" unit="mil" style="lines" multiple="1" display="no" altdistance="1" altunitdist="mil" altunit="mil"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
-<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="no" active="yes"/>
 <layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
@@ -193,7 +193,7 @@
 <text x="12.192" y="18.923" size="1.016" layer="25" rot="R180">A</text>
 <text x="2.667" y="12.446" size="0.8128" layer="25" rot="R180">SDA</text>
 <text x="3.302" y="11.176" size="0.8128" layer="25" rot="R180">SCL</text>
-<text x="14.478" y="16.256" size="0.8128" layer="25" rot="R180">PB3</text>
+<text x="12.4968" y="15.494" size="0.8128" layer="25">PB3</text>
 <text x="17.018" y="34.671" size="1.143" layer="25">G</text>
 </plain>
 <libraries>
@@ -720,7 +720,7 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <attribute name="VALUE" x="2.866" y="15.115" size="0.4064" layer="27"/>
 </element>
 <element name="C1" library="joyAnalog" package="0805" value="" x="14.986" y="5.715" smashed="yes">
-<attribute name="NAME" x="15.24" y="6.6675" size="0.8128" layer="25"/>
+<attribute name="NAME" x="15.1384" y="6.5151" size="0.8128" layer="25"/>
 <attribute name="VALUE" x="13.97" y="4.318" size="0.4064" layer="27"/>
 <attribute name="VALUE" x="13.97" y="4.318" size="0.4064" layer="27"/>
 </element>
@@ -744,7 +744,7 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <attribute name="VALUE" x="3.496" y="30.318" size="1.016" layer="27" rot="R270"/>
 </element>
 <element name="R4" library="joyAnalog" package="0805" value="" x="6.603" y="33.238" smashed="yes" rot="R180">
-<attribute name="NAME" x="6.7035" y="32.257" size="0.8128" layer="25" rot="R270"/>
+<attribute name="NAME" x="7.9766" y="32.6623" size="0.8128" layer="25"/>
 <attribute name="VALUE" x="7.619" y="34.635" size="0.4064" layer="27" rot="R180"/>
 <attribute name="VALUE" x="7.619" y="34.635" size="0.4064" layer="27" rot="R180"/>
 </element>
@@ -752,7 +752,7 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <attribute name="VALUE" x="10.242" y="26.864" size="1.016" layer="27"/>
 </element>
 <element name="R5" library="joyAnalog" package="0805" value="" x="5.873" y="27.327" smashed="yes" rot="R90">
-<attribute name="NAME" x="8.106" y="28.9235" size="0.8128" layer="25" rot="R180"/>
+<attribute name="NAME" x="5.4681" y="25.6828" size="0.8128" layer="25" rot="R270"/>
 <attribute name="VALUE" x="7.27" y="26.311" size="0.4064" layer="27" rot="R90"/>
 <attribute name="VALUE" x="7.27" y="26.311" size="0.4064" layer="27" rot="R90"/>
 </element>
@@ -760,7 +760,7 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <attribute name="VALUE" x="13.014" y="29.419" size="1.016" layer="27" rot="R90"/>
 </element>
 <element name="R6" library="joyAnalog" package="0805" value="" x="14.127" y="27.327" smashed="yes" rot="R90">
-<attribute name="NAME" x="15.726" y="25.7475" size="0.8128" layer="25" rot="R180"/>
+<attribute name="NAME" x="14.8925" y="29.3404" size="0.8128" layer="25" rot="R270"/>
 <attribute name="VALUE" x="15.524" y="26.311" size="0.4064" layer="27" rot="R90"/>
 <attribute name="VALUE" x="15.524" y="26.311" size="0.4064" layer="27" rot="R90"/>
 </element>
@@ -776,7 +776,7 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <attribute name="VALUE" x="18.83" y="30.225" size="1.016" layer="27" rot="R90"/>
 </element>
 <element name="R8" library="joyAnalog" package="0805" value="" x="18.381" y="26.381" smashed="yes" rot="R90">
-<attribute name="NAME" x="17.3015" y="25.238" size="0.8128" layer="25" rot="R90"/>
+<attribute name="NAME" x="17.1999" y="25.1872" size="0.8128" layer="25" rot="R90"/>
 <attribute name="VALUE" x="19.778" y="25.365" size="0.4064" layer="27" rot="R90"/>
 <attribute name="VALUE" x="19.778" y="25.365" size="0.4064" layer="27" rot="R90"/>
 </element>
@@ -808,7 +808,7 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <attribute name="VALUE" x="5.633" y="23.301" size="1.016" layer="27" rot="R180"/>
 </element>
 <element name="R12" library="joyAnalog" package="0805" value="" x="9.017" y="21.717" smashed="yes" rot="R90">
-<attribute name="NAME" x="8.1915" y="20.32" size="0.8128" layer="25" rot="R90"/>
+<attribute name="NAME" x="8.6995" y="18.3896" size="0.8128" layer="25" rot="R90"/>
 <attribute name="VALUE" x="10.414" y="20.701" size="0.4064" layer="27" rot="R90"/>
 <attribute name="VALUE" x="10.414" y="20.701" size="0.4064" layer="27" rot="R90"/>
 </element>
@@ -818,7 +818,7 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <attribute name="VALUE" x="3.556" y="12.954" size="0.4064" layer="27"/>
 </element>
 <element name="C3" library="joyAnalog" package="0805" value="" x="11.811" y="34.163" smashed="yes" rot="R270">
-<attribute name="NAME" x="12.3825" y="33.401" size="0.8128" layer="25" rot="R270"/>
+<attribute name="NAME" x="12.3317" y="31.877" size="0.8128" layer="25" rot="R270"/>
 <attribute name="VALUE" x="10.414" y="35.179" size="0.4064" layer="27" rot="R270"/>
 <attribute name="VALUE" x="10.414" y="35.179" size="0.4064" layer="27" rot="R270"/>
 </element>
@@ -827,32 +827,43 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 </element>
 <element name="D1" library="nixx" package="3528-COMMON-ANODE" value="RGB_LED_CA-150141M173100-R&amp;G&amp;B" x="10" y="25" smashed="yes"/>
 <element name="R13" library="joyAnalog" package="0805" value="" x="4.953" y="37.719" smashed="yes" rot="R90">
-<attribute name="NAME" x="4.1275" y="36.957" size="0.4064" layer="25" rot="R90"/>
-<attribute name="NAME" x="4.1275" y="36.957" size="0.4064" layer="25" rot="R90"/>
+<attribute name="NAME" x="4.1402" y="39.1033" size="0.7112" layer="25"/>
 <attribute name="VALUE" x="6.35" y="36.703" size="0.4064" layer="27" rot="R90"/>
 <attribute name="VALUE" x="6.35" y="36.703" size="0.4064" layer="27" rot="R90"/>
 </element>
 <element name="R14" library="joyAnalog" package="0805" value="" x="17.399" y="6.35" smashed="yes" rot="R270">
-<attribute name="NAME" x="15.494" y="7.9375" size="0.8128" layer="25"/>
+<attribute name="NAME" x="17.526" y="8.8265" size="0.8128" layer="25" rot="R180"/>
 <attribute name="VALUE" x="16.002" y="7.366" size="0.4064" layer="27" rot="R270"/>
 <attribute name="VALUE" x="16.002" y="7.366" size="0.4064" layer="27" rot="R270"/>
 </element>
 <element name="R15" library="joyAnalog" package="0805" value="" x="3.048" y="4.572" smashed="yes">
-<attribute name="NAME" x="2.794" y="5.5245" size="0.8128" layer="25"/>
+<attribute name="NAME" x="4.5212" y="6.2611" size="0.8128" layer="25" rot="R180"/>
 <attribute name="VALUE" x="2.032" y="3.175" size="0.4064" layer="27"/>
 <attribute name="VALUE" x="2.032" y="3.175" size="0.4064" layer="27"/>
 </element>
 <element name="R16" library="joyAnalog" package="0805" value="" x="19.05" y="6.35" smashed="yes" rot="R270">
-<attribute name="NAME" x="18.7325" y="9.652" size="0.8128" layer="25" rot="R270"/>
+<attribute name="NAME" x="19.4183" y="7.7724" size="0.8128" layer="25" rot="R90"/>
 <attribute name="VALUE" x="17.653" y="7.366" size="0.4064" layer="27" rot="R270"/>
 <attribute name="VALUE" x="17.653" y="7.366" size="0.4064" layer="27" rot="R270"/>
 </element>
 <element name="TP1" library="joyAnalog" package="PAD.03X.04" value="TEST-POINT3X4" x="3.429" y="12.192" smashed="yes"/>
 <element name="TP2" library="joyAnalog" package="PAD.03X.04" value="TEST-POINT3X4" x="4.064" y="11.049" smashed="yes"/>
 <element name="TP3" library="joyAnalog" package="PAD.03X.04" value="TEST-POINT3X4" x="11.8618" y="15.9004" smashed="yes"/>
-<element name="R17" library="joyAnalog" package="0805" value="" x="5.588" y="5.842" rot="MR180"/>
-<element name="R18" library="joyAnalog" package="0805" value="" x="12.573" y="5.334" rot="MR90"/>
-<element name="C4" library="joyAnalog" package="0805" value="" x="8.255" y="8.509" rot="MR180"/>
+<element name="R17" library="joyAnalog" package="0805" value="" x="5.588" y="5.842" smashed="yes" rot="MR180">
+<attribute name="NAME" x="4.7244" y="4.9657" size="0.8128" layer="26" rot="MR180"/>
+<attribute name="VALUE" x="4.572" y="7.239" size="0.4064" layer="28" rot="MR180"/>
+<attribute name="VALUE" x="4.572" y="7.239" size="0.4064" layer="28" rot="MR180"/>
+</element>
+<element name="R18" library="joyAnalog" package="0805" value="" x="12.573" y="5.334" smashed="yes" rot="MR90">
+<attribute name="NAME" x="13.4493" y="4.4196" size="0.8128" layer="26" rot="MR90"/>
+<attribute name="VALUE" x="11.176" y="4.318" size="0.4064" layer="28" rot="MR90"/>
+<attribute name="VALUE" x="11.176" y="4.318" size="0.4064" layer="28" rot="MR90"/>
+</element>
+<element name="C4" library="joyAnalog" package="0805" value="" x="8.255" y="8.509" smashed="yes" rot="MR180">
+<attribute name="NAME" x="7.6454" y="7.6327" size="0.8128" layer="26" rot="MR180"/>
+<attribute name="VALUE" x="7.239" y="9.906" size="0.4064" layer="28" rot="MR180"/>
+<attribute name="VALUE" x="7.239" y="9.906" size="0.4064" layer="28" rot="MR180"/>
+</element>
 </elements>
 <signals>
 <signal name="+180V">
