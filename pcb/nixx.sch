@@ -2140,7 +2140,7 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <instance part="+3V2" gate="G$1" x="83.82" y="88.9"/>
 <instance part="JP1" gate="A" x="393.7" y="-38.1"/>
 <instance part="GND15" gate="1" x="401.32" y="-45.72"/>
-<instance part="+3V3" gate="G$1" x="401.32" y="-38.1" rot="MR0"/>
+<instance part="+3V3" gate="G$1" x="401.32" y="-33.02" rot="MR0"/>
 <instance part="D1" gate="G$1" x="477.52" y="0"/>
 <instance part="R13" gate="G$1" x="378.46" y="-30.48"/>
 <instance part="+3V4" gate="G$1" x="459.74" y="2.54"/>
@@ -2498,11 +2498,6 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <junction x="99.06" y="86.36"/>
 </segment>
 <segment>
-<pinref part="JP1" gate="A" pin="5"/>
-<pinref part="+3V3" gate="G$1" pin="+3V3"/>
-<wire x1="391.16" y1="-40.64" x2="401.32" y2="-40.64" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="+3V4" gate="G$1" pin="+3V3"/>
 <pinref part="D1" gate="G$1" pin="A"/>
 <wire x1="459.74" y1="0" x2="467.36" y2="0" width="0.1524" layer="91"/>
@@ -2514,6 +2509,11 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <segment>
 <pinref part="R18" gate="G$1" pin="2"/>
 <pinref part="+3V6" gate="G$1" pin="+3V3"/>
+</segment>
+<segment>
+<pinref part="JP1" gate="A" pin="3"/>
+<pinref part="+3V3" gate="G$1" pin="+3V3"/>
+<wire x1="391.16" y1="-35.56" x2="401.32" y2="-35.56" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="SPI_SCK" class="0">
@@ -2613,9 +2613,9 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <label x="342.9" y="35.56" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="JP1" gate="A" pin="3"/>
-<wire x1="373.38" y1="-35.56" x2="391.16" y2="-35.56" width="0.1524" layer="91"/>
-<label x="373.38" y="-35.56" size="1.778" layer="95"/>
+<label x="373.38" y="-38.1" size="1.778" layer="95"/>
+<pinref part="JP1" gate="A" pin="4"/>
+<wire x1="373.38" y1="-38.1" x2="391.16" y2="-38.1" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="UART_TX" class="0">
@@ -2625,9 +2625,9 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <label x="342.9" y="38.1" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="JP1" gate="A" pin="4"/>
-<wire x1="373.38" y1="-38.1" x2="391.16" y2="-38.1" width="0.1524" layer="91"/>
-<label x="373.38" y="-38.1" size="1.778" layer="95"/>
+<label x="373.38" y="-40.64" size="1.778" layer="95"/>
+<pinref part="JP1" gate="A" pin="5"/>
+<wire x1="373.38" y1="-40.64" x2="391.16" y2="-40.64" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$2" class="0">
