@@ -2936,6 +2936,12 @@ I2C</description>
 <part name="+3V6" library="joyAnalog" deviceset="+3V3" device=""/>
 <part name="C4" library="joyAnalog" deviceset="CAP" device="0805"/>
 <part name="IC1" library="joyAnalog" deviceset="24*" device="ST" technology="C64"/>
+<part name="R19" library="joyAnalog" deviceset="RESISTOR" device="0805-RES"/>
+<part name="R20" library="joyAnalog" deviceset="RESISTOR" device="0805-RES"/>
+<part name="+3V7" library="joyAnalog" deviceset="+3V3" device=""/>
+<part name="+3V8" library="joyAnalog" deviceset="+3V3" device=""/>
+<part name="GND16" library="joyAnalog" deviceset="GND" device=""/>
+<part name="+3V9" library="joyAnalog" deviceset="+3V3" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -3005,7 +3011,13 @@ I2C</description>
 <instance part="+3V5" gate="G$1" x="401.32" y="25.4" rot="MR0"/>
 <instance part="+3V6" gate="G$1" x="408.94" y="15.24" rot="MR0"/>
 <instance part="C4" gate="G$1" x="109.22" y="81.28"/>
-<instance part="IC1" gate="G$1" x="276.86" y="48.26"/>
+<instance part="IC1" gate="G$1" x="276.86" y="50.8"/>
+<instance part="R19" gate="G$1" x="264.16" y="71.12" rot="R90"/>
+<instance part="R20" gate="G$1" x="294.64" y="55.88" rot="R90"/>
+<instance part="+3V7" gate="G$1" x="264.16" y="78.74"/>
+<instance part="+3V8" gate="G$1" x="294.64" y="63.5"/>
+<instance part="GND16" gate="1" x="284.48" y="30.48"/>
+<instance part="+3V9" gate="G$1" x="284.48" y="71.12"/>
 </instances>
 <busses>
 </busses>
@@ -3096,6 +3108,29 @@ I2C</description>
 <pinref part="JP1" gate="A" pin="7"/>
 <wire x1="391.16" y1="-43.18" x2="391.16" y2="-45.72" width="0.1524" layer="91"/>
 <junction x="391.16" y="-43.18"/>
+</segment>
+<segment>
+<pinref part="IC1" gate="G$1" pin="GND"/>
+<pinref part="GND16" gate="1" pin="GND"/>
+<wire x1="284.48" y1="40.64" x2="284.48" y2="38.1" width="0.1524" layer="91"/>
+<pinref part="IC1" gate="G$1" pin="WP"/>
+<wire x1="284.48" y1="38.1" x2="284.48" y2="33.02" width="0.1524" layer="91"/>
+<wire x1="264.16" y1="55.88" x2="261.62" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="261.62" y1="55.88" x2="261.62" y2="50.8" width="0.1524" layer="91"/>
+<pinref part="IC1" gate="G$1" pin="A0"/>
+<wire x1="261.62" y1="50.8" x2="261.62" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="261.62" y1="48.26" x2="261.62" y2="45.72" width="0.1524" layer="91"/>
+<wire x1="261.62" y1="45.72" x2="264.16" y2="45.72" width="0.1524" layer="91"/>
+<pinref part="IC1" gate="G$1" pin="A1"/>
+<wire x1="264.16" y1="48.26" x2="261.62" y2="48.26" width="0.1524" layer="91"/>
+<junction x="261.62" y="48.26"/>
+<pinref part="IC1" gate="G$1" pin="A2"/>
+<wire x1="264.16" y1="50.8" x2="261.62" y2="50.8" width="0.1524" layer="91"/>
+<junction x="261.62" y="50.8"/>
+<wire x1="261.62" y1="45.72" x2="261.62" y2="38.1" width="0.1524" layer="91"/>
+<junction x="261.62" y="45.72"/>
+<wire x1="261.62" y1="38.1" x2="284.48" y2="38.1" width="0.1524" layer="91"/>
+<junction x="284.48" y="38.1"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -3365,6 +3400,19 @@ I2C</description>
 <pinref part="JP1" gate="A" pin="3"/>
 <pinref part="+3V3" gate="G$1" pin="+3V3"/>
 <wire x1="391.16" y1="-35.56" x2="401.32" y2="-35.56" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="R19" gate="G$1" pin="2"/>
+<pinref part="+3V7" gate="G$1" pin="+3V3"/>
+</segment>
+<segment>
+<pinref part="R20" gate="G$1" pin="2"/>
+<pinref part="+3V8" gate="G$1" pin="+3V3"/>
+</segment>
+<segment>
+<pinref part="IC1" gate="G$1" pin="VCC"/>
+<pinref part="+3V9" gate="G$1" pin="+3V3"/>
+<wire x1="284.48" y1="68.58" x2="284.48" y2="63.5" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="SPI_SCK" class="0">
@@ -3694,6 +3742,28 @@ I2C</description>
 <pinref part="D1" gate="G$1" pin="RC"/>
 <pinref part="R14" gate="G$1" pin="1"/>
 <wire x1="482.6" y1="0" x2="490.22" y2="0" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$16" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="SDA"/>
+<pinref part="U$2" gate="G$1" pin="PF0/OSC_IN"/>
+<wire x1="292.1" y1="50.8" x2="294.64" y2="50.8" width="0.1524" layer="91"/>
+<pinref part="R20" gate="G$1" pin="1"/>
+<wire x1="294.64" y1="50.8" x2="299.72" y2="50.8" width="0.1524" layer="91"/>
+<junction x="294.64" y="50.8"/>
+</segment>
+</net>
+<net name="N$18" class="0">
+<segment>
+<pinref part="IC1" gate="G$1" pin="SCL"/>
+<wire x1="264.16" y1="58.42" x2="264.16" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="264.16" y1="66.04" x2="297.18" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="297.18" y1="66.04" x2="297.18" y2="48.26" width="0.1524" layer="91"/>
+<pinref part="U$2" gate="G$1" pin="PF1/OSC_OUT"/>
+<wire x1="297.18" y1="48.26" x2="299.72" y2="48.26" width="0.1524" layer="91"/>
+<pinref part="R19" gate="G$1" pin="1"/>
+<junction x="264.16" y="66.04"/>
 </segment>
 </net>
 </nets>
