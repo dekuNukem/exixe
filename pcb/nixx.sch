@@ -2090,11 +2090,11 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <plain>
 </plain>
 <instances>
-<instance part="N1" gate="G$1" x="15.24" y="-12.7"/>
+<instance part="N1" gate="G$1" x="220.98" y="-30.48"/>
 <instance part="U$2" gate="G$1" x="302.26" y="99.06"/>
 <instance part="JP2" gate="A" x="393.7" y="5.08"/>
 <instance part="Q1" gate="A" x="101.6" y="48.26"/>
-<instance part="P+2" gate="1" x="30.48" y="-10.16" rot="MR0"/>
+<instance part="P+2" gate="1" x="236.22" y="-27.94" rot="MR0"/>
 <instance part="P+1" gate="1" x="363.22" y="-27.94"/>
 <instance part="R1" gate="G$1" x="93.98" y="48.26"/>
 <instance part="C1" gate="G$1" x="68.58" y="81.28"/>
@@ -2163,8 +2163,8 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <segment>
 <pinref part="N1" gate="G$1" pin="A"/>
 <pinref part="P+2" gate="1" pin="+180V"/>
-<wire x1="25.4" y1="-15.24" x2="30.48" y2="-15.24" width="0.1524" layer="91"/>
-<wire x1="30.48" y1="-15.24" x2="30.48" y2="-12.7" width="0.1524" layer="91"/>
+<wire x1="231.14" y1="-33.02" x2="236.22" y2="-33.02" width="0.1524" layer="91"/>
+<wire x1="236.22" y1="-33.02" x2="236.22" y2="-30.48" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="R13" gate="G$1" pin="1"/>
@@ -2322,8 +2322,8 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <net name="NIXIE_1" class="0">
 <segment>
 <pinref part="N1" gate="G$1" pin="1"/>
-<wire x1="-10.16" y1="-2.54" x2="7.62" y2="-2.54" width="0.1524" layer="91"/>
-<label x="-10.16" y="-2.54" size="1.778" layer="95"/>
+<wire x1="195.58" y1="-20.32" x2="213.36" y2="-20.32" width="0.1524" layer="91"/>
+<label x="195.58" y="-20.32" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="Q1" gate="A" pin="C"/>
@@ -2335,8 +2335,8 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <net name="NIXIE_2" class="0">
 <segment>
 <pinref part="N1" gate="G$1" pin="2"/>
-<wire x1="-10.16" y1="-5.08" x2="7.62" y2="-5.08" width="0.1524" layer="91"/>
-<label x="-10.16" y="-5.08" size="1.778" layer="95"/>
+<wire x1="195.58" y1="-22.86" x2="213.36" y2="-22.86" width="0.1524" layer="91"/>
+<label x="195.58" y="-22.86" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="Q2" gate="A" pin="C"/>
@@ -2348,8 +2348,8 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <net name="NIXIE_3" class="0">
 <segment>
 <pinref part="N1" gate="G$1" pin="3"/>
-<wire x1="-10.16" y1="-7.62" x2="7.62" y2="-7.62" width="0.1524" layer="91"/>
-<label x="-10.16" y="-7.62" size="1.778" layer="95"/>
+<wire x1="195.58" y1="-25.4" x2="213.36" y2="-25.4" width="0.1524" layer="91"/>
+<label x="195.58" y="-25.4" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="Q3" gate="A" pin="C"/>
@@ -2361,8 +2361,8 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <net name="NIXIE_4" class="0">
 <segment>
 <pinref part="N1" gate="G$1" pin="4"/>
-<wire x1="-10.16" y1="-10.16" x2="7.62" y2="-10.16" width="0.1524" layer="91"/>
-<label x="-10.16" y="-10.16" size="1.778" layer="95"/>
+<wire x1="195.58" y1="-27.94" x2="213.36" y2="-27.94" width="0.1524" layer="91"/>
+<label x="195.58" y="-27.94" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="Q4" gate="A" pin="C"/>
@@ -2374,8 +2374,8 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <net name="NIXIE_5" class="0">
 <segment>
 <pinref part="N1" gate="G$1" pin="5"/>
-<wire x1="7.62" y1="-12.7" x2="-10.16" y2="-12.7" width="0.1524" layer="91"/>
-<label x="-10.16" y="-12.7" size="1.778" layer="95"/>
+<wire x1="213.36" y1="-30.48" x2="195.58" y2="-30.48" width="0.1524" layer="91"/>
+<label x="195.58" y="-30.48" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="Q5" gate="A" pin="C"/>
@@ -2387,8 +2387,8 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <net name="NIXIE_6" class="0">
 <segment>
 <pinref part="N1" gate="G$1" pin="6"/>
-<wire x1="-10.16" y1="-15.24" x2="7.62" y2="-15.24" width="0.1524" layer="91"/>
-<label x="-10.16" y="-15.24" size="1.778" layer="95"/>
+<wire x1="195.58" y1="-33.02" x2="213.36" y2="-33.02" width="0.1524" layer="91"/>
+<label x="195.58" y="-33.02" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="Q6" gate="A" pin="C"/>
@@ -2400,8 +2400,8 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <net name="NIXIE_7" class="0">
 <segment>
 <pinref part="N1" gate="G$1" pin="7"/>
-<wire x1="-10.16" y1="-17.78" x2="7.62" y2="-17.78" width="0.1524" layer="91"/>
-<label x="-10.16" y="-17.78" size="1.778" layer="95"/>
+<wire x1="195.58" y1="-35.56" x2="213.36" y2="-35.56" width="0.1524" layer="91"/>
+<label x="195.58" y="-35.56" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="Q7" gate="A" pin="C"/>
@@ -2413,8 +2413,8 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <net name="NIXIE_8" class="0">
 <segment>
 <pinref part="N1" gate="G$1" pin="8"/>
-<wire x1="-10.16" y1="-20.32" x2="7.62" y2="-20.32" width="0.1524" layer="91"/>
-<label x="-10.16" y="-20.32" size="1.778" layer="95"/>
+<wire x1="195.58" y1="-38.1" x2="213.36" y2="-38.1" width="0.1524" layer="91"/>
+<label x="195.58" y="-38.1" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="Q8" gate="A" pin="C"/>
@@ -2426,8 +2426,8 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <net name="NIXIE_9" class="0">
 <segment>
 <pinref part="N1" gate="G$1" pin="9"/>
-<wire x1="-10.16" y1="-22.86" x2="7.62" y2="-22.86" width="0.1524" layer="91"/>
-<label x="-10.16" y="-22.86" size="1.778" layer="95"/>
+<wire x1="195.58" y1="-40.64" x2="213.36" y2="-40.64" width="0.1524" layer="91"/>
+<label x="195.58" y="-40.64" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="Q9" gate="A" pin="C"/>
@@ -2439,8 +2439,8 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <net name="NIXIE_10" class="0">
 <segment>
 <pinref part="N1" gate="G$1" pin="0"/>
-<wire x1="-10.16" y1="-25.4" x2="7.62" y2="-25.4" width="0.1524" layer="91"/>
-<label x="-10.16" y="-25.4" size="1.778" layer="95"/>
+<wire x1="195.58" y1="-43.18" x2="213.36" y2="-43.18" width="0.1524" layer="91"/>
+<label x="195.58" y="-43.18" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="Q10" gate="A" pin="C"/>
@@ -2452,8 +2452,8 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <net name="NIXIE_DOT_LEFT" class="0">
 <segment>
 <pinref part="N1" gate="G$1" pin="LHDP"/>
-<wire x1="45.72" y1="-2.54" x2="25.4" y2="-2.54" width="0.1524" layer="91"/>
-<label x="27.94" y="-2.54" size="1.778" layer="95"/>
+<wire x1="251.46" y1="-20.32" x2="231.14" y2="-20.32" width="0.1524" layer="91"/>
+<label x="233.68" y="-20.32" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="Q11" gate="A" pin="C"/>
@@ -2465,8 +2465,8 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 <net name="NIXIE_DOT_RIGHT" class="0">
 <segment>
 <pinref part="N1" gate="G$1" pin="RHDP"/>
-<wire x1="45.72" y1="-25.4" x2="25.4" y2="-25.4" width="0.1524" layer="91"/>
-<label x="27.94" y="-25.4" size="1.778" layer="95"/>
+<wire x1="251.46" y1="-43.18" x2="231.14" y2="-43.18" width="0.1524" layer="91"/>
+<label x="233.68" y="-43.18" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="Q12" gate="A" pin="C"/>
