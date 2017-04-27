@@ -14,13 +14,13 @@
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
 <layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="yes"/>
-<layer number="21" name="tPlace" color="7" fill="1" visible="no" active="yes"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="yes"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
-<layer number="25" name="tNames" color="7" fill="1" visible="no" active="yes"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="28" name="bValues" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
@@ -44,7 +44,7 @@
 <layer number="48" name="Document" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="49" name="Reference" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="50" name="dxf" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="yes"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="53" name="tGND_GNDA" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="54" name="bGND_GNDA" color="7" fill="1" visible="yes" active="yes"/>
@@ -193,6 +193,9 @@
 <text x="12.192" y="19.304" size="1.016" layer="25" rot="R180">A</text>
 <text x="12.4968" y="15.875" size="0.8128" layer="25">PB3</text>
 <text x="17.018" y="34.671" size="1.143" layer="25">G</text>
+<text x="18.669" y="18.542" size="0.9652" layer="25" rot="R270">dekuNukem</text>
+<text x="17.399" y="15.113" size="0.9652" layer="25" rot="R270">2017</text>
+<text x="0.508" y="13.843" size="1.778" layer="25" rot="R270">eixie</text>
 </plain>
 <libraries>
 <library name="russian-nixies">
@@ -809,7 +812,7 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <attribute name="VALUE" x="18.844" y="21.551" size="1.016" layer="27"/>
 </element>
 <element name="R9" library="joyAnalog" package="0805" value="" x="18" y="19.635" smashed="yes" rot="R90">
-<attribute name="NAME" x="19.7145" y="19" size="0.8128" layer="25" rot="R90"/>
+<attribute name="NAME" x="19.5875" y="20.397" size="0.8128" layer="25" rot="R90"/>
 <attribute name="VALUE" x="19.397" y="18.619" size="0.4064" layer="27" rot="R90"/>
 <attribute name="VALUE" x="19.397" y="18.619" size="0.4064" layer="27" rot="R90"/>
 </element>
@@ -817,7 +820,7 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <attribute name="VALUE" x="16.725" y="18.051" size="1.016" layer="27"/>
 </element>
 <element name="R10" library="joyAnalog" package="0805" value="" x="16.135" y="16.889" smashed="yes" rot="R180">
-<attribute name="NAME" x="17.278" y="15.9365" size="0.8128" layer="25" rot="R180"/>
+<attribute name="NAME" x="16.897" y="16.0635" size="0.8128" layer="25" rot="R180"/>
 <attribute name="VALUE" x="17.151" y="18.286" size="0.4064" layer="27" rot="R180"/>
 <attribute name="VALUE" x="17.151" y="18.286" size="0.4064" layer="27" rot="R180"/>
 </element>
