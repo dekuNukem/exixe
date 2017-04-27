@@ -2929,8 +2929,6 @@ I2C</description>
 <part name="R14" library="joyAnalog" deviceset="RESISTOR" device="0805-RES"/>
 <part name="R15" library="joyAnalog" deviceset="RESISTOR" device="0805-RES"/>
 <part name="R16" library="joyAnalog" deviceset="RESISTOR" device="0805-RES"/>
-<part name="TP1" library="joyAnalog" deviceset="TEST-POINT" device="3X4" value="TEST-POINT3X4"/>
-<part name="TP2" library="joyAnalog" deviceset="TEST-POINT" device="3X4" value="TEST-POINT3X4"/>
 <part name="TP3" library="joyAnalog" deviceset="TEST-POINT" device="3X4" value="TEST-POINT3X4"/>
 <part name="R17" library="joyAnalog" deviceset="RESISTOR" device="0805-RES"/>
 <part name="R18" library="joyAnalog" deviceset="RESISTOR" device="0805-RES"/>
@@ -3001,15 +2999,13 @@ I2C</description>
 <instance part="R14" gate="G$1" x="495.3" y="0"/>
 <instance part="R15" gate="G$1" x="495.3" y="7.62"/>
 <instance part="R16" gate="G$1" x="495.3" y="-7.62"/>
-<instance part="TP1" gate="G$1" x="279.4" y="55.88" rot="R180"/>
-<instance part="TP2" gate="G$1" x="279.4" y="43.18" rot="R180"/>
 <instance part="TP3" gate="G$1" x="383.54" y="45.72"/>
 <instance part="R17" gate="G$1" x="401.32" y="17.78" rot="R90"/>
 <instance part="R18" gate="G$1" x="408.94" y="7.62" rot="R90"/>
 <instance part="+3V5" gate="G$1" x="401.32" y="25.4" rot="MR0"/>
 <instance part="+3V6" gate="G$1" x="408.94" y="15.24" rot="MR0"/>
 <instance part="C4" gate="G$1" x="109.22" y="81.28"/>
-<instance part="IC1" gate="G$1" x="299.72" y="-10.16"/>
+<instance part="IC1" gate="G$1" x="276.86" y="48.26"/>
 </instances>
 <busses>
 </busses>
@@ -3698,24 +3694,6 @@ I2C</description>
 <pinref part="D1" gate="G$1" pin="RC"/>
 <pinref part="R14" gate="G$1" pin="1"/>
 <wire x1="482.6" y1="0" x2="490.22" y2="0" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$16" class="0">
-<segment>
-<pinref part="TP1" gate="G$1" pin="1"/>
-<wire x1="279.4" y1="55.88" x2="289.56" y2="55.88" width="0.1524" layer="91"/>
-<wire x1="289.56" y1="55.88" x2="289.56" y2="50.8" width="0.1524" layer="91"/>
-<pinref part="U$2" gate="G$1" pin="PF0/OSC_IN"/>
-<wire x1="289.56" y1="50.8" x2="299.72" y2="50.8" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$18" class="0">
-<segment>
-<pinref part="TP2" gate="G$1" pin="1"/>
-<wire x1="279.4" y1="43.18" x2="289.56" y2="43.18" width="0.1524" layer="91"/>
-<wire x1="289.56" y1="43.18" x2="289.56" y2="48.26" width="0.1524" layer="91"/>
-<pinref part="U$2" gate="G$1" pin="PF1/OSC_OUT"/>
-<wire x1="289.56" y1="48.26" x2="299.72" y2="48.26" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
