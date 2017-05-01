@@ -21,3 +21,6 @@ eeprom
 light senser
 
 stm32f042K 14 PWM channels!
+
+SPI 3MHz MAX, 16 byte command
+
