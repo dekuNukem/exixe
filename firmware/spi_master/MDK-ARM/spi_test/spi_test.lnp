@@ -1,0 +1,26 @@
+--cpu Cortex-M0
+"spi_test\startup_stm32f072xb.o"
+"spi_test\main.o"
+"spi_test\stm32f0xx_hal_msp.o"
+"spi_test\stm32f0xx_it.o"
+"spi_test\system_stm32f0xx.o"
+"spi_test\stm32f0xx_hal_flash_ex.o"
+"spi_test\stm32f0xx_hal_spi_ex.o"
+"spi_test\stm32f0xx_hal_cortex.o"
+"spi_test\stm32f0xx_hal_rcc.o"
+"spi_test\stm32f0xx_hal_dma.o"
+"spi_test\stm32f0xx_hal_tim.o"
+"spi_test\stm32f0xx_hal_gpio.o"
+"spi_test\stm32f0xx_hal_rcc_ex.o"
+"spi_test\stm32f0xx_hal.o"
+"spi_test\stm32f0xx_hal_spi.o"
+"spi_test\stm32f0xx_hal_i2c_ex.o"
+"spi_test\stm32f0xx_hal_pwr_ex.o"
+"spi_test\stm32f0xx_hal_flash.o"
+"spi_test\stm32f0xx_hal_pwr.o"
+"spi_test\stm32f0xx_hal_tim_ex.o"
+"spi_test\stm32f0xx_hal_i2c.o"
+--library_type=microlib --strict --scatter "spi_test\spi_test.sct"
+--diag_suppress=L6329 --summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "spi_test.map" -o spi_test\spi_test.axf
