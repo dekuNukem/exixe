@@ -195,6 +195,7 @@
 <text x="18.669" y="18.542" size="0.9652" layer="25" rot="R270">dekuNukem</text>
 <text x="17.399" y="15.113" size="0.9652" layer="25" rot="R270">2017</text>
 <text x="0.508" y="13.843" size="1.778" layer="25" rot="R270">eixie</text>
+<text x="13.97" y="8.255" size="0.8128" layer="26" rot="MR90">PA12</text>
 </plain>
 <libraries>
 <library name="russian-nixies">
@@ -531,6 +532,21 @@ package type ST</description>
 <smd name="8" x="-0.975" y="2.925" dx="0.35" dy="1.2" layer="1"/>
 <text x="-1.625" y="-2.925" size="1.27" layer="25" rot="R90">&gt;NAME</text>
 <text x="2.925" y="-3.25" size="1.27" layer="27" rot="R90">&gt;VALUE</text>
+</package>
+</packages>
+</library>
+<library name="testpad">
+<description>&lt;b&gt;Test Pins/Pads&lt;/b&gt;&lt;p&gt;
+Cream on SMD OFF.&lt;br&gt;
+new: Attribute TP_SIGNAL_NAME&lt;br&gt;
+&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
+<packages>
+<package name="TP13R">
+<description>&lt;b&gt;TEST PAD&lt;/b&gt;</description>
+<smd name="TP" x="0" y="0" dx="1.3" dy="1.3" layer="1" roundness="100" cream="no"/>
+<text x="-0.65" y="0.7" size="1.27" layer="25">&gt;NAME</text>
+<text x="-0.508" y="-0.635" size="0.0254" layer="27">&gt;VALUE</text>
+<text x="0" y="-2.54" size="1" layer="37">&gt;TP_SIGNAL_NAME</text>
 </package>
 </packages>
 </library>
@@ -893,6 +909,9 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <attribute name="NAME" x="6.7945" y="12.446" size="0.8128" layer="26" rot="MR90"/>
 <attribute name="VALUE" x="4.318" y="12.319" size="0.4064" layer="28" rot="MR90"/>
 </element>
+<element name="TP1" library="testpad" package="TP13R" value="PTR1TP13R" x="12.827" y="9.525" smashed="yes" rot="MR0">
+<attribute name="TP_SIGNAL_NAME" value="" x="12.827" y="6.985" size="1" layer="38" rot="MR0"/>
+</element>
 </elements>
 <signals>
 <signal name="+180V">
@@ -934,8 +953,7 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <wire x1="14.9462" y1="5.1562" x2="13.2334" y2="5.1562" width="0.2032" layer="1"/>
 <wire x1="13.2334" y1="5.1562" x2="12.8" y2="5.5896" width="0.2032" layer="1"/>
 <wire x1="12.8" y1="5.5896" x2="12.8" y2="6.0884" width="0.2032" layer="1"/>
-<wire x1="7.239" y1="13.208" x2="7.239" y2="13.335" width="0.2032" layer="1"/>
-<wire x1="7.239" y1="13.335" x2="7.239" y2="14.605" width="0.2032" layer="1"/>
+<wire x1="7.239" y1="13.081" x2="7.239" y2="14.605" width="0.2032" layer="1"/>
 <wire x1="7.239" y1="14.605" x2="7.239" y2="14.6346" width="0.2032" layer="1"/>
 <wire x1="7.239" y1="14.6346" x2="7.2" y2="14.6736" width="0.2032" layer="1"/>
 <wire x1="16.129" y1="18.46" x2="16.15" y2="18.481" width="0.2032" layer="1"/>
@@ -982,11 +1000,10 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <wire x1="9.723" y1="12.009" x2="10.784" y2="13.07" width="0.2032" layer="16"/>
 <wire x1="10.784" y1="13.07" x2="10.784" y2="13.589" width="0.2032" layer="16"/>
 <wire x1="14.097" y1="14.478" x2="12.954" y2="13.335" width="0.2032" layer="1"/>
-<wire x1="12.954" y1="13.335" x2="12.954" y2="11.938" width="0.2032" layer="1"/>
-<wire x1="12.954" y1="11.938" x2="12.192" y2="11.176" width="0.2032" layer="1"/>
-<wire x1="12.192" y1="11.176" x2="9.144" y2="11.176" width="0.2032" layer="1"/>
 <wire x1="9.144" y1="11.176" x2="7.239" y2="13.081" width="0.2032" layer="1"/>
-<wire x1="7.239" y1="13.081" x2="7.239" y2="13.208" width="0.2032" layer="1"/>
+<wire x1="12.954" y1="13.335" x2="12.954" y2="12.192" width="0.2032" layer="1"/>
+<wire x1="12.954" y1="12.192" x2="11.938" y2="11.176" width="0.2032" layer="1"/>
+<wire x1="11.938" y1="11.176" x2="9.144" y2="11.176" width="0.2032" layer="1"/>
 <wire x1="9.779" y1="5.401" x2="9.723" y2="5.33" width="0" layer="19" extent="16-16"/>
 </signal>
 <signal name="N$1">
@@ -1150,13 +1167,11 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 </polygon>
 <contactref element="D1" pad="1"/>
 <via x="7.2644" y="8.7884" extent="1-16" drill="0.5"/>
-<via x="12.573" y="8.255" extent="1-16" drill="0.5"/>
+<via x="12.827" y="8.128" extent="1-16" drill="0.5"/>
 <via x="3.81" y="13.462" extent="1-16" drill="0.5"/>
 <via x="13.208" y="25.781" extent="1-16" drill="0.5"/>
 <wire x1="11.55" y1="26.231" x2="12.758" y2="26.231" width="0.2032" layer="1"/>
 <wire x1="12.758" y1="26.231" x2="13.208" y2="25.781" width="0.2032" layer="1"/>
-<wire x1="12.573" y1="8.255" x2="13.247" y2="7.581" width="0.2032" layer="1"/>
-<wire x1="13.247" y1="7.581" x2="14.2926" y2="7.581" width="0.2032" layer="1"/>
 <wire x1="14.2926" y1="7.581" x2="14.086" y2="7.3744" width="0.2032" layer="1"/>
 <wire x1="14.086" y1="7.3744" x2="14.086" y2="6.096" width="0.2032" layer="1"/>
 <wire x1="3.683" y1="14.721" x2="3.672" y2="14.732" width="0.2032" layer="1"/>
@@ -1199,6 +1214,8 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <wire x1="3.048" y1="5.842" x2="0.7112" y2="5.842" width="0.2032" layer="16"/>
 <wire x1="14.616" y1="5.334" x2="13.843" y2="5.334" width="0.2032" layer="16"/>
 <wire x1="13.843" y1="5.334" x2="13.843" y2="0.3302" width="0.2032" layer="16"/>
+<wire x1="14.2926" y1="7.581" x2="13.374" y2="7.581" width="0.2032" layer="1"/>
+<wire x1="13.374" y1="7.581" x2="12.827" y2="8.128" width="0.2032" layer="1"/>
 </signal>
 <signal name="SPI_SCK">
 <contactref element="JP2" pad="2"/>
@@ -1544,6 +1561,15 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <wire x1="9.073" y1="9.835" x2="8.89" y2="9.652" width="0.2032" layer="16"/>
 <wire x1="8.89" y1="9.652" x2="5.98" y2="9.652" width="0.2032" layer="16"/>
 <wire x1="5.98" y1="9.652" x2="5.969" y2="9.663" width="0.2032" layer="16"/>
+</signal>
+<signal name="N$17">
+<contactref element="U$2" pad="22"/>
+<contactref element="TP1" pad="TP"/>
+<via x="12.827" y="10.795" extent="1-16" drill="0.5"/>
+<wire x1="14.2926" y1="11.581" x2="13.359" y2="11.581" width="0.2032" layer="1"/>
+<wire x1="13.359" y1="11.581" x2="12.827" y2="11.049" width="0.2032" layer="1"/>
+<wire x1="12.827" y1="11.049" x2="12.827" y2="10.795" width="0.2032" layer="1"/>
+<wire x1="12.827" y1="9.525" x2="12.827" y2="10.795" width="0.2032" layer="16"/>
 </signal>
 </signals>
 </board>
