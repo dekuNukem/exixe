@@ -3464,71 +3464,71 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="Q1" library="nixx" deviceset="BF820" device=""/>
 <part name="P+2" library="nixx" deviceset="+180V" device=""/>
 <part name="P+1" library="nixx" deviceset="+180V" device=""/>
-<part name="R1" library="joyAnalog" deviceset="RESISTOR" device="0805-RES"/>
-<part name="C1" library="joyAnalog" deviceset="CAP" device="0805"/>
+<part name="R1" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="4K7"/>
+<part name="C1" library="joyAnalog" deviceset="CAP" device="0805" value="1uF"/>
 <part name="GND1" library="joyAnalog" deviceset="GND" device=""/>
 <part name="Q2" library="nixx" deviceset="BF820" device=""/>
-<part name="R2" library="joyAnalog" deviceset="RESISTOR" device="0805-RES"/>
+<part name="R2" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="4K7"/>
 <part name="GND2" library="joyAnalog" deviceset="GND" device=""/>
 <part name="Q3" library="nixx" deviceset="BF820" device=""/>
-<part name="R3" library="joyAnalog" deviceset="RESISTOR" device="0805-RES"/>
+<part name="R3" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="4K7"/>
 <part name="GND3" library="joyAnalog" deviceset="GND" device=""/>
 <part name="Q4" library="nixx" deviceset="BF820" device=""/>
-<part name="R4" library="joyAnalog" deviceset="RESISTOR" device="0805-RES"/>
+<part name="R4" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="4K7"/>
 <part name="GND4" library="joyAnalog" deviceset="GND" device=""/>
 <part name="Q5" library="nixx" deviceset="BF820" device=""/>
-<part name="R5" library="joyAnalog" deviceset="RESISTOR" device="0805-RES"/>
+<part name="R5" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="4K7"/>
 <part name="GND5" library="joyAnalog" deviceset="GND" device=""/>
 <part name="Q6" library="nixx" deviceset="BF820" device=""/>
-<part name="R6" library="joyAnalog" deviceset="RESISTOR" device="0805-RES"/>
+<part name="R6" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="4K7"/>
 <part name="GND6" library="joyAnalog" deviceset="GND" device=""/>
 <part name="Q7" library="nixx" deviceset="BF820" device=""/>
-<part name="R7" library="joyAnalog" deviceset="RESISTOR" device="0805-RES"/>
+<part name="R7" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="4K7"/>
 <part name="GND7" library="joyAnalog" deviceset="GND" device=""/>
 <part name="Q8" library="nixx" deviceset="BF820" device=""/>
-<part name="R8" library="joyAnalog" deviceset="RESISTOR" device="0805-RES"/>
+<part name="R8" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="4K7"/>
 <part name="GND8" library="joyAnalog" deviceset="GND" device=""/>
 <part name="Q9" library="nixx" deviceset="BF820" device=""/>
-<part name="R9" library="joyAnalog" deviceset="RESISTOR" device="0805-RES"/>
+<part name="R9" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="4K7"/>
 <part name="GND9" library="joyAnalog" deviceset="GND" device=""/>
 <part name="Q10" library="nixx" deviceset="BF820" device=""/>
-<part name="R10" library="joyAnalog" deviceset="RESISTOR" device="0805-RES"/>
+<part name="R10" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="4K7"/>
 <part name="GND10" library="joyAnalog" deviceset="GND" device=""/>
 <part name="Q11" library="nixx" deviceset="BF820" device=""/>
-<part name="R11" library="joyAnalog" deviceset="RESISTOR" device="0805-RES"/>
+<part name="R11" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="4K7"/>
 <part name="GND11" library="joyAnalog" deviceset="GND" device=""/>
 <part name="Q12" library="nixx" deviceset="BF820" device=""/>
-<part name="R12" library="joyAnalog" deviceset="RESISTOR" device="0805-RES"/>
+<part name="R12" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="4K7"/>
 <part name="GND12" library="joyAnalog" deviceset="GND" device=""/>
 <part name="GND13" library="joyAnalog" deviceset="GND" device=""/>
 <part name="+3V1" library="joyAnalog" deviceset="+3V3" device=""/>
-<part name="C2" library="joyAnalog" deviceset="CAP" device="0805"/>
-<part name="C3" library="joyAnalog" deviceset="CAP" device="0805"/>
+<part name="C2" library="joyAnalog" deviceset="CAP" device="0805" value="100nF"/>
+<part name="C3" library="joyAnalog" deviceset="CAP" device="0805" value="100nF"/>
 <part name="GND14" library="joyAnalog" deviceset="GND" device=""/>
 <part name="+3V2" library="joyAnalog" deviceset="+3V3" device=""/>
 <part name="JP1" library="nixx" deviceset="PINHD-1X7" device=""/>
 <part name="GND15" library="joyAnalog" deviceset="GND" device=""/>
 <part name="+3V3" library="joyAnalog" deviceset="+3V3" device=""/>
 <part name="D1" library="nixx" deviceset="RGB_LED_CA" device="-150141M173100-R&amp;G&amp;B"/>
-<part name="R13" library="joyAnalog" deviceset="RESISTOR" device="0805-RES"/>
+<part name="R13" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="10K"/>
 <part name="+3V4" library="joyAnalog" deviceset="+3V3" device=""/>
-<part name="R14" library="joyAnalog" deviceset="RESISTOR" device="0805-RES"/>
-<part name="R15" library="joyAnalog" deviceset="RESISTOR" device="0805-RES"/>
-<part name="R16" library="joyAnalog" deviceset="RESISTOR" device="0805-RES"/>
-<part name="R17" library="joyAnalog" deviceset="RESISTOR" device="0805-RES"/>
-<part name="R18" library="joyAnalog" deviceset="RESISTOR" device="0805-RES"/>
+<part name="R14" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="470"/>
+<part name="R15" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="470"/>
+<part name="R16" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="0"/>
+<part name="R17" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="4K7"/>
+<part name="R18" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="4K7"/>
 <part name="+3V5" library="joyAnalog" deviceset="+3V3" device=""/>
 <part name="+3V6" library="joyAnalog" deviceset="+3V3" device=""/>
-<part name="C4" library="joyAnalog" deviceset="CAP" device="0805"/>
+<part name="C4" library="joyAnalog" deviceset="CAP" device="0805" value="100nF"/>
 <part name="IC1" library="joyAnalog" deviceset="24*" device="ST" technology="C64"/>
-<part name="R19" library="joyAnalog" deviceset="RESISTOR" device="0805-RES"/>
-<part name="R20" library="joyAnalog" deviceset="RESISTOR" device="0805-RES"/>
+<part name="R19" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="4K7"/>
+<part name="R20" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="4K7"/>
 <part name="+3V7" library="joyAnalog" deviceset="+3V3" device=""/>
 <part name="+3V8" library="joyAnalog" deviceset="+3V3" device=""/>
 <part name="GND16" library="joyAnalog" deviceset="GND" device=""/>
 <part name="+3V9" library="joyAnalog" deviceset="+3V3" device=""/>
 <part name="TP1" library="testpad" deviceset="PTR1" device="TP13R" value="PTR1TP13R"/>
-<part name="R21" library="joyAnalog" deviceset="RESISTOR" device="0805-RES"/>
+<part name="R21" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="10K"/>
 <part name="GND17" library="joyAnalog" deviceset="GND" device=""/>
 </parts>
 <sheets>

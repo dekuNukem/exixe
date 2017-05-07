@@ -31,3 +31,6 @@ SWD cross talk in jumper wire
 
 rg 470ohm
 b 0ohm
+
+htim14.Instance->CCR1 = pwm_value;
+pwm_value must be smaller than counter period
