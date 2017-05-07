@@ -41,8 +41,8 @@
 
 /* Private define ------------------------------------------------------------*/
 
-#define PWM_GREEN_Pin GPIO_PIN_4
-#define PWM_GREEN_GPIO_Port GPIOA
+#define LEFT_DOT_Pin GPIO_PIN_3
+#define LEFT_DOT_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
 
