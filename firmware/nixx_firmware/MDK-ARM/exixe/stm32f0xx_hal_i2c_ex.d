@@ -29,5 +29,7 @@ exixe\stm32f0xx_hal_i2c_ex.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_
 exixe\stm32f0xx_hal_i2c_ex.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_pwr_ex.h
 exixe\stm32f0xx_hal_i2c_ex.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi.h
 exixe\stm32f0xx_hal_i2c_ex.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi_ex.h
+exixe\stm32f0xx_hal_i2c_ex.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim.h
+exixe\stm32f0xx_hal_i2c_ex.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim_ex.h
 exixe\stm32f0xx_hal_i2c_ex.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart.h
 exixe\stm32f0xx_hal_i2c_ex.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart_ex.h
