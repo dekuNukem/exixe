@@ -3528,6 +3528,8 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="GND16" library="joyAnalog" deviceset="GND" device=""/>
 <part name="+3V9" library="joyAnalog" deviceset="+3V3" device=""/>
 <part name="TP1" library="testpad" deviceset="PTR1" device="TP13R" value="PTR1TP13R"/>
+<part name="R21" library="joyAnalog" deviceset="RESISTOR" device="0805-RES"/>
+<part name="GND17" library="joyAnalog" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -3604,6 +3606,8 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <instance part="GND16" gate="1" x="284.48" y="30.48"/>
 <instance part="+3V9" gate="G$1" x="284.48" y="71.12"/>
 <instance part="TP1" gate="G$1" x="365.76" y="63.5" rot="R90"/>
+<instance part="R21" gate="G$1" x="347.98" y="27.94" rot="R90"/>
+<instance part="GND17" gate="1" x="347.98" y="20.32"/>
 </instances>
 <busses>
 </busses>
@@ -3717,6 +3721,10 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <junction x="261.62" y="45.72"/>
 <wire x1="261.62" y1="38.1" x2="284.48" y2="38.1" width="0.1524" layer="91"/>
 <junction x="284.48" y="38.1"/>
+</segment>
+<segment>
+<pinref part="R21" gate="G$1" pin="1"/>
+<pinref part="GND17" gate="1" pin="GND"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -4141,9 +4149,12 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <label x="193.04" y="22.86" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="355.6" y1="33.02" x2="340.36" y2="33.02" width="0.1524" layer="91"/>
+<wire x1="355.6" y1="33.02" x2="347.98" y2="33.02" width="0.1524" layer="91"/>
 <pinref part="U$2" gate="G$1" pin="PB8"/>
 <label x="342.9" y="33.02" size="1.778" layer="95"/>
+<pinref part="R21" gate="G$1" pin="2"/>
+<wire x1="347.98" y1="33.02" x2="340.36" y2="33.02" width="0.1524" layer="91"/>
+<junction x="347.98" y="33.02"/>
 </segment>
 </net>
 <net name="STM_6" class="0">

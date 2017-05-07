@@ -25,3 +25,9 @@ stm32f042K 14 PWM channels!
 SPI 3MHz MAX, 16 byte command
 
 USB C connector
+
+disable boot0 in option byte 
+SWD cross talk in jumper wire
+
+rg 470ohm
+b 0ohm

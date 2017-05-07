@@ -912,6 +912,7 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <element name="TP1" library="testpad" package="TP13R" value="PTR1TP13R" x="12.827" y="9.525" smashed="yes" rot="MR0">
 <attribute name="TP_SIGNAL_NAME" value="" x="12.827" y="6.985" size="1" layer="38" rot="MR0"/>
 </element>
+<element name="R21" library="joyAnalog" package="0805" value="" x="-6.731" y="-3.429"/>
 </elements>
 <signals>
 <signal name="+180V">
@@ -1004,7 +1005,23 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <wire x1="12.954" y1="13.335" x2="12.954" y2="12.192" width="0.2032" layer="1"/>
 <wire x1="12.954" y1="12.192" x2="11.938" y2="11.176" width="0.2032" layer="1"/>
 <wire x1="11.938" y1="11.176" x2="9.144" y2="11.176" width="0.2032" layer="1"/>
-<wire x1="9.779" y1="5.401" x2="9.723" y2="5.33" width="0" layer="19" extent="16-16"/>
+<contactref element="R21" pad="1"/>
+<wire x1="15.0546" y1="37.7508" x2="17.5946" y2="37.7508" width="0" layer="19" extent="1-1"/>
+<wire x1="13.461" y1="33.666" x2="15.0546" y2="37.7508" width="0" layer="19" extent="1-1"/>
+<wire x1="12.584" y1="29.352" x2="13.461" y2="33.666" width="0" layer="19" extent="1-1"/>
+<wire x1="9.667" y1="27.675" x2="12.584" y2="29.352" width="0" layer="19" extent="1-1"/>
+<wire x1="10.653" y1="22.617" x2="9.667" y2="27.675" width="0" layer="19" extent="1-1"/>
+<wire x1="9.723" y1="11.18" x2="9.144" y2="11.176" width="0" layer="19" extent="1-16"/>
+<wire x1="9.723" y1="5.33" x2="9.779" y2="5.401" width="0" layer="19" extent="16-16"/>
+<wire x1="5.472" y1="14.732" x2="7.2" y2="14.6736" width="0" layer="19" extent="1-1"/>
+<wire x1="6.208" y1="23.252" x2="7.874" y2="22.098" width="0" layer="19" extent="1-1"/>
+<wire x1="5.15" y1="18.481" x2="7.366" y2="17.907" width="0" layer="19" extent="1-1"/>
+<wire x1="18.269" y1="21.981" x2="16.15" y2="18.481" width="0" layer="19" extent="1-1"/>
+<wire x1="7.366" y1="32.512" x2="9.667" y2="27.675" width="0" layer="19" extent="1-1"/>
+<wire x1="1.27" y1="31.612" x2="3.926" y2="31.274" width="0" layer="19" extent="1-1"/>
+<wire x1="1.6" y1="28.731" x2="1.27" y2="31.612" width="0" layer="19" extent="1-1"/>
+<wire x1="18.4" y1="30.031" x2="12.584" y2="29.352" width="0" layer="19" extent="1-1"/>
+<wire x1="-7.631" y1="-3.429" x2="8.423" y2="5.33" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="N$1">
 <contactref element="Q1" pad="1"/>
@@ -1351,6 +1368,8 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <wire x1="9.017" y1="20.447" x2="8.636" y2="20.066" width="0.2032" layer="1"/>
 <wire x1="8.636" y1="20.066" x2="8.636" y2="18.542" width="0.2032" layer="1"/>
 <wire x1="8.636" y1="18.542" x2="8.001" y2="17.907" width="0.2032" layer="1"/>
+<contactref element="R21" pad="2"/>
+<wire x1="-5.831" y1="-3.429" x2="8.001" y2="14.6746" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="STM_6">
 <contactref element="R6" pad="1"/>
