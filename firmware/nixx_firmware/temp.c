@@ -29,5 +29,14 @@ HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_0|GPIO_PIN_1);
 
 printf("hello\n");
     HAL_Delay(1);
+    count++;
+    if(count > 1000)
+      count = 0;
     htim14.Instance->CCR1 = count;
-    count+=10;
+     HAL_Delay(5);
+    count++;
+    if(count > 127)
+      count = 0;
+    htim14.Instance->CCR1 = count;
+    htim3.Instance->CCR3 = count;
+    htim3.Instance->CCR4 = count;

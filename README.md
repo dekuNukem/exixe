@@ -34,3 +34,12 @@ b 0ohm
 
 htim14.Instance->CCR1 = pwm_value;
 pwm_value must be smaller than counter period
+
+3528 rgb led
+
+http://www.mouser.co.uk/ProductDetail/Wurth-Electronics/150141M173100/?qs=sGAEpiMZZMuCm2JlHBGeflo8zLeA%2ffbJXCK04oeb2W5E0T0m7VNM2Q%3d%3d
+
+Prescaler 1920
+period 127
+
+194Hz

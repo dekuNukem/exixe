@@ -108,6 +108,7 @@ int main(void)
   		spi_send(spi_buf, 16);
       for (int i = 0; i < 0xff; ++i)
         count++;
+      HAL_Delay(500);
   	}
   }
   /* USER CODE END 3 */
