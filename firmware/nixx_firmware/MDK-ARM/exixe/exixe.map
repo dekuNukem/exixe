@@ -1,4 +1,4 @@
-Component: ARM Compiler 5.06 update 4 (build 422) Tool: armlink [4d35d2]
+Component: ARM Compiler 5.06 update 1 (build 61) Tool: armlink [4d35a8]
 
 ==============================================================================
 
@@ -2124,26 +2124,26 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-      1612        134          0          0        624       8814   main.o
-        88         38        192          0       1024        644   startup_stm32f042x6.o
+      1612        134          0          0        624       8810   main.o
+        88         38        192          0       1024        640   startup_stm32f042x6.o
        116         18          0          4          0       3567   stm32f0xx_hal.o
-       178         28          0          0          0      10495   stm32f0xx_hal_cortex.o
+       178         28          0          0          0      10483   stm32f0xx_hal_cortex.o
         72          0          0          0          0       1091   stm32f0xx_hal_dma.o
-       328         22          0          0          0       2232   stm32f0xx_hal_gpio.o
+       328         22          0          0          0       2228   stm32f0xx_hal_gpio.o
        180          4          0          0          0       2915   stm32f0xx_hal_i2c.o
-       146          0          0          0          0       1895   stm32f0xx_hal_i2c_ex.o
-       556         90          0          0          0       4166   stm32f0xx_hal_msp.o
-      1504        102          0          0          0       5149   stm32f0xx_hal_rcc.o
-       268         14          0          0          0     467740   stm32f0xx_hal_rcc_ex.o
-      1788         40          0          0          0      13881   stm32f0xx_hal_spi.o
-      1360         82          0          0          0      12493   stm32f0xx_hal_tim.o
-       168          0          0          0          0       2052   stm32f0xx_hal_tim_ex.o
-      1016         32          0          0          0       5943   stm32f0xx_hal_uart.o
-        36          6          0          0          0       2509   stm32f0xx_it.o
+       146          0          0          0          0       1883   stm32f0xx_hal_i2c_ex.o
+       556         90          0          0          0       4154   stm32f0xx_hal_msp.o
+      1504        102          0          0          0       5141   stm32f0xx_hal_rcc.o
+       268         14          0          0          0     467720   stm32f0xx_hal_rcc_ex.o
+      1788         40          0          0          0      13869   stm32f0xx_hal_spi.o
+      1360         82          0          0          0      12457   stm32f0xx_hal_tim.o
+       168          0          0          0          0       2044   stm32f0xx_hal_tim_ex.o
+      1016         32          0          0          0       5939   stm32f0xx_hal_uart.o
+        36          6          0          0          0       2505   stm32f0xx_it.o
         92         14         24          4          0       1123   system_stm32f0xx.o
 
     ----------------------------------------------------------------------
-      9536        624        248          8       1652     546709   Object Totals
+      9536        624        248          8       1652     546569   Object Totals
          0          0         32          0          0          0   (incl. Generated)
         28          0          0          0          4          0   (incl. Padding)
 
@@ -2188,8 +2188,8 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     10596        692        248         12       1652     543253   Grand Totals
-     10596        692        248         12       1652     543253   ELF Image Totals
+     10596        692        248         12       1652     543113   Grand Totals
+     10596        692        248         12       1652     543113   ELF Image Totals
      10596        692        248         12          0          0   ROM Totals
 
 ==============================================================================

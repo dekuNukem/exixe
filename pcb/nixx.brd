@@ -20,8 +20,8 @@
 <layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
@@ -196,6 +196,8 @@
 <text x="17.399" y="15.113" size="0.9652" layer="25" font="vector" rot="R270">2017</text>
 <text x="0.889" y="15.367" size="1.778" layer="25" font="vector" rot="R270">eixie</text>
 <text x="13.97" y="8.255" size="0.8128" layer="26" font="vector" rot="MR90">PA12</text>
+<text x="6.858" y="10.287" size="0.8128" layer="26" font="vector" rot="MR0">PF1</text>
+<text x="8.509" y="11.938" size="0.8128" layer="26" font="vector" rot="MR0">PF0</text>
 </plain>
 <libraries>
 <library name="russian-nixies">
@@ -841,7 +843,7 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <attribute name="NAME" x="17.3863" y="8.2804" size="0.8128" layer="25" font="vector" rot="R90"/>
 </element>
 <element name="R17" library="joyAnalog" package="0805" value="4K7" x="5.588" y="6.223" smashed="yes" rot="MR180">
-<attribute name="NAME" x="4.2164" y="5.2197" size="0.8128" layer="26" font="vector" rot="MR180"/>
+<attribute name="NAME" x="4.4704" y="5.2197" size="0.8128" layer="26" font="vector" rot="MR180"/>
 </element>
 <element name="R18" library="joyAnalog" package="0805" value="4K7" x="13.716" y="5.334" smashed="yes" rot="MR180">
 <attribute name="NAME" x="12.4206" y="6.9977" size="0.8128" layer="26" font="vector" rot="MR180"/>
@@ -856,10 +858,10 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <attribute name="MF" value="" x="9.398" y="8.255" size="1.778" layer="28" rot="MR0" display="off"/>
 </element>
 <element name="R19" library="joyAnalog" package="0805" value="4K7" x="5.969" y="8.763" smashed="yes" rot="MR270">
-<attribute name="NAME" x="5.0165" y="9.398" size="0.8128" layer="26" font="vector" rot="MR270"/>
+<attribute name="NAME" x="2.921" y="8.3185" size="0.8128" layer="26" font="vector" rot="MR180"/>
 </element>
 <element name="R20" library="joyAnalog" package="0805" value="4K7" x="5.715" y="13.335" smashed="yes" rot="MR90">
-<attribute name="NAME" x="6.7945" y="12.319" size="0.8128" layer="26" font="vector" rot="MR90"/>
+<attribute name="NAME" x="6.731" y="14.7955" size="0.8128" layer="26" font="vector" rot="MR0"/>
 </element>
 <element name="TP1" library="testpad" package="TP13R" value="PTR1TP13R" x="12.827" y="9.525" smashed="yes" rot="MR0">
 <attribute name="TP_SIGNAL_NAME" value="" x="12.827" y="6.985" size="1" layer="38" rot="MR0"/>
