@@ -102,16 +102,14 @@ int main(void)
   /* USER CODE BEGIN 3 */
   	if(HAL_GPIO_ReadPin(USER_BUTTON_GPIO_Port, USER_BUTTON_Pin) == GPIO_PIN_RESET)
   	{
-      count += 16;
+      count++;
       if(count > 127)
         count = 0;
-
       for (int i = 1; i < 16; ++i)
         spi_buf[i] = count | 0x80;
-
       HAL_GPIO_TogglePin(USER_LED_GPIO_Port, USER_LED_Pin);
       spi_send(spi_buf, 16);
-      HAL_Delay(250);
+      HAL_Delay(5);
   	}
   }
   /* USER CODE END 3 */
@@ -176,7 +174,7 @@ static void MX_SPI1_Init(void)
   hspi1.Init.CLKPolarity = SPI_POLARITY_LOW;
   hspi1.Init.CLKPhase = SPI_PHASE_1EDGE;
   hspi1.Init.NSS = SPI_NSS_SOFT;
-  hspi1.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_16;
+  hspi1.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_8;
   hspi1.Init.FirstBit = SPI_FIRSTBIT_MSB;
   hspi1.Init.TIMode = SPI_TIMODE_DISABLE;
   hspi1.Init.CRCCalculation = SPI_CRCCALCULATION_DISABLE;

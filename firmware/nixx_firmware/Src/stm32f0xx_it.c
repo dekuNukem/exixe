@@ -40,7 +40,7 @@
 /* USER CODE END 0 */
 
 /* External variables --------------------------------------------------------*/
-extern SPI_HandleTypeDef hspi1;
+extern DMA_HandleTypeDef hdma_spi1_rx;
 
 /******************************************************************************/
 /*            Cortex-M0 Processor Interruption and Exception Handlers         */ 
@@ -124,17 +124,16 @@ void SysTick_Handler(void)
 /******************************************************************************/
 
 /**
-* @brief This function handles SPI1 global interrupt.
+* @brief This function handles DMA1 channel 2 and 3 interrupts.
 */
-void SPI1_IRQHandler(void)
+void DMA1_Channel2_3_IRQHandler(void)
 {
-  /* USER CODE BEGIN SPI1_IRQn 0 */
+  /* USER CODE BEGIN DMA1_Channel2_3_IRQn 0 */
+  /* USER CODE END DMA1_Channel2_3_IRQn 0 */
+  HAL_DMA_IRQHandler(&hdma_spi1_rx);
+  /* USER CODE BEGIN DMA1_Channel2_3_IRQn 1 */
 
-  /* USER CODE END SPI1_IRQn 0 */
-  HAL_SPI_IRQHandler(&hspi1);
-  /* USER CODE BEGIN SPI1_IRQn 1 */
-
-  /* USER CODE END SPI1_IRQn 1 */
+  /* USER CODE END DMA1_Channel2_3_IRQn 1 */
 }
 
 /* USER CODE BEGIN 1 */

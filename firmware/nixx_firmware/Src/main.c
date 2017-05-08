@@ -42,6 +42,7 @@
 
 /* Private variables ---------------------------------------------------------*/
 SPI_HandleTypeDef hspi1;
+DMA_HandleTypeDef hdma_spi1_rx;
 
 TIM_HandleTypeDef htim1;
 TIM_HandleTypeDef htim2;
@@ -60,6 +61,7 @@ UART_HandleTypeDef huart1;
 void SystemClock_Config(void);
 void Error_Handler(void);
 static void MX_GPIO_Init(void);
+static void MX_DMA_Init(void);
 static void MX_USART1_UART_Init(void);
 static void MX_SPI1_Init(void);
 static void MX_TIM14_Init(void);
@@ -105,6 +107,7 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
+  MX_DMA_Init();
   MX_USART1_UART_Init();
   MX_SPI1_Init();
   MX_TIM14_Init();
@@ -127,10 +130,7 @@ int main(void)
 
   /* USER CODE BEGIN 3 */
   	if(HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_15) == GPIO_PIN_SET)
-  	{
-    	// HAL_SPI_TransmitReceive_IT(&hspi1, pwm_stats, spi_recv_buf, SPI_BUF_SIZE);
-    	HAL_SPI_Receive_IT(&hspi1, spi_recv_buf, SPI_BUF_SIZE);
-  	}
+  		HAL_SPI_Receive_DMA(&hspi1, spi_recv_buf, SPI_BUF_SIZE);
   }
   /* USER CODE END 3 */
 
@@ -531,6 +531,21 @@ static void MX_USART1_UART_Init(void)
 
 }
 
+/** 
+  * Enable DMA controller clock
+  */
+static void MX_DMA_Init(void) 
+{
+  /* DMA controller clock enable */
+  __HAL_RCC_DMA1_CLK_ENABLE();
+
+  /* DMA interrupt init */
+  /* DMA1_Channel2_3_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(DMA1_Channel2_3_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(DMA1_Channel2_3_IRQn);
+
+}
+
 /** Configure pins as 
         * Analog 
         * Input 
@@ -563,10 +578,9 @@ static void MX_GPIO_Init(void)
 void HAL_SPI_RxCpltCallback(SPI_HandleTypeDef *hspi)
 {
   if(spi_recv_buf[0] != INCOMING_SPI_CMD_HEADER)
-  	return;
-	set_pwm(spi_recv_buf);
-	// HAL_SPI_TransmitReceive_IT(&hspi1, pwm_stats, spi_recv_buf, SPI_BUF_SIZE);
-	HAL_SPI_Receive_IT(&hspi1, spi_recv_buf, SPI_BUF_SIZE);
+    return;
+  set_pwm(spi_recv_buf);
+  HAL_SPI_Receive_DMA(&hspi1, spi_recv_buf, SPI_BUF_SIZE);
 }
 /* USER CODE END 4 */
 
