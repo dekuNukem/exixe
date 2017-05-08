@@ -35,3 +35,4 @@ exixe\main.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart.h
 exixe\main.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart_ex.h
 exixe\main.o: ../Inc/shared.h
 exixe\main.o: ../Inc/helpers.h
+exixe\main.o: ../Inc/delay_us.h

@@ -37,6 +37,7 @@
 /* USER CODE BEGIN Includes */
 #include "shared.h"
 #include "helpers.h"
+#include "delay_us.h"
 
 /* USER CODE END Includes */
 
@@ -49,6 +50,7 @@ TIM_HandleTypeDef htim2;
 TIM_HandleTypeDef htim3;
 TIM_HandleTypeDef htim14;
 TIM_HandleTypeDef htim16;
+TIM_HandleTypeDef htim17;
 
 UART_HandleTypeDef huart1;
 
@@ -69,6 +71,7 @@ static void MX_TIM3_Init(void);
 static void MX_TIM16_Init(void);
 static void MX_TIM1_Init(void);
 static void MX_TIM2_Init(void);
+static void MX_TIM17_Init(void);
                                     
 void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
                                 
@@ -115,6 +118,7 @@ int main(void)
   MX_TIM16_Init();
   MX_TIM1_Init();
   MX_TIM2_Init();
+  MX_TIM17_Init();
 
   /* USER CODE BEGIN 2 */
 
@@ -123,14 +127,15 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   printf("started\n");
+  delay_us_init(&htim17);
   timer_init();
   while (1)
   {
   /* USER CODE END WHILE */
 
   /* USER CODE BEGIN 3 */
-  	if(HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_15) == GPIO_PIN_SET)
-  		HAL_SPI_Receive_DMA(&hspi1, spi_recv_buf, SPI_BUF_SIZE);
+    HAL_GPIO_TogglePin(LEFT_DOT_GPIO_Port, LEFT_DOT_Pin);
+    delay_us(2500);
   }
   /* USER CODE END 3 */
 
@@ -510,6 +515,24 @@ static void MX_TIM16_Init(void)
 
 }
 
+/* TIM17 init function */
+static void MX_TIM17_Init(void)
+{
+
+  htim17.Instance = TIM17;
+  htim17.Init.Prescaler = 47;
+  htim17.Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim17.Init.Period = 65535;
+  htim17.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+  htim17.Init.RepetitionCounter = 0;
+  htim17.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  if (HAL_TIM_Base_Init(&htim17) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
+}
+
 /* USART1 init function */
 static void MX_USART1_UART_Init(void)
 {
@@ -581,6 +604,11 @@ void HAL_SPI_RxCpltCallback(SPI_HandleTypeDef *hspi)
     return;
   set_pwm(spi_recv_buf);
   HAL_SPI_Receive_DMA(&hspi1, spi_recv_buf, SPI_BUF_SIZE);
+}
+
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+{
+  printf("k\n");
 }
 /* USER CODE END 4 */
 

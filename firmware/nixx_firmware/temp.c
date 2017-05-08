@@ -84,3 +84,6 @@ void HAL_SPI_TxRxCpltCallback(SPI_HandleTypeDef *hspi)
   for (int i = 0; i < SPI_BUF_SIZE; ++i)
     printf("%x\n", spi_recv_buf[i]);
 }
+
+if(HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_15) == GPIO_PIN_SET)
+      HAL_SPI_Receive_DMA(&hspi1, spi_recv_buf, SPI_BUF_SIZE);
