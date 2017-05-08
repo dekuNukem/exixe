@@ -77,7 +77,11 @@ void set_pwm(uint8_t pwm_arr[SPI_BUF_SIZE])
     htim1.Instance->CCR2 = pwm_arr[13] & 0x7f; // 9
     pwm_stats[13] = pwm_arr[13];
   }
-  // pwm_arr[14] is for left dot
+  if(pwm_arr[14] & 0x80)
+  {
+    pwm_stats[14] = pwm_arr[13] & 0x7f; // left dot
+    pwm_stats[14] > 125 ? pwm_stats[14] = 125 : pwm_stats[14];
+  }
   if(pwm_arr[15] & 0x80)
   {
     htim16.Instance->CCR1 = pwm_arr[15] & 0x7f; // right dot

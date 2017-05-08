@@ -134,8 +134,13 @@ int main(void)
   /* USER CODE END WHILE */
 
   /* USER CODE BEGIN 3 */
-    HAL_GPIO_TogglePin(LEFT_DOT_GPIO_Port, LEFT_DOT_Pin);
-    delay_us(2500);
+    if(HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_15) == GPIO_PIN_SET)
+      HAL_SPI_Receive_DMA(&hspi1, spi_recv_buf, SPI_BUF_SIZE);
+
+    HAL_GPIO_WritePin(LEFT_DOT_GPIO_Port, LEFT_DOT_Pin, GPIO_PIN_SET);
+    delay_us(pwm_stats[14]);
+    HAL_GPIO_WritePin(LEFT_DOT_GPIO_Port, LEFT_DOT_Pin, GPIO_PIN_RESET);
+    delay_us(125 - pwm_stats[14]);
   }
   /* USER CODE END 3 */
 
@@ -520,7 +525,7 @@ static void MX_TIM17_Init(void)
 {
 
   htim17.Instance = TIM17;
-  htim17.Init.Prescaler = 47;
+  htim17.Init.Prescaler = 1920;
   htim17.Init.CounterMode = TIM_COUNTERMODE_UP;
   htim17.Init.Period = 65535;
   htim17.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;

@@ -69,7 +69,6 @@ NVIC.NonMaskableInt_IRQn=true\:0\:0\:false\:false\:true
 NVIC.PendSV_IRQn=true\:0\:0\:false\:false\:true
 NVIC.SVC_IRQn=true\:0\:0\:false\:false\:true
 NVIC.SysTick_IRQn=true\:0\:0\:false\:false\:true
-NVIC.TIM17_IRQn=true\:3\:0\:true\:false\:true
 PA0.Signal=S_TIM2_CH1_ETR
 PA1.Signal=S_TIM2_CH2
 PA10.Signal=S_TIM1_CH3
