@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.7.0">
+<eagle version="8.1.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -32,20 +32,20 @@
 <layer number="36" name="bGlue" color="7" fill="5" visible="no" active="yes"/>
 <layer number="37" name="tTest" color="7" fill="1" visible="no" active="yes"/>
 <layer number="38" name="bTest" color="7" fill="1" visible="no" active="yes"/>
-<layer number="39" name="tKeepout" color="4" fill="11" visible="yes" active="yes"/>
-<layer number="40" name="bKeepout" color="1" fill="11" visible="yes" active="yes"/>
-<layer number="41" name="tRestrict" color="4" fill="10" visible="yes" active="yes"/>
-<layer number="42" name="bRestrict" color="1" fill="10" visible="yes" active="yes"/>
-<layer number="43" name="vRestrict" color="2" fill="10" visible="yes" active="yes"/>
+<layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="yes"/>
+<layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="yes"/>
+<layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="yes"/>
+<layer number="42" name="bRestrict" color="1" fill="10" visible="no" active="yes"/>
+<layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="yes"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
 <layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
 <layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
-<layer number="48" name="Document" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="49" name="Reference" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="48" name="Document" color="7" fill="1" visible="no" active="yes"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="no" active="yes"/>
 <layer number="50" name="dxf" color="7" fill="1" visible="no" active="yes"/>
-<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="yes"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="no" active="yes"/>
 <layer number="53" name="tGND_GNDA" color="7" fill="1" visible="no" active="yes"/>
 <layer number="54" name="bGND_GNDA" color="7" fill="1" visible="no" active="yes"/>
 <layer number="56" name="wert" color="7" fill="1" visible="no" active="yes"/>
@@ -143,14 +143,14 @@
 <library>
 <packages>
 <package name="EXIXE_PAC">
-<wire x1="0" y1="38.095" x2="0" y2="1.905" width="0" layer="20"/>
-<wire x1="0" y1="1.905" x2="1.905" y2="0" width="0" layer="20" curve="90"/>
-<wire x1="1.905" y1="0" x2="18.095" y2="0" width="0" layer="20"/>
-<wire x1="18.095" y1="0" x2="20" y2="1.905" width="0" layer="20" curve="90"/>
-<wire x1="20" y1="1.905" x2="20" y2="38.095" width="0" layer="20"/>
-<wire x1="20" y1="38.095" x2="18.095" y2="40" width="0" layer="20" curve="90"/>
-<wire x1="18.095" y1="40" x2="1.905" y2="40" width="0" layer="20"/>
-<wire x1="1.905" y1="40" x2="0" y2="38.095" width="0" layer="20" curve="90"/>
+<wire x1="0" y1="38.095" x2="0" y2="1.905" width="0.127" layer="21"/>
+<wire x1="0" y1="1.905" x2="1.905" y2="0" width="0.127" layer="21" curve="90"/>
+<wire x1="1.905" y1="0" x2="18.095" y2="0" width="0.127" layer="21"/>
+<wire x1="18.095" y1="0" x2="20" y2="1.905" width="0.127" layer="21" curve="90"/>
+<wire x1="20" y1="1.905" x2="20" y2="38.095" width="0.127" layer="21"/>
+<wire x1="20" y1="38.095" x2="18.095" y2="40" width="0.127" layer="21" curve="90"/>
+<wire x1="18.095" y1="40" x2="1.905" y2="40" width="0.127" layer="21"/>
+<wire x1="1.905" y1="40" x2="0" y2="38.095" width="0.127" layer="21" curve="90"/>
 <pad name="RST" x="2.38" y="2.181" drill="1.016" shape="long" rot="R90"/>
 <pad name="SCK" x="4.92" y="2.181" drill="1.016" shape="long" rot="R90"/>
 <pad name="MISO" x="7.46" y="2.181" drill="1.016" shape="long" rot="R90"/>
@@ -164,12 +164,12 @@
 <pad name="TX" x="12.5146" y="37.7508" drill="1.016" shape="long" rot="R90"/>
 <pad name="GND" x="15.0546" y="37.7508" drill="1.016" shape="long" rot="R90"/>
 <pad name="GND2" x="17.5946" y="37.7508" drill="1.016" shape="long" rot="R90"/>
-<text x="1.778" y="36.068" size="1.27" layer="21" rot="R270">HV</text>
-<text x="6.985" y="36.068" size="1.27" layer="21" rot="R270">3V</text>
-<text x="9.398" y="36.068" size="1.27" layer="21" rot="R270">RX</text>
-<text x="11.938" y="36.068" size="1.27" layer="21" rot="R270">TX</text>
-<text x="14.351" y="36.068" size="1.27" layer="21" rot="R270">GND</text>
-<text x="16.891" y="36.068" size="1.27" layer="21" rot="R270">GND</text>
+<text x="1.27" y="34.671" size="1.27" layer="21">HV</text>
+<text x="6.35" y="34.671" size="1.27" layer="21">3V</text>
+<text x="9.017" y="34.671" size="1.27" layer="21">RX</text>
+<text x="11.557" y="34.671" size="1.27" layer="21">TX</text>
+<text x="14.605" y="34.671" size="1.27" layer="21">G</text>
+<text x="17.145" y="34.671" size="1.27" layer="21">G</text>
 <text x="3.048" y="3.937" size="1.27" layer="21" rot="R90">RST</text>
 <text x="5.588" y="3.937" size="1.27" layer="21" rot="R90">SCK</text>
 <text x="8.128" y="3.937" size="1.27" layer="21" rot="R90">MISO</text>
@@ -177,6 +177,7 @@
 <text x="13.208" y="3.937" size="1.27" layer="21" rot="R90">CS</text>
 <text x="15.748" y="3.937" size="1.27" layer="21" rot="R90">DIO</text>
 <text x="18.288" y="3.937" size="1.27" layer="21" rot="R90">CLK</text>
+<circle x="10" y="25.381" radius="8.8744" width="0.254" layer="51"/>
 </package>
 </packages>
 <symbols>
