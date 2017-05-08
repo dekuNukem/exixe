@@ -40,3 +40,17 @@ printf("hello\n");
     htim14.Instance->CCR1 = count;
     htim3.Instance->CCR3 = count;
     htim3.Instance->CCR4 = count;
+
+void HAL_SPI_RxCpltCallback(SPI_HandleTypeDef *hspi)
+{
+    HAL_SPI_Receive_IT(&hspi1, spi_recv_buf, SPI_BUF_SIZE);
+  printf("spi received:\n");
+  for (int i = 0; i < SPI_BUF_SIZE; ++i)
+    printf("%x\n", spi_recv_buf[i]);
+  if(spi_recv_buf[0] != INCOMING_SPI_CMD_HEADER)
+  {
+    printf("invalid header\n");
+    return;
+  }
+    set_pwm(spi_recv_buf);
+}

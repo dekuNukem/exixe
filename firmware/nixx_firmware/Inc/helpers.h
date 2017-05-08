@@ -7,26 +7,37 @@
 
 #include "stm32f0xx_hal.h"
 
-#define SetBit(number,bit) (number|=(1<<bit) )		
-#define ClearBit(number,bit) (number&=(~(1<<bit)))
+#define SPI_BUF_SIZE 16
+#define INCOMING_SPI_CMD_HEADER 0xab
+#define OUTGOING_SPI_CMD_HEADER 0xcd
 
-typedef struct
-{
-  int32_t last_recv;
-  int32_t curr_index;
-  int32_t buf_size;
-  uint8_t* buf;
-} linear_buf;
+extern uint8_t spi_recv_buf[SPI_BUF_SIZE];
+extern uint8_t pwm_stats[SPI_BUF_SIZE];
 
-int32_t linear_buf_init(linear_buf *lb, int32_t size);
-void linear_buf_reset(linear_buf *lb);
-int32_t linear_buf_idle(linear_buf *lb, int32_t timeout);
-int32_t linear_buf_line_available(linear_buf *lb);
-int32_t linear_buf_add(linear_buf *lb, uint8_t c);
-int32_t linear_buf_add_str(linear_buf *lb, uint8_t *s, uint32_t len);
-uint16_t b_to_uint16t(uint8_t msb, uint8_t lsb);
-void uint16_t_to_2b(uint16_t value, uint8_t* msb, uint8_t* lsb);
+void set_pwm(uint8_t pwm_arr[SPI_BUF_SIZE]);
+void timer_init(void);
 
+
+/*
+pwm_stats
+index	parameter
+0		0xcd
+1		red
+2		green
+3		blue
+4		0
+5		1
+6		2
+7		3
+8		4
+9		5
+10		6
+11		7
+12		8
+13		9
+14		left dot
+15		right dot
+*/
 #ifdef __cplusplus
 }
 #endif

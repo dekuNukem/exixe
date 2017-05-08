@@ -37,13 +37,10 @@
 /* USER CODE BEGIN Includes */
 #include "shared.h"
 #include "helpers.h"
-#include "eeprom.h"
 
 /* USER CODE END Includes */
 
 /* Private variables ---------------------------------------------------------*/
-I2C_HandleTypeDef hi2c1;
-
 SPI_HandleTypeDef hspi1;
 
 TIM_HandleTypeDef htim1;
@@ -65,13 +62,12 @@ void Error_Handler(void);
 static void MX_GPIO_Init(void);
 static void MX_USART1_UART_Init(void);
 static void MX_SPI1_Init(void);
-static void MX_I2C1_Init(void);
 static void MX_TIM14_Init(void);
 static void MX_TIM3_Init(void);
 static void MX_TIM16_Init(void);
 static void MX_TIM1_Init(void);
 static void MX_TIM2_Init(void);
-
+                                    
 void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
                                 
                                 
@@ -81,8 +77,7 @@ void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
 
 /* USER CODE BEGIN PFP */
 /* Private function prototypes -----------------------------------------------*/
-#define SPI_BUF_SIZE 16
-uint8_t spi_buf[SPI_BUF_SIZE];
+
 /* USER CODE END PFP */
 
 /* USER CODE BEGIN 0 */
@@ -112,7 +107,6 @@ int main(void)
   MX_GPIO_Init();
   MX_USART1_UART_Init();
   MX_SPI1_Init();
-  MX_I2C1_Init();
   MX_TIM14_Init();
   MX_TIM3_Init();
   MX_TIM16_Init();
@@ -125,45 +119,18 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-
-  HAL_TIM_Base_Start(&htim1);
-  HAL_TIM_PWM_Init(&htim1);
-  HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
-  HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_2);
-  HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_3);
-  HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_4);
-
-  HAL_TIM_Base_Start(&htim2);
-  HAL_TIM_PWM_Init(&htim2);
-  HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);
-  HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_2);
-  HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_3);
-  HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_4);
-
-  HAL_TIM_Base_Start(&htim3);
-  HAL_TIM_PWM_Init(&htim3);
-  HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_1);
-  HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_2);
-  HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_3);
-  HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_4);
-
-  HAL_TIM_Base_Start(&htim14);
-  HAL_TIM_PWM_Init(&htim14);
-  HAL_TIM_PWM_Start(&htim14, TIM_CHANNEL_1);
-
-  HAL_TIM_Base_Start(&htim16);
-  HAL_TIM_PWM_Init(&htim16);
-  HAL_TIM_PWM_Start(&htim16, TIM_CHANNEL_1);
-
-  uint8_t count = 0;
-  printf("hello\n");
+  printf("started\n");
+  timer_init();
   while (1)
   {
   /* USER CODE END WHILE */
 
   /* USER CODE BEGIN 3 */
-    HAL_Delay(5);
-    HAL_SPI_Receive_IT(&hspi1, spi_buf, SPI_BUF_SIZE);
+  	if(HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_15) == GPIO_PIN_SET)
+  	{
+    	// HAL_SPI_TransmitReceive_IT(&hspi1, pwm_stats, spi_recv_buf, SPI_BUF_SIZE);
+    	HAL_SPI_Receive_IT(&hspi1, spi_recv_buf, SPI_BUF_SIZE);
+  	}
   }
   /* USER CODE END 3 */
 
@@ -201,9 +168,8 @@ void SystemClock_Config(void)
     Error_Handler();
   }
 
-  PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_USART1|RCC_PERIPHCLK_I2C1;
+  PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_USART1;
   PeriphClkInit.Usart1ClockSelection = RCC_USART1CLKSOURCE_SYSCLK;
-  PeriphClkInit.I2c1ClockSelection = RCC_I2C1CLKSOURCE_SYSCLK;
   if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
   {
     Error_Handler();
@@ -219,40 +185,6 @@ void SystemClock_Config(void)
 
   /* SysTick_IRQn interrupt configuration */
   HAL_NVIC_SetPriority(SysTick_IRQn, 0, 0);
-}
-
-/* I2C1 init function */
-static void MX_I2C1_Init(void)
-{
-
-  hi2c1.Instance = I2C1;
-  hi2c1.Init.Timing = 0x2010091A;
-  hi2c1.Init.OwnAddress1 = 0;
-  hi2c1.Init.AddressingMode = I2C_ADDRESSINGMODE_7BIT;
-  hi2c1.Init.DualAddressMode = I2C_DUALADDRESS_DISABLE;
-  hi2c1.Init.OwnAddress2 = 0;
-  hi2c1.Init.OwnAddress2Masks = I2C_OA2_NOMASK;
-  hi2c1.Init.GeneralCallMode = I2C_GENERALCALL_DISABLE;
-  hi2c1.Init.NoStretchMode = I2C_NOSTRETCH_DISABLE;
-  if (HAL_I2C_Init(&hi2c1) != HAL_OK)
-  {
-    Error_Handler();
-  }
-
-    /**Configure Analogue filter 
-    */
-  if (HAL_I2CEx_ConfigAnalogFilter(&hi2c1, I2C_ANALOGFILTER_ENABLE) != HAL_OK)
-  {
-    Error_Handler();
-  }
-
-    /**Configure Digital filter 
-    */
-  if (HAL_I2CEx_ConfigDigitalFilter(&hi2c1, 0) != HAL_OK)
-  {
-    Error_Handler();
-  }
-
 }
 
 /* SPI1 init function */
@@ -612,7 +544,6 @@ static void MX_GPIO_Init(void)
   GPIO_InitTypeDef GPIO_InitStruct;
 
   /* GPIO Ports Clock Enable */
-  __HAL_RCC_GPIOF_CLK_ENABLE();
   __HAL_RCC_GPIOA_CLK_ENABLE();
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
@@ -631,10 +562,11 @@ static void MX_GPIO_Init(void)
 /* USER CODE BEGIN 4 */
 void HAL_SPI_RxCpltCallback(SPI_HandleTypeDef *hspi)
 {
-  printf("spi received:\n");
-  for (int i = 0; i < SPI_BUF_SIZE; ++i)
-    printf("%x\n", spi_buf[i]);
-  HAL_SPI_Receive_IT(&hspi1, spi_buf, SPI_BUF_SIZE);
+  if(spi_recv_buf[0] != INCOMING_SPI_CMD_HEADER)
+  	return;
+	set_pwm(spi_recv_buf);
+	// HAL_SPI_TransmitReceive_IT(&hspi1, pwm_stats, spi_recv_buf, SPI_BUF_SIZE);
+	HAL_SPI_Receive_IT(&hspi1, spi_recv_buf, SPI_BUF_SIZE);
 }
 /* USER CODE END 4 */
 

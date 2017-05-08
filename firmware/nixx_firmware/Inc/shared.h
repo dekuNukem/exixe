@@ -5,9 +5,11 @@
 #include "main.h"
 
 extern SPI_HandleTypeDef hspi1;
-#define spi1_ptr (&hspi1)
-
-extern I2C_HandleTypeDef hi2c1;
-#define i2c1_ptr (&hi2c1)
+//-------------timers---------------
+extern TIM_HandleTypeDef htim1;
+extern TIM_HandleTypeDef htim2;
+extern TIM_HandleTypeDef htim3;
+extern TIM_HandleTypeDef htim14;
+extern TIM_HandleTypeDef htim16;
 
 #endif

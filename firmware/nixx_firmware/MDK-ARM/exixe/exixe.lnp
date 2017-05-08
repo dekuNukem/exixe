@@ -22,7 +22,6 @@
 "exixe\stm32f0xx_it.o"
 "exixe\stm32f0xx_hal_msp.o"
 "exixe\main.o"
-"exixe\eeprom.o"
 "exixe\helpers.o"
 --library_type=microlib --strict --scatter "exixe\exixe.sct"
 --diag_suppress=L6329 --summary_stderr --info summarysizes --map --xref --callgraph --symbols

@@ -44,3 +44,19 @@ Prescaler 1920
 period 127
 194Hz
 
+0		0xab
+1		red
+2		green
+3		blue
+4		0
+5		1
+6		2
+7		3
+8		4
+9		5
+10		6
+11		7
+12		8
+13		9
+14		left dot
+15		right dot
