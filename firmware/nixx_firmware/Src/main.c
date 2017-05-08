@@ -42,6 +42,8 @@
 /* USER CODE END Includes */
 
 /* Private variables ---------------------------------------------------------*/
+IWDG_HandleTypeDef hiwdg;
+
 SPI_HandleTypeDef hspi1;
 DMA_HandleTypeDef hdma_spi1_rx;
 
@@ -72,7 +74,8 @@ static void MX_TIM16_Init(void);
 static void MX_TIM1_Init(void);
 static void MX_TIM2_Init(void);
 static void MX_TIM17_Init(void);
-                                    
+static void MX_IWDG_Init(void);
+
 void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
                                 
                                 
@@ -82,7 +85,6 @@ void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
 
 /* USER CODE BEGIN PFP */
 /* Private function prototypes -----------------------------------------------*/
-
 /* USER CODE END PFP */
 
 /* USER CODE BEGIN 0 */
@@ -90,6 +92,16 @@ int fputc(int ch, FILE *f)
 {
     HAL_UART_Transmit(&huart1, (unsigned char *)&ch, 1, 100);
     return ch;
+}
+
+void kick_dog(void)
+{
+  static int32_t next_kick = 0;
+  if(HAL_GetTick() > next_kick)
+  {
+    HAL_IWDG_Refresh(&hiwdg);
+    next_kick = HAL_GetTick() + 100;
+  }
 }
 /* USER CODE END 0 */
 
@@ -119,6 +131,7 @@ int main(void)
   MX_TIM1_Init();
   MX_TIM2_Init();
   MX_TIM17_Init();
+  MX_IWDG_Init();
 
   /* USER CODE BEGIN 2 */
 
@@ -126,21 +139,34 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  printf("started\n");
+  printf("eixie started\n");
   delay_us_init(&htim17);
   timer_init();
   while (1)
   {
+    kick_dog();
+    if(HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_15) == GPIO_PIN_SET)
+      HAL_SPI_Receive_DMA(&hspi1, spi_recv_buf, SPI_BUF_SIZE);
   /* USER CODE END WHILE */
 
   /* USER CODE BEGIN 3 */
-    if(HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_15) == GPIO_PIN_SET)
-      HAL_SPI_Receive_DMA(&hspi1, spi_recv_buf, SPI_BUF_SIZE);
-
-    HAL_GPIO_WritePin(LEFT_DOT_GPIO_Port, LEFT_DOT_Pin, GPIO_PIN_SET);
-    delay_us(pwm_stats[14]);
-    HAL_GPIO_WritePin(LEFT_DOT_GPIO_Port, LEFT_DOT_Pin, GPIO_PIN_RESET);
-    delay_us(125 - pwm_stats[14]);
+    if(pwm_stats[14] == 0)
+    {
+      HAL_GPIO_WritePin(LEFT_DOT_GPIO_Port, LEFT_DOT_Pin, GPIO_PIN_RESET);
+      continue;
+    }
+    else if(pwm_stats[14] >= 125)
+    {
+      HAL_GPIO_WritePin(LEFT_DOT_GPIO_Port, LEFT_DOT_Pin, GPIO_PIN_SET);
+      continue;
+    }
+    else
+    {
+      HAL_GPIO_WritePin(LEFT_DOT_GPIO_Port, LEFT_DOT_Pin, GPIO_PIN_SET);
+      delay_us(pwm_stats[14]); // delay_us here is actually delay_40us
+      HAL_GPIO_WritePin(LEFT_DOT_GPIO_Port, LEFT_DOT_Pin, GPIO_PIN_RESET);
+      delay_us(125 - pwm_stats[14]);
+    }
   }
   /* USER CODE END 3 */
 
@@ -157,8 +183,9 @@ void SystemClock_Config(void)
 
     /**Initializes the CPU, AHB and APB busses clocks 
     */
-  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI48;
+  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI48|RCC_OSCILLATORTYPE_LSI;
   RCC_OscInitStruct.HSI48State = RCC_HSI48_ON;
+  RCC_OscInitStruct.LSIState = RCC_LSI_ON;
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_NONE;
   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
   {
@@ -195,6 +222,21 @@ void SystemClock_Config(void)
 
   /* SysTick_IRQn interrupt configuration */
   HAL_NVIC_SetPriority(SysTick_IRQn, 0, 0);
+}
+
+/* IWDG init function */
+static void MX_IWDG_Init(void)
+{
+
+  hiwdg.Instance = IWDG;
+  hiwdg.Init.Prescaler = IWDG_PRESCALER_4;
+  hiwdg.Init.Window = 4095;
+  hiwdg.Init.Reload = 4095;
+  if (HAL_IWDG_Init(&hiwdg) != HAL_OK)
+  {
+    Error_Handler();
+  }
+
 }
 
 /* SPI1 init function */
@@ -261,7 +303,7 @@ static void MX_TIM1_Init(void)
   }
 
   sConfigOC.OCMode = TIM_OCMODE_PWM1;
-  sConfigOC.Pulse = 64;
+  sConfigOC.Pulse = 0;
   sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
   sConfigOC.OCNPolarity = TIM_OCNPOLARITY_HIGH;
   sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
@@ -341,7 +383,7 @@ static void MX_TIM2_Init(void)
   }
 
   sConfigOC.OCMode = TIM_OCMODE_PWM1;
-  sConfigOC.Pulse = 64;
+  sConfigOC.Pulse = 0;
   sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
   sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
   if (HAL_TIM_PWM_ConfigChannel(&htim2, &sConfigOC, TIM_CHANNEL_1) != HAL_OK)
@@ -406,7 +448,7 @@ static void MX_TIM3_Init(void)
   }
 
   sConfigOC.OCMode = TIM_OCMODE_PWM1;
-  sConfigOC.Pulse = 63;
+  sConfigOC.Pulse = 0;
   sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
   sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
   if (HAL_TIM_PWM_ConfigChannel(&htim3, &sConfigOC, TIM_CHANNEL_1) != HAL_OK)
@@ -419,6 +461,7 @@ static void MX_TIM3_Init(void)
     Error_Handler();
   }
 
+  sConfigOC.Pulse = 127;
   if (HAL_TIM_PWM_ConfigChannel(&htim3, &sConfigOC, TIM_CHANNEL_3) != HAL_OK)
   {
     Error_Handler();
@@ -456,7 +499,7 @@ static void MX_TIM14_Init(void)
   }
 
   sConfigOC.OCMode = TIM_OCMODE_PWM1;
-  sConfigOC.Pulse = 63;
+  sConfigOC.Pulse = 127;
   sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
   sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;
   if (HAL_TIM_PWM_ConfigChannel(&htim14, &sConfigOC, TIM_CHANNEL_1) != HAL_OK)
@@ -493,7 +536,7 @@ static void MX_TIM16_Init(void)
   }
 
   sConfigOC.OCMode = TIM_OCMODE_PWM1;
-  sConfigOC.Pulse = 64;
+  sConfigOC.Pulse = 0;
   sConfigOC.OCPolarity = TIM_OCPOLARITY_HIGH;
   sConfigOC.OCNPolarity = TIM_OCNPOLARITY_HIGH;
   sConfigOC.OCFastMode = TIM_OCFAST_DISABLE;

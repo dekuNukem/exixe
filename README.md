@@ -60,3 +60,5 @@ period 127
 13		9
 14		left dot
 15		right dot
+
+up to 20MHZ

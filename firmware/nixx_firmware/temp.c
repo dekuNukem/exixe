@@ -87,3 +87,25 @@ void HAL_SPI_TxRxCpltCallback(SPI_HandleTypeDef *hspi)
 
 if(HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_15) == GPIO_PIN_SET)
       HAL_SPI_Receive_DMA(&hspi1, spi_recv_buf, SPI_BUF_SIZE);
+
+
+/*
+pwm_stats
+index parameter
+0   0xcd
+1   red
+2   green
+3   blue
+4   0
+5   1
+6   2
+7   3
+8   4
+9   5
+10    6
+11    7
+12    8
+13    9
+14    left dot
+15    right dot
+*/

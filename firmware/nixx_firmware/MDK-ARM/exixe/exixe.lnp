@@ -18,6 +18,7 @@
 "exixe\stm32f0xx_hal_uart.o"
 "exixe\stm32f0xx_hal_spi.o"
 "exixe\stm32f0xx_hal_spi_ex.o"
+"exixe\stm32f0xx_hal_iwdg.o"
 "exixe\system_stm32f0xx.o"
 "exixe\stm32f0xx_it.o"
 "exixe\stm32f0xx_hal_msp.o"

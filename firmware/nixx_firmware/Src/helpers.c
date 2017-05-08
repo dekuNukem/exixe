@@ -14,17 +14,17 @@ void set_pwm(uint8_t pwm_arr[SPI_BUF_SIZE])
   // 127 fully off, 0 fully on
   if(pwm_arr[1] & 0x80)
   {
-    htim3.Instance->CCR4 = pwm_arr[1] & 0x7f; // R
+    htim3.Instance->CCR4 = 127 - (pwm_arr[1] & 0x7f); // R
     pwm_stats[1] = pwm_arr[1];
   }
   if(pwm_arr[2] & 0x80)
   {
-    htim14.Instance->CCR1 = pwm_arr[2] & 0x7f; // G
+    htim14.Instance->CCR1 = 127 - (pwm_arr[2] & 0x7f); // G
     pwm_stats[2] = pwm_arr[2];
   }
   if(pwm_arr[3] & 0x80)
   {
-    htim3.Instance->CCR3 = pwm_arr[3] & 0x7f; // B
+    htim3.Instance->CCR3 = 127 - (pwm_arr[3] & 0x7f); // B
     pwm_stats[3] = pwm_arr[3];
   }
   if(pwm_arr[4] & 0x80)
@@ -91,7 +91,7 @@ void set_pwm(uint8_t pwm_arr[SPI_BUF_SIZE])
 
 void timer_init(void)
 {
-  memset(pwm_stats, 0xff, SPI_BUF_SIZE);
+  memset(pwm_stats, 0x80, SPI_BUF_SIZE);
   set_pwm(pwm_stats);
 
   HAL_TIM_Base_Start(&htim1);
