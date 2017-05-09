@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.1.1">
+<eagle version="7.7.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
+<grid distance="0.05" unitdist="inch" unit="mil" style="lines" multiple="1" display="yes" altdistance="0.025" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -151,19 +151,19 @@
 <wire x1="20" y1="38.095" x2="18.095" y2="40" width="0.127" layer="21" curve="90"/>
 <wire x1="18.095" y1="40" x2="1.905" y2="40" width="0.127" layer="21"/>
 <wire x1="1.905" y1="40" x2="0" y2="38.095" width="0.127" layer="21" curve="90"/>
-<pad name="RST" x="2.38" y="2.181" drill="1.016" shape="long" rot="R90"/>
-<pad name="SCK" x="4.92" y="2.181" drill="1.016" shape="long" rot="R90"/>
-<pad name="MISO" x="7.46" y="2.181" drill="1.016" shape="long" rot="R90"/>
-<pad name="MOSI" x="10" y="2.181" drill="1.016" shape="long" rot="R90"/>
-<pad name="CS" x="12.54" y="2.181" drill="1.016" shape="long" rot="R90"/>
-<pad name="DIO" x="15.08" y="2.181" drill="1.016" shape="long" rot="R90"/>
-<pad name="CLK" x="17.62" y="2.181" drill="1.016" shape="long" rot="R90"/>
-<pad name="HV" x="2.3546" y="37.7508" drill="1.016" shape="long" rot="R90"/>
-<pad name="VCC" x="7.4346" y="37.7508" drill="1.016" shape="long" rot="R90"/>
-<pad name="RX" x="9.9746" y="37.7508" drill="1.016" shape="long" rot="R90"/>
-<pad name="TX" x="12.5146" y="37.7508" drill="1.016" shape="long" rot="R90"/>
-<pad name="GND" x="15.0546" y="37.7508" drill="1.016" shape="long" rot="R90"/>
-<pad name="GND2" x="17.5946" y="37.7508" drill="1.016" shape="long" rot="R90"/>
+<pad name="RST" x="2.38" y="2.25" drill="1.016" shape="long" rot="R90"/>
+<pad name="SCK" x="4.92" y="2.25" drill="1.016" shape="long" rot="R90"/>
+<pad name="MISO" x="7.46" y="2.25" drill="1.016" shape="long" rot="R90"/>
+<pad name="MOSI" x="10" y="2.25" drill="1.016" shape="long" rot="R90"/>
+<pad name="CS" x="12.54" y="2.25" drill="1.016" shape="long" rot="R90"/>
+<pad name="DIO" x="15.08" y="2.25" drill="1.016" shape="long" rot="R90"/>
+<pad name="CLK" x="17.62" y="2.25" drill="1.016" shape="long" rot="R90"/>
+<pad name="HV" x="2.38" y="37.75" drill="1.016" shape="long" rot="R90"/>
+<pad name="VCC" x="7.46" y="37.75" drill="1.016" shape="long" rot="R90"/>
+<pad name="RX" x="10" y="37.75" drill="1.016" shape="long" rot="R90"/>
+<pad name="TX" x="12.54" y="37.75" drill="1.016" shape="long" rot="R90"/>
+<pad name="GND" x="15.08" y="37.75" drill="1.016" shape="long" rot="R90"/>
+<pad name="GND2" x="17.62" y="37.75" drill="1.016" shape="long" rot="R90"/>
 <text x="1.27" y="34.671" size="1.27" layer="21">HV</text>
 <text x="6.35" y="34.671" size="1.27" layer="21">3V</text>
 <text x="9.017" y="34.671" size="1.27" layer="21">RX</text>

@@ -62,3 +62,13 @@ period 127
 15		right dot
 
 up to 20MHZ
+
+Thanks to this diode, when an EMC stress oc
+curs, the level of the noise is clamped to V
+DD
+. 
+As a consequence, channels implemented on FT I/O show a better noise immunity
+
+ref-packages
+
+find smt 8MHz and 32.768KHz crystals
