@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.1.1">
+<eagle version="8.2.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -5389,95 +5389,6 @@ SMT- SWCH-08247</description>
 </deviceset>
 </devicesets>
 </library>
-<library name="exixe_module">
-<packages>
-<package name="EXIXE_PAC">
-<wire x1="0" y1="38.095" x2="0" y2="1.905" width="0.127" layer="21"/>
-<wire x1="0" y1="1.905" x2="1.905" y2="0" width="0.127" layer="21" curve="90"/>
-<wire x1="1.905" y1="0" x2="18.095" y2="0" width="0.127" layer="21"/>
-<wire x1="18.095" y1="0" x2="20" y2="1.905" width="0.127" layer="21" curve="90"/>
-<wire x1="20" y1="1.905" x2="20" y2="38.095" width="0.127" layer="21"/>
-<wire x1="20" y1="38.095" x2="18.095" y2="40" width="0.127" layer="21" curve="90"/>
-<wire x1="18.095" y1="40" x2="1.905" y2="40" width="0.127" layer="21"/>
-<wire x1="1.905" y1="40" x2="0" y2="38.095" width="0.127" layer="21" curve="90"/>
-<pad name="RST" x="2.38" y="2.25" drill="1.016" shape="long" rot="R90"/>
-<pad name="SCK" x="4.92" y="2.25" drill="1.016" shape="long" rot="R90"/>
-<pad name="MISO" x="7.46" y="2.25" drill="1.016" shape="long" rot="R90"/>
-<pad name="MOSI" x="10" y="2.25" drill="1.016" shape="long" rot="R90"/>
-<pad name="CS" x="12.54" y="2.25" drill="1.016" shape="long" rot="R90"/>
-<pad name="DIO" x="15.08" y="2.25" drill="1.016" shape="long" rot="R90"/>
-<pad name="CLK" x="17.62" y="2.25" drill="1.016" shape="long" rot="R90"/>
-<pad name="HV" x="2.38" y="37.75" drill="1.016" shape="long" rot="R90"/>
-<pad name="VCC" x="7.46" y="37.75" drill="1.016" shape="long" rot="R90"/>
-<pad name="RX" x="10" y="37.75" drill="1.016" shape="long" rot="R90"/>
-<pad name="TX" x="12.54" y="37.75" drill="1.016" shape="long" rot="R90"/>
-<pad name="GND" x="15.08" y="37.75" drill="1.016" shape="long" rot="R90"/>
-<pad name="GND2" x="17.62" y="37.75" drill="1.016" shape="long" rot="R90"/>
-<text x="1.27" y="34.671" size="1.27" layer="21">HV</text>
-<text x="6.35" y="34.671" size="1.27" layer="21">3V</text>
-<text x="9.017" y="34.671" size="1.27" layer="21">RX</text>
-<text x="11.557" y="34.671" size="1.27" layer="21">TX</text>
-<text x="14.605" y="34.671" size="1.27" layer="21">G</text>
-<text x="17.145" y="34.671" size="1.27" layer="21">G</text>
-<text x="3.048" y="3.937" size="1.27" layer="21" rot="R90">RST</text>
-<text x="5.588" y="3.937" size="1.27" layer="21" rot="R90">SCK</text>
-<text x="8.128" y="3.937" size="1.27" layer="21" rot="R90">MISO</text>
-<text x="10.668" y="3.937" size="1.27" layer="21" rot="R90">MOSI</text>
-<text x="13.208" y="3.937" size="1.27" layer="21" rot="R90">CS</text>
-<text x="15.748" y="3.937" size="1.27" layer="21" rot="R90">DIO</text>
-<text x="18.288" y="3.937" size="1.27" layer="21" rot="R90">CLK</text>
-<circle x="10" y="25.381" radius="8.8744" width="0.254" layer="51"/>
-</package>
-</packages>
-<symbols>
-<symbol name="EXIXE_SYM">
-<wire x1="-10.16" y1="15.24" x2="10.16" y2="15.24" width="0.254" layer="94"/>
-<wire x1="10.16" y1="15.24" x2="10.16" y2="-12.7" width="0.254" layer="94"/>
-<wire x1="10.16" y1="-12.7" x2="-10.16" y2="-12.7" width="0.254" layer="94"/>
-<wire x1="-10.16" y1="-12.7" x2="-10.16" y2="15.24" width="0.254" layer="94"/>
-<pin name="VCC" x="-2.54" y="20.32" length="middle" rot="R270"/>
-<pin name="MOSI" x="-5.08" y="-17.78" length="middle" rot="R90"/>
-<pin name="MISO" x="-2.54" y="-17.78" length="middle" rot="R90"/>
-<pin name="SCK" x="2.54" y="-17.78" length="middle" rot="R90"/>
-<pin name="CS" x="5.08" y="-17.78" length="middle" rot="R90"/>
-<pin name="HV" x="2.54" y="20.32" length="middle" rot="R270"/>
-<pin name="GND" x="-15.24" y="-2.54" length="middle"/>
-<pin name="RX" x="-15.24" y="2.54" length="middle"/>
-<pin name="TX" x="-15.24" y="7.62" length="middle"/>
-<pin name="RST" x="15.24" y="-2.54" length="middle" rot="R180"/>
-<pin name="DIO" x="15.24" y="2.54" length="middle" rot="R180"/>
-<pin name="CLK" x="15.24" y="7.62" length="middle" rot="R180"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="EXIXE">
-<gates>
-<gate name="G$1" symbol="EXIXE_SYM" x="-2.54" y="0"/>
-</gates>
-<devices>
-<device name="" package="EXIXE_PAC">
-<connects>
-<connect gate="G$1" pin="CLK" pad="CLK"/>
-<connect gate="G$1" pin="CS" pad="CS"/>
-<connect gate="G$1" pin="DIO" pad="DIO"/>
-<connect gate="G$1" pin="GND" pad="GND GND2"/>
-<connect gate="G$1" pin="HV" pad="HV"/>
-<connect gate="G$1" pin="MISO" pad="MISO"/>
-<connect gate="G$1" pin="MOSI" pad="MOSI"/>
-<connect gate="G$1" pin="RST" pad="RST"/>
-<connect gate="G$1" pin="RX" pad="RX"/>
-<connect gate="G$1" pin="SCK" pad="SCK"/>
-<connect gate="G$1" pin="TX" pad="TX"/>
-<connect gate="G$1" pin="VCC" pad="VCC"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="joyAnalog">
 <description>Generated from &lt;b&gt;joyAnalog.sch&lt;/b&gt;&lt;p&gt;
 by exp-lbrs.ulp</description>
@@ -6418,97 +6329,6 @@ by exp-lbrs.ulp</description>
 </deviceset>
 </devicesets>
 </library>
-<library name="basicBoard">
-<description>Generated from &lt;b&gt;basicBoard.sch&lt;/b&gt;&lt;p&gt;
-by exp-lbrs.ulp</description>
-<packages>
-<package name="TF-PULL">
-<description>TF / Micro SD socket is PUSH-PUSH type, the card can be pushed into and auto locked and pushed out by simply press the card.
-&lt;p&gt;
-Surface Mounting type.</description>
-<wire x1="7.4" y1="-7.25" x2="7.4" y2="6.75" width="0.127" layer="21"/>
-<wire x1="7.4" y1="6.75" x2="-1.4" y2="6.75" width="0.127" layer="21"/>
-<wire x1="-1.4" y1="6.75" x2="-4.4" y2="7.55" width="0.127" layer="21"/>
-<wire x1="-4.4" y1="7.55" x2="-7.4" y2="7.55" width="0.127" layer="21"/>
-<wire x1="-7.4" y1="7.55" x2="-7.4" y2="-5.8" width="0.127" layer="21"/>
-<wire x1="-7.4" y1="-5.8" x2="-6.1" y2="-5.8" width="0.127" layer="21"/>
-<wire x1="-6.1" y1="-5.8" x2="-6.1" y2="-7.25" width="0.127" layer="21"/>
-<wire x1="-6.1" y1="-7.25" x2="7.4" y2="-7.25" width="0.127" layer="21"/>
-<smd name="1" x="-2.2" y="-7.62" dx="0.7" dy="1.4" layer="1"/>
-<smd name="2" x="-1.1" y="-7.62" dx="0.7" dy="1.4" layer="1"/>
-<smd name="3" x="0" y="-7.62" dx="0.7" dy="1.4" layer="1"/>
-<smd name="4" x="1.1" y="-7.62" dx="0.7" dy="1.4" layer="1"/>
-<smd name="5" x="2.2" y="-7.62" dx="0.7" dy="1.4" layer="1"/>
-<smd name="6" x="3.3" y="-7.62" dx="0.7" dy="1.4" layer="1"/>
-<smd name="7" x="4.4" y="-7.62" dx="0.7" dy="1.4" layer="1"/>
-<smd name="8" x="5.5" y="-7.62" dx="0.7" dy="1.4" layer="1"/>
-<smd name="9" x="6.6" y="-7.62" dx="0.7" dy="1.4" layer="1"/>
-<smd name="S1" x="-7.9" y="2.85" dx="1.4" dy="2" layer="1" thermals="no"/>
-<smd name="S2" x="7.9" y="2.85" dx="1.4" dy="2" layer="1" thermals="no"/>
-<smd name="S3" x="7.96" y="-6.75" dx="1.28" dy="1.4" layer="1" thermals="no"/>
-<smd name="S4" x="-7.025" y="-6.75" dx="1.95" dy="1.4" layer="1" thermals="no"/>
-<text x="7.7" y="1.1" size="1.016" layer="25" ratio="18" rot="R270">&gt;NAME</text>
-<hole x="-3.1" y="3.25" drill="1.25"/>
-<hole x="4.9" y="3.25" drill="1.25"/>
-</package>
-</packages>
-<symbols>
-<symbol name="TF9">
-<wire x1="-7.62" y1="12.7" x2="-7.62" y2="-12.7" width="0.254" layer="94"/>
-<wire x1="-7.62" y1="-12.7" x2="10.16" y2="-12.7" width="0.254" layer="94"/>
-<wire x1="10.16" y1="-12.7" x2="10.16" y2="12.7" width="0.254" layer="94"/>
-<wire x1="10.16" y1="12.7" x2="-7.62" y2="12.7" width="0.254" layer="94"/>
-<pin name="!CARD" x="-12.7" y="-10.16" length="middle" direction="pas"/>
-<pin name="CD/DAT3(!CS!)" x="-12.7" y="7.62" length="middle"/>
-<pin name="CLK(SCLK)" x="-12.7" y="0" length="middle" direction="in"/>
-<pin name="CMD(DI)" x="-12.7" y="5.08" length="middle"/>
-<pin name="DAT0(DO)" x="-12.7" y="-5.08" length="middle"/>
-<pin name="DAT1" x="-12.7" y="-7.62" length="middle"/>
-<pin name="DAT2" x="-12.7" y="10.16" length="middle"/>
-<pin name="S1" x="-2.54" y="-15.24" visible="off" length="short" direction="pas" rot="R90"/>
-<pin name="S2" x="0" y="-15.24" visible="off" length="short" direction="pas" rot="R90"/>
-<pin name="S3" x="2.54" y="-15.24" visible="off" length="short" direction="pas" rot="R90"/>
-<pin name="S4" x="5.08" y="-15.24" visible="off" length="short" direction="pas" rot="R90"/>
-<pin name="VDD" x="-12.7" y="2.54" length="middle" direction="pwr"/>
-<pin name="VSS" x="-12.7" y="-2.54" length="middle" direction="pwr"/>
-<text x="-5.08" y="13.208" size="1.6764" layer="95">&gt;NAME</text>
-<text x="10.668" y="10.16" size="1.6764" layer="96" rot="R270">&gt;VALUE</text>
-<text x="9.398" y="-12.192" size="1.016" layer="97" rot="R90">TransFlash holder</text>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="TF-HOLDER" prefix="SD">
-<description>TF / Micro SD socket is PUSH-PUSH type, the card can be pushed into and auto locked and pushed out by simply press the card.
-&lt;p&gt;
-Surface Mounting type.</description>
-<gates>
-<gate name="G$1" symbol="TF9" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="TF-PULL">
-<connects>
-<connect gate="G$1" pin="!CARD" pad="9"/>
-<connect gate="G$1" pin="CD/DAT3(!CS!)" pad="2"/>
-<connect gate="G$1" pin="CLK(SCLK)" pad="5"/>
-<connect gate="G$1" pin="CMD(DI)" pad="3"/>
-<connect gate="G$1" pin="DAT0(DO)" pad="7"/>
-<connect gate="G$1" pin="DAT1" pad="8"/>
-<connect gate="G$1" pin="DAT2" pad="1"/>
-<connect gate="G$1" pin="S1" pad="S1"/>
-<connect gate="G$1" pin="S2" pad="S2"/>
-<connect gate="G$1" pin="S3" pad="S3"/>
-<connect gate="G$1" pin="S4" pad="S4"/>
-<connect gate="G$1" pin="VDD" pad="4"/>
-<connect gate="G$1" pin="VSS" pad="6"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="adafruit">
 <packages>
 <package name="NX3225">
@@ -6683,6 +6503,116 @@ Surface Mounting type.</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="exixe_module">
+<packages>
+<package name="EXIXE_PAC">
+<wire x1="0" y1="38.095" x2="0" y2="1.905" width="0.127" layer="21"/>
+<wire x1="0" y1="1.905" x2="1.905" y2="0" width="0.127" layer="21" curve="90"/>
+<wire x1="1.905" y1="0" x2="18.095" y2="0" width="0.127" layer="21"/>
+<wire x1="18.095" y1="0" x2="20" y2="1.905" width="0.127" layer="21" curve="90"/>
+<wire x1="20" y1="1.905" x2="20" y2="38.095" width="0.127" layer="21"/>
+<wire x1="20" y1="38.095" x2="18.095" y2="40" width="0.127" layer="21" curve="90"/>
+<wire x1="18.095" y1="40" x2="1.905" y2="40" width="0.127" layer="21"/>
+<wire x1="1.905" y1="40" x2="0" y2="38.095" width="0.127" layer="21" curve="90"/>
+<pad name="RST" x="2.38" y="1.8" drill="1.016" shape="long" rot="R90"/>
+<pad name="SCK" x="4.92" y="1.8" drill="1.016" shape="long" rot="R90"/>
+<pad name="MISO" x="7.46" y="1.8" drill="1.016" shape="long" rot="R90"/>
+<pad name="MOSI" x="10" y="1.8" drill="1.016" shape="long" rot="R90"/>
+<pad name="CS" x="12.54" y="1.8" drill="1.016" shape="long" rot="R90"/>
+<pad name="DIO" x="15.08" y="1.8" drill="1.016" shape="long" rot="R90"/>
+<pad name="CLK" x="17.62" y="1.8" drill="1.016" shape="long" rot="R90"/>
+<pad name="HV" x="2.38" y="38.2" drill="1.016" shape="long" rot="R90"/>
+<pad name="GND" x="15.08" y="38.2" drill="1.016" shape="long" rot="R90"/>
+<pad name="3V" x="17.62" y="38.2" drill="1.016" shape="long" rot="R90"/>
+<text x="1.397" y="35.179" size="1.27" layer="21">HV</text>
+<text x="14.605" y="35.179" size="1.27" layer="21">G</text>
+<text x="16.637" y="35.179" size="1.27" layer="21">3V</text>
+<text x="3.048" y="3.937" size="1.27" layer="21" rot="R90">RST</text>
+<text x="5.588" y="3.937" size="1.27" layer="21" rot="R90">SCK</text>
+<text x="8.128" y="3.937" size="1.27" layer="21" rot="R90">MISO</text>
+<text x="10.668" y="3.937" size="1.27" layer="21" rot="R90">MOSI</text>
+<text x="13.208" y="3.937" size="1.27" layer="21" rot="R90">CS</text>
+<text x="15.748" y="3.937" size="1.27" layer="21" rot="R90">DIO</text>
+<text x="18.288" y="3.937" size="1.27" layer="21" rot="R90">CLK</text>
+<circle x="10" y="25.381" radius="8.8744" width="0.254" layer="51"/>
+</package>
+</packages>
+<symbols>
+<symbol name="EXIXE_SYM">
+<wire x1="-10.16" y1="15.24" x2="10.16" y2="15.24" width="0.254" layer="94"/>
+<wire x1="10.16" y1="15.24" x2="10.16" y2="-12.7" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-12.7" x2="-10.16" y2="-12.7" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="-12.7" x2="-10.16" y2="15.24" width="0.254" layer="94"/>
+<pin name="3V" x="-2.54" y="20.32" length="middle" rot="R270"/>
+<pin name="MOSI" x="-5.08" y="-17.78" length="middle" rot="R90"/>
+<pin name="MISO" x="-2.54" y="-17.78" length="middle" rot="R90"/>
+<pin name="SCK" x="2.54" y="-17.78" length="middle" rot="R90"/>
+<pin name="CS" x="5.08" y="-17.78" length="middle" rot="R90"/>
+<pin name="HV" x="2.54" y="20.32" length="middle" rot="R270"/>
+<pin name="GND" x="-15.24" y="0" length="middle"/>
+<pin name="RST" x="-15.24" y="5.08" length="middle"/>
+<pin name="DIO" x="15.24" y="0" length="middle" rot="R180"/>
+<pin name="CLK" x="15.24" y="5.08" length="middle" rot="R180"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="EXIXE">
+<gates>
+<gate name="G$1" symbol="EXIXE_SYM" x="-2.54" y="0"/>
+</gates>
+<devices>
+<device name="" package="EXIXE_PAC">
+<connects>
+<connect gate="G$1" pin="3V" pad="3V"/>
+<connect gate="G$1" pin="CLK" pad="CLK"/>
+<connect gate="G$1" pin="CS" pad="CS"/>
+<connect gate="G$1" pin="DIO" pad="DIO"/>
+<connect gate="G$1" pin="GND" pad="GND"/>
+<connect gate="G$1" pin="HV" pad="HV"/>
+<connect gate="G$1" pin="MISO" pad="MISO"/>
+<connect gate="G$1" pin="MOSI" pad="MOSI"/>
+<connect gate="G$1" pin="RST" pad="RST"/>
+<connect gate="G$1" pin="SCK" pad="SCK"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
+<library name="a">
+<description>Generated from &lt;b&gt;basicBoard.sch&lt;/b&gt;&lt;p&gt;
+by exp-lbrs.ulp</description>
+<packages>
+<package name="M3_MOUNTING_HOLE_PACK">
+<circle x="0" y="0" radius="2" width="0" layer="41"/>
+<circle x="0" y="0" radius="2" width="0" layer="42"/>
+<hole x="0" y="0" drill="3.2"/>
+</package>
+</packages>
+<symbols>
+<symbol name="M3_MOUNTING_HOLE_SYM">
+<circle x="0" y="0" radius="3.5921" width="0.254" layer="94"/>
+<text x="5.08" y="0" size="1.778" layer="94">M3 hole</text>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="M3_MOUNTING_HOLE">
+<gates>
+<gate name="G$1" symbol="M3_MOUNTING_HOLE_SYM" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="M3_MOUNTING_HOLE_PACK">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -6734,24 +6664,7 @@ Surface Mounting type.</description>
 <part name="+3V6" library="backplane" deviceset="+3V3" device=""/>
 <part name="+3V9" library="backplane" deviceset="+3V3" device=""/>
 <part name="S2" library="SparkFun-Retired" deviceset="TAC_SWITCH" device="SMD" value="TAC_SWITCHSMD"/>
-<part name="U$3" library="exixe_module" deviceset="EXIXE" device=""/>
-<part name="U$1" library="exixe_module" deviceset="EXIXE" device=""/>
-<part name="U$2" library="exixe_module" deviceset="EXIXE" device=""/>
-<part name="U$4" library="exixe_module" deviceset="EXIXE" device=""/>
-<part name="U$5" library="exixe_module" deviceset="EXIXE" device=""/>
-<part name="U$6" library="exixe_module" deviceset="EXIXE" device=""/>
-<part name="GND4" library="backplane" deviceset="GND" device=""/>
-<part name="GND5" library="backplane" deviceset="GND" device=""/>
-<part name="GND6" library="backplane" deviceset="GND" device=""/>
-<part name="GND9" library="backplane" deviceset="GND" device=""/>
-<part name="GND15" library="backplane" deviceset="GND" device=""/>
-<part name="GND16" library="backplane" deviceset="GND" device=""/>
 <part name="+3V2" library="backplane" deviceset="+3V3" device=""/>
-<part name="+3V7" library="backplane" deviceset="+3V3" device=""/>
-<part name="+3V8" library="backplane" deviceset="+3V3" device=""/>
-<part name="+3V10" library="backplane" deviceset="+3V3" device=""/>
-<part name="+3V12" library="backplane" deviceset="+3V3" device=""/>
-<part name="+3V13" library="backplane" deviceset="+3V3" device=""/>
 <part name="U$7" library="ubloxLib" deviceset="MAX-M8" device=""/>
 <part name="X1" library="clock" deviceset="SMACONNECTOR" device=""/>
 <part name="U$8" library="ProtoSnap-v14a" deviceset="TEMT6000" device=""/>
@@ -6764,12 +6677,32 @@ Surface Mounting type.</description>
 <part name="GND23" library="backplane" deviceset="GND" device=""/>
 <part name="GND24" library="backplane" deviceset="GND" device=""/>
 <part name="GND25" library="backplane" deviceset="GND" device=""/>
-<part name="SD1" library="basicBoard" deviceset="TF-HOLDER" device=""/>
 <part name="Q1" library="adafruit" deviceset="XTAL-4" device="-3225"/>
 <part name="X2" library="adafruit" deviceset="XTAL" device="-3.2X1.5"/>
 <part name="GND26" library="backplane" deviceset="GND" device=""/>
 <part name="GND27" library="backplane" deviceset="GND" device=""/>
 <part name="GND28" library="backplane" deviceset="GND" device=""/>
+<part name="U$1" library="exixe_module" deviceset="EXIXE" device=""/>
+<part name="GND4" library="backplane" deviceset="GND" device=""/>
+<part name="+3V7" library="backplane" deviceset="+3V3" device=""/>
+<part name="U$2" library="exixe_module" deviceset="EXIXE" device=""/>
+<part name="GND5" library="backplane" deviceset="GND" device=""/>
+<part name="+3V8" library="backplane" deviceset="+3V3" device=""/>
+<part name="U$3" library="exixe_module" deviceset="EXIXE" device=""/>
+<part name="GND6" library="backplane" deviceset="GND" device=""/>
+<part name="+3V10" library="backplane" deviceset="+3V3" device=""/>
+<part name="U$4" library="exixe_module" deviceset="EXIXE" device=""/>
+<part name="GND9" library="backplane" deviceset="GND" device=""/>
+<part name="+3V12" library="backplane" deviceset="+3V3" device=""/>
+<part name="U$5" library="exixe_module" deviceset="EXIXE" device=""/>
+<part name="GND15" library="backplane" deviceset="GND" device=""/>
+<part name="+3V13" library="backplane" deviceset="+3V3" device=""/>
+<part name="U$6" library="exixe_module" deviceset="EXIXE" device=""/>
+<part name="GND16" library="backplane" deviceset="GND" device=""/>
+<part name="U$10" library="a" deviceset="M3_MOUNTING_HOLE" device=""/>
+<part name="U$11" library="a" deviceset="M3_MOUNTING_HOLE" device=""/>
+<part name="U$12" library="a" deviceset="M3_MOUNTING_HOLE" device=""/>
+<part name="U$13" library="a" deviceset="M3_MOUNTING_HOLE" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -6825,24 +6758,7 @@ Surface Mounting type.</description>
 <instance part="+3V6" gate="G$1" x="-58.42" y="7.62"/>
 <instance part="+3V9" gate="G$1" x="-45.72" y="-58.42" rot="MR0"/>
 <instance part="S2" gate="S" x="162.56" y="-104.14"/>
-<instance part="U$3" gate="G$1" x="12.7" y="-198.12"/>
-<instance part="U$1" gate="G$1" x="53.34" y="-198.12"/>
-<instance part="U$2" gate="G$1" x="104.14" y="-198.12"/>
-<instance part="U$4" gate="G$1" x="142.24" y="-198.12"/>
-<instance part="U$5" gate="G$1" x="200.66" y="-198.12"/>
-<instance part="U$6" gate="G$1" x="238.76" y="-198.12"/>
-<instance part="GND4" gate="1" x="-2.54" y="-203.2"/>
-<instance part="GND5" gate="1" x="38.1" y="-203.2"/>
-<instance part="GND6" gate="1" x="88.9" y="-203.2"/>
-<instance part="GND9" gate="1" x="127" y="-203.2"/>
-<instance part="GND15" gate="1" x="185.42" y="-203.2"/>
-<instance part="GND16" gate="1" x="223.52" y="-203.2"/>
-<instance part="+3V2" gate="G$1" x="10.16" y="-170.18" rot="MR0"/>
-<instance part="+3V7" gate="G$1" x="50.8" y="-170.18" rot="MR0"/>
-<instance part="+3V8" gate="G$1" x="101.6" y="-170.18" rot="MR0"/>
-<instance part="+3V10" gate="G$1" x="139.7" y="-175.26" rot="MR0"/>
-<instance part="+3V12" gate="G$1" x="198.12" y="-175.26" rot="MR0"/>
-<instance part="+3V13" gate="G$1" x="236.22" y="-175.26" rot="MR0"/>
+<instance part="+3V2" gate="G$1" x="10.16" y="-165.1"/>
 <instance part="U$7" gate="G$1" x="459.74" y="-172.72"/>
 <instance part="X1" gate="G$1" x="381" y="-162.56" rot="MR0"/>
 <instance part="U$8" gate="G$1" x="325.12" y="-246.38"/>
@@ -6855,12 +6771,32 @@ Surface Mounting type.</description>
 <instance part="GND23" gate="1" x="378.46" y="-152.4" rot="R180"/>
 <instance part="GND24" gate="1" x="383.54" y="-152.4" rot="R180"/>
 <instance part="GND25" gate="1" x="426.72" y="-170.18"/>
-<instance part="SD1" gate="G$1" x="391.16" y="-205.74"/>
 <instance part="Q1" gate="G$1" x="-53.34" y="-139.7" rot="R270"/>
 <instance part="X2" gate="G$1" x="162.56" y="-78.74" rot="R270"/>
 <instance part="GND26" gate="1" x="-45.72" y="-154.94"/>
 <instance part="GND27" gate="1" x="-40.64" y="-154.94"/>
 <instance part="GND28" gate="1" x="-60.96" y="-132.08" rot="R180"/>
+<instance part="U$1" gate="G$1" x="12.7" y="-193.04"/>
+<instance part="GND4" gate="1" x="-2.54" y="-195.58"/>
+<instance part="+3V7" gate="G$1" x="53.34" y="-165.1"/>
+<instance part="U$2" gate="G$1" x="55.88" y="-193.04"/>
+<instance part="GND5" gate="1" x="40.64" y="-195.58"/>
+<instance part="+3V8" gate="G$1" x="93.98" y="-165.1"/>
+<instance part="U$3" gate="G$1" x="96.52" y="-193.04"/>
+<instance part="GND6" gate="1" x="81.28" y="-195.58"/>
+<instance part="+3V10" gate="G$1" x="139.7" y="-165.1"/>
+<instance part="U$4" gate="G$1" x="142.24" y="-193.04"/>
+<instance part="GND9" gate="1" x="127" y="-195.58"/>
+<instance part="+3V12" gate="G$1" x="182.88" y="-165.1"/>
+<instance part="U$5" gate="G$1" x="185.42" y="-193.04"/>
+<instance part="GND15" gate="1" x="170.18" y="-195.58"/>
+<instance part="+3V13" gate="G$1" x="223.52" y="-165.1"/>
+<instance part="U$6" gate="G$1" x="226.06" y="-193.04"/>
+<instance part="GND16" gate="1" x="210.82" y="-195.58"/>
+<instance part="U$10" gate="G$1" x="-71.12" y="-175.26"/>
+<instance part="U$11" gate="G$1" x="-71.12" y="-190.5"/>
+<instance part="U$12" gate="G$1" x="-43.18" y="-175.26"/>
+<instance part="U$13" gate="G$1" x="-43.18" y="-190.5"/>
 </instances>
 <busses>
 </busses>
@@ -6910,30 +6846,6 @@ Surface Mounting type.</description>
 <segment>
 <pinref part="IC3" gate="G$1" pin="GND"/>
 <pinref part="GND12" gate="1" pin="GND"/>
-</segment>
-<segment>
-<pinref part="U$3" gate="G$1" pin="GND"/>
-<pinref part="GND4" gate="1" pin="GND"/>
-</segment>
-<segment>
-<pinref part="U$1" gate="G$1" pin="GND"/>
-<pinref part="GND5" gate="1" pin="GND"/>
-</segment>
-<segment>
-<pinref part="U$2" gate="G$1" pin="GND"/>
-<pinref part="GND6" gate="1" pin="GND"/>
-</segment>
-<segment>
-<pinref part="U$4" gate="G$1" pin="GND"/>
-<pinref part="GND9" gate="1" pin="GND"/>
-</segment>
-<segment>
-<pinref part="U$5" gate="G$1" pin="GND"/>
-<pinref part="GND15" gate="1" pin="GND"/>
-</segment>
-<segment>
-<pinref part="U$6" gate="G$1" pin="GND"/>
-<pinref part="GND16" gate="1" pin="GND"/>
 </segment>
 <segment>
 <pinref part="S2" gate="S" pin="3"/>
@@ -7028,6 +6940,30 @@ Surface Mounting type.</description>
 <pinref part="Q1" gate="G$1" pin="G1"/>
 <pinref part="GND28" gate="1" pin="GND"/>
 </segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="GND"/>
+<pinref part="GND4" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="U$2" gate="G$1" pin="GND"/>
+<pinref part="GND5" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="U$3" gate="G$1" pin="GND"/>
+<pinref part="GND6" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="U$4" gate="G$1" pin="GND"/>
+<pinref part="GND9" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="U$5" gate="G$1" pin="GND"/>
+<pinref part="GND15" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="U$6" gate="G$1" pin="GND"/>
+<pinref part="GND16" gate="1" pin="GND"/>
+</segment>
 </net>
 <net name="+3V3" class="0">
 <segment>
@@ -7076,31 +7012,34 @@ Surface Mounting type.</description>
 <pinref part="+3V6" gate="G$1" pin="+3V3"/>
 </segment>
 <segment>
-<pinref part="U$3" gate="G$1" pin="VCC"/>
 <pinref part="+3V2" gate="G$1" pin="+3V3"/>
-<wire x1="10.16" y1="-172.72" x2="10.16" y2="-177.8" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="G$1" pin="3V"/>
+<wire x1="10.16" y1="-167.64" x2="10.16" y2="-172.72" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="U$1" gate="G$1" pin="VCC"/>
 <pinref part="+3V7" gate="G$1" pin="+3V3"/>
-<wire x1="50.8" y1="-172.72" x2="50.8" y2="-177.8" width="0.1524" layer="91"/>
+<pinref part="U$2" gate="G$1" pin="3V"/>
+<wire x1="53.34" y1="-167.64" x2="53.34" y2="-172.72" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="U$2" gate="G$1" pin="VCC"/>
 <pinref part="+3V8" gate="G$1" pin="+3V3"/>
-<wire x1="101.6" y1="-172.72" x2="101.6" y2="-177.8" width="0.1524" layer="91"/>
+<pinref part="U$3" gate="G$1" pin="3V"/>
+<wire x1="93.98" y1="-167.64" x2="93.98" y2="-172.72" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="U$4" gate="G$1" pin="VCC"/>
 <pinref part="+3V10" gate="G$1" pin="+3V3"/>
+<pinref part="U$4" gate="G$1" pin="3V"/>
+<wire x1="139.7" y1="-167.64" x2="139.7" y2="-172.72" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="U$5" gate="G$1" pin="VCC"/>
 <pinref part="+3V12" gate="G$1" pin="+3V3"/>
+<pinref part="U$5" gate="G$1" pin="3V"/>
+<wire x1="182.88" y1="-167.64" x2="182.88" y2="-172.72" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="U$6" gate="G$1" pin="VCC"/>
 <pinref part="+3V13" gate="G$1" pin="+3V3"/>
+<pinref part="U$6" gate="G$1" pin="3V"/>
+<wire x1="223.52" y1="-167.64" x2="223.52" y2="-172.72" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$27" class="0">
