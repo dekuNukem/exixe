@@ -72,3 +72,8 @@ As a consequence, channels implemented on FT I/O show a better noise immunity
 ref-packages
 
 find smt 8MHz and 32.768KHz crystals
+
+remove tx rx header put backing transistors there
+
+remove eeprom 
+put pf0 pf1 tx rx on test points

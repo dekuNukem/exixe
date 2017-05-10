@@ -93,7 +93,6 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  spi_buf[0] = 0xab;
   uint8_t count = 0;
   while (1)
   {
@@ -106,7 +105,11 @@ int main(void)
       if(count > 127)
         count = 0;
       for (int i = 1; i < 16; ++i)
-        spi_buf[i] = count | 0x80;
+      	spi_buf[i] = 0;
+
+      spi_buf[0] = 0xab;
+      spi_buf[3] = count | 0x80;
+      spi_buf[5] = count | 0x80;
       HAL_GPIO_TogglePin(USER_LED_GPIO_Port, USER_LED_Pin);
       spi_send(spi_buf, 16);
       HAL_Delay(5);

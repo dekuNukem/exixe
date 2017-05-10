@@ -1,0 +1,1 @@
+;(function($,window,document,undefined){window.hideMessage=function(){$el=$('.messaging-container');$el.hide();document.cookie="seen_msg_"+ $el.data('msgid')+"=1; path=/;domain="+ $el.data('domain')+";";}})(jQuery,window,document);
