@@ -77,3 +77,12 @@ remove tx rx header put backing transistors there
 
 remove eeprom 
 put pf0 pf1 tx rx on test points
+
+change drc will change pad size
+
+eixie reset after a short delay when invalid header
+gps fix led
+
+polygon rank higher will isolate lower
+
+use driven shield, no ground or signal underneath
