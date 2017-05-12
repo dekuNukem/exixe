@@ -1,8 +1,8 @@
 Dependencies for Project 'clock_test', Target 'clock_test': (DO NOT MODIFY !)
-F (../Src/stm32f0xx_it.c)(0x5916310E)(-c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM0 -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS --C99-I.\RTE\_clock_test-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F072xB -DUSE_HAL_DRIVER -DSTM32F072xB-o clock_test\stm32f0xx_it.o --omf_browse clock_test\stm32f0xx_it.crf --depend clock_test\stm32f0xx_it.d)
+F (../Src/stm32f0xx_it.c)(0x59163875)(-c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM0 -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS --C99-I.\RTE\_clock_test-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F072xB -DUSE_HAL_DRIVER -DSTM32F072xB-o clock_test\stm32f0xx_it.o --omf_browse clock_test\stm32f0xx_it.crf --depend clock_test\stm32f0xx_it.d)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x58A21CA6)
-I (../Inc/stm32f0xx_hal_conf.h)(0x5916310E)
-I (../Inc/main.h)(0x5916310E)
+I (../Inc/stm32f0xx_hal_conf.h)(0x59163876)
+I (../Inc/main.h)(0x59163876)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x58A21CA6)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x58A21C8D)
@@ -33,11 +33,11 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi_ex.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim_ex.h)(0x58A21CA6)
-I (../Inc/stm32f0xx_it.h)(0x5916310E)
+I (../Inc/stm32f0xx_it.h)(0x59163875)
 I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h)(0x58A21CAA)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F67738)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x58A21CAA)
-I (../Inc/FreeRTOSConfig.h)(0x5916310D)
+I (../Inc/FreeRTOSConfig.h)(0x59163874)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x58A21CAA)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x58A21CAA)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x58A21CAA)
@@ -49,10 +49,10 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h)(0x58A21CAA)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h)(0x58A21CAA)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x58A21CAA)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x58A21CAA)
-F (../Src/main.c)(0x59163743)(-c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM0 -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS --C99-I.\RTE\_clock_test-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F072xB -DUSE_HAL_DRIVER -DSTM32F072xB-o clock_test\main.o --omf_browse clock_test\main.crf --depend clock_test\main.d)
-I (../Inc/main.h)(0x5916310E)
+F (../Src/main.c)(0x59163876)(-c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM0 -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS --C99-I.\RTE\_clock_test-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F072xB -DUSE_HAL_DRIVER -DSTM32F072xB-o clock_test\main.o --omf_browse clock_test\main.crf --depend clock_test\main.d)
+I (../Inc/main.h)(0x59163876)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x58A21CA6)
-I (../Inc/stm32f0xx_hal_conf.h)(0x5916310E)
+I (../Inc/stm32f0xx_hal_conf.h)(0x59163876)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x58A21CA6)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x58A21C8D)
@@ -86,7 +86,7 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim_ex.h)(0x58A21CA6)
 I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h)(0x58A21CAA)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F67738)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x58A21CAA)
-I (../Inc/FreeRTOSConfig.h)(0x5916310D)
+I (../Inc/FreeRTOSConfig.h)(0x59163874)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x58A21CAA)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x58A21CAA)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x58A21CAA)
@@ -98,19 +98,19 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h)(0x58A21CAA)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h)(0x58A21CAA)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x58A21CAA)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x58A21CAA)
-I (../Inc/usb_device.h)(0x5916310D)
+I (../Inc/usb_device.h)(0x59163875)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h)(0x58A21CA9)
-I (../Inc/usbd_conf.h)(0x5916310D)
+I (../Inc/usbd_conf.h)(0x59163875)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x57F67738)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F67738)
-I (../Inc/shared.h)(0x5916334E)
+I (../Inc/shared.h)(0x591639DB)
 I (../Inc/my_usb.h)(0x58FBB46B)
 I (../Inc/helpers.h)(0x59163370)
-I (../Inc/my_tasks.h)(0x591636C2)
-F (../Src/stm32f0xx_hal_msp.c)(0x5916310E)(-c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM0 -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS --C99-I.\RTE\_clock_test-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F072xB -DUSE_HAL_DRIVER -DSTM32F072xB-o clock_test\stm32f0xx_hal_msp.o --omf_browse clock_test\stm32f0xx_hal_msp.crf --depend clock_test\stm32f0xx_hal_msp.d)
+I (../Inc/my_tasks.h)(0x591639DD)
+F (../Src/stm32f0xx_hal_msp.c)(0x59163875)(-c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM0 -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS --C99-I.\RTE\_clock_test-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F072xB -DUSE_HAL_DRIVER -DSTM32F072xB-o clock_test\stm32f0xx_hal_msp.o --omf_browse clock_test\stm32f0xx_hal_msp.crf --depend clock_test\stm32f0xx_hal_msp.d)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x58A21CA6)
-I (../Inc/stm32f0xx_hal_conf.h)(0x5916310E)
-I (../Inc/main.h)(0x5916310E)
+I (../Inc/stm32f0xx_hal_conf.h)(0x59163876)
+I (../Inc/main.h)(0x59163876)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x58A21CA6)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x58A21C8D)
@@ -141,7 +141,7 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi_ex.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim_ex.h)(0x58A21CA6)
-F (../Src/usbd_conf.c)(0x5916310E)(-c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM0 -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS --C99-I.\RTE\_clock_test-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F072xB -DUSE_HAL_DRIVER -DSTM32F072xB-o clock_test\usbd_conf.o --omf_browse clock_test\usbd_conf.crf --depend clock_test\usbd_conf.d)
+F (../Src/usbd_conf.c)(0x59163875)(-c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM0 -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS --C99-I.\RTE\_clock_test-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F072xB -DUSE_HAL_DRIVER -DSTM32F072xB-o clock_test\usbd_conf.o --omf_browse clock_test\usbd_conf.crf --depend clock_test\usbd_conf.d)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x58A21C8D)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f072xb.h)(0x58A21C8D)
 I (../Drivers/CMSIS/Include/core_cm0.h)(0x58A21CA5)
@@ -151,8 +151,8 @@ I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x58A21CA5)
 I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x58A21CA5)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/system_stm32f0xx.h)(0x58A21C8D)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x58A21CA6)
-I (../Inc/stm32f0xx_hal_conf.h)(0x5916310E)
-I (../Inc/main.h)(0x5916310E)
+I (../Inc/stm32f0xx_hal_conf.h)(0x59163876)
+I (../Inc/main.h)(0x59163876)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x58A21CA6)
@@ -176,19 +176,19 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi_ex.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim_ex.h)(0x58A21CA6)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h)(0x58A21CA9)
-I (../Inc/usbd_conf.h)(0x5916310D)
+I (../Inc/usbd_conf.h)(0x59163875)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x57F67738)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F67738)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h)(0x58A21CA9)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h)(0x58A21CA9)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h)(0x58A21CA9)
 I (../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h)(0x58A21CA9)
-F (../Src/freertos.c)(0x5916310D)(-c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM0 -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS --C99-I.\RTE\_clock_test-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F072xB -DUSE_HAL_DRIVER -DSTM32F072xB-o clock_test\freertos.o --omf_browse clock_test\freertos.crf --depend clock_test\freertos.d)
+F (../Src/freertos.c)(0x59163875)(-c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM0 -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS --C99-I.\RTE\_clock_test-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F072xB -DUSE_HAL_DRIVER -DSTM32F072xB-o clock_test\freertos.o --omf_browse clock_test\freertos.crf --depend clock_test\freertos.d)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x58A21CAA)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F67738)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F67738)
-I (../Inc/FreeRTOSConfig.h)(0x5916310D)
-I (../Inc/main.h)(0x5916310E)
+I (../Inc/FreeRTOSConfig.h)(0x59163874)
+I (../Inc/main.h)(0x59163876)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x58A21CAA)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x58A21CAA)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x58A21CAA)
@@ -196,10 +196,10 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM0/portmacro.h)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h)(0x58A21CAA)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/task.h)(0x58A21CAA)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/list.h)(0x58A21CAA)
-F (../Src/stm32f0xx_hal_timebase_TIM.c)(0x5916310E)(-c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM0 -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS --C99-I.\RTE\_clock_test-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F072xB -DUSE_HAL_DRIVER -DSTM32F072xB-o clock_test\stm32f0xx_hal_timebase_tim.o --omf_browse clock_test\stm32f0xx_hal_timebase_tim.crf --depend clock_test\stm32f0xx_hal_timebase_tim.d)
+F (../Src/stm32f0xx_hal_timebase_TIM.c)(0x59163875)(-c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM0 -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS --C99-I.\RTE\_clock_test-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F072xB -DUSE_HAL_DRIVER -DSTM32F072xB-o clock_test\stm32f0xx_hal_timebase_tim.o --omf_browse clock_test\stm32f0xx_hal_timebase_tim.crf --depend clock_test\stm32f0xx_hal_timebase_tim.d)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x58A21CA6)
-I (../Inc/stm32f0xx_hal_conf.h)(0x5916310E)
-I (../Inc/main.h)(0x5916310E)
+I (../Inc/stm32f0xx_hal_conf.h)(0x59163876)
+I (../Inc/main.h)(0x59163876)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x58A21CA6)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x58A21C8D)
@@ -230,9 +230,9 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi_ex.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim_ex.h)(0x58A21CA6)
-F (../Src/usbd_desc.c)(0x5916310E)(-c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM0 -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS --C99-I.\RTE\_clock_test-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F072xB -DUSE_HAL_DRIVER -DSTM32F072xB-o clock_test\usbd_desc.o --omf_browse clock_test\usbd_desc.crf --depend clock_test\usbd_desc.d)
+F (../Src/usbd_desc.c)(0x59163875)(-c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM0 -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS --C99-I.\RTE\_clock_test-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F072xB -DUSE_HAL_DRIVER -DSTM32F072xB-o clock_test\usbd_desc.o --omf_browse clock_test\usbd_desc.crf --depend clock_test\usbd_desc.d)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h)(0x58A21CA9)
-I (../Inc/usbd_conf.h)(0x5916310D)
+I (../Inc/usbd_conf.h)(0x59163875)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F67738)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x57F67738)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F67738)
@@ -245,8 +245,8 @@ I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x58A21CA5)
 I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x58A21CA5)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/system_stm32f0xx.h)(0x58A21C8D)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x58A21CA6)
-I (../Inc/stm32f0xx_hal_conf.h)(0x5916310E)
-I (../Inc/main.h)(0x5916310E)
+I (../Inc/stm32f0xx_hal_conf.h)(0x59163876)
+I (../Inc/main.h)(0x59163876)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x58A21CA6)
@@ -271,9 +271,9 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim_ex.h)(0x58A21CA6)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h)(0x58A21CA9)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h)(0x58A21CA9)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h)(0x58A21CA9)
-I (../Inc/usbd_desc.h)(0x5916310E)
-F (../Src/usb_device.c)(0x5916310D)(-c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM0 -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS --C99-I.\RTE\_clock_test-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F072xB -DUSE_HAL_DRIVER -DSTM32F072xB-o clock_test\usb_device.o --omf_browse clock_test\usb_device.crf --depend clock_test\usb_device.d)
-I (../Inc/usb_device.h)(0x5916310D)
+I (../Inc/usbd_desc.h)(0x59163875)
+F (../Src/usb_device.c)(0x59163875)(-c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM0 -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS --C99-I.\RTE\_clock_test-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F072xB -DUSE_HAL_DRIVER -DSTM32F072xB-o clock_test\usb_device.o --omf_browse clock_test\usb_device.crf --depend clock_test\usb_device.d)
+I (../Inc/usb_device.h)(0x59163875)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x58A21C8D)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f072xb.h)(0x58A21C8D)
 I (../Drivers/CMSIS/Include/core_cm0.h)(0x58A21CA5)
@@ -283,8 +283,8 @@ I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x58A21CA5)
 I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x58A21CA5)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/system_stm32f0xx.h)(0x58A21C8D)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x58A21CA6)
-I (../Inc/stm32f0xx_hal_conf.h)(0x5916310E)
-I (../Inc/main.h)(0x5916310E)
+I (../Inc/stm32f0xx_hal_conf.h)(0x59163876)
+I (../Inc/main.h)(0x59163876)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x58A21CA6)
@@ -308,21 +308,21 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi_ex.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim_ex.h)(0x58A21CA6)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h)(0x58A21CA9)
-I (../Inc/usbd_conf.h)(0x5916310D)
+I (../Inc/usbd_conf.h)(0x59163875)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x57F67738)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F67738)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h)(0x58A21CA9)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h)(0x58A21CA9)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h)(0x58A21CA9)
-I (../Inc/usbd_desc.h)(0x5916310E)
+I (../Inc/usbd_desc.h)(0x59163875)
 I (../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h)(0x58A21CA9)
-I (../Inc/usbd_cdc_if.h)(0x5916310E)
-F (../Src/usbd_cdc_if.c)(0x59163424)(-c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM0 -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS --C99-I.\RTE\_clock_test-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F072xB -DUSE_HAL_DRIVER -DSTM32F072xB-o clock_test\usbd_cdc_if.o --omf_browse clock_test\usbd_cdc_if.crf --depend clock_test\usbd_cdc_if.d)
-I (../Inc/usbd_cdc_if.h)(0x5916310E)
+I (../Inc/usbd_cdc_if.h)(0x59163875)
+F (../Src/usbd_cdc_if.c)(0x59163875)(-c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM0 -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS --C99-I.\RTE\_clock_test-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F072xB -DUSE_HAL_DRIVER -DSTM32F072xB-o clock_test\usbd_cdc_if.o --omf_browse clock_test\usbd_cdc_if.crf --depend clock_test\usbd_cdc_if.d)
+I (../Inc/usbd_cdc_if.h)(0x59163875)
 I (../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h)(0x58A21CA9)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h)(0x58A21CA9)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h)(0x58A21CA9)
-I (../Inc/usbd_conf.h)(0x5916310D)
+I (../Inc/usbd_conf.h)(0x59163875)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F67738)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x57F67738)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F67738)
@@ -335,8 +335,8 @@ I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x58A21CA5)
 I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x58A21CA5)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/system_stm32f0xx.h)(0x58A21C8D)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x58A21CA6)
-I (../Inc/stm32f0xx_hal_conf.h)(0x5916310E)
-I (../Inc/main.h)(0x5916310E)
+I (../Inc/stm32f0xx_hal_conf.h)(0x59163876)
+I (../Inc/main.h)(0x59163876)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x58A21CA6)
@@ -364,15 +364,15 @@ I (../Inc/helpers.h)(0x59163370)
 I (../Inc/my_usb.h)(0x58FBB46B)
 F (..\Inc\helpers.h)(0x59163370)()
 F (..\Inc\my_usb.h)(0x58FBB46B)()
-F (..\Inc\shared.h)(0x5916334E)()
+F (..\Inc\shared.h)(0x591639DB)()
 F (..\Src\helpers.c)(0x591633B2)(-c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM0 -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS --C99-I.\RTE\_clock_test-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F072xB -DUSE_HAL_DRIVER -DSTM32F072xB-o clock_test\helpers.o --omf_browse clock_test\helpers.crf --depend clock_test\helpers.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F67738)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F67738)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x57F67738)
 I (../Inc/helpers.h)(0x59163370)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x58A21CA6)
-I (../Inc/stm32f0xx_hal_conf.h)(0x5916310E)
-I (../Inc/main.h)(0x5916310E)
+I (../Inc/stm32f0xx_hal_conf.h)(0x59163876)
+I (../Inc/main.h)(0x59163876)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x58A21CA6)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x58A21C8D)
@@ -402,15 +402,15 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi_ex.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim_ex.h)(0x58A21CA6)
-I (../Inc/shared.h)(0x5916334E)
+I (../Inc/shared.h)(0x591639DB)
 F (..\Src\my_usb.c)(0x58FA7744)(-c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM0 -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS --C99-I.\RTE\_clock_test-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F072xB -DUSE_HAL_DRIVER -DSTM32F072xB-o clock_test\my_usb.o --omf_browse clock_test\my_usb.crf --depend clock_test\my_usb.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F67738)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F67738)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x57F67738)
 I (../Inc/my_usb.h)(0x58FBB46B)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x58A21CA6)
-I (../Inc/stm32f0xx_hal_conf.h)(0x5916310E)
-I (../Inc/main.h)(0x5916310E)
+I (../Inc/stm32f0xx_hal_conf.h)(0x59163876)
+I (../Inc/main.h)(0x59163876)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x58A21CA6)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x58A21C8D)
@@ -441,22 +441,22 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi_ex.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim_ex.h)(0x58A21CA6)
 I (../Inc/helpers.h)(0x59163370)
-I (../Inc/usbd_cdc_if.h)(0x5916310E)
+I (../Inc/usbd_cdc_if.h)(0x59163875)
 I (../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h)(0x58A21CA9)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h)(0x58A21CA9)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h)(0x58A21CA9)
-I (../Inc/usbd_conf.h)(0x5916310D)
+I (../Inc/usbd_conf.h)(0x59163875)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h)(0x58A21CA9)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h)(0x58A21CA9)
-F (..\Inc\my_tasks.h)(0x591636C2)()
-F (..\Src\my_tasks.c)(0x59163679)(-c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM0 -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS --C99-I.\RTE\_clock_test-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F072xB -DUSE_HAL_DRIVER -DSTM32F072xB-o clock_test\my_tasks.o --omf_browse clock_test\my_tasks.crf --depend clock_test\my_tasks.d)
+F (..\Inc\my_tasks.h)(0x591639DD)()
+F (..\Src\my_tasks.c)(0x59164165)(-c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM0 -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS --C99-I.\RTE\_clock_test-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F072xB -DUSE_HAL_DRIVER -DSTM32F072xB-o clock_test\my_tasks.o --omf_browse clock_test\my_tasks.crf --depend clock_test\my_tasks.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F67738)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F67738)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x57F67738)
-I (../Inc/shared.h)(0x5916334E)
+I (../Inc/shared.h)(0x591639DB)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x58A21CA6)
-I (../Inc/stm32f0xx_hal_conf.h)(0x5916310E)
-I (../Inc/main.h)(0x5916310E)
+I (../Inc/stm32f0xx_hal_conf.h)(0x59163876)
+I (../Inc/main.h)(0x59163876)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x58A21CA6)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x58A21C8D)
@@ -486,11 +486,11 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi_ex.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim_ex.h)(0x58A21CA6)
-I (../Inc/my_tasks.h)(0x591636C2)
+I (../Inc/my_tasks.h)(0x591639DD)
 I (../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h)(0x58A21CAA)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F67738)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x58A21CAA)
-I (../Inc/FreeRTOSConfig.h)(0x5916310D)
+I (../Inc/FreeRTOSConfig.h)(0x59163874)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x58A21CAA)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x58A21CAA)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x58A21CAA)
@@ -514,8 +514,8 @@ I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x58A21CA5)
 I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x58A21CA5)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/system_stm32f0xx.h)(0x58A21C8D)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x58A21CA6)
-I (../Inc/stm32f0xx_hal_conf.h)(0x5916310E)
-I (../Inc/main.h)(0x5916310E)
+I (../Inc/stm32f0xx_hal_conf.h)(0x59163876)
+I (../Inc/main.h)(0x59163876)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x58A21CA6)
@@ -538,11 +538,11 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi_ex.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim_ex.h)(0x58A21CA6)
-F (startup_stm32f072xb.s)(0x59163111)(--cpu Cortex-M0 -g --apcs=interwork --pd "__MICROLIB SETA 1" -I ..\Inc-I.\RTE\_clock_test-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include--pd "__UVISION_VERSION SETA 523" --pd "_RTE_ SETA 1" --pd "STM32F072xB SETA 1"--list startup_stm32f072xb.lst --xref -o clock_test\startup_stm32f072xb.o --depend clock_test\startup_stm32f072xb.d)
+F (startup_stm32f072xb.s)(0x59163878)(--cpu Cortex-M0 -g --apcs=interwork --pd "__MICROLIB SETA 1" -I ..\Inc-I.\RTE\_clock_test-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include--pd "__UVISION_VERSION SETA 523" --pd "_RTE_ SETA 1" --pd "STM32F072xB SETA 1"--list startup_stm32f072xb.lst --xref -o clock_test\startup_stm32f072xb.o --depend clock_test\startup_stm32f072xb.d)
 F (../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_cortex.c)(0x58A21CA6)(-c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM0 -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS --C99-I.\RTE\_clock_test-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F072xB -DUSE_HAL_DRIVER -DSTM32F072xB-o clock_test\stm32f0xx_hal_cortex.o --omf_browse clock_test\stm32f0xx_hal_cortex.crf --depend clock_test\stm32f0xx_hal_cortex.d)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x58A21CA6)
-I (../Inc/stm32f0xx_hal_conf.h)(0x5916310E)
-I (../Inc/main.h)(0x5916310E)
+I (../Inc/stm32f0xx_hal_conf.h)(0x59163876)
+I (../Inc/main.h)(0x59163876)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x58A21CA6)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x58A21C8D)
@@ -575,8 +575,8 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim_ex.h)(0x58A21CA6)
 F (../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_gpio.c)(0x58A21CA6)(-c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM0 -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS --C99-I.\RTE\_clock_test-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F072xB -DUSE_HAL_DRIVER -DSTM32F072xB-o clock_test\stm32f0xx_hal_gpio.o --omf_browse clock_test\stm32f0xx_hal_gpio.crf --depend clock_test\stm32f0xx_hal_gpio.d)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x58A21CA6)
-I (../Inc/stm32f0xx_hal_conf.h)(0x5916310E)
-I (../Inc/main.h)(0x5916310E)
+I (../Inc/stm32f0xx_hal_conf.h)(0x59163876)
+I (../Inc/main.h)(0x59163876)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x58A21CA6)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x58A21C8D)
@@ -609,8 +609,8 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim_ex.h)(0x58A21CA6)
 F (../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc.c)(0x58A21CA6)(-c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM0 -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS --C99-I.\RTE\_clock_test-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F072xB -DUSE_HAL_DRIVER -DSTM32F072xB-o clock_test\stm32f0xx_hal_rcc.o --omf_browse clock_test\stm32f0xx_hal_rcc.crf --depend clock_test\stm32f0xx_hal_rcc.d)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x58A21CA6)
-I (../Inc/stm32f0xx_hal_conf.h)(0x5916310E)
-I (../Inc/main.h)(0x5916310E)
+I (../Inc/stm32f0xx_hal_conf.h)(0x59163876)
+I (../Inc/main.h)(0x59163876)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x58A21CA6)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x58A21C8D)
@@ -643,8 +643,8 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim_ex.h)(0x58A21CA6)
 F (../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_spi.c)(0x58A21CA6)(-c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM0 -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS --C99-I.\RTE\_clock_test-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F072xB -DUSE_HAL_DRIVER -DSTM32F072xB-o clock_test\stm32f0xx_hal_spi.o --omf_browse clock_test\stm32f0xx_hal_spi.crf --depend clock_test\stm32f0xx_hal_spi.d)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x58A21CA6)
-I (../Inc/stm32f0xx_hal_conf.h)(0x5916310E)
-I (../Inc/main.h)(0x5916310E)
+I (../Inc/stm32f0xx_hal_conf.h)(0x59163876)
+I (../Inc/main.h)(0x59163876)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x58A21CA6)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x58A21C8D)
@@ -677,8 +677,8 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim_ex.h)(0x58A21CA6)
 F (../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_tim_ex.c)(0x58A21CA6)(-c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM0 -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS --C99-I.\RTE\_clock_test-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F072xB -DUSE_HAL_DRIVER -DSTM32F072xB-o clock_test\stm32f0xx_hal_tim_ex.o --omf_browse clock_test\stm32f0xx_hal_tim_ex.crf --depend clock_test\stm32f0xx_hal_tim_ex.d)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x58A21CA6)
-I (../Inc/stm32f0xx_hal_conf.h)(0x5916310E)
-I (../Inc/main.h)(0x5916310E)
+I (../Inc/stm32f0xx_hal_conf.h)(0x59163876)
+I (../Inc/main.h)(0x59163876)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x58A21CA6)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x58A21C8D)
@@ -711,8 +711,8 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim_ex.h)(0x58A21CA6)
 F (../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_flash_ex.c)(0x58A21CA6)(-c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM0 -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS --C99-I.\RTE\_clock_test-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F072xB -DUSE_HAL_DRIVER -DSTM32F072xB-o clock_test\stm32f0xx_hal_flash_ex.o --omf_browse clock_test\stm32f0xx_hal_flash_ex.crf --depend clock_test\stm32f0xx_hal_flash_ex.d)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x58A21CA6)
-I (../Inc/stm32f0xx_hal_conf.h)(0x5916310E)
-I (../Inc/main.h)(0x5916310E)
+I (../Inc/stm32f0xx_hal_conf.h)(0x59163876)
+I (../Inc/main.h)(0x59163876)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x58A21CA6)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x58A21C8D)
@@ -745,8 +745,8 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim_ex.h)(0x58A21CA6)
 F (../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr.c)(0x58A21CA6)(-c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM0 -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS --C99-I.\RTE\_clock_test-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F072xB -DUSE_HAL_DRIVER -DSTM32F072xB-o clock_test\stm32f0xx_hal_pwr.o --omf_browse clock_test\stm32f0xx_hal_pwr.crf --depend clock_test\stm32f0xx_hal_pwr.d)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x58A21CA6)
-I (../Inc/stm32f0xx_hal_conf.h)(0x5916310E)
-I (../Inc/main.h)(0x5916310E)
+I (../Inc/stm32f0xx_hal_conf.h)(0x59163876)
+I (../Inc/main.h)(0x59163876)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x58A21CA6)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x58A21C8D)
@@ -779,8 +779,8 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim_ex.h)(0x58A21CA6)
 F (../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_flash.c)(0x58A21CA6)(-c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM0 -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS --C99-I.\RTE\_clock_test-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F072xB -DUSE_HAL_DRIVER -DSTM32F072xB-o clock_test\stm32f0xx_hal_flash.o --omf_browse clock_test\stm32f0xx_hal_flash.crf --depend clock_test\stm32f0xx_hal_flash.d)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x58A21CA6)
-I (../Inc/stm32f0xx_hal_conf.h)(0x5916310E)
-I (../Inc/main.h)(0x5916310E)
+I (../Inc/stm32f0xx_hal_conf.h)(0x59163876)
+I (../Inc/main.h)(0x59163876)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x58A21CA6)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x58A21C8D)
@@ -813,8 +813,8 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim_ex.h)(0x58A21CA6)
 F (../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_spi_ex.c)(0x58A21CA6)(-c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM0 -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS --C99-I.\RTE\_clock_test-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F072xB -DUSE_HAL_DRIVER -DSTM32F072xB-o clock_test\stm32f0xx_hal_spi_ex.o --omf_browse clock_test\stm32f0xx_hal_spi_ex.crf --depend clock_test\stm32f0xx_hal_spi_ex.d)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x58A21CA6)
-I (../Inc/stm32f0xx_hal_conf.h)(0x5916310E)
-I (../Inc/main.h)(0x5916310E)
+I (../Inc/stm32f0xx_hal_conf.h)(0x59163876)
+I (../Inc/main.h)(0x59163876)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x58A21CA6)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x58A21C8D)
@@ -847,8 +847,8 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim_ex.h)(0x58A21CA6)
 F (../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_tim.c)(0x58A21CA6)(-c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM0 -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS --C99-I.\RTE\_clock_test-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F072xB -DUSE_HAL_DRIVER -DSTM32F072xB-o clock_test\stm32f0xx_hal_tim.o --omf_browse clock_test\stm32f0xx_hal_tim.crf --depend clock_test\stm32f0xx_hal_tim.d)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x58A21CA6)
-I (../Inc/stm32f0xx_hal_conf.h)(0x5916310E)
-I (../Inc/main.h)(0x5916310E)
+I (../Inc/stm32f0xx_hal_conf.h)(0x59163876)
+I (../Inc/main.h)(0x59163876)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x58A21CA6)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x58A21C8D)
@@ -881,8 +881,8 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim_ex.h)(0x58A21CA6)
 F (../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pcd_ex.c)(0x58A21CA6)(-c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM0 -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS --C99-I.\RTE\_clock_test-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F072xB -DUSE_HAL_DRIVER -DSTM32F072xB-o clock_test\stm32f0xx_hal_pcd_ex.o --omf_browse clock_test\stm32f0xx_hal_pcd_ex.crf --depend clock_test\stm32f0xx_hal_pcd_ex.d)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x58A21CA6)
-I (../Inc/stm32f0xx_hal_conf.h)(0x5916310E)
-I (../Inc/main.h)(0x5916310E)
+I (../Inc/stm32f0xx_hal_conf.h)(0x59163876)
+I (../Inc/main.h)(0x59163876)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x58A21CA6)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x58A21C8D)
@@ -915,8 +915,8 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim_ex.h)(0x58A21CA6)
 F (../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pcd.c)(0x58A21CA6)(-c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM0 -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS --C99-I.\RTE\_clock_test-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F072xB -DUSE_HAL_DRIVER -DSTM32F072xB-o clock_test\stm32f0xx_hal_pcd.o --omf_browse clock_test\stm32f0xx_hal_pcd.crf --depend clock_test\stm32f0xx_hal_pcd.d)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x58A21CA6)
-I (../Inc/stm32f0xx_hal_conf.h)(0x5916310E)
-I (../Inc/main.h)(0x5916310E)
+I (../Inc/stm32f0xx_hal_conf.h)(0x59163876)
+I (../Inc/main.h)(0x59163876)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x58A21CA6)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x58A21C8D)
@@ -949,8 +949,8 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim_ex.h)(0x58A21CA6)
 F (../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal.c)(0x58A21CA6)(-c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM0 -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS --C99-I.\RTE\_clock_test-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F072xB -DUSE_HAL_DRIVER -DSTM32F072xB-o clock_test\stm32f0xx_hal.o --omf_browse clock_test\stm32f0xx_hal.crf --depend clock_test\stm32f0xx_hal.d)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x58A21CA6)
-I (../Inc/stm32f0xx_hal_conf.h)(0x5916310E)
-I (../Inc/main.h)(0x5916310E)
+I (../Inc/stm32f0xx_hal_conf.h)(0x59163876)
+I (../Inc/main.h)(0x59163876)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x58A21CA6)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x58A21C8D)
@@ -983,8 +983,8 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim_ex.h)(0x58A21CA6)
 F (../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_pwr_ex.c)(0x58A21CA6)(-c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM0 -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS --C99-I.\RTE\_clock_test-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F072xB -DUSE_HAL_DRIVER -DSTM32F072xB-o clock_test\stm32f0xx_hal_pwr_ex.o --omf_browse clock_test\stm32f0xx_hal_pwr_ex.crf --depend clock_test\stm32f0xx_hal_pwr_ex.d)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x58A21CA6)
-I (../Inc/stm32f0xx_hal_conf.h)(0x5916310E)
-I (../Inc/main.h)(0x5916310E)
+I (../Inc/stm32f0xx_hal_conf.h)(0x59163876)
+I (../Inc/main.h)(0x59163876)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x58A21CA6)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x58A21C8D)
@@ -1017,8 +1017,8 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim_ex.h)(0x58A21CA6)
 F (../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_rcc_ex.c)(0x58A21CA6)(-c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM0 -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS --C99-I.\RTE\_clock_test-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F072xB -DUSE_HAL_DRIVER -DSTM32F072xB-o clock_test\stm32f0xx_hal_rcc_ex.o --omf_browse clock_test\stm32f0xx_hal_rcc_ex.crf --depend clock_test\stm32f0xx_hal_rcc_ex.d)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x58A21CA6)
-I (../Inc/stm32f0xx_hal_conf.h)(0x5916310E)
-I (../Inc/main.h)(0x5916310E)
+I (../Inc/stm32f0xx_hal_conf.h)(0x59163876)
+I (../Inc/main.h)(0x59163876)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x58A21CA6)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x58A21C8D)
@@ -1051,8 +1051,8 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim_ex.h)(0x58A21CA6)
 F (../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_dma.c)(0x58A21CA6)(-c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM0 -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS --C99-I.\RTE\_clock_test-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F072xB -DUSE_HAL_DRIVER -DSTM32F072xB-o clock_test\stm32f0xx_hal_dma.o --omf_browse clock_test\stm32f0xx_hal_dma.crf --depend clock_test\stm32f0xx_hal_dma.d)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x58A21CA6)
-I (../Inc/stm32f0xx_hal_conf.h)(0x5916310E)
-I (../Inc/main.h)(0x5916310E)
+I (../Inc/stm32f0xx_hal_conf.h)(0x59163876)
+I (../Inc/main.h)(0x59163876)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x58A21CA6)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x58A21C8D)
@@ -1085,8 +1085,8 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim_ex.h)(0x58A21CA6)
 F (../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_i2c_ex.c)(0x58A21CA6)(-c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM0 -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS --C99-I.\RTE\_clock_test-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F072xB -DUSE_HAL_DRIVER -DSTM32F072xB-o clock_test\stm32f0xx_hal_i2c_ex.o --omf_browse clock_test\stm32f0xx_hal_i2c_ex.crf --depend clock_test\stm32f0xx_hal_i2c_ex.d)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x58A21CA6)
-I (../Inc/stm32f0xx_hal_conf.h)(0x5916310E)
-I (../Inc/main.h)(0x5916310E)
+I (../Inc/stm32f0xx_hal_conf.h)(0x59163876)
+I (../Inc/main.h)(0x59163876)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x58A21CA6)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x58A21C8D)
@@ -1119,8 +1119,8 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim_ex.h)(0x58A21CA6)
 F (../Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_hal_i2c.c)(0x58A21CA6)(-c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM0 -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS --C99-I.\RTE\_clock_test-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F072xB -DUSE_HAL_DRIVER -DSTM32F072xB-o clock_test\stm32f0xx_hal_i2c.o --omf_browse clock_test\stm32f0xx_hal_i2c.crf --depend clock_test\stm32f0xx_hal_i2c.d)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x58A21CA6)
-I (../Inc/stm32f0xx_hal_conf.h)(0x5916310E)
-I (../Inc/main.h)(0x5916310E)
+I (../Inc/stm32f0xx_hal_conf.h)(0x59163876)
+I (../Inc/main.h)(0x59163876)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x58A21CA6)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x58A21C8D)
@@ -1157,8 +1157,8 @@ I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F67738)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x58A21CAA)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F67738)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F67738)
-I (../Inc/FreeRTOSConfig.h)(0x5916310D)
-I (../Inc/main.h)(0x5916310E)
+I (../Inc/FreeRTOSConfig.h)(0x59163874)
+I (../Inc/main.h)(0x59163876)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x58A21CAA)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x58A21CAA)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x58A21CAA)
@@ -1171,8 +1171,8 @@ F (../Middlewares/Third_Party/FreeRTOS/Source/croutine.c)(0x58A21CAA)(-c --cpu C
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x58A21CAA)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F67738)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F67738)
-I (../Inc/FreeRTOSConfig.h)(0x5916310D)
-I (../Inc/main.h)(0x5916310E)
+I (../Inc/FreeRTOSConfig.h)(0x59163874)
+I (../Inc/main.h)(0x59163876)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x58A21CAA)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x58A21CAA)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x58A21CAA)
@@ -1187,8 +1187,8 @@ I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F67738)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x58A21CAA)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F67738)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F67738)
-I (../Inc/FreeRTOSConfig.h)(0x5916310D)
-I (../Inc/main.h)(0x5916310E)
+I (../Inc/FreeRTOSConfig.h)(0x59163874)
+I (../Inc/main.h)(0x59163876)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x58A21CAA)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x58A21CAA)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x58A21CAA)
@@ -1203,8 +1203,8 @@ I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x57F67738)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x58A21CAA)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F67738)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F67738)
-I (../Inc/FreeRTOSConfig.h)(0x5916310D)
-I (../Inc/main.h)(0x5916310E)
+I (../Inc/FreeRTOSConfig.h)(0x59163874)
+I (../Inc/main.h)(0x59163876)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x58A21CAA)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x58A21CAA)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x58A21CAA)
@@ -1219,8 +1219,8 @@ I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x57F67738)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x58A21CAA)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F67738)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F67738)
-I (../Inc/FreeRTOSConfig.h)(0x5916310D)
-I (../Inc/main.h)(0x5916310E)
+I (../Inc/FreeRTOSConfig.h)(0x59163874)
+I (../Inc/main.h)(0x59163876)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x58A21CAA)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x58A21CAA)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x58A21CAA)
@@ -1233,8 +1233,8 @@ I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x57F67738)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x58A21CAA)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F67738)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F67738)
-I (../Inc/FreeRTOSConfig.h)(0x5916310D)
-I (../Inc/main.h)(0x5916310E)
+I (../Inc/FreeRTOSConfig.h)(0x59163874)
+I (../Inc/main.h)(0x59163876)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x58A21CAA)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x58A21CAA)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x58A21CAA)
@@ -1249,8 +1249,8 @@ I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F67738)
 I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x58A21CA5)
 I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x58A21CA5)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x58A21CAA)
-I (../Inc/FreeRTOSConfig.h)(0x5916310D)
-I (../Inc/main.h)(0x5916310E)
+I (../Inc/FreeRTOSConfig.h)(0x59163874)
+I (../Inc/main.h)(0x59163876)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x58A21CAA)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x58A21CAA)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x58A21CAA)
@@ -1267,8 +1267,8 @@ I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x57F67738)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x58A21CAA)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F67738)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F67738)
-I (../Inc/FreeRTOSConfig.h)(0x5916310D)
-I (../Inc/main.h)(0x5916310E)
+I (../Inc/FreeRTOSConfig.h)(0x59163874)
+I (../Inc/main.h)(0x59163876)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x58A21CAA)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x58A21CAA)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x58A21CAA)
@@ -1282,8 +1282,8 @@ F (../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM0/port.c)(0x58
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h)(0x58A21CAA)
 I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F67738)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F67738)
-I (../Inc/FreeRTOSConfig.h)(0x5916310D)
-I (../Inc/main.h)(0x5916310E)
+I (../Inc/FreeRTOSConfig.h)(0x59163874)
+I (../Inc/main.h)(0x59163876)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h)(0x58A21CAA)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h)(0x58A21CAA)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h)(0x58A21CAA)
@@ -1293,7 +1293,7 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/task.h)(0x58A21CAA)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/list.h)(0x58A21CAA)
 F (../Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c)(0x58A21CA9)(-c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM0 -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS --C99-I.\RTE\_clock_test-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F072xB -DUSE_HAL_DRIVER -DSTM32F072xB-o clock_test\usbd_core.o --omf_browse clock_test\usbd_core.crf --depend clock_test\usbd_core.d)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h)(0x58A21CA9)
-I (../Inc/usbd_conf.h)(0x5916310D)
+I (../Inc/usbd_conf.h)(0x59163875)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F67738)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x57F67738)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F67738)
@@ -1306,8 +1306,8 @@ I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x58A21CA5)
 I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x58A21CA5)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/system_stm32f0xx.h)(0x58A21C8D)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x58A21CA6)
-I (../Inc/stm32f0xx_hal_conf.h)(0x5916310E)
-I (../Inc/main.h)(0x5916310E)
+I (../Inc/stm32f0xx_hal_conf.h)(0x59163876)
+I (../Inc/main.h)(0x59163876)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x58A21CA6)
@@ -1335,7 +1335,7 @@ I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h)(0x58A21CA9
 F (../Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c)(0x58A21CA9)(-c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM0 -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS --C99-I.\RTE\_clock_test-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F072xB -DUSE_HAL_DRIVER -DSTM32F072xB-o clock_test\usbd_ctlreq.o --omf_browse clock_test\usbd_ctlreq.crf --depend clock_test\usbd_ctlreq.d)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h)(0x58A21CA9)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h)(0x58A21CA9)
-I (../Inc/usbd_conf.h)(0x5916310D)
+I (../Inc/usbd_conf.h)(0x59163875)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F67738)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x57F67738)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F67738)
@@ -1348,8 +1348,8 @@ I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x58A21CA5)
 I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x58A21CA5)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/system_stm32f0xx.h)(0x58A21C8D)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x58A21CA6)
-I (../Inc/stm32f0xx_hal_conf.h)(0x5916310E)
-I (../Inc/main.h)(0x5916310E)
+I (../Inc/stm32f0xx_hal_conf.h)(0x59163876)
+I (../Inc/main.h)(0x59163876)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x58A21CA6)
@@ -1377,7 +1377,7 @@ F (../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.c)(0x58A21C
 I (../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h)(0x58A21CA9)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h)(0x58A21CA9)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h)(0x58A21CA9)
-I (../Inc/usbd_conf.h)(0x5916310D)
+I (../Inc/usbd_conf.h)(0x59163875)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F67738)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x57F67738)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F67738)
@@ -1390,8 +1390,8 @@ I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x58A21CA5)
 I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x58A21CA5)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/system_stm32f0xx.h)(0x58A21C8D)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x58A21CA6)
-I (../Inc/stm32f0xx_hal_conf.h)(0x5916310E)
-I (../Inc/main.h)(0x5916310E)
+I (../Inc/stm32f0xx_hal_conf.h)(0x59163876)
+I (../Inc/main.h)(0x59163876)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x58A21CA6)
@@ -1415,11 +1415,11 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim_ex.h)(0x58A21CA6)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h)(0x58A21CA9)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h)(0x58A21CA9)
-I (../Inc/usbd_desc.h)(0x5916310E)
+I (../Inc/usbd_desc.h)(0x59163875)
 F (../Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c)(0x58A21CA9)(-c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc -I ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I ../Drivers/CMSIS/Include -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM0 -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS --C99-I.\RTE\_clock_test-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F072xB -DUSE_HAL_DRIVER -DSTM32F072xB-o clock_test\usbd_ioreq.o --omf_browse clock_test\usbd_ioreq.crf --depend clock_test\usbd_ioreq.d)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h)(0x58A21CA9)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h)(0x58A21CA9)
-I (../Inc/usbd_conf.h)(0x5916310D)
+I (../Inc/usbd_conf.h)(0x59163875)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F67738)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x57F67738)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F67738)
@@ -1432,8 +1432,8 @@ I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x58A21CA5)
 I (../Drivers/CMSIS/Include/core_cmFunc.h)(0x58A21CA5)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/system_stm32f0xx.h)(0x58A21C8D)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x58A21CA6)
-I (../Inc/stm32f0xx_hal_conf.h)(0x5916310E)
-I (../Inc/main.h)(0x5916310E)
+I (../Inc/stm32f0xx_hal_conf.h)(0x59163876)
+I (../Inc/main.h)(0x59163876)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_def.h)(0x58A21CA6)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x58A21CA6)

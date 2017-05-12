@@ -90,3 +90,5 @@ use driven shield, no ground or signal underneath
 test reversed tx rx
 
 test rtos
+
+looks like reset is needed for correct SPI snyc

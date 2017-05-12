@@ -101,6 +101,7 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_SPI1_Init();
+
   /* USER CODE BEGIN 2 */
   MX_USB_DEVICE_Init();
   my_usb_init();
@@ -121,7 +122,7 @@ int main(void)
 
   /* Create the thread(s) */
   /* definition and creation of defaultTask */
-  osThreadDef(defaultTask, StartDefaultTask, osPriorityNormal, 0, 128);
+  osThreadDef(defaultTask, StartDefaultTask, osPriorityIdle, 0, 64);
   defaultTaskHandle = osThreadCreate(osThread(defaultTask), NULL);
 
   /* USER CODE BEGIN RTOS_THREADS */
@@ -286,6 +287,7 @@ static void MX_GPIO_Init(void)
 void StartDefaultTask(void const * argument)
 {
   /* init code for USB_DEVICE */
+  MX_USB_DEVICE_Init();
 
   /* USER CODE BEGIN 5 */
   /* Infinite loop */
