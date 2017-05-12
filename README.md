@@ -92,3 +92,7 @@ test reversed tx rx
 test rtos
 
 looks like reset is needed for correct SPI snyc
+
+current state, 16 bytes,
+new state, 16 bytes
+compare difference between the two, then do fade animation
