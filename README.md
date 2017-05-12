@@ -86,3 +86,7 @@ gps fix led
 polygon rank higher will isolate lower
 
 use driven shield, no ground or signal underneath
+
+test reversed tx rx
+
+test rtos
