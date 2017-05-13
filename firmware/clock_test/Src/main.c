@@ -126,6 +126,10 @@ int main(void)
   defaultTaskHandle = osThreadCreate(osThread(defaultTask), NULL);
 
   /* USER CODE BEGIN RTOS_THREADS */
+  osThreadDef(animation_task, animation_task_start, osPriorityNormal, 0, 128);
+  osThreadCreate(osThread(animation_task), NULL);
+  osThreadDef(test_task, test_task_start, osPriorityNormal, 0, 64);
+  osThreadCreate(osThread(test_task), NULL);
   /* add threads, ... */
   /* USER CODE END RTOS_THREADS */
 
@@ -286,8 +290,6 @@ static void MX_GPIO_Init(void)
 /* StartDefaultTask function */
 void StartDefaultTask(void const * argument)
 {
-  /* init code for USB_DEVICE */
-  MX_USB_DEVICE_Init();
 
   /* USER CODE BEGIN 5 */
   /* Infinite loop */

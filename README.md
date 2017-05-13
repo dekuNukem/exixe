@@ -96,3 +96,7 @@ looks like reset is needed for correct SPI snyc
 current state, 16 bytes,
 new state, 16 bytes
 compare difference between the two, then do fade animation
+send animation SPI updates 60fps
+
+animation is active if animation_frame_end is bigger than current frame counter
+

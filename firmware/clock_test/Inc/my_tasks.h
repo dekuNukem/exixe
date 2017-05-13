@@ -12,6 +12,9 @@
 #include "helpers.h"
  
 void setup_task(void);
+void animation_task_start(void const * argument);
+void test_task_start(void const * argument);
+
 
 #ifdef __cplusplus
 }

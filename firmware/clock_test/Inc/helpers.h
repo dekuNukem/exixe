@@ -15,6 +15,13 @@ typedef struct
   uint8_t* buf;
 } linear_buf;
 
+typedef struct
+{
+	uint8_t	start_digit;
+	uint8_t end_digit;
+	uint32_t frame_end;
+} digit_animation;
+
 int32_t linear_buf_init(linear_buf *lb, int32_t size);
 void linear_buf_reset(linear_buf *lb);
 int32_t linear_buf_idle(linear_buf *lb, int32_t timeout);
