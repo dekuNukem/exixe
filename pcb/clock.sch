@@ -9906,7 +9906,6 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="R17" library="clock" deviceset="RESISTOR" device="0805-RES"/>
 <part name="R9" library="clock" deviceset="RESISTOR" device="0805-RES"/>
 <part name="U$20" library="a" deviceset="M3_MOUNTING_HOLE" device=""/>
-<part name="U$21" library="a" deviceset="M3_MOUNTING_HOLE" device=""/>
 <part name="TP2" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="PTR1" device="TP20R"/>
 <part name="TP3" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="PTR1" device="TP20R"/>
 </parts>
@@ -10084,7 +10083,6 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <instance part="R17" gate="G$1" x="88.9" y="-256.54" rot="R270"/>
 <instance part="R9" gate="G$1" x="93.98" y="-40.64" rot="R180"/>
 <instance part="U$20" gate="G$1" x="-71.12" y="-205.74"/>
-<instance part="U$21" gate="G$1" x="-43.18" y="-205.74"/>
 <instance part="TP2" gate="G$1" x="538.48" y="-193.04" rot="R90"/>
 <instance part="TP3" gate="G$1" x="538.48" y="-187.96" rot="R90"/>
 </instances>
