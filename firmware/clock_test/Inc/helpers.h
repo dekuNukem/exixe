@@ -7,6 +7,9 @@
 
 #include "stm32f0xx_hal.h"
 
+#define TUBE_COUNT 6
+#define SPI_CMD_SIZE 16
+
 typedef struct
 {
   int32_t last_recv;
@@ -19,8 +22,14 @@ typedef struct
 {
 	uint8_t	start_digit;
 	uint8_t end_digit;
-	uint32_t frame_end;
+	uint32_t animation_start;
+	uint8_t animation_type;
 } digit_animation;
+
+typedef struct
+{
+	uint8_t value[SPI_CMD_SIZE];
+} pwm_status;
 
 int32_t linear_buf_init(linear_buf *lb, int32_t size);
 void linear_buf_reset(linear_buf *lb);

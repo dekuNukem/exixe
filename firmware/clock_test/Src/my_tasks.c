@@ -6,10 +6,13 @@
 #include "main.h"
 #include "my_usb.h"
 #include "helpers.h"
+#include "animations.h"
 
-uint8_t spi_buf[16];
+uint8_t spi_buf[SPI_CMD_SIZE];
 uint32_t frame_counter;
 digit_animation test_anime;
+uint8_t brightness_modifier;
+pwm_status exixe_pwm_status[TUBE_COUNT];
 
 void spi_send(uint8_t* data, uint8_t size)
 {
@@ -23,27 +26,24 @@ void setup_task(void)
   HAL_GPIO_WritePin(USER_LED_GPIO_Port, USER_LED_Pin, GPIO_PIN_RESET);
   HAL_Delay(100);
   HAL_GPIO_WritePin(USER_LED_GPIO_Port, USER_LED_Pin, GPIO_PIN_SET);
+
+  brightness_modifier = 1;
   frame_counter = 0;
-  test_anime.start_digit = 1;
-  test_anime.end_digit = 3;
-  test_anime.frame_end = 255;
+  spi_buf[0] = 0xab;
 }
 
 void animation_task_start(void const * argument)
 {
   for(;;)
   {
-    for (int i = 0; i < 16; ++i)
-      spi_buf[i] = 0;
-    spi_buf[0] = 0xab;
-
     frame_counter++;
-    if(frame_counter <= test_anime.frame_end)
-    {
-      spi_buf[7] = (frame_counter % 128) | 0x80;
-    }
-    spi_send(spi_buf, 16);
-    osDelay(16);
+    animation_handler(frame_counter, &test_anime, &exixe_pwm_status[0]);
+
+    for (int i = 1; i < SPI_CMD_SIZE; ++i)
+      spi_buf[i] = ((exixe_pwm_status[0].value[i] >> 1) / brightness_modifier) | 0x80;
+    
+    spi_send(spi_buf, SPI_CMD_SIZE);
+    osDelay(17);
   }
 }
 
@@ -51,12 +51,28 @@ void test_task_start(void const * argument)
 {
   for(;;)
   {
-    if(HAL_GPIO_ReadPin(USER_BUTTON_GPIO_Port, USER_BUTTON_Pin) == GPIO_PIN_RESET)
-    {
-      printf("button pressed\n");
-      test_anime.frame_end = frame_counter + 255;
-    }
-    printf("no pressed\n");
     osDelay(500);
+    test_anime.start_digit = DIGIT_1;
+    test_anime.end_digit = DIGIT_2;
+    test_anime.animation_start = frame_counter;
+    test_anime.animation_type = ANIMATION_CROSS_FADE;
+    while(is_animation_underway(frame_counter, &test_anime))
+      ;
+
+    osDelay(500);
+    test_anime.start_digit = DIGIT_2;
+    test_anime.end_digit = DIGIT_3;
+    test_anime.animation_start = frame_counter;
+    test_anime.animation_type = ANIMATION_CROSS_FADE;
+    while(is_animation_underway(frame_counter, &test_anime))
+      ;
+
+    osDelay(500);
+    test_anime.start_digit = DIGIT_3;
+    test_anime.end_digit = DIGIT_1;
+    test_anime.animation_start = frame_counter;
+    test_anime.animation_type = ANIMATION_CROSS_FADE;
+    while(is_animation_underway(frame_counter, &test_anime))
+      ;
   }
 }

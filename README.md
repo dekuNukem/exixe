@@ -45,21 +45,21 @@ period 127
 194Hz
 
 0		0xab
-1		red
-2		green
-3		blue
-4		0
-5		1
-6		2
-7		3
-8		4
-9		5
-10		6
-11		7
-12		8
-13		9
-14		left dot
-15		right dot
+1		1
+2		2
+3		3
+4		4
+5		5
+6		6
+7		7
+8		8
+9		9
+10		0
+11		left dot
+12		right dot
+13		red
+14		green
+15		blue
 
 up to 20MHZ
 
@@ -100,3 +100,8 @@ send animation SPI updates 60fps
 
 animation is active if animation_frame_end is bigger than current frame counter
 
+animation type
+0: fade to black then fade into another digit
+1: 2 digits crossfade
+
+2 frame arrays, start digit brightness, end digit brightness

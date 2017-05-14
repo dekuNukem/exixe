@@ -55,3 +55,6 @@ clock_test\my_tasks.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr
 clock_test\my_tasks.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
 clock_test\my_tasks.o: ../Inc/helpers.h
 clock_test\my_tasks.o: ../Inc/my_usb.h
+clock_test\my_tasks.o: ../Inc/animations.h
+clock_test\my_tasks.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
+clock_test\my_tasks.o: ../Drivers/CMSIS/Include/core_cmFunc.h

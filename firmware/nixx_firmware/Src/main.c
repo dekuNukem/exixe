@@ -139,7 +139,6 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  printf("eixie started\n");
   delay_us_init(&htim17);
   timer_init();
   while (1)
@@ -150,12 +149,12 @@ int main(void)
   /* USER CODE END WHILE */
 
   /* USER CODE BEGIN 3 */
-    if(pwm_stats[14] == 0)
+    if(pwm_stats[11] == 0)
     {
       HAL_GPIO_WritePin(LEFT_DOT_GPIO_Port, LEFT_DOT_Pin, GPIO_PIN_RESET);
       continue;
     }
-    else if(pwm_stats[14] >= 125)
+    else if(pwm_stats[11] >= 125)
     {
       HAL_GPIO_WritePin(LEFT_DOT_GPIO_Port, LEFT_DOT_Pin, GPIO_PIN_SET);
       continue;
@@ -163,9 +162,9 @@ int main(void)
     else
     {
       HAL_GPIO_WritePin(LEFT_DOT_GPIO_Port, LEFT_DOT_Pin, GPIO_PIN_SET);
-      delay_us(pwm_stats[14]); // delay_us here is actually delay_40us
+      delay_us(pwm_stats[11]); // delay_us here is actually delay_40us
       HAL_GPIO_WritePin(LEFT_DOT_GPIO_Port, LEFT_DOT_Pin, GPIO_PIN_RESET);
-      delay_us(125 - pwm_stats[14]);
+      delay_us(125 - pwm_stats[11]);
     }
   }
   /* USER CODE END 3 */
@@ -649,15 +648,14 @@ static void MX_GPIO_Init(void)
 void HAL_SPI_RxCpltCallback(SPI_HandleTypeDef *hspi)
 {
   if(spi_recv_buf[0] != INCOMING_SPI_CMD_HEADER)
-    return;
+  {
+    HAL_Delay(10);
+    HAL_NVIC_SystemReset();
+  }
   set_pwm(spi_recv_buf);
   HAL_SPI_Receive_DMA(&hspi1, spi_recv_buf, SPI_BUF_SIZE);
 }
 
-void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
-{
-  printf("k\n");
-}
 /* USER CODE END 4 */
 
 /**

@@ -11,6 +11,7 @@
 "clock_test\helpers.o"
 "clock_test\my_usb.o"
 "clock_test\my_tasks.o"
+"clock_test\animations.o"
 "clock_test\system_stm32f0xx.o"
 "clock_test\startup_stm32f072xb.o"
 "clock_test\stm32f0xx_hal_cortex.o"

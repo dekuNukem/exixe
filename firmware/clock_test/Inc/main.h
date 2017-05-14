@@ -55,7 +55,7 @@
 #define USER_LED_GPIO_Port GPIOC
 #define EXIXE1_CS_Pin GPIO_PIN_0
 #define EXIXE1_CS_GPIO_Port GPIOB
-#define USER_BUTTON_Pin GPIO_PIN_9
+#define USER_BUTTON_Pin GPIO_PIN_8
 #define USER_BUTTON_GPIO_Port GPIOA
 
 /* USER CODE BEGIN Private defines */
