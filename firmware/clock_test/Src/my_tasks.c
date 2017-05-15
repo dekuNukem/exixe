@@ -51,7 +51,14 @@ void test_task_start(void const * argument)
 {
   for(;;)
   {
-    osDelay(500);
+    osDelay(2000);
+    test_anime.start_digit = DIGIT_0;
+    test_anime.end_digit = DIGIT_1;
+    test_anime.animation_start = frame_counter;
+    test_anime.animation_type = ANIMATION_CROSS_FADE;
+    while(is_animation_underway(frame_counter, &test_anime))
+      ;
+
     test_anime.start_digit = DIGIT_1;
     test_anime.end_digit = DIGIT_2;
     test_anime.animation_start = frame_counter;
@@ -59,17 +66,8 @@ void test_task_start(void const * argument)
     while(is_animation_underway(frame_counter, &test_anime))
       ;
 
-    osDelay(500);
     test_anime.start_digit = DIGIT_2;
-    test_anime.end_digit = DIGIT_3;
-    test_anime.animation_start = frame_counter;
-    test_anime.animation_type = ANIMATION_CROSS_FADE;
-    while(is_animation_underway(frame_counter, &test_anime))
-      ;
-
-    osDelay(500);
-    test_anime.start_digit = DIGIT_3;
-    test_anime.end_digit = DIGIT_1;
+    test_anime.end_digit = DIGIT_0;
     test_anime.animation_start = frame_counter;
     test_anime.animation_type = ANIMATION_CROSS_FADE;
     while(is_animation_underway(frame_counter, &test_anime))

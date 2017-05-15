@@ -17,7 +17,53 @@ void test_task_start(void const * argument)
     osDelay(100);
   }
 }
+    // osDelay(500);
+    test_anime.start_digit = DIGIT_RIGHT_DOT;
+    test_anime.end_digit = DIGIT_2;
+    test_anime.animation_start = frame_counter;
+    test_anime.animation_type = ANIMATION_CROSS_FADE;
+    while(is_animation_underway(frame_counter, &test_anime))
+      ;
 
+    // osDelay(500);
+    test_anime.start_digit = DIGIT_2;
+    test_anime.end_digit = DIGIT_3;
+    test_anime.animation_start = frame_counter;
+    test_anime.animation_type = ANIMATION_CROSS_FADE;
+    while(is_animation_underway(frame_counter, &test_anime))
+      ;
+
+    // osDelay(500);
+    test_anime.start_digit = DIGIT_3;
+    test_anime.end_digit = DIGIT_4;
+    test_anime.animation_start = frame_counter;
+    test_anime.animation_type = ANIMATION_CROSS_FADE;
+    while(is_animation_underway(frame_counter, &test_anime))
+      ;
+
+    // osDelay(500);
+    test_anime.start_digit = DIGIT_4;
+    test_anime.end_digit = DIGIT_5;
+    test_anime.animation_start = frame_counter;
+    test_anime.animation_type = ANIMATION_CROSS_FADE;
+    while(is_animation_underway(frame_counter, &test_anime))
+      ;
+
+    // osDelay(500);
+    test_anime.start_digit = DIGIT_5;
+    test_anime.end_digit = DIGIT_6;
+    test_anime.animation_start = frame_counter;
+    test_anime.animation_type = ANIMATION_CROSS_FADE;
+    while(is_animation_underway(frame_counter, &test_anime))
+      ;
+
+    // osDelay(500);
+    test_anime.start_digit = DIGIT_6;
+    test_anime.end_digit = DIGIT_RIGHT_DOT;
+    test_anime.animation_start = frame_counter;
+    test_anime.animation_type = ANIMATION_CROSS_FADE;
+    while(is_animation_underway(frame_counter, &test_anime))
+      ;
 
 void test_task_start(void const * argument)
 {
