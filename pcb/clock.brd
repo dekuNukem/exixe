@@ -228,8 +228,8 @@
 <rectangle x1="117.856" y1="45.085" x2="120.396" y2="49.149" layer="41"/>
 <rectangle x1="74.2188" y1="33.5788" x2="75.4888" y2="45.2628" layer="41"/>
 <rectangle x1="73.025" y1="44.704" x2="76.708" y2="50.038" layer="42"/>
-<text x="15.367" y="1.143" size="1.27" layer="25">RX</text>
-<text x="17.907" y="1.143" size="1.27" layer="25">TX</text>
+<text x="15.367" y="1.143" size="1.27" layer="25">TX</text>
+<text x="17.907" y="1.143" size="1.27" layer="25">RX</text>
 <text x="20.955" y="1.143" size="1.27" layer="25">G</text>
 <text x="22.987" y="1.143" size="1.27" layer="25">3V</text>
 <text x="61.849" y="1.397" size="1.27" layer="25" rot="R180">3V</text>
@@ -247,9 +247,13 @@
 <text x="2.159" y="14.478" size="5.08" layer="25">+</text>
 <text x="2.286" y="36.449" size="5.08" layer="25">-</text>
 <text x="2.286" y="25.4" size="5.08" layer="25">*</text>
-<text x="140.716" y="43.053" size="1.27" layer="25" rot="R270">GPS FIX</text>
+<text x="139.954" y="42.672" size="1.27" layer="25" rot="R270">GPS
+FIX</text>
 <text x="139.573" y="26.67" size="1.27" layer="25" rot="R270">exixe clock
 dekuNukem 2017</text>
+<text x="78.74" y="32.004" size="1.27" layer="25">RX</text>
+<text x="82.677" y="22.86" size="1.27" layer="25">TX</text>
+<text x="99.695" y="31.75" size="1.27" layer="25">EXTINT</text>
 </plain>
 <libraries>
 <library name="backplane">
@@ -1532,13 +1536,13 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 </element>
 <element name="R9" library="clock" package="0805" value="" x="138.684" y="36.957" rot="R270"/>
 <element name="U$20" library="a" package="M3_MOUNTING_HOLE_PACK" value="M3_MOUNTING_HOLE" x="85" y="32"/>
-<element name="TP2" library="testpad" library_urn="urn:adsk.eagle:library:385" package="TP20R" value="PTR1TP20R" x="89.535" y="25.4" smashed="yes">
-<attribute name="TP_SIGNAL_NAME" value="" x="89.535" y="22.86" size="1" layer="37"/>
-<attribute name="VALUE" x="88.773" y="24.384" size="0.0254" layer="27"/>
+<element name="TP2" library="testpad" library_urn="urn:adsk.eagle:library:385" package="TP20R" value="PTR1TP20R" x="83.82" y="25.781" smashed="yes">
+<attribute name="TP_SIGNAL_NAME" value="" x="83.82" y="23.241" size="1" layer="37"/>
+<attribute name="VALUE" x="83.058" y="24.765" size="0.0254" layer="27"/>
 </element>
-<element name="TP3" library="testpad" library_urn="urn:adsk.eagle:library:385" package="TP20R" value="PTR1TP20R" x="89.916" y="30.099" smashed="yes">
-<attribute name="TP_SIGNAL_NAME" value="" x="89.916" y="27.559" size="1" layer="37"/>
-<attribute name="VALUE" x="89.154" y="29.083" size="0.0254" layer="27"/>
+<element name="TP3" library="testpad" library_urn="urn:adsk.eagle:library:385" package="TP20R" value="PTR1TP20R" x="79.629" y="30.353" smashed="yes">
+<attribute name="TP_SIGNAL_NAME" value="" x="79.629" y="27.813" size="1" layer="37"/>
+<attribute name="VALUE" x="78.867" y="29.337" size="0.0254" layer="27"/>
 </element>
 </elements>
 <signals>
@@ -2196,8 +2200,8 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <signal name="USART1_TX">
 <contactref element="IC1" pad="42"/>
 <contactref element="U$7" pad="2_TXD"/>
-<wire x1="89.535" y1="27.948" x2="54.682" y2="27.948" width="0.2032" layer="1"/>
-<wire x1="89.535" y1="27.948" x2="90.2382" y2="27.948" width="0.2032" layer="1"/>
+<wire x1="83.693" y1="27.948" x2="90.2382" y2="27.948" width="0.2032" layer="1"/>
+<wire x1="83.693" y1="27.948" x2="54.682" y2="27.948" width="0.2032" layer="1"/>
 <wire x1="93.5482" y1="24.638" x2="100.076" y2="24.638" width="0.2032" layer="1"/>
 <wire x1="101.0892" y1="25.6512" x2="100.076" y2="24.638" width="0.2032" layer="1"/>
 <wire x1="101.0892" y1="25.6512" x2="101.0892" y2="28.3688" width="0.2032" layer="1"/>
@@ -2213,13 +2217,14 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <wire x1="102.997" y1="29.718" x2="105.283" y2="27.432" width="0.2032" layer="1"/>
 <wire x1="105.283" y1="27.432" x2="105.283" y2="15.2654" width="0.2032" layer="1"/>
 <contactref element="TP2" pad="TP"/>
-<wire x1="89.535" y1="25.4" x2="89.535" y2="27.948" width="0.2032" layer="1"/>
+<wire x1="83.82" y1="25.781" x2="83.82" y2="27.948" width="0.2032" layer="1"/>
+<wire x1="83.82" y1="27.948" x2="83.693" y2="27.948" width="0.2032" layer="1"/>
 </signal>
 <signal name="USART1_RX">
 <contactref element="IC1" pad="43"/>
 <contactref element="U$7" pad="3_RXD"/>
-<wire x1="89.916" y1="28.448" x2="54.682" y2="28.448" width="0.2032" layer="1"/>
-<wire x1="89.916" y1="28.448" x2="90.5764" y2="28.448" width="0.2032" layer="1"/>
+<wire x1="79.629" y1="28.448" x2="90.5764" y2="28.448" width="0.2032" layer="1"/>
+<wire x1="79.629" y1="28.448" x2="54.682" y2="28.448" width="0.2032" layer="1"/>
 <wire x1="90.5764" y1="28.448" x2="93.8784" y2="25.146" width="0.2032" layer="1"/>
 <wire x1="99.9998" y1="28.3582" x2="99.9892" y2="28.3688" width="0.2032" layer="1"/>
 <wire x1="93.8784" y1="25.146" x2="99.187" y2="25.146" width="0.2032" layer="1"/>
@@ -2235,7 +2240,7 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <wire x1="103.378" y1="30.226" x2="106.553" y2="27.051" width="0.2032" layer="1"/>
 <wire x1="106.553" y1="27.051" x2="106.553" y2="14.1478" width="0.2032" layer="1"/>
 <contactref element="TP3" pad="TP"/>
-<wire x1="89.916" y1="30.099" x2="89.916" y2="28.448" width="0.2032" layer="1"/>
+<wire x1="79.629" y1="30.353" x2="79.629" y2="28.448" width="0.2032" layer="1"/>
 </signal>
 <signal name="N$9">
 <contactref element="U$15" pad="P$1"/>
@@ -2482,7 +2487,7 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <wire x1="106.553" y1="8.382" x2="106.553" y2="4.013" width="0.2032" layer="1"/>
 <wire x1="106.553" y1="4.013" x2="104.77" y2="2.23" width="0.2032" layer="1"/>
 </signal>
-<signal name="RX3">
+<signal name="PB10">
 <contactref element="JP5" pad="1"/>
 <contactref element="IC1" pad="21"/>
 <wire x1="45.682" y1="26.948" x2="44.728" y2="26.948" width="0.2032" layer="1"/>
@@ -2497,7 +2502,7 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <wire x1="29.972" y1="7.366" x2="30.988" y2="8.382" width="0.2032" layer="1"/>
 <wire x1="30.988" y1="8.382" x2="41.275" y2="8.382" width="0.2032" layer="1"/>
 </signal>
-<signal name="TX3">
+<signal name="PB11">
 <contactref element="JP5" pad="2"/>
 <contactref element="IC1" pad="22"/>
 <wire x1="45.682" y1="26.448" x2="44.99" y2="26.448" width="0.2032" layer="1"/>

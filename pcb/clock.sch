@@ -11116,7 +11116,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <junction x="510.54" y="-182.88"/>
 </segment>
 </net>
-<net name="RX3" class="0">
+<net name="PB10" class="0">
 <segment>
 <pinref part="JP5" gate="A" pin="1"/>
 <label x="7.62" y="-33.02" size="1.778" layer="95"/>
@@ -11125,7 +11125,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <wire x1="-10.16" y1="-35.56" x2="17.78" y2="-33.02" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="TX3" class="0">
+<net name="PB11" class="0">
 <segment>
 <pinref part="JP5" gate="A" pin="2"/>
 <label x="7.62" y="-35.56" size="1.778" layer="95"/>
