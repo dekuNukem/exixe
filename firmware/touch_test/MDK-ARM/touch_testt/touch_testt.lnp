@@ -1,0 +1,27 @@
+--cpu Cortex-M0
+"touch_testt\stm32f0xx_hal_msp.o"
+"touch_testt\main.o"
+"touch_testt\stm32f0xx_it.o"
+"touch_testt\system_stm32f0xx.o"
+"touch_testt\startup_stm32f072xb.o"
+"touch_testt\stm32f0xx_hal_tim.o"
+"touch_testt\stm32f0xx_hal_dma.o"
+"touch_testt\stm32f0xx_hal_flash_ex.o"
+"touch_testt\stm32f0xx_hal_rcc_ex.o"
+"touch_testt\stm32f0xx_hal_rcc.o"
+"touch_testt\stm32f0xx_hal_flash.o"
+"touch_testt\stm32f0xx_hal_pwr_ex.o"
+"touch_testt\stm32f0xx_hal_cortex.o"
+"touch_testt\stm32f0xx_hal.o"
+"touch_testt\stm32f0xx_hal_i2c.o"
+"touch_testt\stm32f0xx_hal_pwr.o"
+"touch_testt\stm32f0xx_hal_gpio.o"
+"touch_testt\stm32f0xx_hal_tim_ex.o"
+"touch_testt\stm32f0xx_hal_i2c_ex.o"
+"touch_testt\stm32f0xx_hal_uart.o"
+"touch_testt\stm32f0xx_hal_uart_ex.o"
+"touch_testt\stm32f0xx_hal_tsc.o"
+--library_type=microlib --strict --scatter "touch_testt\touch_testt.sct"
+--diag_suppress=L6329 --summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "touch_testt.map" -o touch_testt\touch_testt.axf

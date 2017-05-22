@@ -105,3 +105,6 @@ animation type
 1: 2 digits crossfade
 
 2 frame arrays, start digit brightness, end digit brightness
+
+en pin on power supply normally off connected to a gpio?
+
