@@ -36,6 +36,9 @@ clock_test\my_usb.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi.h
 clock_test\my_usb.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi_ex.h
 clock_test\my_usb.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim.h
 clock_test\my_usb.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim_ex.h
+clock_test\my_usb.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tsc.h
+clock_test\my_usb.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart.h
+clock_test\my_usb.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart_ex.h
 clock_test\my_usb.o: ../Inc/helpers.h
 clock_test\my_usb.o: ../Inc/usbd_cdc_if.h
 clock_test\my_usb.o: ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h

@@ -2,6 +2,37 @@ void test_task_start(void const * argument)
 {
   for(;;)
   {
+    osDelay(2000);
+    test_anime.start_digit = DIGIT_0;
+    test_anime.end_digit = DIGIT_1;
+    test_anime.animation_start = frame_counter;
+    test_anime.animation_type = ANIMATION_CROSS_FADE;
+    while(is_animation_underway(frame_counter, &test_anime))
+      ;
+
+    test_anime.start_digit = DIGIT_1;
+    test_anime.end_digit = DIGIT_2;
+    test_anime.animation_start = frame_counter;
+    test_anime.animation_type = ANIMATION_CROSS_FADE;
+    while(is_animation_underway(frame_counter, &test_anime))
+      ;
+
+    test_anime.start_digit = DIGIT_2;
+    test_anime.end_digit = DIGIT_0;
+    test_anime.animation_start = frame_counter;
+    test_anime.animation_type = ANIMATION_CROSS_FADE;
+    while(is_animation_underway(frame_counter, &test_anime))
+      ;
+
+    HAL_GPIO_TogglePin(USER_LED_GPIO_Port, USER_LED_Pin);
+  }
+}
+
+
+void test_task_start(void const * argument)
+{
+  for(;;)
+  {
     while(!is_animation_finished(frame_counter, &test_anime))
       ;
     test_anime.start_digit = 1;

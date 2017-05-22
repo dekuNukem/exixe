@@ -94,11 +94,32 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+  TSC_IOConfigTypeDef IoConfig;
+
+  IoConfig.ChannelIOs  = TSC_GROUP2_IO1|TSC_GROUP2_IO2|TSC_GROUP2_IO3;
+  IoConfig.SamplingIOs = TSC_GROUP1_IO3|TSC_GROUP2_IO4;
+	IoConfig.ShieldIOs = TSC_GROUP1_IO4;
+	HAL_TSC_IOConfig(&htsc, &IoConfig);
+
   while (1)
   {
-  	printf("hello\n");
+  	HAL_TSC_IODischarge(&htsc, ENABLE);
+  	HAL_Delay(1);
+  	HAL_TSC_IODischarge(&htsc, DISABLE);
+
+  	HAL_TSC_Start(&htsc);
+
+  	while(HAL_TSC_GetState(&htsc) == HAL_TSC_STATE_BUSY)
+  		;
+
+  	if (HAL_TSC_GroupGetStatus(&htsc, TSC_GROUP2_IDX) == TSC_GROUP_COMPLETED)
+    {
+      uint32_t uhTSCAcquisitionValue = HAL_TSC_GroupGetValue(&htsc, TSC_GROUP2_IDX);
+      printf("%d\n", uhTSCAcquisitionValue);
+		}
+
   	HAL_GPIO_TogglePin(USER_LED_GPIO_Port, USER_LED_Pin);
-  	HAL_Delay(500);
+  	HAL_Delay(100);
   /* USER CODE END WHILE */
 
   /* USER CODE BEGIN 3 */
@@ -158,12 +179,12 @@ static void MX_TSC_Init(void)
     /**Configure the TSC peripheral 
     */
   htsc.Instance = TSC;
-  htsc.Init.CTPulseHighLength = TSC_CTPH_16CYCLES;
-  htsc.Init.CTPulseLowLength = TSC_CTPL_16CYCLES;
+  htsc.Init.CTPulseHighLength = TSC_CTPH_4CYCLES;
+  htsc.Init.CTPulseLowLength = TSC_CTPL_4CYCLES;
   htsc.Init.SpreadSpectrum = DISABLE;
   htsc.Init.SpreadSpectrumDeviation = 1;
   htsc.Init.SpreadSpectrumPrescaler = TSC_SS_PRESC_DIV1;
-  htsc.Init.PulseGeneratorPrescaler = TSC_PG_PRESC_DIV64;
+  htsc.Init.PulseGeneratorPrescaler = TSC_PG_PRESC_DIV32;
   htsc.Init.MaxCountValue = TSC_MCV_4095;
   htsc.Init.IODefaultMode = TSC_IODEF_OUT_PP_LOW;
   htsc.Init.SynchroPinPolarity = TSC_SYNC_POLARITY_FALLING;
