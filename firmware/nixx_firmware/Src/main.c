@@ -141,6 +141,7 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   delay_us_init(&htim17);
   timer_init();
+  HAL_GPIO_WritePin(BAKE_GPIO_Port, BAKE_Pin, GPIO_PIN_SET);
   while (1)
   {
     kick_dog();
@@ -633,7 +634,17 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(BAKE_GPIO_Port, BAKE_Pin, GPIO_PIN_RESET);
+
+  /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(LEFT_DOT_GPIO_Port, LEFT_DOT_Pin, GPIO_PIN_RESET);
+
+  /*Configure GPIO pin : BAKE_Pin */
+  GPIO_InitStruct.Pin = BAKE_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(BAKE_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pin : LEFT_DOT_Pin */
   GPIO_InitStruct.Pin = LEFT_DOT_Pin;

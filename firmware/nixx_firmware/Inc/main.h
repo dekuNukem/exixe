@@ -41,6 +41,8 @@
 
 /* Private define ------------------------------------------------------------*/
 
+#define BAKE_Pin GPIO_PIN_12
+#define BAKE_GPIO_Port GPIOA
 #define LEFT_DOT_Pin GPIO_PIN_3
 #define LEFT_DOT_GPIO_Port GPIOB
 
