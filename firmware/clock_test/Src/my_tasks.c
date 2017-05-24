@@ -23,10 +23,11 @@ void spi_send(uint8_t* data, uint8_t size)
 
 void setup_task(void)
 {
-  HAL_GPIO_WritePin(USER_LED_GPIO_Port, USER_LED_Pin, GPIO_PIN_RESET);
-  HAL_Delay(100);
-  HAL_GPIO_WritePin(USER_LED_GPIO_Port, USER_LED_Pin, GPIO_PIN_SET);
-
+  while(1)
+  {
+    HAL_GPIO_TogglePin(USER_LED_GPIO_Port, USER_LED_Pin);
+    delay_us(250000);
+  }
   brightness_modifier = 1;
   frame_counter = 0;
   spi_buf[0] = 0xab;
@@ -51,9 +52,9 @@ void test_task_start(void const * argument)
 {
   for(;;)
   {
-    osDelay(500);
-    printf("hello\n");
-    HAL_GPIO_TogglePin(USER_LED_GPIO_Port, USER_LED_Pin);
+    osDelay(100);
+    // printf("%d\n", get_ls_reading());
+    // HAL_GPIO_TogglePin(USER_LED_GPIO_Port, USER_LED_Pin);
   }
 }
 

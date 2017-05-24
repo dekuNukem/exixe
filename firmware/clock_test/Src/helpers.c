@@ -66,4 +66,12 @@ int32_t linear_buf_idle(linear_buf *lb, int32_t timeout)
   return 0;
 }
 
-
+int32_t get_ls_reading(void)
+{
+  int32_t result = -1;
+  HAL_ADC_Start(adc_ptr);
+  if(HAL_ADC_PollForConversion(adc_ptr, 100) == HAL_OK)
+    result = HAL_ADC_GetValue(adc_ptr);
+  HAL_ADC_Stop(adc_ptr);
+  return result;
+}

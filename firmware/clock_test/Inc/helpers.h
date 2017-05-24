@@ -37,6 +37,7 @@ int32_t linear_buf_idle(linear_buf *lb, int32_t timeout);
 int32_t linear_buf_line_available(linear_buf *lb);
 int32_t linear_buf_add(linear_buf *lb, uint8_t c);
 int32_t linear_buf_add_str(linear_buf *lb, uint8_t *s, uint32_t len);
+int32_t get_ls_reading(void);
 
 #ifdef __cplusplus
 }
