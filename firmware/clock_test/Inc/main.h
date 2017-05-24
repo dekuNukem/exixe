@@ -51,6 +51,8 @@
 
 /* Private define ------------------------------------------------------------*/
 
+#define OWIRE_DATA_Pin GPIO_PIN_13
+#define OWIRE_DATA_GPIO_Port GPIOC
 #define EXIXE1_CS_Pin GPIO_PIN_0
 #define EXIXE1_CS_GPIO_Port GPIOB
 #define USER_LED_Pin GPIO_PIN_9

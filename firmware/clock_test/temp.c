@@ -1,3 +1,12 @@
+ result = my_1wire_read_byte();
+  printf("read: 0x%x\n", result);
+  for (int i = 0; i < DS_BUF_SIZE; ++i)
+    printf("%d: 0x%x\n", i, ds18b20_buf[i]);
+
+
+
+printf("mask %d: %d\n", i, (v >> i) & 0x1);
+my_1wire_write_bit((mask & v)?1:0);
 void test_task_start(void const * argument)
 {
   for(;;)
