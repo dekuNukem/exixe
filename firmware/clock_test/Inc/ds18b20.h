@@ -7,7 +7,8 @@
 
 #include "stm32f0xx_hal.h"
 
-uint8_t ds18b20_init(void);
+void ds18b20_start_conversion(void);
+int16_t ds18b20_get_temp(void);
 
 #ifdef __cplusplus
 }

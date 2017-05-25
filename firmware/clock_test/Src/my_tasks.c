@@ -26,9 +26,12 @@ void spi_send(uint8_t* data, uint8_t size)
 
 void setup_task(void)
 {
-  ds18b20_init();
-  printf("1wire init done\n");
-  while(1);
+  while(1)
+  {
+    ds18b20_start_conversion();
+    HAL_Delay(750);
+    printf("temp: %d\n", ds18b20_get_temp() >> 4);
+  }
 
   brightness_modifier = 1;
   frame_counter = 0;
