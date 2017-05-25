@@ -9,6 +9,7 @@
 
 #define TUBE_COUNT 6
 #define SPI_CMD_SIZE 16
+#define GPS_BUF_SIZE 256
 
 typedef struct
 {

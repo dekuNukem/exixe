@@ -49,6 +49,7 @@ void NMI_Handler(void);
 void HardFault_Handler(void);
 void SysTick_Handler(void);
 void TIM7_IRQHandler(void);
+void USART1_IRQHandler(void);
 void USB_IRQHandler(void);
 
 #ifdef __cplusplus

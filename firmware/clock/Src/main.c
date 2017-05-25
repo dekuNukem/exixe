@@ -70,7 +70,6 @@ osThreadId defaultTaskHandle;
 
 /* USER CODE BEGIN PV */
 /* Private variables ---------------------------------------------------------*/
-
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -438,10 +437,10 @@ static void MX_GPIO_Init(void)
   HAL_GPIO_WritePin(OWIRE_DATA_GPIO_Port, OWIRE_DATA_Pin, GPIO_PIN_SET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(EXIXE1_CS_GPIO_Port, EXIXE1_CS_Pin, GPIO_PIN_SET);
+  HAL_GPIO_WritePin(GPIOA, GPS_RESET_Pin|USER_LED_Pin, GPIO_PIN_SET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(USER_LED_GPIO_Port, USER_LED_Pin, GPIO_PIN_SET);
+  HAL_GPIO_WritePin(EXIXE1_CS_GPIO_Port, EXIXE1_CS_Pin, GPIO_PIN_SET);
 
   /*Configure GPIO pin : OWIRE_DATA_Pin */
   GPIO_InitStruct.Pin = OWIRE_DATA_Pin;
@@ -449,6 +448,13 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(OWIRE_DATA_GPIO_Port, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : GPS_RESET_Pin */
+  GPIO_InitStruct.Pin = GPS_RESET_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_OD;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(GPS_RESET_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pin : EXIXE1_CS_Pin */
   GPIO_InitStruct.Pin = EXIXE1_CS_Pin;
@@ -467,6 +473,23 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
+
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
+{
+  HAL_GPIO_TogglePin(USER_LED_GPIO_Port, USER_LED_Pin);
+  if(huart->Instance==USART1)
+  {
+      linear_buf_add(&gps_lb, gps_byte_buf[0]);
+      HAL_UART_Receive_IT(&huart1, gps_byte_buf, 1);
+  }
+}
+
+void HAL_UART_ErrorCallback(UART_HandleTypeDef *huart)
+{
+  if(huart->Instance==USART1)
+      HAL_UART_Receive_IT(&huart1, gps_byte_buf, 1);
+}
+
 
 /* USER CODE END 4 */
 

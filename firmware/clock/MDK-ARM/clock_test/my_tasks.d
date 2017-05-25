@@ -66,3 +66,4 @@ clock_test\my_tasks.o: ../Inc/delay_us.h
 clock_test\my_tasks.o: ../Inc/my_1wire.h
 clock_test\my_tasks.o: ../Inc/ds18b20.h
 clock_test\my_tasks.o: ../Inc/eeprom.h
+clock_test\my_tasks.o: ../Inc/gps_config.h
