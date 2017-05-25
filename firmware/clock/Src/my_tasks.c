@@ -10,6 +10,7 @@
 #include "delay_us.h"
 #include "my_1wire.h"
 #include "ds18b20.h"
+#include "eeprom.h"
 
 uint8_t spi_buf[SPI_CMD_SIZE];
 uint32_t frame_counter;

@@ -10,4 +10,7 @@ extern SPI_HandleTypeDef hspi1;
 extern ADC_HandleTypeDef hadc;
 #define adc_ptr (&hadc)
 
+extern I2C_HandleTypeDef hi2c1;
+#define i2c1_ptr (&hi2c1)
+
 #endif

@@ -15,6 +15,7 @@
 "clock_test\delay_us.o"
 "clock_test\my_1wire.o"
 "clock_test\ds18b20.o"
+"clock_test\eeprom.o"
 "clock_test\system_stm32f0xx.o"
 "clock_test\startup_stm32f072xb.o"
 "clock_test\stm32f0xx_hal_cortex.o"

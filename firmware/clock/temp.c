@@ -1,3 +1,10 @@
+  for (int i = 0; i < 16; ++i)
+    eeprom_write(i, 255 - i);
+
+  for (int i = 0; i < 16; ++i)
+    printf("%d: %d\n", i, eeprom_read(i));
+
+
  result = my_1wire_read_byte();
   printf("read: 0x%x\n", result);
   for (int i = 0; i < DS_BUF_SIZE; ++i)
