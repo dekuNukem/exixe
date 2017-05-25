@@ -3,7 +3,7 @@
 <title>Static Call Graph - [clock_test\clock_test.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image clock_test\clock_test.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060061: Last Updated: Wed May 24 17:35:02 2017
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060061: Last Updated: Thu May 25 10:05:13 2017
 <BR><P>
 <H3>Maximum Stack Usage =        260 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -1448,13 +1448,13 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[e4]"></a>ds18b20_init</STRONG> (Thumb, 102 bytes, Stack size 16 bytes, ds18b20.o(i.ds18b20_init))
+<P><STRONG><a name="[e4]"></a>ds18b20_init</STRONG> (Thumb, 82 bytes, Stack size 16 bytes, ds18b20.o(i.ds18b20_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = ds18b20_init &rArr; my_1wire_read_bytes &rArr; my_1wire_read_byte &rArr; my_1wire_read_bit
 </UL>
 <BR>[Calls]<UL><LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;my_1wire_write_byte
 <LI><a href="#[e5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;my_1wire_reset
-<LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;my_1wire_read_bytes
-<LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;my_1wire_read_byte
+<LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;my_1wire_read_bytes
+<LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;my_1wire_read_byte
 <LI><a href="#[e9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
 <LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
 </UL>
@@ -1537,22 +1537,22 @@ Global Symbols
 <LI><a href="#[f6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_ReadPin
 <LI><a href="#[f5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_us
 </UL>
-<BR>[Called By]<UL><LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;my_1wire_read_byte
+<BR>[Called By]<UL><LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;my_1wire_read_byte
 </UL>
 
-<P><STRONG><a name="[e8]"></a>my_1wire_read_byte</STRONG> (Thumb, 28 bytes, Stack size 16 bytes, my_1wire.o(i.my_1wire_read_byte))
+<P><STRONG><a name="[e7]"></a>my_1wire_read_byte</STRONG> (Thumb, 28 bytes, Stack size 16 bytes, my_1wire.o(i.my_1wire_read_byte))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = my_1wire_read_byte &rArr; my_1wire_read_bit
 </UL>
 <BR>[Calls]<UL><LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;my_1wire_read_bit
 </UL>
-<BR>[Called By]<UL><LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;my_1wire_read_bytes
+<BR>[Called By]<UL><LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;my_1wire_read_bytes
 <LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ds18b20_init
 </UL>
 
-<P><STRONG><a name="[e7]"></a>my_1wire_read_bytes</STRONG> (Thumb, 24 bytes, Stack size 16 bytes, my_1wire.o(i.my_1wire_read_bytes))
+<P><STRONG><a name="[e8]"></a>my_1wire_read_bytes</STRONG> (Thumb, 24 bytes, Stack size 16 bytes, my_1wire.o(i.my_1wire_read_bytes))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = my_1wire_read_bytes &rArr; my_1wire_read_byte &rArr; my_1wire_read_bit
 </UL>
-<BR>[Calls]<UL><LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;my_1wire_read_byte
+<BR>[Calls]<UL><LI><a href="#[e7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;my_1wire_read_byte
 </UL>
 <BR>[Called By]<UL><LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ds18b20_init
 </UL>

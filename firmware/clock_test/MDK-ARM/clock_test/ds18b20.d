@@ -39,4 +39,6 @@ clock_test\ds18b20.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart.h
 clock_test\ds18b20.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart_ex.h
 clock_test\ds18b20.o: ../Inc/ds18b20.h
 clock_test\ds18b20.o: ../Inc/my_1wire.h
+clock_test\ds18b20.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+clock_test\ds18b20.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 clock_test\ds18b20.o: ../Inc/delay_us.h

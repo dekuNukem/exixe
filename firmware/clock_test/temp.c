@@ -3,6 +3,29 @@
   for (int i = 0; i < DS_BUF_SIZE; ++i)
     printf("%d: 0x%x\n", i, ds18b20_buf[i]);
 
+uint8_t ds18b20_init(void)
+{
+  my_1wire_reset();
+  my_1wire_write_byte(0x33);
+  my_1wire_read_bytes(rom_id, ROM_SIZE);
+
+  my_1wire_write_byte(0x44);
+  while(my_1wire_read_byte() != 0xff)
+    ;
+
+  my_1wire_write_byte(0x55);
+  for(int i = 0; i < ROM_SIZE; ++i)
+    my_1wire_write_byte(rom_id[i]);
+
+  my_1wire_write_byte(0xbe);
+  memset(ds18b20_buf, 0, DS_BUF_SIZE);
+  my_1wire_read_bytes(ds18b20_buf, DS_BUF_SIZE);
+  
+  for(int i = 0; i < DS_BUF_SIZE; ++i)
+    printf("%d: 0x%x\n", i, ds18b20_buf[i]);
+
+  return HAL_OK;
+}
 
 
 printf("mask %d: %d\n", i, (v >> i) & 0x1);
