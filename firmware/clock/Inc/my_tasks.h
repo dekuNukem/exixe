@@ -14,6 +14,7 @@
 void setup_task(void);
 void animation_task_start(void const * argument);
 void test_task_start(void const * argument);
+void gps_temp_parse_task_start(void const * argument);
 
 extern linear_buf gps_lb;
 extern uint8_t gps_byte_buf[1];

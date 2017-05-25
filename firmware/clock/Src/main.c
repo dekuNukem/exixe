@@ -148,14 +148,17 @@ int main(void)
 
   /* Create the thread(s) */
   /* definition and creation of defaultTask */
-  osThreadDef(defaultTask, StartDefaultTask, osPriorityIdle, 0, 64);
+  osThreadDef(defaultTask, StartDefaultTask, osPriorityIdle, 0, 32);
   defaultTaskHandle = osThreadCreate(osThread(defaultTask), NULL);
 
   /* USER CODE BEGIN RTOS_THREADS */
   osThreadDef(animation_task, animation_task_start, osPriorityNormal, 0, 128);
   osThreadCreate(osThread(animation_task), NULL);
-  osThreadDef(test_task, test_task_start, osPriorityNormal, 0, 64);
+  osThreadDef(test_task, test_task_start, osPriorityNormal, 0, 128);
   osThreadCreate(osThread(test_task), NULL);
+
+  osThreadDef(gps_temp_parse_task, gps_temp_parse_task_start, osPriorityNormal, 0, 128);
+  osThreadCreate(osThread(gps_temp_parse_task), NULL);
   /* add threads, ... */
   /* USER CODE END RTOS_THREADS */
 

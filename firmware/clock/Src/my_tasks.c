@@ -34,18 +34,6 @@ void setup_task(void)
   linear_buf_init(&gps_lb, GPS_BUF_SIZE);
   gps_init();
   HAL_UART_Receive_IT(gps_uart_ptr, gps_byte_buf, 1);
-  
-  while(1)
-  {
-    if(linear_buf_line_available(&gps_lb))
-    {
-      printf("%s\n", gps_lb.buf);
-      linear_buf_reset(&gps_lb);
-    }
-    ds18b20_start_conversion();
-    HAL_Delay(750);
-    printf("temp: %d\n", ds18b20_get_temp() >> 4);
-  }
 
   brightness_modifier = 1;
   frame_counter = 0;
@@ -71,9 +59,23 @@ void test_task_start(void const * argument)
 {
   for(;;)
   {
-    osDelay(100);
-    // printf("%d\n", get_ls_reading());
-    // HAL_GPIO_TogglePin(USER_LED_GPIO_Port, USER_LED_Pin);
+    osDelay(1000);
+  }
+}
+
+
+void gps_temp_parse_task_start(void const * argument)
+{
+  for(;;)
+  {
+    if(linear_buf_line_available(&gps_lb))
+    {
+      printf("%s\n", gps_lb.buf);
+      linear_buf_reset(&gps_lb);
+    }
+    ds18b20_start_conversion();
+    osDelay(750);
+    printf("temp: %d\n", ds18b20_get_temp() >> 4);
   }
 }
 
