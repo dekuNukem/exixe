@@ -8,8 +8,7 @@
 #include "stm32f0xx_hal.h"
 
 #define SPI_BUF_SIZE 16
-#define INCOMING_SPI_CMD_HEADER 0xab
-#define OUTGOING_SPI_CMD_HEADER 0xcd
+#define SPI_CMD_UPDATE 0xaa
 
 extern uint8_t spi_recv_buf[SPI_BUF_SIZE];
 extern uint8_t pwm_stats[SPI_BUF_SIZE];

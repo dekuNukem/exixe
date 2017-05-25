@@ -7,49 +7,53 @@
 #include "helpers.h"
 #include "animations.h"
 
-/*
-type 0:
-no animation
-
-type 1:
-first digit fade to black, then next digit fade in
-duration: 30 frames
-frame 0 to 15 fade out
-frame 16 to 30 fade in
-
-type 2:
-crossfade
-duration: 30 frames
-from frame 0 to 30 the first digit linearlly decrease while the 
-second digit linearlly increase
-*/
-void animation_handler(uint32_t frame_count, digit_animation* anime_struct, pwm_status* pwm_stuct)
+void animation_init(digit_animation* anime_struct)
 {
-  uint32_t current_frame = frame_count - anime_struct->animation_start;
+  anime_struct->start_digit = DIGIT_NONE;
+  anime_struct->end_digit = DIGIT_NONE;
+  anime_struct->animation_start = 0;
+  anime_struct->animation_type = ANIMATION_NO_ANIMATION;
+  anime_struct->left_dot_status = 0;
+  anime_struct->right_dot_status = 0;
+  memset(anime_struct->pwm_status, 0, PWM_STATUS_SIZE);
+}
+
+void start_animation(digit_animation* anime_struct, uint8_t dest_digit, uint8_t anime_type)
+{
+  dest_digit %= 10;
+  dest_digit == 0 ? dest_digit = DIGIT_0 : dest_digit;
+  anime_struct->start_digit = anime_struct->end_digit;
+  anime_struct->end_digit = dest_digit;
+  anime_struct->animation_start = frame_counter;
+  anime_struct->animation_type = anime_type;
+}
+
+void tube_print2(int8_t value, digit_animation* msa, digit_animation* lsa)
+{
+  msa->pwm_status[DIGIT_LEFT_DOT] = 0;
+  if(value < 0)
+  {
+    msa->pwm_status[DIGIT_LEFT_DOT] = 255;
+    value *= -1;
+  }
+  start_animation(lsa, value % 10, ANIMATION_CROSS_FADE);
+  start_animation(msa, (value / 10) % 10, ANIMATION_CROSS_FADE);
+}
+
+void animation_handler(digit_animation* anime_struct)
+{
+  uint32_t current_frame = frame_counter - anime_struct->animation_start;
+  if(anime_struct->start_digit == anime_struct->end_digit)
+    return;
   if(anime_struct->animation_type == ANIMATION_NO_ANIMATION)
     return;
-  else if(anime_struct->animation_type == ANIMATION_FADE_OVER)
-  {
-    if(current_frame <= 15)
-      pwm_stuct->value[anime_struct->start_digit] = 255 - 17 * current_frame;
-    else if(current_frame <= 30)
-      pwm_stuct->value[anime_struct->end_digit] = 255 + 17 * current_frame;
-  }
-
-  if(anime_struct->animation_type == ANIMATION_CROSS_FADE)
+  else if(anime_struct->animation_type == ANIMATION_CROSS_FADE)
   {
     if(current_frame <= 30)
     {
-      pwm_stuct->value[anime_struct->start_digit] = 255 - 8.5 * current_frame;
-      pwm_stuct->value[anime_struct->end_digit] = 255 + 8.5 * current_frame;
+      anime_struct->pwm_status[anime_struct->start_digit] = 255 - 8.5 * current_frame;
+      anime_struct->pwm_status[anime_struct->end_digit] = 255 + 8.5 * current_frame;
     }
   }
-}
-
-uint8_t is_animation_underway(uint32_t frame_count, digit_animation* anime_struct)
-{
-  if(anime_struct->animation_type == ANIMATION_NO_ANIMATION)
-    return 0;
-  return frame_count - anime_struct->animation_start <= 30;
 }
 

@@ -1,3 +1,139 @@
+
+/*
+type 0:
+no animation
+
+type 1:
+first digit fade to black, then next digit fade in
+duration: 30 frames
+frame 0 to 15 fade out
+frame 16 to 30 fade in
+
+type 2:
+crossfade
+duration: 30 frames
+from frame 0 to 30 the first digit linearlly decrease while the 
+second digit linearlly increase
+*/
+void animation_handler(digit_animation* anime_struct)
+{
+  uint32_t current_frame = frame_counter - anime_struct->animation_start;
+  if(anime_struct->animation_type == ANIMATION_NO_ANIMATION)
+    return;
+  if(anime_struct->start_digit == anime_struct->end_digit)
+    return;
+  else if(anime_struct->animation_type == ANIMATION_FADE_OVER)
+  {
+    if(current_frame <= 15)
+      anime_struct->pwm_status[anime_struct->start_digit] = 255 - 17 * current_frame;
+    else if(current_frame <= 30)
+      anime_struct->pwm_status[anime_struct->end_digit] = 255 + 17 * current_frame;
+  }
+
+  if(anime_struct->animation_type == ANIMATION_CROSS_FADE)
+  {
+    if(current_frame <= 30)
+    {
+      anime_struct->pwm_status[anime_struct->start_digit] = 255 - 8.5 * current_frame;
+      anime_struct->pwm_status[anime_struct->end_digit] = 255 + 8.5 * current_frame;
+    }
+  }
+}
+
+
+void test_task_start(void const * argument)
+{
+  int8_t count = 10;
+  for(;;)
+  {
+    count--;
+    tube_print2(count, &(tube_animation[1]), &(tube_animation[0]));
+    osDelay(500);
+  }
+}
+
+void dot_on(digit_animation* anime_struct, uint8_t left, uint8_t right)
+{
+  if(left)
+    anime_struct->left_dot_status = 1;
+}
+
+void test_task_start(void const * argument)
+{
+  uint8_t count = 0;
+  for(;;)
+  {
+    count++;
+    start_animation(&(tube_animation[0]), count, ANIMATION_CROSS_FADE);
+    start_animation(&(tube_animation[1]), count, ANIMATION_CROSS_FADE);
+    osDelay(600);
+  }
+}
+    
+printf("temp: %d\n", raw_temp >> 4);
+
+
+    if(frame_counter % 120 > 60)
+    {
+      spi_buf[0] = SPI_CMD_UPDATE;
+      HAL_GPIO_WritePin(USER_LED_GPIO_Port, USER_LED_Pin, GPIO_PIN_SET);
+    }
+    else
+    {
+      spi_buf[0] = SPI_CMD_UPDATE | 1;
+      HAL_GPIO_WritePin(USER_LED_GPIO_Port, USER_LED_Pin, GPIO_PIN_RESET);
+    }
+  dest_digit > 10 ? dest_digit = 0 : dest_digit;
+uint8_t is_animation_underway(digit_animation* anime_struct)
+{
+  if(anime_struct->animation_type == ANIMATION_NO_ANIMATION)
+    return 0;
+  if(anime_struct->start_digit == anime_struct->end_digit)
+    return 0;
+  return frame_counter - anime_struct->animation_start <= 30;
+}
+
+
+
+void HAL_SPI_RxCpltCallback(SPI_HandleTypeDef *hspi)
+{
+  if(spi_recv_buf[0] == SPI_CMD_UPDATE)
+    set_pwm(spi_recv_buf);
+  else if(spi_recv_buf[0] == SPI_CMD_BAKE_ON)
+    HAL_GPIO_WritePin(BAKE_GPIO_Port, BAKE_Pin, GPIO_PIN_SET);
+  else if(spi_recv_buf[0] == SPI_CMD_BAKE_OFF)
+    HAL_GPIO_WritePin(BAKE_GPIO_Port, BAKE_Pin, GPIO_PIN_RESET);
+  else
+    goto spi_err;
+  HAL_SPI_Receive_DMA(&hspi1, spi_recv_buf, SPI_BUF_SIZE);
+  return;
+  spi_err:
+  HAL_Delay(10);
+  HAL_NVIC_SystemReset();
+}
+void HAL_SPI_RxCpltCallback(SPI_HandleTypeDef *hspi)
+{
+  if(spi_recv_buf[0] & 0xfe != SPI_CMD_UPDATE)
+    HAL_NVIC_SystemReset();
+  set_pwm(spi_recv_buf);
+  // if(spi_recv_buf[0] & 0x1)
+  //  HAL_GPIO_WritePin(BAKE_GPIO_Port, BAKE_Pin, GPIO_PIN_SET);
+  // else
+  //  HAL_GPIO_WritePin(BAKE_GPIO_Port, BAKE_Pin, GPIO_PIN_SET);
+    HAL_SPI_Receive_DMA(&hspi1, spi_recv_buf, SPI_BUF_SIZE);
+}
+void HAL_SPI_RxCpltCallback(SPI_HandleTypeDef *hspi)
+{
+  if(spi_recv_buf[0] != INCOMING_SPI_CMD_HEADER)
+  {
+    HAL_Delay(10);
+    HAL_NVIC_SystemReset();
+  }
+  set_pwm(spi_recv_buf);
+  HAL_SPI_Receive_DMA(&hspi1, spi_recv_buf, SPI_BUF_SIZE);
+}
+
+
   for (int i = 0; i < 16; ++i)
     eeprom_write(i, 255 - i);
 

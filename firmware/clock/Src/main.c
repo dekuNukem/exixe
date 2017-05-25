@@ -148,7 +148,7 @@ int main(void)
 
   /* Create the thread(s) */
   /* definition and creation of defaultTask */
-  osThreadDef(defaultTask, StartDefaultTask, osPriorityIdle, 0, 32);
+  osThreadDef(defaultTask, StartDefaultTask, osPriorityIdle, 0, 64);
   defaultTaskHandle = osThreadCreate(osThread(defaultTask), NULL);
 
   /* USER CODE BEGIN RTOS_THREADS */
@@ -329,7 +329,7 @@ static void MX_SPI1_Init(void)
   hspi1.Init.CLKPolarity = SPI_POLARITY_LOW;
   hspi1.Init.CLKPhase = SPI_PHASE_1EDGE;
   hspi1.Init.NSS = SPI_NSS_SOFT;
-  hspi1.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_8;
+  hspi1.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_16;
   hspi1.Init.FirstBit = SPI_FIRSTBIT_MSB;
   hspi1.Init.TIMode = SPI_TIMODE_DISABLE;
   hspi1.Init.CRCCalculation = SPI_CRCCALCULATION_DISABLE;
@@ -440,10 +440,11 @@ static void MX_GPIO_Init(void)
   HAL_GPIO_WritePin(OWIRE_DATA_GPIO_Port, OWIRE_DATA_Pin, GPIO_PIN_SET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, GPS_RESET_Pin|USER_LED_Pin, GPIO_PIN_SET);
+  HAL_GPIO_WritePin(GPIOA, GPS_RESET_Pin|USER_LED_Pin|EXIXE_RESET_Pin, GPIO_PIN_SET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(EXIXE1_CS_GPIO_Port, EXIXE1_CS_Pin, GPIO_PIN_SET);
+  HAL_GPIO_WritePin(GPIOB, EXIXE1_CS_Pin|EXIXE2_CS_Pin|EXIXE3_CS_Pin|EXIXE4_CS_Pin 
+                          |EXIXE5_CS_Pin|EXIXE6_CS_Pin, GPIO_PIN_SET);
 
   /*Configure GPIO pin : OWIRE_DATA_Pin */
   GPIO_InitStruct.Pin = OWIRE_DATA_Pin;
@@ -452,19 +453,21 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(OWIRE_DATA_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : GPS_RESET_Pin */
-  GPIO_InitStruct.Pin = GPS_RESET_Pin;
+  /*Configure GPIO pins : GPS_RESET_Pin EXIXE_RESET_Pin */
+  GPIO_InitStruct.Pin = GPS_RESET_Pin|EXIXE_RESET_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_OD;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(GPS_RESET_GPIO_Port, &GPIO_InitStruct);
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : EXIXE1_CS_Pin */
-  GPIO_InitStruct.Pin = EXIXE1_CS_Pin;
+  /*Configure GPIO pins : EXIXE1_CS_Pin EXIXE2_CS_Pin EXIXE3_CS_Pin EXIXE4_CS_Pin 
+                           EXIXE5_CS_Pin EXIXE6_CS_Pin */
+  GPIO_InitStruct.Pin = EXIXE1_CS_Pin|EXIXE2_CS_Pin|EXIXE3_CS_Pin|EXIXE4_CS_Pin 
+                          |EXIXE5_CS_Pin|EXIXE6_CS_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(EXIXE1_CS_GPIO_Port, &GPIO_InitStruct);
+  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
   /*Configure GPIO pin : USER_LED_Pin */
   GPIO_InitStruct.Pin = USER_LED_Pin;

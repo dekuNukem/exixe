@@ -57,8 +57,20 @@
 #define GPS_RESET_GPIO_Port GPIOA
 #define EXIXE1_CS_Pin GPIO_PIN_0
 #define EXIXE1_CS_GPIO_Port GPIOB
+#define EXIXE2_CS_Pin GPIO_PIN_1
+#define EXIXE2_CS_GPIO_Port GPIOB
+#define EXIXE3_CS_Pin GPIO_PIN_2
+#define EXIXE3_CS_GPIO_Port GPIOB
+#define EXIXE4_CS_Pin GPIO_PIN_12
+#define EXIXE4_CS_GPIO_Port GPIOB
+#define EXIXE5_CS_Pin GPIO_PIN_13
+#define EXIXE5_CS_GPIO_Port GPIOB
+#define EXIXE6_CS_Pin GPIO_PIN_14
+#define EXIXE6_CS_GPIO_Port GPIOB
 #define USER_LED_Pin GPIO_PIN_9
 #define USER_LED_GPIO_Port GPIOA
+#define EXIXE_RESET_Pin GPIO_PIN_15
+#define EXIXE_RESET_GPIO_Port GPIOA
 
 /* USER CODE BEGIN Private defines */
 

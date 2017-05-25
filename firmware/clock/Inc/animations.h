@@ -11,9 +11,10 @@
 #include "shared.h"
 #include "helpers.h"
 
+#define PWM_STATUS_SIZE (SPI_CMD_SIZE + 1)
+
 #define ANIMATION_NO_ANIMATION 0
-#define ANIMATION_FADE_OVER 1
-#define ANIMATION_CROSS_FADE 2 	
+#define ANIMATION_CROSS_FADE 1
 
 #define DIGIT_1 1
 #define DIGIT_2 2
@@ -25,11 +26,25 @@
 #define DIGIT_8 8
 #define DIGIT_9 9
 #define DIGIT_0 10
-#define DIGIT_LEFT_DOT 11
-#define DIGIT_RIGHT_DOT 12
+#define DIGIT_RIGHT_DOT 11
+#define DIGIT_LEFT_DOT 12
+#define DIGIT_NONE 16
 
-void animation_handler(uint32_t frame_count, digit_animation* anime_struct, pwm_status* pwm_stuct);
-uint8_t is_animation_underway(uint32_t frame_count, digit_animation* anime_struct);
+typedef struct
+{
+	uint8_t	start_digit;
+	uint8_t end_digit;
+	uint32_t animation_start;
+	uint8_t animation_type;
+	uint8_t pwm_status[PWM_STATUS_SIZE];
+	uint8_t left_dot_status;
+	uint8_t right_dot_status;
+} digit_animation;
+
+void animation_init(digit_animation* anime_struct);
+void start_animation(digit_animation* anime_struct, uint8_t dest_digit, uint8_t anime_type);
+void tube_print2(int8_t value, digit_animation* msa, digit_animation* lsa);
+void animation_handler(digit_animation* anime_struct);
 
 #ifdef __cplusplus
 }
