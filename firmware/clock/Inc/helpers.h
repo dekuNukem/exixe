@@ -8,6 +8,8 @@
 #include "stm32f0xx_hal.h"
 
 #define SPI_CMD_SIZE 16
+#define SPI_SMD_DIGIT_END 11
+#define SPI_CMD_DOT_END 13
 #define TUBE_COUNT 6
 #define GPS_BUF_SIZE 256
 

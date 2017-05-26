@@ -3,7 +3,7 @@
 <title>Static Call Graph - [clock_test\clock_test.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image clock_test\clock_test.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060061: Last Updated: Fri May 26 16:54:19 2017
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060061: Last Updated: Fri May 26 17:27:57 2017
 <BR><P>
 <H3>Maximum Stack Usage =        276 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -1610,7 +1610,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setup_task
 </UL>
 
-<P><STRONG><a name="[43]"></a>animation_task_start</STRONG> (Thumb, 136 bytes, Stack size 8 bytes, my_tasks.o(i.animation_task_start))
+<P><STRONG><a name="[43]"></a>animation_task_start</STRONG> (Thumb, 162 bytes, Stack size 8 bytes, my_tasks.o(i.animation_task_start))
 <BR><BR>[Stack]<UL><LI>Max Depth = 160<LI>Call Chain = animation_task_start &rArr; animation_handler &rArr; __aeabi_dmul &rArr; _double_epilogue &rArr; __aeabi_llsr
 </UL>
 <BR>[Calls]<UL><LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osDelay
@@ -1950,7 +1950,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tube_print2
 </UL>
 
-<P><STRONG><a name="[44]"></a>test_task_start</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, my_tasks.o(i.test_task_start))
+<P><STRONG><a name="[44]"></a>test_task_start</STRONG> (Thumb, 40 bytes, Stack size 0 bytes, my_tasks.o(i.test_task_start))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = test_task_start &rArr; osDelay &rArr; vTaskDelay &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
 </UL>
 <BR>[Calls]<UL><LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osDelay

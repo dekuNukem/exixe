@@ -95,8 +95,15 @@ void animation_task_start(void const * argument)
     spi_buf[0] = SPI_CMD_UPDATE | 0x0;
     for (int curr_tube = 0; curr_tube < TUBE_COUNT; ++curr_tube)
     {
-      for (int j = 1; j < SPI_CMD_SIZE; ++j)
+      // digits
+      for (int j = 1; j < SPI_SMD_DIGIT_END; ++j)
         spi_buf[j] = (uint8_t)((double)(tube_animation[curr_tube].pwm_status[j] >> 1) / brightness_modifier) | 0x80;
+      // dots
+      for (int j = SPI_SMD_DIGIT_END; j < SPI_CMD_DOT_END; ++j)
+        spi_buf[j] = (tube_animation[curr_tube].pwm_status[j] >> 1) | 0x80;
+      // LEDs
+      for (int j = SPI_CMD_DOT_END; j < SPI_CMD_SIZE; ++j)
+        spi_buf[j] = 0 | 0x80;
       spi_send(spi_buf, SPI_CMD_SIZE, curr_tube);
     }
     brightness_modifier = get_modifier();
@@ -106,7 +113,7 @@ void animation_task_start(void const * argument)
 
 void test_task_start(void const * argument)
 {
-  int8_t count = 0;
+  int8_t count = -20;
   for(;;)
   {
     count++;

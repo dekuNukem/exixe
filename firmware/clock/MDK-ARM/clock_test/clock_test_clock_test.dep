@@ -113,7 +113,7 @@ I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x55DB2B78)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x55DB2B78)
 I (../Inc/shared.h)(0x5926AEBF)
 I (../Inc/my_usb.h)(0x59198015)
-I (../Inc/helpers.h)(0x59284A84)
+I (../Inc/helpers.h)(0x59285306)
 I (../Inc/my_tasks.h)(0x5926F5B6)
 I (../Inc/delay_us.h)(0x58FDE5FE)
 F (../Src/stm32f0xx_hal_msp.c)(0x5926E961)(-c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM0 -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS --C99-I C:\Users\Allen\Desktop\nixx\firmware\clock\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include-D__UVISION_VERSION="517" -D_RTE_ -DSTM32F072xB -DUSE_HAL_DRIVER -DSTM32F072xB-o clock_test\stm32f0xx_hal_msp.o --omf_browse clock_test\stm32f0xx_hal_msp.crf --depend clock_test\stm32f0xx_hal_msp.d)
@@ -393,16 +393,16 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart.h)(0x58411C82)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart_ex.h)(0x58411C82)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h)(0x58411C87)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h)(0x58411C87)
-I (../Inc/helpers.h)(0x59284A84)
+I (../Inc/helpers.h)(0x59285306)
 I (../Inc/my_usb.h)(0x59198015)
-F (..\Inc\helpers.h)(0x59284A84)()
+F (..\Inc\helpers.h)(0x59285306)()
 F (..\Inc\my_usb.h)(0x59198015)()
 F (..\Inc\shared.h)(0x5926AEBF)()
 F (..\Src\helpers.c)(0x59284F34)(-c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM0 -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS --C99-I C:\Users\Allen\Desktop\nixx\firmware\clock\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include-D__UVISION_VERSION="517" -D_RTE_ -DSTM32F072xB -DUSE_HAL_DRIVER -DSTM32F072xB-o clock_test\helpers.o --omf_browse clock_test\helpers.crf --depend clock_test\helpers.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x55DB2B76)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x55DB2B78)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x55DB2B78)
-I (../Inc/helpers.h)(0x59284A84)
+I (../Inc/helpers.h)(0x59285306)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h)(0x58411C82)
 I (../Inc/stm32f0xx_hal_conf.h)(0x5926E962)
 I (../Inc/main.h)(0x5926E962)
@@ -481,7 +481,7 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim.h)(0x58411C82)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim_ex.h)(0x58411C82)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart.h)(0x58411C82)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart_ex.h)(0x58411C82)
-I (../Inc/helpers.h)(0x59284A84)
+I (../Inc/helpers.h)(0x59285306)
 I (../Inc/usbd_cdc_if.h)(0x5926E961)
 I (../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc/usbd_cdc.h)(0x58411C87)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h)(0x58411C87)
@@ -490,7 +490,7 @@ I (../Inc/usbd_conf.h)(0x5926E960)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h)(0x58411C87)
 I (../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ctlreq.h)(0x58411C87)
 F (..\Inc\my_tasks.h)(0x5926F5B6)()
-F (..\Src\my_tasks.c)(0x59284FA5)(-c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM0 -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS --C99-I C:\Users\Allen\Desktop\nixx\firmware\clock\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include-D__UVISION_VERSION="517" -D_RTE_ -DSTM32F072xB -DUSE_HAL_DRIVER -DSTM32F072xB-o clock_test\my_tasks.o --omf_browse clock_test\my_tasks.crf --depend clock_test\my_tasks.d)
+F (..\Src\my_tasks.c)(0x59285632)(-c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM0 -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS --C99-I C:\Users\Allen\Desktop\nixx\firmware\clock\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include-D__UVISION_VERSION="517" -D_RTE_ -DSTM32F072xB -DUSE_HAL_DRIVER -DSTM32F072xB-o clock_test\my_tasks.o --omf_browse clock_test\my_tasks.crf --depend clock_test\my_tasks.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x55DB2B76)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x55DB2B78)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x55DB2B78)
@@ -547,7 +547,7 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h)(0x58411C89)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h)(0x58411C89)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x58411C89)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x58411C89)
-I (../Inc/helpers.h)(0x59284A84)
+I (../Inc/helpers.h)(0x59285306)
 I (../Inc/my_usb.h)(0x59198015)
 I (../Inc/animations.h)(0x59270005)
 I (../Inc/delay_us.h)(0x58FDE5FE)
@@ -556,7 +556,7 @@ I (../Inc/ds18b20.h)(0x5926A43C)
 I (../Inc/eeprom.h)(0x5926A78E)
 I (../Inc/gps_config.h)(0x5926AEA7)
 F (..\Inc\animations.h)(0x59270005)()
-F (..\Src\animations.c)(0x59284ECC)(-c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM0 -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS --C99-I C:\Users\Allen\Desktop\nixx\firmware\clock\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include-D__UVISION_VERSION="517" -D_RTE_ -DSTM32F072xB -DUSE_HAL_DRIVER -DSTM32F072xB-o clock_test\animations.o --omf_browse clock_test\animations.crf --depend clock_test\animations.d)
+F (..\Src\animations.c)(0x59285787)(-c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM0 -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS --C99-I C:\Users\Allen\Desktop\nixx\firmware\clock\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include-D__UVISION_VERSION="517" -D_RTE_ -DSTM32F072xB -DUSE_HAL_DRIVER -DSTM32F072xB-o clock_test\animations.o --omf_browse clock_test\animations.crf --depend clock_test\animations.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x55DB2B76)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x55DB2B78)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x55DB2B78)
@@ -613,7 +613,7 @@ I (../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h)(0x58411C89)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h)(0x58411C89)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h)(0x58411C89)
 I (../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h)(0x58411C89)
-I (../Inc/helpers.h)(0x59284A84)
+I (../Inc/helpers.h)(0x59285306)
 I (../Inc/animations.h)(0x59270005)
 F (..\Inc\delay_us.h)(0x58FDE5FE)()
 F (..\Src\delay_us.c)(0x58FDE5FF)(-c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM0 -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS --C99-I C:\Users\Allen\Desktop\nixx\firmware\clock\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include-D__UVISION_VERSION="517" -D_RTE_ -DSTM32F072xB -DUSE_HAL_DRIVER -DSTM32F072xB-o clock_test\delay_us.o --omf_browse clock_test\delay_us.crf --depend clock_test\delay_us.d)
@@ -797,7 +797,7 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim.h)(0x58411C82)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim_ex.h)(0x58411C82)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart.h)(0x58411C82)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart_ex.h)(0x58411C82)
-I (../Inc/helpers.h)(0x59284A84)
+I (../Inc/helpers.h)(0x59285306)
 I (../Inc/shared.h)(0x5926AEBF)
 F (..\Inc\gps_config.h)(0x5926AEA7)()
 F (..\Src\gps_config.c)(0x5926B18F)(-c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM0 -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS --C99-I C:\Users\Allen\Desktop\nixx\firmware\clock\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include-D__UVISION_VERSION="517" -D_RTE_ -DSTM32F072xB -DUSE_HAL_DRIVER -DSTM32F072xB-o clock_test\gps_config.o --omf_browse clock_test\gps_config.crf --depend clock_test\gps_config.d)
@@ -841,7 +841,7 @@ I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim.h)(0x58411C82)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim_ex.h)(0x58411C82)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart.h)(0x58411C82)
 I (../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart_ex.h)(0x58411C82)
-I (../Inc/helpers.h)(0x59284A84)
+I (../Inc/helpers.h)(0x59285306)
 I (../Inc/gps_config.h)(0x5926AEA7)
 F (../Src/system_stm32f0xx.c)(0x59198017)(-c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I../Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc -I../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F0xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM0 -I../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS --C99-I C:\Users\Allen\Desktop\nixx\firmware\clock\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\1.5.0\Device\Include-D__UVISION_VERSION="517" -D_RTE_ -DSTM32F072xB -DUSE_HAL_DRIVER -DSTM32F072xB-o clock_test\system_stm32f0xx.o --omf_browse clock_test\system_stm32f0xx.crf --depend clock_test\system_stm32f0xx.d)
 I (../Drivers/CMSIS/Device/ST/STM32F0xx/Include/stm32f0xx.h)(0x58411C49)
