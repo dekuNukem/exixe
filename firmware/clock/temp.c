@@ -1,4 +1,26 @@
+    double temp = 4 - ((double)get_ls_reading() * 0.005);
+    printf("%f\n", temp);
+    // printf("%d\n", (int32_t)(get_modifier() * 255));
 
+void tube_print2(int8_t value, digit_animation* msa, digit_animation* lsa)
+{
+  msa->pwm_status[DIGIT_LEFT_DOT] = 0;
+  if(value < 0)
+  {
+    msa->pwm_status[DIGIT_LEFT_DOT] = 255;
+    value *= -1;
+  }
+  start_animation(lsa, value % 10, ANIMATION_CROSS_FADE);
+  start_animation(msa, (value / 10) % 10, ANIMATION_CROSS_FADE);
+}
+
+void tube_print2(int8_t value, digit_animation* msa, digit_animation* lsa)
+{
+  lsa->pwm_status[DIGIT_LEFT_DOT] = 255;
+  lsa->pwm_status[DIGIT_RIGHT_DOT] = 255;
+  start_animation(lsa, value % 10, ANIMATION_CROSS_FADE);
+  start_animation(msa, (value / 10) % 10, ANIMATION_CROSS_FADE);
+}
 /*
 type 0:
 no animation

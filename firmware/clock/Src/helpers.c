@@ -75,3 +75,12 @@ int32_t get_ls_reading(void)
   HAL_ADC_Stop(adc_ptr);
   return result;
 }
+
+double get_modifier(void)
+{
+  int32_t ls_value = get_ls_reading();
+  if(ls_value > 600 || ls_value < 0)
+    return 1;
+  return 6 - (ls_value * 0.0083);
+}
+

@@ -14,7 +14,7 @@
 #include "gps_config.h"
 
 uint8_t spi_buf[SPI_CMD_SIZE];
-uint8_t brightness_modifier = 1;
+double brightness_modifier = 1;
 uint8_t gps_byte_buf[1];
 uint32_t frame_counter;
 int16_t raw_temp;
@@ -92,22 +92,27 @@ void animation_task_start(void const * argument)
     for (int i = 0; i < TUBE_COUNT; ++i)
       animation_handler(&(tube_animation[i]));
 
-    spi_buf[0] = SPI_CMD_UPDATE;
+    spi_buf[0] = SPI_CMD_UPDATE | 0x0;
     for (int curr_tube = 0; curr_tube < TUBE_COUNT; ++curr_tube)
     {
       for (int j = 1; j < SPI_CMD_SIZE; ++j)
-        spi_buf[j] = ((tube_animation[curr_tube].pwm_status[j] >> 1) / brightness_modifier) | 0x80;
+        spi_buf[j] = (uint8_t)((double)(tube_animation[curr_tube].pwm_status[j] >> 1) / brightness_modifier) | 0x80;
       spi_send(spi_buf, SPI_CMD_SIZE, curr_tube);
     }
+    brightness_modifier = get_modifier();
     osDelay(17);
   }
 }
 
 void test_task_start(void const * argument)
 {
+  int8_t count = 0;
   for(;;)
   {
-    osDelay(500);
+    count++;
+    // tube_print2(count, &(tube_animation[1]), &(tube_animation[0]));
+    tube_print2(count, &(tube_animation[3]), &(tube_animation[2]));
+    osDelay(1000);
   }
 }
 
