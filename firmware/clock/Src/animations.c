@@ -7,6 +7,44 @@
 #include "helpers.h"
 #include "animations.h"
 
+void led_animation_init(led_animation* anime_struct)
+{
+  for (int i = 0; i < LED_CHANNEL_SIZE; ++i)
+  {
+    anime_struct->pwm_status[i] = 0;
+    anime_struct->step[i] = 0;
+  }
+  anime_struct->animation_start = 0;
+  anime_struct->animation_type = ANIMATION_NO_ANIMATION;
+}
+
+void led_start_animation(led_animation* anime_struct, uint8_t dest_color[LED_CHANNEL_SIZE], uint8_t anime_type)
+{
+  for (int i = 0; i < LED_CHANNEL_SIZE; ++i)
+    anime_struct->step[i] = (dest_color[i] - anime_struct->pwm_status[i]) / 30.0;
+  anime_struct->animation_start = frame_counter;
+  anime_struct->animation_type = anime_type;
+}
+
+void led_animation_handler(led_animation* anime_struct)
+{
+  uint32_t current_frame = frame_counter - anime_struct->animation_start;
+  if(anime_struct->animation_type == ANIMATION_NO_ANIMATION)
+    return;
+  else if(anime_struct->animation_type == ANIMATION_CROSS_FADE)
+  {
+    if(current_frame <= 30)
+      for (int i = 0; i < LED_CHANNEL_SIZE; ++i)
+      {
+        anime_struct->pwm_status[i] += anime_struct->step[i];
+        if(anime_struct->pwm_status[i] > 255)
+          anime_struct->pwm_status[i] = 255;
+        if(anime_struct->pwm_status[i] < 0)
+          anime_struct->pwm_status[i] = 0;
+      }
+  }
+}
+
 void animation_init(digit_animation* anime_struct)
 {
   anime_struct->start_digit = DIGIT_NONE;
@@ -28,14 +66,8 @@ void start_animation(digit_animation* anime_struct, uint8_t dest_digit, uint8_t 
   anime_struct->animation_type = anime_type;
 }
 
-void tube_print2(int8_t value, digit_animation* msa, digit_animation* lsa)
+void tube_print2_uint8_t(uint8_t value, digit_animation* msa, digit_animation* lsa)
 {
-  msa->pwm_status[DIGIT_LEFT_DOT] = 0;
-  if(value < 0)
-  {
-    msa->pwm_status[DIGIT_LEFT_DOT] = 255;
-    value *= -1;
-  }
   start_animation(lsa, value % 10, ANIMATION_CROSS_FADE);
   start_animation(msa, (value / 10) % 10, ANIMATION_CROSS_FADE);
 }

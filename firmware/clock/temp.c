@@ -1,6 +1,42 @@
+    spi_buf[0] = SPI_CMD_UPDATE | 0x0;
+
+
+void led_animation_handler(led_animation* anime_struct)
+{
+  uint32_t current_frame = frame_counter - anime_struct->animation_start;
+  if(anime_struct->animation_type == ANIMATION_NO_ANIMATION)
+    return;
+  else if(anime_struct->animation_type == ANIMATION_CROSS_FADE)
+  {
+    if(current_frame <= 30)
+      for (int i = 0; i < LED_CHANNEL_SIZE; ++i)
+        anime_struct->pwm_status[i] += anime_struct->step[i];
+  }
+}
+
+void led_animation_handler(led_animation* anime_struct)
+{
+  for (int i = 0; i < LED_CHANNEL_SIZE; ++i)
+    if(anime_struct->pwm_status[i] < 250)
+      anime_struct->pwm_status[i] += 1;
+}
+
+for (int j = SPI_CMD_DOT_END; j < SPI_CMD_SIZE; ++j)
+        spi_buf[j] = (uint8_t)(rgb_animation[curr_tube].pwm_status[j - SPI_CMD_DOT_END]) | 0x80;
+
     double temp = 4 - ((double)get_ls_reading() * 0.005);
     printf("%f\n", temp);
     // printf("%d\n", (int32_t)(get_modifier() * 255));
+typedef struct
+{
+  uint8_t start_color[LED_CHANNEL_SIZE];
+  uint8_t end_color[LED_CHANNEL_SIZE];
+  uint32_t animation_start;
+  uint8_t animation_type;
+  uint8_t pwm_status[LED_CHANNEL_SIZE];
+  uint8_t step;
+} led_animation;
+
 
 void tube_print2(int8_t value, digit_animation* msa, digit_animation* lsa)
 {

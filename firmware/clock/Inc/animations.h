@@ -12,6 +12,7 @@
 #include "helpers.h"
 
 #define PWM_STATUS_SIZE (SPI_CMD_SIZE + 1)
+#define LED_CHANNEL_SIZE 3
 
 #define ANIMATION_NO_ANIMATION 0
 #define ANIMATION_CROSS_FADE 1
@@ -41,9 +42,22 @@ typedef struct
 	uint8_t right_dot_status;
 } digit_animation;
 
+typedef struct
+{
+	uint32_t animation_start;
+	uint8_t animation_type;
+	double pwm_status[LED_CHANNEL_SIZE];
+	double step[LED_CHANNEL_SIZE];
+} led_animation;
+
+
+void led_animation_init(led_animation* anime_struct);
+void led_start_animation(led_animation* anime_struct, uint8_t dest_color[LED_CHANNEL_SIZE], uint8_t anime_type);
+void led_animation_handler(led_animation* anime_struct);
+
 void animation_init(digit_animation* anime_struct);
 void start_animation(digit_animation* anime_struct, uint8_t dest_digit, uint8_t anime_type);
-void tube_print2(int8_t value, digit_animation* msa, digit_animation* lsa);
+void tube_print2_uint8_t(uint8_t value, digit_animation* msa, digit_animation* lsa);
 void animation_handler(digit_animation* anime_struct);
 
 #ifdef __cplusplus

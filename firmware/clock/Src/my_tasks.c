@@ -19,6 +19,8 @@ uint8_t gps_byte_buf[1];
 uint32_t frame_counter;
 int16_t raw_temp;
 digit_animation tube_animation[TUBE_COUNT];
+led_animation rgb_animation[TUBE_COUNT];
+
 linear_buf gps_lb;
 
 void spi_send(uint8_t* data, uint8_t size, uint8_t index)
@@ -79,6 +81,12 @@ void setup_task(void)
   
   for (int i = 0; i < TUBE_COUNT; ++i)
     animation_init(&(tube_animation[i]));
+
+  for (int i = 0; i < TUBE_COUNT; ++i)
+    led_animation_init(&(rgb_animation[i]));
+
+  uint8_t sdfsdf[LED_CHANNEL_SIZE] = {255, 0, 255};
+  led_start_animation(&(rgb_animation[3]), sdfsdf, ANIMATION_CROSS_FADE);
   
   HAL_UART_Receive_IT(gps_uart_ptr, gps_byte_buf, 1);
 }
@@ -90,11 +98,16 @@ void animation_task_start(void const * argument)
     frame_counter++;
 
     for (int i = 0; i < TUBE_COUNT; ++i)
+    {
       animation_handler(&(tube_animation[i]));
+      led_animation_handler(&(rgb_animation[i]));
+    }
 
-    spi_buf[0] = SPI_CMD_UPDATE | 0x0;
     for (int curr_tube = 0; curr_tube < TUBE_COUNT; ++curr_tube)
     {
+      spi_buf[0] = SPI_CMD_UPDATE;
+      if(tube_animation[curr_tube].end_digit == DIGIT_2 || tube_animation[curr_tube].end_digit == DIGIT_3)
+        spi_buf[0] |= 0x1;
       // digits
       for (int j = 1; j < SPI_SMD_DIGIT_END; ++j)
         spi_buf[j] = (uint8_t)((double)(tube_animation[curr_tube].pwm_status[j] >> 1) / brightness_modifier) | 0x80;
@@ -103,7 +116,7 @@ void animation_task_start(void const * argument)
         spi_buf[j] = (tube_animation[curr_tube].pwm_status[j] >> 1) | 0x80;
       // LEDs
       for (int j = SPI_CMD_DOT_END; j < SPI_CMD_SIZE; ++j)
-        spi_buf[j] = 0 | 0x80;
+        spi_buf[j] = ((uint8_t)(rgb_animation[curr_tube].pwm_status[j - SPI_CMD_DOT_END]) >> 1) | 0x80;
       spi_send(spi_buf, SPI_CMD_SIZE, curr_tube);
     }
     brightness_modifier = get_modifier();
@@ -117,8 +130,8 @@ void test_task_start(void const * argument)
   for(;;)
   {
     count++;
-    // tube_print2(count, &(tube_animation[1]), &(tube_animation[0]));
-    tube_print2(count, &(tube_animation[3]), &(tube_animation[2]));
+    tube_print2_uint8_t(255 - count, &(tube_animation[5]), &(tube_animation[4]));
+    tube_print2_uint8_t(count, &(tube_animation[3]), &(tube_animation[2]));
     osDelay(1000);
   }
 }
@@ -136,7 +149,7 @@ void gps_temp_parse_task_start(void const * argument)
     ds18b20_start_conversion();
     osDelay(750);
     raw_temp = ds18b20_get_temp();
-    tube_print2(raw_temp >> 4, &(tube_animation[1]), &(tube_animation[0]));
+    tube_print2_uint8_t(raw_temp >> 4, &(tube_animation[1]), &(tube_animation[0]));
   }
 }
 
