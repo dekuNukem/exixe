@@ -12,6 +12,7 @@
 #include "ds18b20.h"
 #include "eeprom.h"
 #include "gps_config.h"
+#include "minmea.h"
 
 uint8_t spi_buf[SPI_CMD_SIZE];
 double brightness_modifier = 1;
@@ -20,8 +21,14 @@ uint32_t frame_counter;
 int16_t raw_temp;
 digit_animation tube_animation[TUBE_COUNT];
 led_animation rgb_animation[TUBE_COUNT];
-
 linear_buf gps_lb;
+
+struct minmea_sentence_rmc gps_rmc;
+struct minmea_sentence_gga gps_gga;
+struct minmea_sentence_gsa gps_gsa;
+struct minmea_sentence_gll gps_gll;
+struct minmea_sentence_gst gps_gst;
+struct minmea_sentence_gsv gps_gsv;
 
 void spi_send(uint8_t* data, uint8_t size, uint8_t index)
 {
@@ -139,11 +146,15 @@ void test_task_start(void const * argument)
 
 void gps_temp_parse_task_start(void const * argument)
 {
+  int32_t unix_timestamp_temp = -1;
+  int32_t microsec_temp = -1;
   for(;;)
   {
-    if(linear_buf_line_available(&gps_lb))
+    if(linear_buf_line_available(&gps_lb) && (strstr((const char*)gps_lb.buf, "RMC") != NULL))
     {
-      // printf("%s\n", gps_lb.buf);
+      parse_gps((char*)gps_lb.buf, &gps_rmc, &gps_gga, &gps_gsa, &gps_gll, &gps_gst, &gps_gsv);
+      minmea_gettime(&unix_timestamp_temp, &microsec_temp, &(gps_rmc.date), &(gps_rmc.time));
+      printf("%ld\n", unix_timestamp_temp);
       linear_buf_reset(&gps_lb);
     }
     ds18b20_start_conversion();

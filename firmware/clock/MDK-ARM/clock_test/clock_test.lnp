@@ -17,6 +17,7 @@
 "clock_test\ds18b20.o"
 "clock_test\eeprom.o"
 "clock_test\gps_config.o"
+"clock_test\minmea.o"
 "clock_test\system_stm32f0xx.o"
 "clock_test\startup_stm32f072xb.o"
 "clock_test\stm32f0xx_hal_cortex.o"

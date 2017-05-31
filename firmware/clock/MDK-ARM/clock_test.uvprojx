@@ -10,7 +10,7 @@
       <TargetName>clock_test</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pCCUsed>5060422::V5.06 update 4 (build 422)::ARMCC</pCCUsed>
+      <pCCUsed>5060061::V5.06 update 1 (build 61)::ARMCC</pCCUsed>
       <TargetOption>
         <TargetCommonOption>
           <Device>STM32F072C8</Device>
@@ -150,7 +150,7 @@
             <RestoreSysVw>1</RestoreSysVw>
           </Target>
           <RunDebugAfterBuild>0</RunDebugAfterBuild>
-          <TargetSelection>5</TargetSelection>
+          <TargetSelection>11</TargetSelection>
           <SimDlls>
             <CpuDll></CpuDll>
             <CpuDllArguments></CpuDllArguments>
@@ -555,6 +555,16 @@
               <FileName>gps_config.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Src\gps_config.c</FilePath>
+            </File>
+            <File>
+              <FileName>minmea.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\minmea.c</FilePath>
+            </File>
+            <File>
+              <FileName>minmea.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Inc\minmea.h</FilePath>
             </File>
           </Files>
         </Group>

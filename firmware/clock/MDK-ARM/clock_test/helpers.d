@@ -41,3 +41,8 @@ clock_test\helpers.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim_ex.h
 clock_test\helpers.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart.h
 clock_test\helpers.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart_ex.h
 clock_test\helpers.o: ../Inc/shared.h
+clock_test\helpers.o: ../Inc/minmea.h
+clock_test\helpers.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+clock_test\helpers.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\errno.h
+clock_test\helpers.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\time.h
+clock_test\helpers.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h

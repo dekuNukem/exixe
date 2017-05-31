@@ -12,7 +12,6 @@
 #define SPI_CMD_DOT_END 13
 #define TUBE_COUNT 6
 #define GPS_BUF_SIZE 256
-
 #define SPI_CMD_UPDATE 0xaa
 
 typedef struct

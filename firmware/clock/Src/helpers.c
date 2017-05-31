@@ -3,6 +3,9 @@
 #include <stdlib.h>
 #include "helpers.h"
 #include "shared.h"
+#include "minmea.h"
+
+
 
 int32_t linear_buf_init(linear_buf *lb, int32_t size)
 {
@@ -83,4 +86,3 @@ double get_modifier(void)
     return 1;
   return 6 - (ls_value * 0.0083);
 }
-

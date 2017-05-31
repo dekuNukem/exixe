@@ -67,3 +67,8 @@ clock_test\my_tasks.o: ../Inc/my_1wire.h
 clock_test\my_tasks.o: ../Inc/ds18b20.h
 clock_test\my_tasks.o: ../Inc/eeprom.h
 clock_test\my_tasks.o: ../Inc/gps_config.h
+clock_test\my_tasks.o: ../Inc/minmea.h
+clock_test\my_tasks.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+clock_test\my_tasks.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\errno.h
+clock_test\my_tasks.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\time.h
+clock_test\my_tasks.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
