@@ -1,3 +1,10 @@
+  while(1)
+  {
+    HAL_GPIO_TogglePin(OWIRE_DATA_GPIO_Port, OWIRE_DATA_Pin);
+    printf("wtf\n");
+    HAL_Delay(100);
+  }
+
 disable GGA:
 {0xB5, 0x62, 0x06, 0x01, 0x03, 0x00, 0xF0, 0x00, 0x00, 0xFA, 0x0F}
 
@@ -20,6 +27,52 @@ full power:
 printf("%s\n", gps_lb.buf);
 
     spi_buf[0] = SPI_CMD_UPDATE | 0x0;
+
+void gps_temp_parse_task_start(void const * argument)
+{
+  uint8_t loop_count = 0;
+  for(;;)
+  {
+    if(linear_buf_line_available(&gps_lb))
+    {
+      parse_gps((char*)gps_lb.buf, &gps_rmc, &gps_gga, &gps_gsa, &gps_gll, &gps_gst, &gps_gsv);
+      linear_buf_reset(&gps_lb);
+    }
+    if(loop_count == 0)
+      ds18b20_start_conversion();
+    if(loop_count == 8)
+    {
+      raw_temp = ds18b20_get_temp();
+      printf("raw_temp: %d\n", raw_temp);
+    }
+    loop_count = (loop_count + 1) % 10;
+    osDelay(750);
+  }
+}
+
+void gps_temp_parse_task_start(void const * argument)
+{
+  int32_t unix_timestamp_temp = -1;
+  int32_t microsec_temp = -1;
+  for(;;)
+  {
+    if(linear_buf_line_available(&gps_lb) && \
+      (strstr((const char*)gps_lb.buf, "RMC") != NULL) && \
+      (parse_gps((char*)gps_lb.buf, &gps_rmc, &gps_gga, &gps_gsa, &gps_gll, &gps_gst, &gps_gsv) == 0) && \
+      (gps_rmc.valid))
+    {
+      minmea_gettime(&unix_timestamp_temp, &microsec_temp, &(gps_rmc.date), &(gps_rmc.time));
+      printf("%s\n", gps_lb.buf);
+      printf("%ld\n", unix_timestamp_temp);
+      rtc_gps_calib(&gps_rmc);
+      linear_buf_reset(&gps_lb);
+    }
+    ds18b20_start_conversion();
+    osDelay(750);
+    raw_temp = ds18b20_get_temp();
+    tube_print2_uint8_t(raw_temp >> 4, &(tube_animation[1]), &(tube_animation[0]));
+  }
+}
 
 
 void led_animation_handler(led_animation* anime_struct)

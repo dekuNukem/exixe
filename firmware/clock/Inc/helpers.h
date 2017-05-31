@@ -6,12 +6,13 @@
 #endif 
 
 #include "stm32f0xx_hal.h"
+#include "minmea.h"
 
 #define SPI_CMD_SIZE 16
 #define SPI_SMD_DIGIT_END 11
 #define SPI_CMD_DOT_END 13
 #define TUBE_COUNT 6
-#define GPS_BUF_SIZE 256
+#define GPS_BUF_SIZE 128
 #define SPI_CMD_UPDATE 0xaa
 
 typedef struct
@@ -30,6 +31,8 @@ int32_t linear_buf_add(linear_buf *lb, uint8_t c);
 int32_t linear_buf_add_str(linear_buf *lb, uint8_t *s, uint32_t len);
 int32_t get_ls_reading(void);
 double get_modifier(void);
+void rtc_gps_calib(struct minmea_sentence_rmc *gps_rmc);
+int32_t get_time(void);
 
 #ifdef __cplusplus
 }

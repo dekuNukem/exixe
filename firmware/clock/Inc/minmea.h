@@ -138,7 +138,7 @@ struct minmea_sentence_gsv {
     struct minmea_sat_info sats[4];
 };
 
-void parse_gps(char* line, struct minmea_sentence_rmc *ggps_rmc, struct minmea_sentence_gga *ggps_gga, struct minmea_sentence_gsa *ggps_gsa, struct minmea_sentence_gll *ggps_gll, struct minmea_sentence_gst *ggps_gst, struct minmea_sentence_gsv *ggps_gsv);
+char parse_gps(char* line, struct minmea_sentence_rmc *ggps_rmc, struct minmea_sentence_gga *ggps_gga, struct minmea_sentence_gsa *ggps_gsa, struct minmea_sentence_gll *ggps_gll, struct minmea_sentence_gst *ggps_gst, struct minmea_sentence_gsv *ggps_gsv);
 char * my_strsep(char **stringp, const char *delim);
 
 /**

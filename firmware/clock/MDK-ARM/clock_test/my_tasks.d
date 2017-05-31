@@ -34,6 +34,8 @@ clock_test\my_tasks.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_pcd.h
 clock_test\my_tasks.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_pcd_ex.h
 clock_test\my_tasks.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_pwr.h
 clock_test\my_tasks.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_pwr_ex.h
+clock_test\my_tasks.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rtc.h
+clock_test\my_tasks.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rtc_ex.h
 clock_test\my_tasks.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi.h
 clock_test\my_tasks.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi_ex.h
 clock_test\my_tasks.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim.h
@@ -58,6 +60,11 @@ clock_test\my_tasks.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.
 clock_test\my_tasks.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h
 clock_test\my_tasks.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
 clock_test\my_tasks.o: ../Inc/helpers.h
+clock_test\my_tasks.o: ../Inc/minmea.h
+clock_test\my_tasks.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+clock_test\my_tasks.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\errno.h
+clock_test\my_tasks.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\time.h
+clock_test\my_tasks.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 clock_test\my_tasks.o: ../Inc/my_usb.h
 clock_test\my_tasks.o: ../Inc/animations.h
 clock_test\my_tasks.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
@@ -67,8 +74,3 @@ clock_test\my_tasks.o: ../Inc/my_1wire.h
 clock_test\my_tasks.o: ../Inc/ds18b20.h
 clock_test\my_tasks.o: ../Inc/eeprom.h
 clock_test\my_tasks.o: ../Inc/gps_config.h
-clock_test\my_tasks.o: ../Inc/minmea.h
-clock_test\my_tasks.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
-clock_test\my_tasks.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\errno.h
-clock_test\my_tasks.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\time.h
-clock_test\my_tasks.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h

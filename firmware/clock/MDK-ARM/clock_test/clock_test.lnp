@@ -42,6 +42,8 @@
 "clock_test\stm32f0xx_hal_uart_ex.o"
 "clock_test\stm32f0xx_hal_adc_ex.o"
 "clock_test\stm32f0xx_hal_adc.o"
+"clock_test\stm32f0xx_hal_rtc.o"
+"clock_test\stm32f0xx_hal_rtc_ex.o"
 "clock_test\queue.o"
 "clock_test\croutine.o"
 "clock_test\tasks.o"

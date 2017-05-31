@@ -67,6 +67,8 @@
 #define EXIXE5_CS_GPIO_Port GPIOB
 #define EXIXE6_CS_Pin GPIO_PIN_14
 #define EXIXE6_CS_GPIO_Port GPIOB
+#define GPS_TP_Pin GPIO_PIN_15
+#define GPS_TP_GPIO_Port GPIOB
 #define USER_LED_Pin GPIO_PIN_9
 #define USER_LED_GPIO_Port GPIOA
 #define EXIXE_RESET_Pin GPIO_PIN_15

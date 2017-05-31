@@ -2,6 +2,7 @@ clock_test\helpers.o: ..\Src\helpers.c
 clock_test\helpers.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 clock_test\helpers.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 clock_test\helpers.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+clock_test\helpers.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\time.h
 clock_test\helpers.o: ../Inc/helpers.h
 clock_test\helpers.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h
 clock_test\helpers.o: ../Inc/stm32f0xx_hal_conf.h
@@ -34,15 +35,16 @@ clock_test\helpers.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_pcd.h
 clock_test\helpers.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_pcd_ex.h
 clock_test\helpers.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_pwr.h
 clock_test\helpers.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_pwr_ex.h
+clock_test\helpers.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rtc.h
+clock_test\helpers.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rtc_ex.h
 clock_test\helpers.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi.h
 clock_test\helpers.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_spi_ex.h
 clock_test\helpers.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim.h
 clock_test\helpers.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_tim_ex.h
 clock_test\helpers.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart.h
 clock_test\helpers.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart_ex.h
-clock_test\helpers.o: ../Inc/shared.h
 clock_test\helpers.o: ../Inc/minmea.h
 clock_test\helpers.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
 clock_test\helpers.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\errno.h
-clock_test\helpers.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\time.h
 clock_test\helpers.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
+clock_test\helpers.o: ../Inc/shared.h

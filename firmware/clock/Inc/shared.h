@@ -16,4 +16,7 @@ extern I2C_HandleTypeDef hi2c1;
 extern UART_HandleTypeDef huart1;
 #define gps_uart_ptr (&huart1)
 
+extern RTC_HandleTypeDef hrtc;
+#define rtc_ptr (&hrtc)
+
 #endif

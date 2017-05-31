@@ -16,26 +16,26 @@
 
 #define boolstr(s) ((s) ? "true" : "false")
 
-void parse_gps(char* line, struct minmea_sentence_rmc *ggps_rmc, struct minmea_sentence_gga *ggps_gga, struct minmea_sentence_gsa *ggps_gsa, struct minmea_sentence_gll *ggps_gll, struct minmea_sentence_gst *ggps_gst, struct minmea_sentence_gsv *ggps_gsv)
+char parse_gps(char* line, struct minmea_sentence_rmc *ggps_rmc, struct minmea_sentence_gga *ggps_gga, struct minmea_sentence_gsa *ggps_gsa, struct minmea_sentence_gll *ggps_gll, struct minmea_sentence_gst *ggps_gst, struct minmea_sentence_gsv *ggps_gsv)
 {
     switch (minmea_sentence_id(line, false)) 
     {
     case MINMEA_SENTENCE_RMC:
         minmea_parse_rmc(ggps_rmc, line);
-        break;
+        return 0;
     case MINMEA_SENTENCE_GGA:
         minmea_parse_gga(ggps_gga, line);
-        break;
+        return 0;
     case MINMEA_SENTENCE_GST:
         minmea_parse_gst(ggps_gst, line);
-        break;
+        return 0;
     case MINMEA_SENTENCE_GSV:
         minmea_parse_gsv(ggps_gsv, line);
-        break;
+        return 0;
     case MINMEA_INVALID:
-        break;
+        return 1;
     default:
-        break;
+        return 1;
     }
 }
 

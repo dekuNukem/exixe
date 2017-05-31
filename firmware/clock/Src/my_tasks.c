@@ -96,6 +96,8 @@ void setup_task(void)
   led_start_animation(&(rgb_animation[3]), sdfsdf, ANIMATION_CROSS_FADE);
   
   HAL_UART_Receive_IT(gps_uart_ptr, gps_byte_buf, 1);
+
+  printf("time: %d\n", get_time());
 }
 
 void animation_task_start(void const * argument)
@@ -143,25 +145,28 @@ void test_task_start(void const * argument)
   }
 }
 
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
+{
+  if(GPIO_Pin == GPS_TP_Pin)
+  {
+    if(gps_rmc.valid)
+      rtc_gps_calib(&gps_rmc);
+  }
+}
 
 void gps_temp_parse_task_start(void const * argument)
 {
-  int32_t unix_timestamp_temp = -1;
-  int32_t microsec_temp = -1;
   for(;;)
   {
-    if(linear_buf_line_available(&gps_lb) && (strstr((const char*)gps_lb.buf, "RMC") != NULL))
+    if(linear_buf_line_available(&gps_lb))
     {
       parse_gps((char*)gps_lb.buf, &gps_rmc, &gps_gga, &gps_gsa, &gps_gll, &gps_gst, &gps_gsv);
-      minmea_gettime(&unix_timestamp_temp, &microsec_temp, &(gps_rmc.date), &(gps_rmc.time));
-      printf("%s\n", gps_lb.buf);
-      printf("%ld\n", unix_timestamp_temp);
       linear_buf_reset(&gps_lb);
     }
     ds18b20_start_conversion();
     osDelay(750);
     raw_temp = ds18b20_get_temp();
-    tube_print2_uint8_t(raw_temp >> 4, &(tube_animation[1]), &(tube_animation[0]));
+    printf("raw_temp: %d\n", raw_temp>>4);
   }
 }
 
