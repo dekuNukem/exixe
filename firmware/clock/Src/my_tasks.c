@@ -154,6 +154,7 @@ void gps_temp_parse_task_start(void const * argument)
     {
       parse_gps((char*)gps_lb.buf, &gps_rmc, &gps_gga, &gps_gsa, &gps_gll, &gps_gst, &gps_gsv);
       minmea_gettime(&unix_timestamp_temp, &microsec_temp, &(gps_rmc.date), &(gps_rmc.time));
+      printf("%s\n", gps_lb.buf);
       printf("%ld\n", unix_timestamp_temp);
       linear_buf_reset(&gps_lb);
     }

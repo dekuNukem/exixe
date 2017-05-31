@@ -3,7 +3,7 @@
 <title>Static Call Graph - [clock_test\clock_test.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image clock_test\clock_test.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060061: Last Updated: Wed May 31 11:30:25 2017
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060061: Last Updated: Wed May 31 12:53:55 2017
 <BR><P>
 <H3>Maximum Stack Usage =        312 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -575,6 +575,7 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setup_task
 <LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gps_say
+<LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gps_init
 <LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;linear_buf_init
 </UL>
 
@@ -1780,10 +1781,11 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;animation_task_start
 </UL>
 
-<P><STRONG><a name="[113]"></a>gps_init</STRONG> (Thumb, 92 bytes, Stack size 8 bytes, gps_config.o(i.gps_init))
+<P><STRONG><a name="[113]"></a>gps_init</STRONG> (Thumb, 98 bytes, Stack size 8 bytes, gps_config.o(i.gps_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = gps_init &rArr; gps_say &rArr; HAL_UART_Transmit &rArr; UART_WaitOnFlagUntilTimeout
 </UL>
-<BR>[Calls]<UL><LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gps_say
+<BR>[Calls]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Delay
+<LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gps_say
 </UL>
 <BR>[Called By]<UL><LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setup_task
 </UL>
@@ -1797,7 +1799,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gps_init
 </UL>
 
-<P><STRONG><a name="[45]"></a>gps_temp_parse_task_start</STRONG> (Thumb, 134 bytes, Stack size 24 bytes, my_tasks.o(i.gps_temp_parse_task_start))
+<P><STRONG><a name="[45]"></a>gps_temp_parse_task_start</STRONG> (Thumb, 142 bytes, Stack size 24 bytes, my_tasks.o(i.gps_temp_parse_task_start))
 <BR><BR>[Stack]<UL><LI>Max Depth = 312<LI>Call Chain = gps_temp_parse_task_start &rArr; parse_gps &rArr; minmea_parse_gsv &rArr; minmea_scan &rArr; strtol &rArr; _strtoul
 </UL>
 <BR>[Calls]<UL><LI><a href="#[d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osDelay
