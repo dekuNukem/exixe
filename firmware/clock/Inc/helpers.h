@@ -14,6 +14,7 @@
 #define TUBE_COUNT 6
 #define GPS_BUF_SIZE 128
 #define SPI_CMD_UPDATE 0xaa
+#define STM32_UUID ((uint32_t *)0x1FFFF7AC)
 
 typedef struct
 {
@@ -31,8 +32,10 @@ int32_t linear_buf_add(linear_buf *lb, uint8_t c);
 int32_t linear_buf_add_str(linear_buf *lb, uint8_t *s, uint32_t len);
 int32_t get_ls_reading(void);
 double get_modifier(void);
-void rtc_gps_calib(struct minmea_sentence_rmc *gps_rmc);
-int32_t get_time(void);
+uint8_t rtc_gps_calib(struct minmea_sentence_rmc *gps_rmc);
+int32_t get_time_rtc(void);
+int32_t get_time_rmc(struct minmea_sentence_rmc *gps_rmc);
+void unix_ts_2_datetime(int32_t ts, uint8_t* year, uint8_t* month, uint8_t* day, uint8_t* hour, uint8_t* minute, uint8_t* second);
 
 #ifdef __cplusplus
 }

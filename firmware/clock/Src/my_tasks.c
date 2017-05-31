@@ -19,6 +19,8 @@ double brightness_modifier = 1;
 uint8_t gps_byte_buf[1];
 uint32_t frame_counter;
 int16_t raw_temp;
+int32_t current_time;
+uint8_t year, month, day, hour, minute, second;
 digit_animation tube_animation[TUBE_COUNT];
 led_animation rgb_animation[TUBE_COUNT];
 linear_buf gps_lb;
@@ -85,6 +87,7 @@ void setup_task(void)
 
   linear_buf_init(&gps_lb, GPS_BUF_SIZE);
   gps_init();
+  current_time = get_time_rtc();
   
   for (int i = 0; i < TUBE_COUNT; ++i)
     animation_init(&(tube_animation[i]));
@@ -92,12 +95,7 @@ void setup_task(void)
   for (int i = 0; i < TUBE_COUNT; ++i)
     led_animation_init(&(rgb_animation[i]));
 
-  uint8_t sdfsdf[LED_CHANNEL_SIZE] = {255, 0, 255};
-  led_start_animation(&(rgb_animation[3]), sdfsdf, ANIMATION_CROSS_FADE);
-  
   HAL_UART_Receive_IT(gps_uart_ptr, gps_byte_buf, 1);
-
-  printf("time: %d\n", get_time());
 }
 
 void animation_task_start(void const * argument)
@@ -117,6 +115,7 @@ void animation_task_start(void const * argument)
       spi_buf[0] = SPI_CMD_UPDATE;
       if(tube_animation[curr_tube].end_digit == DIGIT_2 || tube_animation[curr_tube].end_digit == DIGIT_3)
         spi_buf[0] |= 0x1;
+
       // digits
       for (int j = 1; j < SPI_SMD_DIGIT_END; ++j)
         spi_buf[j] = (uint8_t)((double)(tube_animation[curr_tube].pwm_status[j] >> 1) / brightness_modifier) | 0x80;
@@ -135,12 +134,8 @@ void animation_task_start(void const * argument)
 
 void test_task_start(void const * argument)
 {
-  int8_t count = -20;
   for(;;)
   {
-    count++;
-    tube_print2_uint8_t(255 - count, &(tube_animation[5]), &(tube_animation[4]));
-    tube_print2_uint8_t(count, &(tube_animation[3]), &(tube_animation[2]));
     osDelay(1000);
   }
 }
@@ -150,7 +145,22 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
   if(GPIO_Pin == GPS_TP_Pin)
   {
     if(gps_rmc.valid)
-      rtc_gps_calib(&gps_rmc);
+    {
+      HAL_GPIO_WritePin(USER_LED_GPIO_Port, USER_LED_Pin, GPIO_PIN_RESET);
+      if(rtc_gps_calib(&gps_rmc) == 0)
+        current_time = get_time_rmc(&gps_rmc);
+    }
+    else
+    {
+      HAL_GPIO_WritePin(USER_LED_GPIO_Port, USER_LED_Pin, GPIO_PIN_SET);
+    }
+    current_time++;
+    unix_ts_2_datetime(current_time, &year, &month, &day, &hour, &minute, &second);
+    if(hour > 12)
+      hour -= 12;
+    tube_print2_uint8_t(hour, &(tube_animation[5]), &(tube_animation[4]));
+    tube_print2_uint8_t(minute, &(tube_animation[3]), &(tube_animation[2]));
+    tube_print2_uint8_t(second, &(tube_animation[1]), &(tube_animation[0]));
   }
 }
 
@@ -163,10 +173,7 @@ void gps_temp_parse_task_start(void const * argument)
       parse_gps((char*)gps_lb.buf, &gps_rmc, &gps_gga, &gps_gsa, &gps_gll, &gps_gst, &gps_gsv);
       linear_buf_reset(&gps_lb);
     }
-    ds18b20_start_conversion();
-    osDelay(750);
-    raw_temp = ds18b20_get_temp();
-    printf("raw_temp: %d\n", raw_temp>>4);
+    osDelay(100);
   }
 }
 

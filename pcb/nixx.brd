@@ -835,10 +835,10 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <element name="TP1" library="testpad" package="TP13R" value="PTR1TP13R" x="7.366" y="11.43" smashed="yes" rot="MR0">
 <attribute name="TP_SIGNAL_NAME" value="" x="7.366" y="8.89" size="1" layer="38" rot="MR0"/>
 </element>
-<element name="R22" library="joyAnalog" package="0805" value="100K" x="9.017" y="39.116" smashed="yes">
+<element name="R22" library="joyAnalog" package="0805" value="1M" x="9.017" y="39.116" smashed="yes">
 <attribute name="NAME" x="7.62" y="39.6875" size="0.6096" layer="25" rot="R180"/>
 </element>
-<element name="R23" library="joyAnalog" package="0805" value="75K" x="8.255" y="36.703" smashed="yes" rot="R90">
+<element name="R23" library="joyAnalog" package="0805" value="100K" x="8.255" y="36.703" smashed="yes" rot="R90">
 <attribute name="NAME" x="5.969" y="36.3855" size="0.6096" layer="25"/>
 </element>
 <element name="T1" library="zetex" package="SOT323" value="" x="5.715" y="38.1" smashed="yes" rot="R270">
@@ -855,7 +855,7 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <element name="R24" library="joyAnalog" package="0805" value="4K7" x="12.319" y="35.814" smashed="yes">
 <attribute name="NAME" x="10.9855" y="35.179" size="0.6096" layer="25" rot="R270"/>
 </element>
-<element name="R19" library="joyAnalog" package="0805" value="100K" x="10.033" y="36.703" smashed="yes" rot="R90">
+<element name="R19" library="joyAnalog" package="0805" value="1M" x="10.033" y="36.703" smashed="yes" rot="R90">
 <attribute name="NAME" x="8.509" y="34.6075" size="0.6096" layer="25"/>
 </element>
 <element name="TP2" library="testpad" package="TP13R" value="PTR1TP13R" x="4.064" y="11.811" smashed="yes" rot="MR0">

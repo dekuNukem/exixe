@@ -1,3 +1,96 @@
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
+{
+  if(GPIO_Pin == GPS_TP_Pin)
+  {
+    if(gps_rmc.valid && (rtc_gps_calib(&gps_rmc) == 0))
+    {
+      HAL_GPIO_WritePin(USER_LED_GPIO_Port, USER_LED_Pin, GPIO_PIN_RESET);
+      current_time = get_time_rmc(&gps_rmc);
+    }
+    else
+    {
+      HAL_GPIO_WritePin(USER_LED_GPIO_Port, USER_LED_Pin, GPIO_PIN_SET);
+    }
+    current_time++;
+    unix_ts_2_datetime(current_time, &year, &month, &day, &hour, &minute, &second);
+    tube_print2_uint8_t(hour, &(tube_animation[5]), &(tube_animation[4]));
+    tube_print2_uint8_t(minute, &(tube_animation[3]), &(tube_animation[2]));
+    tube_print2_uint8_t(second, &(tube_animation[1]), &(tube_animation[0]));
+  }
+}
+
+
+#define STM32F0_UUID ((uint32_t *)0x1FFFF7AC)
+
+  for (int i = 0; i < 3; ++i)
+    printf("%x\n", STM32F0_UUID[i]);
+
+uint8_t sdfsdf[LED_CHANNEL_SIZE] = {255, 0, 255};
+  led_start_animation(&(rgb_animation[3]), sdfsdf, ANIMATION_CROSS_FADE);
+
+void animation_task_start(void const * argument)
+{
+  for(;;)
+  {
+    frame_counter++;
+
+    for (int i = 0; i < TUBE_COUNT; ++i)
+    {
+      animation_handler(&(tube_animation[i]));
+      led_animation_handler(&(rgb_animation[i]));
+    }
+
+    for (int curr_tube = 0; curr_tube < TUBE_COUNT; ++curr_tube)
+    {
+      spi_buf[0] = SPI_CMD_UPDATE;
+      if(tube_animation[curr_tube].end_digit == DIGIT_2 || tube_animation[curr_tube].end_digit == DIGIT_3)
+        spi_buf[0] |= 0x1;
+      // digits
+      for (int j = 1; j < SPI_SMD_DIGIT_END; ++j)
+        spi_buf[j] = (uint8_t)((double)(tube_animation[curr_tube].pwm_status[j] >> 1) / brightness_modifier) | 0x80;
+      // dots
+      for (int j = SPI_SMD_DIGIT_END; j < SPI_CMD_DOT_END; ++j)
+        spi_buf[j] = (tube_animation[curr_tube].pwm_status[j] >> 1) | 0x80;
+      // LEDs
+      for (int j = SPI_CMD_DOT_END; j < SPI_CMD_SIZE; ++j)
+        spi_buf[j] = ((uint8_t)(rgb_animation[curr_tube].pwm_status[j - SPI_CMD_DOT_END]) >> 1) | 0x80;
+      spi_send(spi_buf, SPI_CMD_SIZE, curr_tube);
+    }
+    brightness_modifier = get_modifier();
+    osDelay(17);
+  }
+}
+
+    void test_task_start(void const * argument)
+{
+  int8_t count = -20;
+  for(;;)
+  {
+    count++;
+    tube_print2_uint8_t(255 - count, &(tube_animation[5]), &(tube_animation[4]));
+    tube_print2_uint8_t(count, &(tube_animation[3]), &(tube_animation[2]));
+    osDelay(1000);
+  }
+}
+
+    void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
+{
+  if(GPIO_Pin == GPS_TP_Pin)
+  {
+    if(gps_rmc.valid && (rtc_gps_calib(&gps_rmc) == 0))
+      current_time = get_time_rmc(&gps_rmc);
+    current_time++;
+    printf("current_time: %d\n", current_time);
+    unix_ts_2_datetime(current_time, &year, &month, &day, &hour, &minute, &second);
+    printf("%d %d %d\n", year, month, day);
+    printf("%d %d %d\n", hour, minute, second);
+  }
+}
+
+
+    printf("%02d %02d %02d\n", my_tm.tm_year, my_tm.tm_mon, my_tm.tm_mday);
+  printf("%02d %02d %02d\n", my_tm.tm_hour, my_tm.tm_min, my_tm.tm_sec);
+
   while(1)
   {
     HAL_GPIO_TogglePin(OWIRE_DATA_GPIO_Port, OWIRE_DATA_Pin);
@@ -75,6 +168,12 @@ void gps_temp_parse_task_start(void const * argument)
 }
 
 
+void unix_ts_2_datetime(time_t ts)
+{
+  struct tm *my_tm;
+  my_tm = gmtime(&ts);
+  printf("%02d %02d %02d\n", my_tm->tm_hour, my_tm->tm_min, my_tm->tm_sec);
+}
 void led_animation_handler(led_animation* anime_struct)
 {
   uint32_t current_frame = frame_counter - anime_struct->animation_start;
