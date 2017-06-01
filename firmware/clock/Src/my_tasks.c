@@ -23,9 +23,11 @@ uint32_t frame_counter;
 int16_t raw_temp;
 int32_t current_time;
 uint8_t year, month, day, hour, minute, second;
+uint8_t display_mode;
 digit_animation tube_animation[TUBE_COUNT];
 led_animation rgb_animation[TUBE_COUNT];
 linear_buf gps_lb;
+my_button up_button;
 
 struct minmea_sentence_rmc gps_rmc;
 struct minmea_sentence_gga gps_gga;
@@ -97,7 +99,10 @@ void setup_task(void)
   for (int i = 0; i < TUBE_COUNT; ++i)
     led_animation_init(&(rgb_animation[i]));
 
+  button_init(&up_button);
   HAL_UART_Receive_IT(gps_uart_ptr, gps_byte_buf, 1);
+  display_mode = get_display_mode();
+  printf("launching scheduler...\n");
 }
 
 void animation_task_start(void const * argument)
@@ -136,10 +141,17 @@ void animation_task_start(void const * argument)
 
 void test_task_start(void const * argument)
 {
+  uint8_t result;
   for(;;)
   {
-    printf("test\n");
-    osDelay(1000);
+    result = button_update(&up_button, HAL_GPIO_ReadPin(UP_BUTTON_GPIO_Port, UP_BUTTON_Pin));
+    if(result != BUTTON_NO_PRESS)
+    {
+      display_mode = (display_mode + 1) % DISPLAY_MODE_SIZE;
+      eeprom_write(EEPROM_ADDR_DISPLAY_MODE, display_mode);
+      printf("display_mode: %d\n", display_mode);
+    }
+    osDelay(50);
   }
 }
 

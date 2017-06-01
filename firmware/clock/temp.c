@@ -1,4 +1,34 @@
+void test_task_start(void const * argument)
+{
+  uint8_t result;
+  for(;;)
+  {
+    result = button_update(&up_button, HAL_GPIO_ReadPin(UP_BUTTON_GPIO_Port, UP_BUTTON_Pin));
+    if(result != BUTTON_NO_PRESS)
+      printf("button: %d\n", result);
+    osDelay(16);
+  }
+}
 
+void button_update(my_button* butt, GPIO_PinState ps)
+{
+  int32_t now = HAL_GetTick();
+  if(ps == BUTTON_STATE_PRESSED && butt->state == BUTTON_STATE_RELEASED)
+  {
+    printf("press %d\n", now);
+    butt->last_action = now;
+  }
+  else if(ps == BUTTON_STATE_RELEASED && butt->state == BUTTON_STATE_PRESSED)
+  {
+    printf("release %d, %d\n", now, now - butt->last_action);
+    butt->last_action = now;
+  }
+  butt->state = ps;
+}
+
+
+  if(butt->state != ps)
+    printf("different!\n");
 #define BUTTON_STATE_PRESSED GPIO_PIN_RESET
 #define BUTTON_STATE_NOT_PRESSED GPIO_PIN_SET
 

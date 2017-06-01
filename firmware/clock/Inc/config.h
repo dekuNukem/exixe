@@ -9,9 +9,30 @@
 #include "helpers.h"
 #include "shared.h"
 
-#define EEPROM_ADDR_HOUR_OFFSET 0
-#define EEPROM_ADDR_DISPLAY_MODE 1
+/*
+mode button is up button
 
+when in regular mode, press mode button
+to cycle through display modes:
+
+0	24hr no temp
+1	24hr with temp
+2	12hr no temp
+3	12hr with temp
+
+hold mode button while booting:
+enter UTC offset mode:
+then use two buttons to set UTC offset
+
+*/
+
+#define DISPLAY_MODE_SIZE 4
+
+#define EEPROM_ADDR_UTC_OFFSET 0
+#define EEPROM_ADDR_DISPLAY_MODE 1
+#define EEPROM_ADDR_USE_24HR 2
+
+uint8_t get_display_mode(void);
 
 #ifdef __cplusplus
 }
