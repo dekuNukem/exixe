@@ -13,6 +13,8 @@
 #include "eeprom.h"
 #include "gps_config.h"
 #include "minmea.h"
+#include "config.h"
+#include "buttons.h"
 
 uint8_t spi_buf[SPI_CMD_SIZE];
 double brightness_modifier = 1;
@@ -136,6 +138,7 @@ void test_task_start(void const * argument)
 {
   for(;;)
   {
+    printf("test\n");
     osDelay(1000);
   }
 }

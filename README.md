@@ -108,3 +108,4 @@ animation type
 
 en pin on power supply normally off connected to a gpio?
 
+PA8 PA9 PA10 is messed up fix them in the next revision

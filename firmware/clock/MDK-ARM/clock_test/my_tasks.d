@@ -74,3 +74,5 @@ clock_test\my_tasks.o: ../Inc/my_1wire.h
 clock_test\my_tasks.o: ../Inc/ds18b20.h
 clock_test\my_tasks.o: ../Inc/eeprom.h
 clock_test\my_tasks.o: ../Inc/gps_config.h
+clock_test\my_tasks.o: ../Inc/config.h
+clock_test\my_tasks.o: ../Inc/buttons.h

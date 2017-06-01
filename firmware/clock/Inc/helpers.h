@@ -14,7 +14,6 @@
 #define TUBE_COUNT 6
 #define GPS_BUF_SIZE 128
 #define SPI_CMD_UPDATE 0xaa
-#define STM32_UUID ((uint32_t *)0x1FFFF7AC)
 
 typedef struct
 {

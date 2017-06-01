@@ -566,6 +566,26 @@
               <FileType>5</FileType>
               <FilePath>..\Inc\minmea.h</FilePath>
             </File>
+            <File>
+              <FileName>config.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Inc\config.h</FilePath>
+            </File>
+            <File>
+              <FileName>config.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\config.c</FilePath>
+            </File>
+            <File>
+              <FileName>buttons.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Src\buttons.c</FilePath>
+            </File>
+            <File>
+              <FileName>buttons.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Inc\buttons.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

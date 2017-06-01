@@ -1,3 +1,7 @@
+
+#define BUTTON_STATE_PRESSED GPIO_PIN_RESET
+#define BUTTON_STATE_NOT_PRESSED GPIO_PIN_SET
+
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
   if(GPIO_Pin == GPS_TP_Pin)
