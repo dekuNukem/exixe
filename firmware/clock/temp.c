@@ -1,3 +1,38 @@
+void gps_temp_parse_task_start(void const * argument)
+{
+  uint8_t loop_count = 0;
+  for(;;)
+  {
+    if(linear_buf_line_available(&gps_lb))
+    {
+      parse_gps((char*)gps_lb.buf, &gps_rmc, &gps_gga, &gps_gsa, &gps_gll, &gps_gst, &gps_gsv);
+      // printf("%s\n", gps_lb.buf);
+      linear_buf_reset(&gps_lb);
+    }
+    if(loop_count == 0)
+      ds18b20_start_conversion();
+    if(loop_count == 8)
+    {
+      raw_temp = ds18b20_get_temp() >> 4;
+      if(display_mode == DISPLAY_MODE_TIME_TEMP)
+        tube_print2(raw_temp, &(tube_animation[1]), &(tube_animation[0]), ANIMATION_CROSS_FADE);
+    }
+    loop_count = (loop_count + 1) % 10;
+    osDelay(100);
+  }
+}
+
+
+
+  else if(anime_struct->animation_type == ANIMATION_BREATHING)
+  {
+    double result = 1 - 0.6 * cos((PI/30) * (double)frame_counter);
+    if(result > 1)
+      result = 1;
+    for (int i = 0; i < LED_CHANNEL_SIZE; ++i)
+      anime_struct->pwm_status[i] = anime_struct->target_color[i] * result;
+  }
+
         spi_buf[j] = ((uint8_t)(rgb_animation[curr_tube].pwm_status[j - SPI_CMD_DOT_END]) >> 1) | 0x80;
         spi_buf[j] = (uint8_t)((double)(tube_animation[curr_tube].pwm_status[j] >> 1) / brightness_modifier) | 0x80;
 

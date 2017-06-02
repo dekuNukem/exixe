@@ -52,14 +52,21 @@ void led_animation_handler(led_animation* anime_struct)
         if(anime_struct->pwm_status[i] < 0)
           anime_struct->pwm_status[i] = 0;
       }
+    else
+    {
+      for (int i = 0; i < LED_CHANNEL_SIZE; ++i)
+        anime_struct->pwm_status[i] = anime_struct->target_color[i];
+    }
   }
   else if(anime_struct->animation_type == ANIMATION_BREATHING)
   {
-    double result = 1 - 0.6 * cos((PI/30) * (double)frame_counter);
-    if(result > 1)
-      result = 1;
+    double modifier = 1;
+    if(current_frame <= 30)
+      modifier = 1.1 + 0.6 * cos((PI/15) * (double)current_frame);
+    if(modifier > 1)
+      modifier = 1;
     for (int i = 0; i < LED_CHANNEL_SIZE; ++i)
-      anime_struct->pwm_status[i] = anime_struct->target_color[i] * result;
+      anime_struct->pwm_status[i] = anime_struct->target_color[i] * modifier;
   }
 }
 

@@ -3,7 +3,7 @@
 <title>Static Call Graph - [clock_test\clock_test.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image clock_test\clock_test.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060061: Last Updated: Fri Jun 02 16:00:25 2017
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060061: Last Updated: Fri Jun 02 17:12:40 2017
 <BR><P>
 <H3>Maximum Stack Usage =        312 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -331,12 +331,12 @@ Global Symbols
 <P><STRONG><a name="[15c]"></a>strcmp</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, strcmp.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = strcmp
 </UL>
-<BR>[Called By]<UL><LI><a href="#[164]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;minmea_parse_rmc
-<LI><a href="#[163]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;minmea_parse_gsv
+<BR>[Called By]<UL><LI><a href="#[163]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;minmea_parse_gsv
 <LI><a href="#[162]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;minmea_parse_gst
 <LI><a href="#[160]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;minmea_parse_gga
 <LI><a href="#[159]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;minmea_check
 <LI><a href="#[165]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;minmea_sentence_id
+<LI><a href="#[164]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;minmea_parse_rmc
 </UL>
 
 <P><STRONG><a name="[50]"></a>strtol</STRONG> (Thumb, 108 bytes, Stack size 32 bytes, strtol.o(.text))
@@ -382,8 +382,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
 </UL>
-<BR>[Called By]<UL><LI><a href="#[12f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;led_animation_handler
-<LI><a href="#[12b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;animation_handler
+<BR>[Called By]<UL><LI><a href="#[12b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;animation_handler
 <LI><a href="#[131]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_modifier
 <LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__kernel_cos
 <LI><a href="#[125]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__kernel_sin
@@ -642,7 +641,7 @@ Global Symbols
 <LI><a href="#[150]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;linear_buf_init
 </UL>
 
-<P><STRONG><a name="[78]"></a>HAL_GPIO_EXTI_Callback</STRONG> (Thumb, 196 bytes, Stack size 24 bytes, my_tasks.o(i.HAL_GPIO_EXTI_Callback))
+<P><STRONG><a name="[78]"></a>HAL_GPIO_EXTI_Callback</STRONG> (Thumb, 276 bytes, Stack size 24 bytes, my_tasks.o(i.HAL_GPIO_EXTI_Callback))
 <BR><BR>[Stack]<UL><LI>Max Depth = 172<LI>Call Chain = HAL_GPIO_EXTI_Callback &rArr; unix_ts_2_datetime &rArr; __secs_to_tm &rArr; __aeabi_idivmod &rArr; __aeabi_uidivmod
 </UL>
 <BR>[Calls]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
@@ -2219,11 +2218,10 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[149]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gps_init
 </UL>
 
-<P><STRONG><a name="[45]"></a>gps_temp_parse_task_start</STRONG> (Thumb, 118 bytes, Stack size 16 bytes, my_tasks.o(i.gps_temp_parse_task_start))
+<P><STRONG><a name="[45]"></a>gps_temp_parse_task_start</STRONG> (Thumb, 100 bytes, Stack size 16 bytes, my_tasks.o(i.gps_temp_parse_task_start))
 <BR><BR>[Stack]<UL><LI>Max Depth = 304<LI>Call Chain = gps_temp_parse_task_start &rArr; parse_gps &rArr; minmea_parse_gsv &rArr; minmea_scan &rArr; strtol &rArr; _strtoul
 </UL>
 <BR>[Calls]<UL><LI><a href="#[f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osDelay
-<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;tube_print2
 <LI><a href="#[14c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;parse_gps
 <LI><a href="#[13e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ds18b20_start_conversion
 <LI><a href="#[138]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ds18b20_get_temp
@@ -2233,14 +2231,13 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> main.o(.constdata)
 </UL>
-<P><STRONG><a name="[12f]"></a>led_animation_handler</STRONG> (Thumb, 218 bytes, Stack size 24 bytes, animations.o(i.led_animation_handler))
+<P><STRONG><a name="[12f]"></a>led_animation_handler</STRONG> (Thumb, 252 bytes, Stack size 24 bytes, animations.o(i.led_animation_handler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 304<LI>Call Chain = led_animation_handler &rArr; cos &rArr; __ieee754_rem_pio2 &rArr; __aeabi_dmul &rArr; _double_epilogue &rArr; _double_round
 </UL>
 <BR>[Calls]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
 <LI><a href="#[12d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_cdrcmple
 <LI><a href="#[14e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_cdcmple
 <LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ui2d
-<LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_drsub
 <LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul
 <LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cos
 </UL>
@@ -2407,11 +2404,11 @@ Global Symbols
 <LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_ctype_table
 <LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
 </UL>
-<BR>[Called By]<UL><LI><a href="#[164]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;minmea_parse_rmc
-<LI><a href="#[163]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;minmea_parse_gsv
+<BR>[Called By]<UL><LI><a href="#[163]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;minmea_parse_gsv
 <LI><a href="#[162]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;minmea_parse_gst
 <LI><a href="#[160]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;minmea_parse_gga
 <LI><a href="#[165]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;minmea_sentence_id
+<LI><a href="#[164]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;minmea_parse_rmc
 </UL>
 
 <P><STRONG><a name="[165]"></a>minmea_sentence_id</STRONG> (Thumb, 136 bytes, Stack size 24 bytes, minmea.o(i.minmea_sentence_id))
@@ -2527,12 +2524,12 @@ Global Symbols
 <P><STRONG><a name="[14c]"></a>parse_gps</STRONG> (Thumb, 80 bytes, Stack size 24 bytes, minmea.o(i.parse_gps))
 <BR><BR>[Stack]<UL><LI>Max Depth = 288<LI>Call Chain = parse_gps &rArr; minmea_parse_gsv &rArr; minmea_scan &rArr; strtol &rArr; _strtoul
 </UL>
-<BR>[Calls]<UL><LI><a href="#[164]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;minmea_parse_rmc
-<LI><a href="#[163]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;minmea_parse_gsv
+<BR>[Calls]<UL><LI><a href="#[163]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;minmea_parse_gsv
 <LI><a href="#[162]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;minmea_parse_gst
 <LI><a href="#[160]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;minmea_parse_gga
 <LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_common_switch8
 <LI><a href="#[165]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;minmea_sentence_id
+<LI><a href="#[164]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;minmea_parse_rmc
 </UL>
 <BR>[Called By]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gps_temp_parse_task_start
 </UL>
@@ -2644,7 +2641,6 @@ Global Symbols
 <LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
 </UL>
 <BR>[Called By]<UL><LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;test_task_start
-<LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gps_temp_parse_task_start
 <LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_EXTI_Callback
 </UL>
 
