@@ -9,11 +9,15 @@
 #define DAYS_PER_400Y (365*400 + 97)
 #define DAYS_PER_100Y (365*100 + 24)
 #define DAYS_PER_4Y   (365*4   + 1)
+#define LS_ARR_SIZE 32
 
 RTC_TimeTypeDef time_to_update;
 RTC_DateTypeDef date_to_update;
 RTC_TimeTypeDef rtc_current_time;
 RTC_DateTypeDef rtc_current_date;
+
+uint8_t ls_index;
+int32_t avg_arr[LS_ARR_SIZE];
 
 int32_t linear_buf_init(linear_buf *lb, int32_t size)
 {
@@ -89,7 +93,12 @@ int32_t get_ls_reading(void)
 
 double get_modifier(void)
 {
-  int32_t ls_value = get_ls_reading();
+  ls_index = (ls_index + 1) % LS_ARR_SIZE;
+  avg_arr[ls_index] = get_ls_reading();
+  int32_t ls_value = 0;
+  for (int i = 0; i < LS_ARR_SIZE; ++i)
+    ls_value += avg_arr[i];
+  ls_value = ls_value / LS_ARR_SIZE;
   if(ls_value > 600 || ls_value < 0)
     return 1;
   return 6 - (ls_value * 0.0083);

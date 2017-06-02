@@ -3,7 +3,7 @@
 <title>Static Call Graph - [clock_test\clock_test.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image clock_test\clock_test.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060061: Last Updated: Fri Jun 02 17:12:40 2017
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060061: Last Updated: Fri Jun 02 17:28:59 2017
 <BR><P>
 <H3>Maximum Stack Usage =        312 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -263,9 +263,9 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = __aeabi_llsr
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2uiz
-<LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2iz
 <LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
 <LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uldivmod
+<LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2iz
 </UL>
 
 <P><STRONG><a name="[18e]"></a>_ll_ushift_r</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, llushr.o(.text), UNUSED)
@@ -331,12 +331,12 @@ Global Symbols
 <P><STRONG><a name="[15c]"></a>strcmp</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, strcmp.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = strcmp
 </UL>
-<BR>[Called By]<UL><LI><a href="#[163]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;minmea_parse_gsv
-<LI><a href="#[162]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;minmea_parse_gst
-<LI><a href="#[160]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;minmea_parse_gga
+<BR>[Called By]<UL><LI><a href="#[160]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;minmea_parse_gga
 <LI><a href="#[159]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;minmea_check
 <LI><a href="#[165]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;minmea_sentence_id
 <LI><a href="#[164]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;minmea_parse_rmc
+<LI><a href="#[163]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;minmea_parse_gsv
+<LI><a href="#[162]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;minmea_parse_gst
 </UL>
 
 <P><STRONG><a name="[50]"></a>strtol</STRONG> (Thumb, 108 bytes, Stack size 32 bytes, strtol.o(.text))
@@ -1911,9 +1911,9 @@ Global Symbols
 <LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2d
 <LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_drsub
 <LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul
+<LI><a href="#[121]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_common_ll_muluu
 <LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2iz
 <LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_scalbn
-<LI><a href="#[121]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_common_ll_muluu
 </UL>
 <BR>[Called By]<UL><LI><a href="#[12c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sin
 <LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cos
@@ -1925,9 +1925,9 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dsub
 <LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_drsub
 <LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul
+<LI><a href="#[124]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__kernel_poly
 <LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2iz
 <LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_scalbn
-<LI><a href="#[124]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__kernel_poly
 </UL>
 <BR>[Called By]<UL><LI><a href="#[12c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sin
 <LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cos
@@ -1950,10 +1950,10 @@ Global Symbols
 <LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
 <LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_drsub
 <LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul
-<LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_scalbn
 <LI><a href="#[124]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__kernel_poly
 <LI><a href="#[126]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_fpclassify
 <LI><a href="#[127]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_dbl_underflow
+<LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_scalbn
 </UL>
 <BR>[Called By]<UL><LI><a href="#[12c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sin
 <LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;cos
@@ -2154,7 +2154,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[131]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_modifier
 </UL>
 
-<P><STRONG><a name="[131]"></a>get_modifier</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, helpers.o(i.get_modifier))
+<P><STRONG><a name="[131]"></a>get_modifier</STRONG> (Thumb, 84 bytes, Stack size 8 bytes, helpers.o(i.get_modifier))
 <BR><BR>[Stack]<UL><LI>Max Depth = 136<LI>Call Chain = get_modifier &rArr; __aeabi_dmul &rArr; _double_epilogue &rArr; _double_round
 </UL>
 <BR>[Calls]<UL><LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_i2d
@@ -2404,11 +2404,11 @@ Global Symbols
 <LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_ctype_table
 <LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_idivmod
 </UL>
-<BR>[Called By]<UL><LI><a href="#[163]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;minmea_parse_gsv
-<LI><a href="#[162]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;minmea_parse_gst
-<LI><a href="#[160]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;minmea_parse_gga
+<BR>[Called By]<UL><LI><a href="#[160]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;minmea_parse_gga
 <LI><a href="#[165]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;minmea_sentence_id
 <LI><a href="#[164]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;minmea_parse_rmc
+<LI><a href="#[163]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;minmea_parse_gsv
+<LI><a href="#[162]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;minmea_parse_gst
 </UL>
 
 <P><STRONG><a name="[165]"></a>minmea_sentence_id</STRONG> (Thumb, 136 bytes, Stack size 24 bytes, minmea.o(i.minmea_sentence_id))
@@ -2524,12 +2524,12 @@ Global Symbols
 <P><STRONG><a name="[14c]"></a>parse_gps</STRONG> (Thumb, 80 bytes, Stack size 24 bytes, minmea.o(i.parse_gps))
 <BR><BR>[Stack]<UL><LI>Max Depth = 288<LI>Call Chain = parse_gps &rArr; minmea_parse_gsv &rArr; minmea_scan &rArr; strtol &rArr; _strtoul
 </UL>
-<BR>[Calls]<UL><LI><a href="#[163]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;minmea_parse_gsv
-<LI><a href="#[162]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;minmea_parse_gst
-<LI><a href="#[160]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;minmea_parse_gga
+<BR>[Calls]<UL><LI><a href="#[160]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;minmea_parse_gga
 <LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_common_switch8
 <LI><a href="#[165]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;minmea_sentence_id
 <LI><a href="#[164]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;minmea_parse_rmc
+<LI><a href="#[163]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;minmea_parse_gsv
+<LI><a href="#[162]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;minmea_parse_gst
 </UL>
 <BR>[Called By]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gps_temp_parse_task_start
 </UL>
