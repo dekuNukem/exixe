@@ -26,13 +26,19 @@ then use two buttons to set UTC offset
 
 */
 
-#define DISPLAY_MODE_SIZE 4
+#define DISPLAY_MODE_SIZE 2
+
+#define DISPLAY_MODE_TIME_ONLY 0
+#define DISPLAY_MODE_TIME_TEMP 1
 
 #define EEPROM_ADDR_UTC_OFFSET 0
 #define EEPROM_ADDR_DISPLAY_MODE 1
 #define EEPROM_ADDR_USE_24HR 2
 
 uint8_t get_display_mode(void);
+int8_t get_utc_offset(void);
+int8_t utc_offset_trim(int8_t value);
+uint8_t get_use_24hour(void);
 
 #ifdef __cplusplus
 }

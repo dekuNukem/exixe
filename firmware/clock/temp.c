@@ -1,3 +1,56 @@
+        spi_buf[j] = ((uint8_t)(rgb_animation[curr_tube].pwm_status[j - SPI_CMD_DOT_END]) >> 1) | 0x80;
+        spi_buf[j] = (uint8_t)((double)(tube_animation[curr_tube].pwm_status[j] >> 1) / brightness_modifier) | 0x80;
+
+spi_buf[j] = (((uint8_t)(rgb_animation[curr_tube].pwm_status[j - SPI_CMD_DOT_END] / brightness_modifier)) >> 1) | 0x80;
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
+{
+  if(is_in_setup_mode)
+    return;
+  if(GPIO_Pin == GPS_TP_Pin)
+  {
+    if(gps_rmc.valid)
+      HAL_GPIO_WritePin(USER_LED_GPIO_Port, USER_LED_Pin, GPIO_PIN_RESET);
+    else
+      HAL_GPIO_WritePin(USER_LED_GPIO_Port, USER_LED_Pin, GPIO_PIN_SET);
+    if(gps_rmc.date.year >= 17 && rtc_gps_calib(&gps_rmc) == 0)
+        current_time = get_time_rmc(&gps_rmc);
+    current_time++;
+    int32_t current_local = current_time + 86400 * utc_offset;
+    printf("utc %d offset %d local %d\n", current_time, utc_offset, current_local);
+    unix_ts_2_datetime(current_local, &year, &month, &day, &hour, &minute, &second);
+    tube_print2(hour, &(tube_animation[5]), &(tube_animation[4]), ANIMATION_CROSS_FADE);
+    tube_print2(minute, &(tube_animation[3]), &(tube_animation[2]), ANIMATION_CROSS_FADE);
+    tube_print2(second, &(tube_animation[1]), &(tube_animation[0]), ANIMATION_CROSS_FADE);
+  }
+}
+
+
+void set_utc_offset(int8_t value)
+{
+  eeprom_write(EEPROM_ADDR_UTC_OFFSET, value);
+}
+
+void test_task_start(void const * argument)
+{
+  uint8_t result;
+  for(;;)
+  {
+    result = button_update(&up_button, HAL_GPIO_ReadPin(UP_BUTTON_GPIO_Port, UP_BUTTON_Pin));
+    if(result != BUTTON_NO_PRESS)
+    {
+      display_mode = (display_mode + 1) % DISPLAY_MODE_SIZE;
+      eeprom_write(EEPROM_ADDR_DISPLAY_MODE, display_mode);
+      printf("display_mode: %d\n", display_mode);
+    }
+
+    if(is_in_setup_mode)
+    {
+      tube_print2(42, &(tube_animation[3]), &(tube_animation[2]), ANIMATION_BREATHING);
+    }
+    osDelay(50);
+  }
+}
+
 void test_task_start(void const * argument)
 {
   uint8_t result;
@@ -154,7 +207,21 @@ full power:
 printf("%s\n", gps_lb.buf);
 
     spi_buf[0] = SPI_CMD_UPDATE | 0x0;
+  while(1)
+  {
+    HAL_GPIO_TogglePin(USER_LED_GPIO_Port, USER_LED_Pin);
+    // HAL_GPIO_TogglePin(OWIRE_DATA_GPIO_Port, OWIRE_DATA_Pin);
+    my_1wire_reset();
+    HAL_Delay(100);
+  }
 
+  while(1)
+  {
+    ds18b20_start_conversion();
+    HAL_Delay(750);
+    printf("raw_temp: %d\n", ds18b20_get_temp());
+    HAL_Delay(100);
+  }  
 void gps_temp_parse_task_start(void const * argument)
 {
   uint8_t loop_count = 0;
@@ -244,6 +311,11 @@ typedef struct
   uint8_t step;
 } led_animation;
 
+void tube_print2_uint8_t(uint8_t value, digit_animation* msa, digit_animation* lsa)
+{
+  start_animation(lsa, value % 10, ANIMATION_CROSS_FADE);
+  start_animation(msa, (value / 10) % 10, ANIMATION_CROSS_FADE);
+}
 
 void tube_print2(int8_t value, digit_animation* msa, digit_animation* lsa)
 {

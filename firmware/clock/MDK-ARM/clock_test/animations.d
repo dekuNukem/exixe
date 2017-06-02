@@ -2,6 +2,7 @@ clock_test\animations.o: ..\Src\animations.c
 clock_test\animations.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 clock_test\animations.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 clock_test\animations.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+clock_test\animations.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 clock_test\animations.o: ../Inc/shared.h
 clock_test\animations.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h
 clock_test\animations.o: ../Inc/stm32f0xx_hal_conf.h
@@ -64,7 +65,6 @@ clock_test\animations.o: ../Inc/minmea.h
 clock_test\animations.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
 clock_test\animations.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\errno.h
 clock_test\animations.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\time.h
-clock_test\animations.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 clock_test\animations.o: ../Inc/animations.h
 clock_test\animations.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
 clock_test\animations.o: ../Drivers/CMSIS/Include/core_cmFunc.h

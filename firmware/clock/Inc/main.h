@@ -51,10 +51,10 @@
 
 /* Private define ------------------------------------------------------------*/
 
-#define OWIRE_DATA_Pin GPIO_PIN_13
-#define OWIRE_DATA_GPIO_Port GPIOC
 #define GPS_RESET_Pin GPIO_PIN_0
 #define GPS_RESET_GPIO_Port GPIOA
+#define OWIRE_DATA_Pin GPIO_PIN_3
+#define OWIRE_DATA_GPIO_Port GPIOA
 #define EXIXE1_CS_Pin GPIO_PIN_0
 #define EXIXE1_CS_GPIO_Port GPIOB
 #define EXIXE2_CS_Pin GPIO_PIN_1

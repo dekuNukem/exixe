@@ -329,10 +329,6 @@ static void MX_I2C1_Init(void)
 /* RTC init function */
 static void MX_RTC_Init(void)
 {
-
-  RTC_TimeTypeDef sTime;
-  RTC_DateTypeDef sDate;
-
     /**Initialize RTC Only 
     */
   hrtc.Instance = RTC;
@@ -346,33 +342,6 @@ static void MX_RTC_Init(void)
   {
     Error_Handler();
   }
-
-    /**Initialize RTC and set the Time and Date 
-    */
-  sTime.Hours = 0;
-  sTime.Minutes = 0;
-  sTime.Seconds = 0;
-  sTime.DayLightSaving = RTC_DAYLIGHTSAVING_NONE;
-  sTime.StoreOperation = RTC_STOREOPERATION_RESET;
-  if (HAL_RTC_SetTime(&hrtc, &sTime, RTC_FORMAT_BIN) != HAL_OK)
-  {
-    Error_Handler();
-  }
-
-  sDate.WeekDay = RTC_WEEKDAY_MONDAY;
-  sDate.Month = RTC_MONTH_JANUARY;
-  sDate.Date = 1;
-  sDate.Year = 0;
-
-  if (HAL_RTC_SetDate(&hrtc, &sDate, RTC_FORMAT_BIN) != HAL_OK)
-  {
-    Error_Handler();
-  }
-
-  if(HAL_RTCEx_BKUPRead(&hrtc, RTC_BKP_DR0) != 0x32F2){
-    HAL_RTCEx_BKUPWrite(&hrtc,RTC_BKP_DR0,0x32F2);
-  }
-
 }
 
 /* SPI1 init function */
@@ -494,24 +463,14 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(OWIRE_DATA_GPIO_Port, OWIRE_DATA_Pin, GPIO_PIN_SET);
-
-  /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, GPS_RESET_Pin|USER_LED_Pin|EXIXE_RESET_Pin, GPIO_PIN_SET);
+  HAL_GPIO_WritePin(GPIOA, GPS_RESET_Pin|OWIRE_DATA_Pin|USER_LED_Pin|EXIXE_RESET_Pin, GPIO_PIN_SET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOB, EXIXE1_CS_Pin|EXIXE2_CS_Pin|EXIXE3_CS_Pin|EXIXE4_CS_Pin 
                           |EXIXE5_CS_Pin|EXIXE6_CS_Pin, GPIO_PIN_SET);
 
-  /*Configure GPIO pin : OWIRE_DATA_Pin */
-  GPIO_InitStruct.Pin = OWIRE_DATA_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_OD;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(OWIRE_DATA_GPIO_Port, &GPIO_InitStruct);
-
-  /*Configure GPIO pins : GPS_RESET_Pin EXIXE_RESET_Pin */
-  GPIO_InitStruct.Pin = GPS_RESET_Pin|EXIXE_RESET_Pin;
+  /*Configure GPIO pins : GPS_RESET_Pin OWIRE_DATA_Pin EXIXE_RESET_Pin */
+  GPIO_InitStruct.Pin = GPS_RESET_Pin|OWIRE_DATA_Pin|EXIXE_RESET_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_OD;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;

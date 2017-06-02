@@ -98,7 +98,7 @@ double get_modifier(void)
 uint8_t rtc_gps_calib(struct minmea_sentence_rmc *gps_rmc)
 {
   static int32_t next_rtc_calib = 0;
-  if(HAL_GetTick() < next_rtc_calib)
+  if(HAL_GetTick() < 5000 || HAL_GetTick() < next_rtc_calib)
     return 1;
   time_to_update.Hours = gps_rmc->time.hours;
   time_to_update.Minutes = gps_rmc->time.minutes;
@@ -108,7 +108,7 @@ uint8_t rtc_gps_calib(struct minmea_sentence_rmc *gps_rmc)
   date_to_update.Year = gps_rmc->date.year;
   HAL_RTC_SetTime(rtc_ptr, &time_to_update, RTC_FORMAT_BIN);
   HAL_RTC_SetDate(rtc_ptr, &date_to_update, RTC_FORMAT_BIN);
-  next_rtc_calib = HAL_GetTick() + 30000;
+  next_rtc_calib = HAL_GetTick() + RTC_CALIB_FREQ_MS;
   printf("RTC calibrated, next: %ld\n", next_rtc_calib);
   return 0;
 }

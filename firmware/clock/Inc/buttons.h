@@ -26,7 +26,7 @@ typedef struct
   int32_t last_action;
 } my_button;
 
-void button_init(my_button* butt);
+void button_init(my_button* butt, GPIO_PinState ps);
 uint8_t button_update(my_button* butt, GPIO_PinState ps);
 
 #ifdef __cplusplus

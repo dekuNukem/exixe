@@ -23,12 +23,13 @@ uint32_t frame_counter;
 int16_t raw_temp;
 int32_t current_time;
 uint8_t year, month, day, hour, minute, second;
-uint8_t display_mode;
+uint8_t display_mode, is_in_setup_mode, use_24hour;
+int8_t utc_offset;
 digit_animation tube_animation[TUBE_COUNT];
 led_animation rgb_animation[TUBE_COUNT];
 linear_buf gps_lb;
-my_button up_button;
-
+my_button up_button, down_button;
+uint8_t rgb_orange[LED_CHANNEL_SIZE] = {255, 64, 0};
 struct minmea_sentence_rmc gps_rmc;
 struct minmea_sentence_gga gps_gga;
 struct minmea_sentence_gsa gps_gsa;
@@ -88,27 +89,30 @@ void setup_task(void)
   HAL_Delay(10);
   HAL_GPIO_WritePin(EXIXE_RESET_GPIO_Port, EXIXE_RESET_Pin, GPIO_PIN_SET);
   HAL_Delay(10);
-
   linear_buf_init(&gps_lb, GPS_BUF_SIZE);
   gps_init();
-  current_time = get_time_rtc();
   
   for (int i = 0; i < TUBE_COUNT; ++i)
     animation_init(&(tube_animation[i]));
-
   for (int i = 0; i < TUBE_COUNT; ++i)
     led_animation_init(&(rgb_animation[i]));
 
-  button_init(&up_button);
+  for (int i = 0; i < TUBE_COUNT; ++i)
+    led_start_animation(&(rgb_animation[i]), rgb_orange, ANIMATION_CROSS_FADE);
+
+  button_init(&up_button, HAL_GPIO_ReadPin(UP_BUTTON_GPIO_Port, UP_BUTTON_Pin));
+  button_init(&down_button, HAL_GPIO_ReadPin(DOWN_BUTTON_GPIO_Port, DOWN_BUTTON_Pin));
   HAL_UART_Receive_IT(gps_uart_ptr, gps_byte_buf, 1);
   display_mode = get_display_mode();
-  printf("launching scheduler...\n");
-  while(1)
-  {
-    HAL_GPIO_TogglePin(USER_LED_GPIO_Port, USER_LED_Pin);
-    HAL_GPIO_TogglePin(OWIRE_DATA_GPIO_Port, OWIRE_DATA_Pin);
-    HAL_Delay(100);
-  }
+  current_time = get_time_rtc();
+  utc_offset = get_utc_offset();
+  use_24hour = get_use_24hour();
+  if(HAL_GPIO_ReadPin(DOWN_BUTTON_GPIO_Port, DOWN_BUTTON_Pin) == GPIO_PIN_RESET)
+    is_in_setup_mode = SETUP_UTC_OFFSET;
+  else if(HAL_GPIO_ReadPin(UP_BUTTON_GPIO_Port, UP_BUTTON_Pin) == GPIO_PIN_RESET)
+    is_in_setup_mode = SETUP_12H24H;
+  else
+    printf("launching scheduler...\n");
 }
 
 void animation_task_start(void const * argument)
@@ -131,13 +135,13 @@ void animation_task_start(void const * argument)
 
       // digits
       for (int j = 1; j < SPI_SMD_DIGIT_END; ++j)
-        spi_buf[j] = (uint8_t)((double)(tube_animation[curr_tube].pwm_status[j] >> 1) / brightness_modifier) | 0x80;
+        spi_buf[j] = ((uint8_t)((double)tube_animation[curr_tube].pwm_status[j] / brightness_modifier) >> 1) | 0x80;
       // dots
       for (int j = SPI_SMD_DIGIT_END; j < SPI_CMD_DOT_END; ++j)
         spi_buf[j] = (tube_animation[curr_tube].pwm_status[j] >> 1) | 0x80;
       // LEDs
       for (int j = SPI_CMD_DOT_END; j < SPI_CMD_SIZE; ++j)
-        spi_buf[j] = ((uint8_t)(rgb_animation[curr_tube].pwm_status[j - SPI_CMD_DOT_END]) >> 1) | 0x80;
+        spi_buf[j] = (((uint8_t)(rgb_animation[curr_tube].pwm_status[j - SPI_CMD_DOT_END] / brightness_modifier)) >> 1) | 0x80;
       spi_send(spi_buf, SPI_CMD_SIZE, curr_tube);
     }
     brightness_modifier = get_modifier();
@@ -147,15 +151,38 @@ void animation_task_start(void const * argument)
 
 void test_task_start(void const * argument)
 {
-  uint8_t result;
   for(;;)
   {
-    result = button_update(&up_button, HAL_GPIO_ReadPin(UP_BUTTON_GPIO_Port, UP_BUTTON_Pin));
-    if(result != BUTTON_NO_PRESS)
+    if(is_in_setup_mode == SETUP_UTC_OFFSET)
     {
-      display_mode = (display_mode + 1) % DISPLAY_MODE_SIZE;
-      eeprom_write(EEPROM_ADDR_DISPLAY_MODE, display_mode);
-      printf("display_mode: %d\n", display_mode);
+      if(button_update(&up_button, HAL_GPIO_ReadPin(UP_BUTTON_GPIO_Port, UP_BUTTON_Pin)) == BUTTON_SHORT_PRESS)
+        utc_offset++;
+      else if(button_update(&down_button, HAL_GPIO_ReadPin(DOWN_BUTTON_GPIO_Port, DOWN_BUTTON_Pin)) == BUTTON_SHORT_PRESS)
+        utc_offset--;
+      utc_offset = utc_offset_trim(utc_offset);
+      tube_print2(utc_offset, &(tube_animation[3]), &(tube_animation[2]), ANIMATION_BREATHING);
+      eeprom_write(EEPROM_ADDR_UTC_OFFSET, utc_offset);
+    }
+    else if(is_in_setup_mode == SETUP_12H24H)
+    {
+      if(button_update(&up_button, HAL_GPIO_ReadPin(UP_BUTTON_GPIO_Port, UP_BUTTON_Pin)) == BUTTON_SHORT_PRESS || \
+        button_update(&down_button, HAL_GPIO_ReadPin(DOWN_BUTTON_GPIO_Port, DOWN_BUTTON_Pin)) == BUTTON_SHORT_PRESS)
+        use_24hour = (use_24hour + 1) % 2;
+      eeprom_write(EEPROM_ADDR_USE_24HR, use_24hour);
+      if(use_24hour)
+        tube_print2(24, &(tube_animation[3]), &(tube_animation[2]), ANIMATION_BREATHING);
+      else
+        tube_print2(12, &(tube_animation[3]), &(tube_animation[2]), ANIMATION_BREATHING);
+    }
+    else if(is_in_setup_mode == SETUP_NO_SETUP)
+    {
+      if(button_update(&up_button, HAL_GPIO_ReadPin(UP_BUTTON_GPIO_Port, UP_BUTTON_Pin)) == BUTTON_SHORT_PRESS || \
+        button_update(&down_button, HAL_GPIO_ReadPin(DOWN_BUTTON_GPIO_Port, DOWN_BUTTON_Pin)) == BUTTON_SHORT_PRESS)
+      {
+        display_mode = (display_mode + 1) % DISPLAY_MODE_SIZE;
+        eeprom_write(EEPROM_ADDR_DISPLAY_MODE, display_mode);
+        printf("display_mode: %d\n", display_mode);
+      }
     }
     osDelay(50);
   }
@@ -163,37 +190,48 @@ void test_task_start(void const * argument)
 
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
 {
+  if(is_in_setup_mode)
+    return;
   if(GPIO_Pin == GPS_TP_Pin)
   {
     if(gps_rmc.valid)
-    {
       HAL_GPIO_WritePin(USER_LED_GPIO_Port, USER_LED_Pin, GPIO_PIN_RESET);
-      if(rtc_gps_calib(&gps_rmc) == 0)
-        current_time = get_time_rmc(&gps_rmc);
-    }
     else
-    {
       HAL_GPIO_WritePin(USER_LED_GPIO_Port, USER_LED_Pin, GPIO_PIN_SET);
-    }
+    if(gps_rmc.date.year >= 17 && rtc_gps_calib(&gps_rmc) == 0)
+        current_time = get_time_rmc(&gps_rmc);
     current_time++;
-    unix_ts_2_datetime(current_time, &year, &month, &day, &hour, &minute, &second);
-    if(hour > 12)
+    unix_ts_2_datetime(current_time + 3600 * utc_offset, &year, &month, &day, &hour, &minute, &second);
+    if(use_24hour == 0 && hour > 12)
       hour -= 12;
-    tube_print2_uint8_t(hour, &(tube_animation[5]), &(tube_animation[4]));
-    tube_print2_uint8_t(minute, &(tube_animation[3]), &(tube_animation[2]));
-    tube_print2_uint8_t(second, &(tube_animation[1]), &(tube_animation[0]));
+    tube_print2(hour, &(tube_animation[5]), &(tube_animation[4]), ANIMATION_CROSS_FADE);
+    tube_print2(minute, &(tube_animation[3]), &(tube_animation[2]), ANIMATION_CROSS_FADE);
+    if(display_mode == DISPLAY_MODE_TIME_ONLY)
+      tube_print2(second, &(tube_animation[1]), &(tube_animation[0]), ANIMATION_CROSS_FADE);
   }
+  led_start_animation(&(rgb_animation[0]), rgb_orange, ANIMATION_BREATHING);
 }
 
 void gps_temp_parse_task_start(void const * argument)
 {
+  uint8_t loop_count = 0;
   for(;;)
   {
     if(linear_buf_line_available(&gps_lb))
     {
       parse_gps((char*)gps_lb.buf, &gps_rmc, &gps_gga, &gps_gsa, &gps_gll, &gps_gst, &gps_gsv);
+      // printf("%s\n", gps_lb.buf);
       linear_buf_reset(&gps_lb);
     }
+    if(loop_count == 0)
+      ds18b20_start_conversion();
+    if(loop_count == 8)
+    {
+      raw_temp = ds18b20_get_temp() >> 4;
+      if(display_mode == DISPLAY_MODE_TIME_TEMP)
+        tube_print2(raw_temp, &(tube_animation[1]), &(tube_animation[0]), ANIMATION_CROSS_FADE);
+    }
+    loop_count = (loop_count + 1) % 10;
     osDelay(100);
   }
 }

@@ -14,6 +14,10 @@
 #define TUBE_COUNT 6
 #define GPS_BUF_SIZE 128
 #define SPI_CMD_UPDATE 0xaa
+#define SETUP_NO_SETUP 0
+#define SETUP_UTC_OFFSET 1
+#define SETUP_12H24H 2
+#define RTC_CALIB_FREQ_MS 30000
 
 typedef struct
 {

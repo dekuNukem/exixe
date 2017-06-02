@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include "buttons.h"
 
-void button_init(my_button* butt)
+void button_init(my_button* butt, GPIO_PinState ps)
 {
 	butt->state = BUTTON_STATE_RELEASED;
 	butt->last_action = HAL_GetTick();
