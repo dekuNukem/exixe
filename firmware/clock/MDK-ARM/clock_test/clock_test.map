@@ -267,6 +267,7 @@ Section Cross References
     my_tasks.o(i.setup_task) refers to stm32f0xx_hal_uart.o(i.HAL_UART_Receive_IT) for HAL_UART_Receive_IT
     my_tasks.o(i.setup_task) refers to config.o(i.get_display_mode) for get_display_mode
     my_tasks.o(i.setup_task) refers to printf4.o(i.__0printf$4) for __2printf
+    my_tasks.o(i.setup_task) refers to stm32f0xx_hal_gpio.o(i.HAL_GPIO_TogglePin) for HAL_GPIO_TogglePin
     my_tasks.o(i.setup_task) refers to my_tasks.o(.bss) for .bss
     my_tasks.o(i.setup_task) refers to my_tasks.o(.data) for .data
     my_tasks.o(i.setup_task) refers to main.o(.bss) for huart1
@@ -3138,47 +3139,47 @@ Image Symbol Table
     i.pxPortInitialiseStack                  0x08006a60   Section        0  port.o(i.pxPortInitialiseStack)
     i.rtc_gps_calib                          0x08006a80   Section        0  helpers.o(i.rtc_gps_calib)
     i.setup_task                             0x08006b08   Section        0  my_tasks.o(i.setup_task)
-    i.spi_send                               0x08006bb8   Section        0  my_tasks.o(i.spi_send)
-    i.start_animation                        0x08006c14   Section        0  animations.o(i.start_animation)
-    i.test_task_start                        0x08006c40   Section        0  my_tasks.o(i.test_task_start)
-    i.timegm                                 0x08006c98   Section        0  minmea.o(i.timegm)
-    i.tube_print2_uint8_t                    0x08006d2c   Section        0  animations.o(i.tube_print2_uint8_t)
-    i.unix_ts_2_datetime                     0x08006d54   Section        0  helpers.o(i.unix_ts_2_datetime)
-    i.uxListRemove                           0x08006dac   Section        0  list.o(i.uxListRemove)
-    i.vListInitialise                        0x08006dd0   Section        0  list.o(i.vListInitialise)
-    i.vListInitialiseItem                    0x08006de6   Section        0  list.o(i.vListInitialiseItem)
-    i.vListInsert                            0x08006dec   Section        0  list.o(i.vListInsert)
-    i.vListInsertEnd                         0x08006e1c   Section        0  list.o(i.vListInsertEnd)
-    i.vPortEnterCritical                     0x08006e34   Section        0  port.o(i.vPortEnterCritical)
-    i.vPortExitCritical                      0x08006e4c   Section        0  port.o(i.vPortExitCritical)
-    i.vPortFree                              0x08006e68   Section        0  heap_1.o(i.vPortFree)
-    i.vPortYield                             0x08006e74   Section        0  port.o(i.vPortYield)
-    i.vTaskDelay                             0x08006e8c   Section        0  tasks.o(i.vTaskDelay)
-    i.vTaskStartScheduler                    0x08006ec8   Section        0  tasks.o(i.vTaskStartScheduler)
-    i.vTaskSuspendAll                        0x08006f14   Section        0  tasks.o(i.vTaskSuspendAll)
-    i.vTaskSwitchContext                     0x08006f24   Section        0  tasks.o(i.vTaskSwitchContext)
-    i.xPortStartScheduler                    0x08006f7c   Section        0  port.o(i.xPortStartScheduler)
-    i.xPortSysTickHandler                    0x08006fc8   Section        0  port.o(i.xPortSysTickHandler)
-    i.xTaskGenericCreate                     0x08006fec   Section        0  tasks.o(i.xTaskGenericCreate)
-    i.xTaskGetSchedulerState                 0x08007158   Section        0  tasks.o(i.xTaskGetSchedulerState)
-    i.xTaskIncrementTick                     0x08007178   Section        0  tasks.o(i.xTaskIncrementTick)
-    i.xTaskResumeAll                         0x08007238   Section        0  tasks.o(i.xTaskResumeAll)
-    .constdata                               0x080072e0   Section       80  main.o(.constdata)
-    .constdata                               0x08007330   Section       12  helpers.o(.constdata)
-    days_in_month                            0x08007330   Data          12  helpers.o(.constdata)
-    .constdata                               0x0800733c   Section      171  gps_config.o(.constdata)
-    .constdata                               0x080073e8   Section       48  minmea.o(.constdata)
-    monoff                                   0x080073e8   Data          48  minmea.o(.constdata)
-    .constdata                               0x08007418   Section       16  system_stm32f0xx.o(.constdata)
-    .constdata                               0x08007428   Section        8  system_stm32f0xx.o(.constdata)
-    .constdata                               0x08007430   Section      129  ctype_o.o(.constdata)
-    .constdata                               0x080074b4   Section        4  ctype_o.o(.constdata)
-    table                                    0x080074b4   Data           4  ctype_o.o(.constdata)
-    .constdata                               0x080074b8   Section       12  mktime.o(.constdata)
-    monlen                                   0x080074b8   Data          12  mktime.o(.constdata)
-    .constdata                               0x080074c4   Section       12  localtime_i.o(.constdata)
-    monlen                                   0x080074c4   Data          12  localtime_i.o(.constdata)
-    .conststring                             0x080074d0   Section       58  main.o(.conststring)
+    i.spi_send                               0x08006bd8   Section        0  my_tasks.o(i.spi_send)
+    i.start_animation                        0x08006c34   Section        0  animations.o(i.start_animation)
+    i.test_task_start                        0x08006c60   Section        0  my_tasks.o(i.test_task_start)
+    i.timegm                                 0x08006cb8   Section        0  minmea.o(i.timegm)
+    i.tube_print2_uint8_t                    0x08006d4c   Section        0  animations.o(i.tube_print2_uint8_t)
+    i.unix_ts_2_datetime                     0x08006d74   Section        0  helpers.o(i.unix_ts_2_datetime)
+    i.uxListRemove                           0x08006dcc   Section        0  list.o(i.uxListRemove)
+    i.vListInitialise                        0x08006df0   Section        0  list.o(i.vListInitialise)
+    i.vListInitialiseItem                    0x08006e06   Section        0  list.o(i.vListInitialiseItem)
+    i.vListInsert                            0x08006e0c   Section        0  list.o(i.vListInsert)
+    i.vListInsertEnd                         0x08006e3c   Section        0  list.o(i.vListInsertEnd)
+    i.vPortEnterCritical                     0x08006e54   Section        0  port.o(i.vPortEnterCritical)
+    i.vPortExitCritical                      0x08006e6c   Section        0  port.o(i.vPortExitCritical)
+    i.vPortFree                              0x08006e88   Section        0  heap_1.o(i.vPortFree)
+    i.vPortYield                             0x08006e94   Section        0  port.o(i.vPortYield)
+    i.vTaskDelay                             0x08006eac   Section        0  tasks.o(i.vTaskDelay)
+    i.vTaskStartScheduler                    0x08006ee8   Section        0  tasks.o(i.vTaskStartScheduler)
+    i.vTaskSuspendAll                        0x08006f34   Section        0  tasks.o(i.vTaskSuspendAll)
+    i.vTaskSwitchContext                     0x08006f44   Section        0  tasks.o(i.vTaskSwitchContext)
+    i.xPortStartScheduler                    0x08006f9c   Section        0  port.o(i.xPortStartScheduler)
+    i.xPortSysTickHandler                    0x08006fe8   Section        0  port.o(i.xPortSysTickHandler)
+    i.xTaskGenericCreate                     0x0800700c   Section        0  tasks.o(i.xTaskGenericCreate)
+    i.xTaskGetSchedulerState                 0x08007178   Section        0  tasks.o(i.xTaskGetSchedulerState)
+    i.xTaskIncrementTick                     0x08007198   Section        0  tasks.o(i.xTaskIncrementTick)
+    i.xTaskResumeAll                         0x08007258   Section        0  tasks.o(i.xTaskResumeAll)
+    .constdata                               0x08007300   Section       80  main.o(.constdata)
+    .constdata                               0x08007350   Section       12  helpers.o(.constdata)
+    days_in_month                            0x08007350   Data          12  helpers.o(.constdata)
+    .constdata                               0x0800735c   Section      171  gps_config.o(.constdata)
+    .constdata                               0x08007408   Section       48  minmea.o(.constdata)
+    monoff                                   0x08007408   Data          48  minmea.o(.constdata)
+    .constdata                               0x08007438   Section       16  system_stm32f0xx.o(.constdata)
+    .constdata                               0x08007448   Section        8  system_stm32f0xx.o(.constdata)
+    .constdata                               0x08007450   Section      129  ctype_o.o(.constdata)
+    .constdata                               0x080074d4   Section        4  ctype_o.o(.constdata)
+    table                                    0x080074d4   Data           4  ctype_o.o(.constdata)
+    .constdata                               0x080074d8   Section       12  mktime.o(.constdata)
+    monlen                                   0x080074d8   Data          12  mktime.o(.constdata)
+    .constdata                               0x080074e4   Section       12  localtime_i.o(.constdata)
+    monlen                                   0x080074e4   Data          12  localtime_i.o(.constdata)
+    .conststring                             0x080074f0   Section       58  main.o(.conststring)
     .data                                    0x20000000   Section        4  main.o(.data)
     .data                                    0x20000004   Section       28  usbd_desc.o(.data)
     .data                                    0x20000020   Section       22  usbd_desc.o(.data)
@@ -3609,46 +3610,46 @@ Image Symbol Table
     pvPortMalloc                             0x08006a11   Thumb Code    68  heap_1.o(i.pvPortMalloc)
     pxPortInitialiseStack                    0x08006a61   Thumb Code    28  port.o(i.pxPortInitialiseStack)
     rtc_gps_calib                            0x08006a81   Thumb Code    92  helpers.o(i.rtc_gps_calib)
-    setup_task                               0x08006b09   Thumb Code   136  my_tasks.o(i.setup_task)
-    spi_send                                 0x08006bb9   Thumb Code    84  my_tasks.o(i.spi_send)
-    start_animation                          0x08006c15   Thumb Code    38  animations.o(i.start_animation)
-    test_task_start                          0x08006c41   Thumb Code    64  my_tasks.o(i.test_task_start)
-    timegm                                   0x08006c99   Thumb Code   140  minmea.o(i.timegm)
-    tube_print2_uint8_t                      0x08006d2d   Thumb Code    40  animations.o(i.tube_print2_uint8_t)
-    unix_ts_2_datetime                       0x08006d55   Thumb Code    88  helpers.o(i.unix_ts_2_datetime)
-    uxListRemove                             0x08006dad   Thumb Code    36  list.o(i.uxListRemove)
-    vListInitialise                          0x08006dd1   Thumb Code    22  list.o(i.vListInitialise)
-    vListInitialiseItem                      0x08006de7   Thumb Code     6  list.o(i.vListInitialiseItem)
-    vListInsert                              0x08006ded   Thumb Code    48  list.o(i.vListInsert)
-    vListInsertEnd                           0x08006e1d   Thumb Code    24  list.o(i.vListInsertEnd)
-    vPortEnterCritical                       0x08006e35   Thumb Code    20  port.o(i.vPortEnterCritical)
-    vPortExitCritical                        0x08006e4d   Thumb Code    22  port.o(i.vPortExitCritical)
-    vPortFree                                0x08006e69   Thumb Code    10  heap_1.o(i.vPortFree)
-    vPortYield                               0x08006e75   Thumb Code    18  port.o(i.vPortYield)
-    vTaskDelay                               0x08006e8d   Thumb Code    54  tasks.o(i.vTaskDelay)
-    vTaskStartScheduler                      0x08006ec9   Thumb Code    58  tasks.o(i.vTaskStartScheduler)
-    vTaskSuspendAll                          0x08006f15   Thumb Code    10  tasks.o(i.vTaskSuspendAll)
-    vTaskSwitchContext                       0x08006f25   Thumb Code    78  tasks.o(i.vTaskSwitchContext)
-    xPortStartScheduler                      0x08006f7d   Thumb Code    58  port.o(i.xPortStartScheduler)
-    xPortSysTickHandler                      0x08006fc9   Thumb Code    32  port.o(i.xPortSysTickHandler)
-    xTaskGenericCreate                       0x08006fed   Thumb Code   354  tasks.o(i.xTaskGenericCreate)
-    xTaskGetSchedulerState                   0x08007159   Thumb Code    26  tasks.o(i.xTaskGetSchedulerState)
-    xTaskIncrementTick                       0x08007179   Thumb Code   184  tasks.o(i.xTaskIncrementTick)
-    xTaskResumeAll                           0x08007239   Thumb Code   160  tasks.o(i.xTaskResumeAll)
-    disable_gll                              0x0800733c   Data          11  gps_config.o(.constdata)
-    disable_gsa                              0x08007347   Data          11  gps_config.o(.constdata)
-    disable_gsv                              0x08007352   Data          11  gps_config.o(.constdata)
-    disable_vtg                              0x0800735d   Data          11  gps_config.o(.constdata)
-    disable_gga                              0x08007368   Data          11  gps_config.o(.constdata)
-    disable_sbas                             0x08007373   Data          16  gps_config.o(.constdata)
-    pos_mode_stationary                      0x08007383   Data          44  gps_config.o(.constdata)
-    pwr_full_power                           0x080073af   Data          16  gps_config.o(.constdata)
-    tp_1hz                                   0x080073bf   Data          40  gps_config.o(.constdata)
-    AHBPrescTable                            0x08007418   Data          16  system_stm32f0xx.o(.constdata)
-    APBPrescTable                            0x08007428   Data           8  system_stm32f0xx.o(.constdata)
-    __ctype_table                            0x08007430   Data         129  ctype_o.o(.constdata)
-    Region$$Table$$Base                      0x0800750c   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x0800752c   Number         0  anon$$obj.o(Region$$Table)
+    setup_task                               0x08006b09   Thumb Code   164  my_tasks.o(i.setup_task)
+    spi_send                                 0x08006bd9   Thumb Code    84  my_tasks.o(i.spi_send)
+    start_animation                          0x08006c35   Thumb Code    38  animations.o(i.start_animation)
+    test_task_start                          0x08006c61   Thumb Code    64  my_tasks.o(i.test_task_start)
+    timegm                                   0x08006cb9   Thumb Code   140  minmea.o(i.timegm)
+    tube_print2_uint8_t                      0x08006d4d   Thumb Code    40  animations.o(i.tube_print2_uint8_t)
+    unix_ts_2_datetime                       0x08006d75   Thumb Code    88  helpers.o(i.unix_ts_2_datetime)
+    uxListRemove                             0x08006dcd   Thumb Code    36  list.o(i.uxListRemove)
+    vListInitialise                          0x08006df1   Thumb Code    22  list.o(i.vListInitialise)
+    vListInitialiseItem                      0x08006e07   Thumb Code     6  list.o(i.vListInitialiseItem)
+    vListInsert                              0x08006e0d   Thumb Code    48  list.o(i.vListInsert)
+    vListInsertEnd                           0x08006e3d   Thumb Code    24  list.o(i.vListInsertEnd)
+    vPortEnterCritical                       0x08006e55   Thumb Code    20  port.o(i.vPortEnterCritical)
+    vPortExitCritical                        0x08006e6d   Thumb Code    22  port.o(i.vPortExitCritical)
+    vPortFree                                0x08006e89   Thumb Code    10  heap_1.o(i.vPortFree)
+    vPortYield                               0x08006e95   Thumb Code    18  port.o(i.vPortYield)
+    vTaskDelay                               0x08006ead   Thumb Code    54  tasks.o(i.vTaskDelay)
+    vTaskStartScheduler                      0x08006ee9   Thumb Code    58  tasks.o(i.vTaskStartScheduler)
+    vTaskSuspendAll                          0x08006f35   Thumb Code    10  tasks.o(i.vTaskSuspendAll)
+    vTaskSwitchContext                       0x08006f45   Thumb Code    78  tasks.o(i.vTaskSwitchContext)
+    xPortStartScheduler                      0x08006f9d   Thumb Code    58  port.o(i.xPortStartScheduler)
+    xPortSysTickHandler                      0x08006fe9   Thumb Code    32  port.o(i.xPortSysTickHandler)
+    xTaskGenericCreate                       0x0800700d   Thumb Code   354  tasks.o(i.xTaskGenericCreate)
+    xTaskGetSchedulerState                   0x08007179   Thumb Code    26  tasks.o(i.xTaskGetSchedulerState)
+    xTaskIncrementTick                       0x08007199   Thumb Code   184  tasks.o(i.xTaskIncrementTick)
+    xTaskResumeAll                           0x08007259   Thumb Code   160  tasks.o(i.xTaskResumeAll)
+    disable_gll                              0x0800735c   Data          11  gps_config.o(.constdata)
+    disable_gsa                              0x08007367   Data          11  gps_config.o(.constdata)
+    disable_gsv                              0x08007372   Data          11  gps_config.o(.constdata)
+    disable_vtg                              0x0800737d   Data          11  gps_config.o(.constdata)
+    disable_gga                              0x08007388   Data          11  gps_config.o(.constdata)
+    disable_sbas                             0x08007393   Data          16  gps_config.o(.constdata)
+    pos_mode_stationary                      0x080073a3   Data          44  gps_config.o(.constdata)
+    pwr_full_power                           0x080073cf   Data          16  gps_config.o(.constdata)
+    tp_1hz                                   0x080073df   Data          40  gps_config.o(.constdata)
+    AHBPrescTable                            0x08007438   Data          16  system_stm32f0xx.o(.constdata)
+    APBPrescTable                            0x08007448   Data           8  system_stm32f0xx.o(.constdata)
+    __ctype_table                            0x08007450   Data         129  ctype_o.o(.constdata)
+    Region$$Table$$Base                      0x0800752c   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x0800754c   Number         0  anon$$obj.o(Region$$Table)
     defaultTaskHandle                        0x20000000   Data           4  main.o(.data)
     FS_Desc                                  0x20000004   Data          28  usbd_desc.o(.data)
     USBD_LangIDDesc                          0x20000020   Data           4  usbd_desc.o(.data)
@@ -3719,9 +3720,9 @@ Memory Map of the image
 
   Image Entry point : 0x080000c1
 
-  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x0000771c, Max: 0x00010000, ABSOLUTE, COMPRESSED[0x000075f4])
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x0000773c, Max: 0x00010000, ABSOLUTE, COMPRESSED[0x00007614])
 
-    Execution Region ER_IROM1 (Base: 0x08000000, Size: 0x0000752c, Max: 0x00010000, ABSOLUTE)
+    Execution Region ER_IROM1 (Base: 0x08000000, Size: 0x0000754c, Max: 0x00010000, ABSOLUTE)
 
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -4060,48 +4061,48 @@ Memory Map of the image
     0x08006a10   0x00000050   Code   RO         5769    i.pvPortMalloc      heap_1.o
     0x08006a60   0x00000020   Code   RO         6179    i.pxPortInitialiseStack  port.o
     0x08006a80   0x00000088   Code   RO          910    i.rtc_gps_calib     helpers.o
-    0x08006b08   0x000000b0   Code   RO         1043    i.setup_task        my_tasks.o
-    0x08006bb8   0x0000005c   Code   RO         1044    i.spi_send          my_tasks.o
-    0x08006c14   0x0000002c   Code   RO         1129    i.start_animation   animations.o
-    0x08006c40   0x00000058   Code   RO         1045    i.test_task_start   my_tasks.o
-    0x08006c98   0x00000094   Code   RO         1376    i.timegm            minmea.o
-    0x08006d2c   0x00000028   Code   RO         1130    i.tube_print2_uint8_t  animations.o
-    0x08006d54   0x00000058   Code   RO          911    i.unix_ts_2_datetime  helpers.o
-    0x08006dac   0x00000024   Code   RO         5802    i.uxListRemove      list.o
-    0x08006dd0   0x00000016   Code   RO         5803    i.vListInitialise   list.o
-    0x08006de6   0x00000006   Code   RO         5804    i.vListInitialiseItem  list.o
-    0x08006dec   0x00000030   Code   RO         5805    i.vListInsert       list.o
-    0x08006e1c   0x00000018   Code   RO         5806    i.vListInsertEnd    list.o
-    0x08006e34   0x00000018   Code   RO         6181    i.vPortEnterCritical  port.o
-    0x08006e4c   0x0000001c   Code   RO         6182    i.vPortExitCritical  port.o
-    0x08006e68   0x0000000a   Code   RO         5770    i.vPortFree         heap_1.o
-    0x08006e72   0x00000002   PAD
-    0x08006e74   0x00000018   Code   RO         6183    i.vPortYield        port.o
-    0x08006e8c   0x0000003c   Code   RO         5488    i.vTaskDelay        tasks.o
-    0x08006ec8   0x0000004c   Code   RO         5498    i.vTaskStartScheduler  tasks.o
-    0x08006f14   0x00000010   Code   RO         5500    i.vTaskSuspendAll   tasks.o
-    0x08006f24   0x00000058   Code   RO         5501    i.vTaskSwitchContext  tasks.o
-    0x08006f7c   0x0000004c   Code   RO         6184    i.xPortStartScheduler  port.o
-    0x08006fc8   0x00000024   Code   RO         6185    i.xPortSysTickHandler  port.o
-    0x08006fec   0x0000016c   Code   RO         5503    i.xTaskGenericCreate  tasks.o
-    0x08007158   0x00000020   Code   RO         5504    i.xTaskGetSchedulerState  tasks.o
-    0x08007178   0x000000c0   Code   RO         5507    i.xTaskIncrementTick  tasks.o
-    0x08007238   0x000000a8   Code   RO         5510    i.xTaskResumeAll    tasks.o
-    0x080072e0   0x00000050   Data   RO          247    .constdata          main.o
-    0x08007330   0x0000000c   Data   RO          913    .constdata          helpers.o
-    0x0800733c   0x000000ab   Data   RO         1329    .constdata          gps_config.o
-    0x080073e7   0x00000001   PAD
-    0x080073e8   0x00000030   Data   RO         1377    .constdata          minmea.o
-    0x08007418   0x00000010   Data   RO         1531    .constdata          system_stm32f0xx.o
-    0x08007428   0x00000008   Data   RO         1532    .constdata          system_stm32f0xx.o
-    0x08007430   0x00000081   Data   RO         6604    .constdata          mc_p.l(ctype_o.o)
-    0x080074b1   0x00000003   PAD
-    0x080074b4   0x00000004   Data   RO         6605    .constdata          mc_p.l(ctype_o.o)
-    0x080074b8   0x0000000c   Data   RO         6632    .constdata          mc_p.l(mktime.o)
-    0x080074c4   0x0000000c   Data   RO         6978    .constdata          mc_p.l(localtime_i.o)
-    0x080074d0   0x0000003a   Data   RO          248    .conststring        main.o
-    0x0800750a   0x00000002   PAD
-    0x0800750c   0x00000020   Data   RO         7002    Region$$Table       anon$$obj.o
+    0x08006b08   0x000000d0   Code   RO         1043    i.setup_task        my_tasks.o
+    0x08006bd8   0x0000005c   Code   RO         1044    i.spi_send          my_tasks.o
+    0x08006c34   0x0000002c   Code   RO         1129    i.start_animation   animations.o
+    0x08006c60   0x00000058   Code   RO         1045    i.test_task_start   my_tasks.o
+    0x08006cb8   0x00000094   Code   RO         1376    i.timegm            minmea.o
+    0x08006d4c   0x00000028   Code   RO         1130    i.tube_print2_uint8_t  animations.o
+    0x08006d74   0x00000058   Code   RO          911    i.unix_ts_2_datetime  helpers.o
+    0x08006dcc   0x00000024   Code   RO         5802    i.uxListRemove      list.o
+    0x08006df0   0x00000016   Code   RO         5803    i.vListInitialise   list.o
+    0x08006e06   0x00000006   Code   RO         5804    i.vListInitialiseItem  list.o
+    0x08006e0c   0x00000030   Code   RO         5805    i.vListInsert       list.o
+    0x08006e3c   0x00000018   Code   RO         5806    i.vListInsertEnd    list.o
+    0x08006e54   0x00000018   Code   RO         6181    i.vPortEnterCritical  port.o
+    0x08006e6c   0x0000001c   Code   RO         6182    i.vPortExitCritical  port.o
+    0x08006e88   0x0000000a   Code   RO         5770    i.vPortFree         heap_1.o
+    0x08006e92   0x00000002   PAD
+    0x08006e94   0x00000018   Code   RO         6183    i.vPortYield        port.o
+    0x08006eac   0x0000003c   Code   RO         5488    i.vTaskDelay        tasks.o
+    0x08006ee8   0x0000004c   Code   RO         5498    i.vTaskStartScheduler  tasks.o
+    0x08006f34   0x00000010   Code   RO         5500    i.vTaskSuspendAll   tasks.o
+    0x08006f44   0x00000058   Code   RO         5501    i.vTaskSwitchContext  tasks.o
+    0x08006f9c   0x0000004c   Code   RO         6184    i.xPortStartScheduler  port.o
+    0x08006fe8   0x00000024   Code   RO         6185    i.xPortSysTickHandler  port.o
+    0x0800700c   0x0000016c   Code   RO         5503    i.xTaskGenericCreate  tasks.o
+    0x08007178   0x00000020   Code   RO         5504    i.xTaskGetSchedulerState  tasks.o
+    0x08007198   0x000000c0   Code   RO         5507    i.xTaskIncrementTick  tasks.o
+    0x08007258   0x000000a8   Code   RO         5510    i.xTaskResumeAll    tasks.o
+    0x08007300   0x00000050   Data   RO          247    .constdata          main.o
+    0x08007350   0x0000000c   Data   RO          913    .constdata          helpers.o
+    0x0800735c   0x000000ab   Data   RO         1329    .constdata          gps_config.o
+    0x08007407   0x00000001   PAD
+    0x08007408   0x00000030   Data   RO         1377    .constdata          minmea.o
+    0x08007438   0x00000010   Data   RO         1531    .constdata          system_stm32f0xx.o
+    0x08007448   0x00000008   Data   RO         1532    .constdata          system_stm32f0xx.o
+    0x08007450   0x00000081   Data   RO         6604    .constdata          mc_p.l(ctype_o.o)
+    0x080074d1   0x00000003   PAD
+    0x080074d4   0x00000004   Data   RO         6605    .constdata          mc_p.l(ctype_o.o)
+    0x080074d8   0x0000000c   Data   RO         6632    .constdata          mc_p.l(mktime.o)
+    0x080074e4   0x0000000c   Data   RO         6978    .constdata          mc_p.l(localtime_i.o)
+    0x080074f0   0x0000003a   Data   RO          248    .conststring        main.o
+    0x0800752a   0x00000002   PAD
+    0x0800752c   0x00000020   Data   RO         7002    Region$$Table       anon$$obj.o
 
 
     Execution Region RW_IRAM1 (Base: 0x20000000, Size: 0x00002930, Max: 0x00004000, ABSOLUTE, COMPRESSED[0x000000c8])
@@ -4166,7 +4167,7 @@ Image component sizes
        136          0          0          0          0       3290   list.o
       1282        158        138          4        572      20876   main.o
       2156        156         48          0          0      14952   minmea.o
-       846        114          0         32        948       7014   my_tasks.o
+       878        118          0         32        948       7010   my_tasks.o
         28         10          0          4        144       1147   my_usb.o
        354         58          0          4          0       6748   port.o
          0          0          0          0          0       1472   queue.o
@@ -4204,7 +4205,7 @@ Image component sizes
        140          0          0          0          0       4240   usbd_ioreq.o
 
     ----------------------------------------------------------------------
-     26106       1722        620        480      10048     821483   Object Totals
+     26138       1726        620        480      10048     821479   Object Totals
          0          0         32          0          0          0   (incl. Generated)
         38          0          3          6          4          0   (incl. Padding)
 
@@ -4276,15 +4277,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     29216       1846        780        496      10048     810119   Grand Totals
-     29216       1846        780        200      10048     810119   ELF Image Totals (compressed)
-     29216       1846        780        200          0          0   ROM Totals
+     29248       1850        780        496      10048     810115   Grand Totals
+     29248       1850        780        200      10048     810115   ELF Image Totals (compressed)
+     29248       1850        780        200          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                29996 (  29.29kB)
+    Total RO  Size (Code + RO Data)                30028 (  29.32kB)
     Total RW  Size (RW Data + ZI Data)             10544 (  10.30kB)
-    Total ROM Size (Code + RO Data + RW Data)      30196 (  29.49kB)
+    Total ROM Size (Code + RO Data + RW Data)      30228 (  29.52kB)
 
 ==============================================================================
 

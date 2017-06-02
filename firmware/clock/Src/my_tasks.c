@@ -103,6 +103,12 @@ void setup_task(void)
   HAL_UART_Receive_IT(gps_uart_ptr, gps_byte_buf, 1);
   display_mode = get_display_mode();
   printf("launching scheduler...\n");
+  while(1)
+  {
+    HAL_GPIO_TogglePin(USER_LED_GPIO_Port, USER_LED_Pin);
+    HAL_GPIO_TogglePin(OWIRE_DATA_GPIO_Port, OWIRE_DATA_Pin);
+    HAL_Delay(100);
+  }
 }
 
 void animation_task_start(void const * argument)
