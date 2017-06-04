@@ -99,9 +99,13 @@ double get_modifier(void)
   for (int i = 0; i < LS_ARR_SIZE; ++i)
     ls_value += avg_arr[i];
   ls_value = ls_value / LS_ARR_SIZE;
-  if(ls_value > 600 || ls_value < 0)
-    return 1;
-  return 6 - (ls_value * 0.0083);
+  double ret = 6 - (ls_value * 0.0083);
+  // double ret = 8 - ((double)ls_value * 0.0117);
+  if(ret < 1)
+    ret = 1;
+  if(ret > 6)
+    ret = 6;
+  return ret;
 }
 
 uint8_t rtc_gps_calib(struct minmea_sentence_rmc *gps_rmc)

@@ -29,7 +29,7 @@ digit_animation tube_animation[TUBE_COUNT];
 led_animation rgb_animation[TUBE_COUNT];
 linear_buf gps_lb;
 my_button up_button, down_button;
-uint8_t rgb_orange[LED_CHANNEL_SIZE] = {255, 64, 0};
+uint8_t rgb_orange[LED_CHANNEL_SIZE] = {255, 55, 0};
 uint8_t rgb_purple[LED_CHANNEL_SIZE] = {255, 0, 255};
 struct minmea_sentence_rmc gps_rmc;
 struct minmea_sentence_gga gps_gga;
@@ -228,6 +228,8 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
       for (int i = 0; i < TUBE_COUNT; ++i)
         led_start_animation(&(rgb_animation[i]), rgb_orange, ANIMATION_CROSS_FADE);
     }
+
+    printf("ls: %d\n", get_ls_reading());
   }
 }
 

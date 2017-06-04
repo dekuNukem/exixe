@@ -1,3 +1,9 @@
+  if(ls_value > 800 || ls_value < 0)
+    return 1;
+  // return 6 - (ls_value * 0.0083);
+  // return 8 - ((double)ls_value * 0.0117);
+  // return (1 / (0.00012 * ls_value + 0.08)) - 4.5;
+
 void gps_temp_parse_task_start(void const * argument)
 {
   uint8_t loop_count = 0;
