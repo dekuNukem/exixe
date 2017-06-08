@@ -743,8 +743,8 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <element name="R1" library="joyAnalog" package="0805" value="4K7" x="3.103" y="14.984" smashed="yes" rot="R180">
 <attribute name="NAME" x="4.7645" y="15.549" size="0.8128" layer="25" font="vector" rot="R270"/>
 </element>
-<element name="C1" library="joyAnalog" package="0805" value="1uF" x="38.481" y="8.001" smashed="yes">
-<attribute name="NAME" x="38.6334" y="8.8011" size="0.8128" layer="25" font="vector"/>
+<element name="C1" library="joyAnalog" package="0805" value="1uF" x="40.64" y="8.89" smashed="yes">
+<attribute name="NAME" x="40.7924" y="9.6901" size="0.8128" layer="25" font="vector"/>
 </element>
 <element name="Q2" library="nixx" package="SOT323" value="" x="7.218" y="21.685" smashed="yes" rot="R90">
 <attribute name="VALUE" x="8.548" y="22.91" size="1.016" layer="27" rot="R90"/>
@@ -773,8 +773,8 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <element name="Q6" library="nixx" package="SOT323" value="" x="2.413" y="33.655" smashed="yes">
 <attribute name="VALUE" x="3.638" y="32.325" size="1.016" layer="27"/>
 </element>
-<element name="R6" library="joyAnalog" package="0805" value="4K7" x="10.011" y="31.78" smashed="yes" rot="R180">
-<attribute name="NAME" x="7.9976" y="32.5455" size="0.8128" layer="25" font="vector"/>
+<element name="R6" library="joyAnalog" package="0805" value="4K7" x="10.392" y="31.526" smashed="yes" rot="R180">
+<attribute name="NAME" x="8.3786" y="32.2915" size="0.8128" layer="25" font="vector"/>
 </element>
 <element name="Q7" library="nixx" package="SOT323" value="" x="17.004" y="33.274" smashed="yes">
 <attribute name="VALUE" x="18.229" y="31.944" size="1.016" layer="27"/>
@@ -815,18 +815,18 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <element name="JP1" library="nixx" package="1X07" value="" x="10" y="38.2" smashed="yes">
 <attribute name="VALUE" x="1.11" y="35.025" size="1.27" layer="27"/>
 </element>
-<element name="D1" library="nixx" package="3528-COMMON-ANODE" value="RGB_LED_CA-150141M173100-R&amp;G&amp;B" x="10.181" y="29.445" smashed="yes"/>
+<element name="D1" library="nixx" package="3528-COMMON-ANODE" value="RGB_LED_CA-150141M173100-R&amp;G&amp;B" x="10.435" y="29.191" smashed="yes"/>
 <element name="R13" library="joyAnalog" package="0805" value="68K" x="5.715" y="36.449" smashed="yes" rot="R180">
 <attribute name="NAME" x="6.7818" y="35.6997" size="0.7112" layer="25" font="vector" rot="R180"/>
 </element>
-<element name="R14" library="joyAnalog" package="0805" value="470" x="40.894" y="8.636" smashed="yes" rot="R270">
-<attribute name="NAME" x="39.8145" y="10.16" size="0.8128" layer="25" font="vector" rot="R90"/>
+<element name="R14" library="joyAnalog" package="0805" value="470" x="18.669" y="8.89" smashed="yes" rot="R270">
+<attribute name="NAME" x="17.5895" y="10.414" size="0.8128" layer="25" font="vector" rot="R90"/>
 </element>
 <element name="R15" library="joyAnalog" package="0805" value="470" x="2.54" y="9.525" smashed="yes">
 <attribute name="NAME" x="3.2131" y="10.5918" size="0.8128" layer="25" font="vector" rot="R90"/>
 </element>
-<element name="R16" library="joyAnalog" package="0805" value="0" x="42.545" y="8.636" smashed="yes" rot="R270">
-<attribute name="NAME" x="40.8813" y="10.1854" size="0.8128" layer="25" font="vector" rot="R90"/>
+<element name="R16" library="joyAnalog" package="0805" value="0" x="17.145" y="9.144" smashed="yes" rot="R270">
+<attribute name="NAME" x="15.4813" y="10.6934" size="0.8128" layer="25" font="vector" rot="R90"/>
 </element>
 <element name="R17" library="joyAnalog" package="0805" value="4K7" x="29.083" y="8.128" smashed="yes" rot="MR180">
 <attribute name="NAME" x="27.9654" y="7.1247" size="0.8128" layer="26" font="vector" rot="MR180"/>
@@ -897,7 +897,7 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <wire x1="18.944" y1="18.735" x2="28.967" y2="16.637" width="0" layer="19" extent="1-1"/>
 <wire x1="7.08" y1="26.786" x2="8.118" y2="22.335" width="0" layer="19" extent="1-1"/>
 <wire x1="19.158" y1="24.013" x2="18.944" y2="18.735" width="0" layer="19" extent="1-1"/>
-<wire x1="39.381" y1="8.001" x2="28.967" y2="16.637" width="0" layer="19" extent="1-1"/>
+<wire x1="41.54" y1="8.89" x2="28.967" y2="16.637" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$1">
 <contactref element="Q1" pad="1"/>
@@ -927,7 +927,7 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <signal name="N$8">
 <contactref element="Q6" pad="1"/>
 <contactref element="R6" pad="2"/>
-<wire x1="1.763" y1="32.755" x2="9.111" y2="31.78" width="0" layer="19" extent="1-1"/>
+<wire x1="1.763" y1="32.755" x2="9.492" y2="31.526" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$9">
 <contactref element="Q7" pad="1"/>
@@ -1029,13 +1029,13 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <wire x1="17.62" y1="38.2" x2="18.415" y2="37.405" width="0.3048" layer="1"/>
 <wire x1="19.177" y1="36.643" x2="17.62" y2="38.2" width="0.2032" layer="16"/>
 <wire x1="19.177" y1="36.643" x2="41.91" y2="35.952" width="0" layer="19" extent="1-16"/>
-<wire x1="11.731" y1="30.295" x2="18.415" y2="37.405" width="0" layer="19" extent="1-1"/>
-<wire x1="5.8344" y1="12.038" x2="11.731" y2="30.295" width="0" layer="19" extent="1-1"/>
+<wire x1="11.985" y1="30.041" x2="18.415" y2="37.405" width="0" layer="19" extent="1-1"/>
+<wire x1="5.8344" y1="12.038" x2="11.985" y2="30.041" width="0" layer="19" extent="1-1"/>
 <wire x1="5.8344" y1="8.838" x2="5.8344" y2="12.038" width="0" layer="19" extent="1-1"/>
 <wire x1="14.4196" y1="6.438" x2="5.8344" y2="8.838" width="0" layer="19" extent="1-1"/>
 <wire x1="29.983" y1="8.128" x2="14.4196" y2="6.438" width="0" layer="19" extent="1-16"/>
-<wire x1="37.581" y1="8.001" x2="29.983" y2="8.128" width="0" layer="19" extent="1-16"/>
-<wire x1="38.111" y1="7.239" x2="37.581" y2="8.001" width="0" layer="19" extent="1-16"/>
+<wire x1="39.74" y1="8.89" x2="29.983" y2="8.128" width="0" layer="19" extent="1-16"/>
+<wire x1="38.111" y1="7.239" x2="39.74" y2="8.89" width="0" layer="19" extent="1-16"/>
 <wire x1="27.167" y1="16.637" x2="29.983" y2="8.128" width="0" layer="19" extent="1-16"/>
 </signal>
 <signal name="SPI_SCK">
@@ -1113,7 +1113,7 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <signal name="N$21">
 <contactref element="D1" pad="2"/>
 <contactref element="R16" pad="1"/>
-<wire x1="11.731" y1="28.595" x2="42.545" y2="9.536" width="0" layer="19" extent="1-1"/>
+<wire x1="11.985" y1="28.341" x2="17.145" y2="10.044" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="PWM_BLUE">
 <contactref element="R16" pad="2"/>
@@ -1127,12 +1127,12 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <signal name="N$3">
 <contactref element="D1" pad="4"/>
 <contactref element="R15" pad="1"/>
-<wire x1="1.64" y1="9.525" x2="8.631" y2="28.595" width="0" layer="19" extent="1-1"/>
+<wire x1="1.64" y1="9.525" x2="8.885" y2="28.341" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$15">
 <contactref element="D1" pad="3"/>
 <contactref element="R14" pad="1"/>
-<wire x1="8.631" y1="30.295" x2="40.894" y2="9.536" width="0" layer="19" extent="1-1"/>
+<wire x1="8.885" y1="30.041" x2="18.669" y2="9.79" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$19">
 <contactref element="T1" pad="3"/>
