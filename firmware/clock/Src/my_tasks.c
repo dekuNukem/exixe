@@ -228,8 +228,7 @@ void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
       for (int i = 0; i < TUBE_COUNT; ++i)
         led_start_animation(&(rgb_animation[i]), rgb_orange, ANIMATION_CROSS_FADE);
     }
-
-    printf("ls: %d\n", get_ls_reading());
+    // printf("ls: %d\n", get_ls_reading());
   }
 }
 
@@ -238,6 +237,7 @@ void gps_temp_parse_task_start(void const * argument)
   uint8_t loop_count = 0;
   for(;;)
   {
+    HAL_IWDG_Refresh(iwdg_ptr);
     if(linear_buf_line_available(&gps_lb))
     {
       parse_gps((char*)gps_lb.buf, &gps_rmc, &gps_gga, &gps_gsa, &gps_gll, &gps_gst, &gps_gsv);

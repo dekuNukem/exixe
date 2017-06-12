@@ -19,4 +19,7 @@ extern UART_HandleTypeDef huart1;
 extern RTC_HandleTypeDef hrtc;
 #define rtc_ptr (&hrtc)
 
+extern IWDG_HandleTypeDef hiwdg;
+#define iwdg_ptr (&hiwdg)
+
 #endif
