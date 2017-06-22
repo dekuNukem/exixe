@@ -118,3 +118,5 @@ ZDA – Time and Date
 UTC, day, month, year and local time zone
 
 add IWDG
+
+looks like I don't need baking function for new IN-12, keep a jumper though
