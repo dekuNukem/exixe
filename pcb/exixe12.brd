@@ -48,8 +48,8 @@
 <layer number="38" name="bTest" color="7" fill="1" visible="no" active="yes"/>
 <layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="yes"/>
 <layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="yes"/>
-<layer number="41" name="tRestrict" color="4" fill="10" visible="yes" active="yes"/>
-<layer number="42" name="bRestrict" color="1" fill="10" visible="yes" active="yes"/>
+<layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="yes"/>
+<layer number="42" name="bRestrict" color="1" fill="10" visible="no" active="yes"/>
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="yes"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
@@ -175,6 +175,42 @@
 <text x="16.637" y="3.556" size="0.8128" layer="25" font="vector">CLK</text>
 <text x="15.4178" y="35.3314" size="1.143" layer="26" font="vector" rot="MR0">G</text>
 <text x="11.6078" y="32.639" size="1.143" layer="25" font="vector">+</text>
+<polygon width="0.1524" layer="41">
+<vertex x="3.5052" y="39.878"/>
+<vertex x="7.9756" y="39.878"/>
+<vertex x="8.2804" y="39.5732"/>
+<vertex x="8.2804" y="36.2712"/>
+<vertex x="7.9248" y="35.9156"/>
+<vertex x="7.4676" y="35.9156"/>
+<vertex x="7.0104" y="36.3728"/>
+<vertex x="1.778" y="36.3728"/>
+<vertex x="0.6604" y="37.4904"/>
+<vertex x="0.6604" y="39.0144"/>
+<vertex x="1.524" y="39.878"/>
+<vertex x="3.556" y="39.878"/>
+</polygon>
+<polygon width="0.254" layer="42">
+<vertex x="7.366" y="36.0172"/>
+<vertex x="8.5344" y="32.5628"/>
+<vertex x="8.7884" y="29.21"/>
+<vertex x="7.1628" y="27.4828"/>
+<vertex x="7.1628" y="24.892"/>
+<vertex x="12.6492" y="19.2024"/>
+<vertex x="12.7508" y="17.4244"/>
+<vertex x="13.462" y="17.018"/>
+<vertex x="14.5288" y="16.8656"/>
+<vertex x="15.3416" y="17.4244"/>
+<vertex x="15.6464" y="18.542"/>
+<vertex x="15.2908" y="19.5072"/>
+<vertex x="14.5796" y="20.0152"/>
+<vertex x="13.4112" y="19.812"/>
+<vertex x="9.144" y="24.2316"/>
+<vertex x="9.652" y="29.0576"/>
+<vertex x="9.6012" y="33.02"/>
+<vertex x="8.1788" y="36.6268"/>
+<vertex x="7.2644" y="36.3728"/>
+<vertex x="7.366" y="36.068"/>
+</polygon>
 </plain>
 <libraries>
 <library name="pinhead">
@@ -864,16 +900,18 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <wire x1="2.6675625" y1="28.702" x2="4.9276" y2="28.702" width="0.254" layer="1"/>
 <wire x1="4.9276" y1="28.702" x2="5.4356" y2="29.21" width="0.254" layer="1"/>
 <wire x1="5.4356" y1="29.21" x2="6.604" y2="29.21" width="0.254" layer="1"/>
-<wire x1="10.399" y1="21.2708" x2="9.8044" y2="21.8654" width="0.254" layer="1"/>
-<wire x1="9.8044" y1="21.8654" x2="9.8044" y2="23.114" width="0.254" layer="1"/>
-<wire x1="9.8044" y1="23.114" x2="9.4996" y2="23.4188" width="0.1524" layer="1"/>
-<wire x1="9.4996" y1="23.4188" x2="8.7376" y2="23.4188" width="0.1524" layer="1"/>
-<wire x1="8.7376" y1="23.4188" x2="7.7216" y2="24.4348" width="0.1524" layer="1"/>
+<wire x1="10.399" y1="21.2708" x2="9.8044" y2="21.8654" width="0.2032" layer="1"/>
+<wire x1="9.8044" y1="21.8654" x2="9.8044" y2="23.114" width="0.2032" layer="1"/>
+<wire x1="9.8044" y1="23.114" x2="9.4996" y2="23.4188" width="0.2032" layer="1"/>
+<wire x1="9.4996" y1="23.4188" x2="8.7376" y2="23.4188" width="0.2032" layer="1"/>
+<wire x1="8.7376" y1="23.4188" x2="7.7216" y2="24.4348" width="0.2032" layer="1"/>
 <wire x1="7.7216" y1="24.4348" x2="7.7216" y2="27.432" width="0.2032" layer="1"/>
 <wire x1="7.7216" y1="27.432" x2="7.334" y2="27.8196" width="0.2032" layer="1"/>
 <wire x1="7.334" y1="27.8196" x2="7.334" y2="28.31" width="0.1524" layer="1"/>
-<wire x1="3.825" y1="33.009" x2="2.6675625" y2="31.8515625" width="0.1524" layer="1"/>
-<wire x1="2.6675625" y1="31.8515625" x2="2.6675625" y2="28.702" width="0.1524" layer="1"/>
+<wire x1="3.825" y1="33.009" x2="2.6675625" y2="31.8515625" width="0.2032" layer="1"/>
+<wire x1="2.6675625" y1="31.8515625" x2="2.6675625" y2="28.702" width="0.2032" layer="1"/>
+<wire x1="15.08" y1="38.2" x2="9.256" y2="38.2" width="0.254" layer="1"/>
+<wire x1="9.256" y1="38.2" x2="9.256" y2="39.127" width="0.254" layer="1"/>
 </signal>
 <signal name="N$1">
 <contactref element="Q1" pad="1"/>
@@ -1357,6 +1395,7 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 </signal>
 </signals>
 <errors>
+<approved hash="17,41,4da055d854d84ca0"/>
 <approved hash="8,16,4d7c75be47dd6008"/>
 <approved hash="8,1,dfeb80e922ea9d7a"/>
 <approved hash="4,1,063c0b0c0cd5f915"/>
