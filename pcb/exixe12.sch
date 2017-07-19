@@ -2482,93 +2482,6 @@ Standard 0603 ceramic capacitor, and 0.1" leaded capacitor.</description>
 </deviceset>
 </devicesets>
 </library>
-<library name="0-nixies-russian">
-<description>&lt;b&gt;Russian IN series nixie tubes&lt;/b&gt;&lt;br&gt;&lt;br&gt;
-
-Based on the following sources:
-&lt;ul&gt;
-&lt;li&gt;Measurements taken from nixies in my collection
-&lt;li&gt;http://www.tube-tester.com
-&lt;/ul&gt;&lt;br&gt;
-&lt;author&gt;Created by p.s.troost@student.tue.nl&lt;/author&gt;</description>
-<packages>
-<package name="IN-12">
-<description>May be used with socket: &lt;b&gt;SK-136&lt;/b&gt;</description>
-<wire x1="-8.89" y1="6.6675" x2="7.9375" y2="6.6675" width="0.127" layer="21" curve="-103.699894"/>
-<wire x1="7.9375" y1="-6.35" x2="-8.89" y2="-6.35" width="0.127" layer="21" curve="-108.924838"/>
-<wire x1="7.9375" y1="-6.35" x2="-8.89" y2="-6.35" width="0.254" layer="21" curve="-110.891013"/>
-<wire x1="-8.89" y1="6.6675" x2="7.9375" y2="6.6675" width="0.254" layer="21" curve="-104.398074"/>
-<wire x1="7.9375" y1="6.6675" x2="7.9375" y2="-6.35" width="0.254" layer="21"/>
-<wire x1="-8.89" y1="-6.1913" x2="-8.89" y2="6.6675" width="0.254" layer="21"/>
-<wire x1="-8.89" y1="-6.1913" x2="-8.89" y2="-6.35" width="0.254" layer="21"/>
-<circle x="0" y="0" radius="2.54" width="0.127" layer="21"/>
-<pad name="6" x="-0.3175" y="8.8175" drill="1.1" diameter="2.54"/>
-<pad name="9" x="5.1745" y="0" drill="1.1" diameter="2.54"/>
-<pad name="8" x="5.0475" y="4.5" drill="1.1" diameter="2.54"/>
-<pad name="LHDP" x="-0.3175" y="-8.8175" drill="1.1" diameter="2.54"/>
-<pad name="0" x="5.0475" y="-4.5" drill="1.1" diameter="2.54"/>
-<pad name="A" x="3.6825" y="-7.8175" drill="1.1" diameter="2.54"/>
-<pad name="7" x="3.6825" y="7.8175" drill="1.1" diameter="2.54"/>
-<pad name="5" x="-4.3175" y="7.8175" drill="1.1" diameter="2.54"/>
-<pad name="4" x="-6" y="4.5" drill="1.1" diameter="2.54"/>
-<pad name="3" x="-6.127" y="0" drill="1.1" diameter="2.54"/>
-<pad name="2" x="-6" y="-4.5" drill="1.1" diameter="2.54"/>
-<pad name="1" x="-4.3175" y="-7.8175" drill="1.1" diameter="2.54"/>
-<text x="10.3188" y="-2.8575" size="1.27" layer="25" rot="R90">&gt;NAME</text>
-<hole x="0" y="0" drill="5"/>
-</package>
-</packages>
-<symbols>
-<symbol name="IN-12B">
-<wire x1="-7.62" y1="-10.795" x2="-7.62" y2="13.335" width="0.4064" layer="94"/>
-<wire x1="-7.62" y1="-10.795" x2="5.08" y2="-10.795" width="0.4064" layer="94" curve="180"/>
-<wire x1="5.08" y1="-10.795" x2="5.08" y2="13.335" width="0.4064" layer="94"/>
-<wire x1="-7.62" y1="13.335" x2="5.08" y2="13.335" width="0.4064" layer="94" curve="-180"/>
-<text x="-4.445" y="20.955" size="1.778" layer="95">&gt;NAME</text>
-<pin name="1" x="-12.7" y="12.7" visible="pin" length="middle"/>
-<pin name="2" x="-12.7" y="10.16" visible="pin" length="middle"/>
-<pin name="3" x="-12.7" y="7.62" visible="pin" length="middle"/>
-<pin name="4" x="-12.7" y="5.08" visible="pin" length="middle"/>
-<pin name="5" x="-12.7" y="2.54" visible="pin" length="middle"/>
-<pin name="6" x="-12.7" y="0" visible="pin" length="middle"/>
-<pin name="7" x="-12.7" y="-2.54" visible="pin" length="middle"/>
-<pin name="8" x="-12.7" y="-5.08" visible="pin" length="middle"/>
-<pin name="9" x="-12.7" y="-7.62" visible="pin" length="middle"/>
-<pin name="0" x="-12.7" y="-10.16" visible="pin" length="middle"/>
-<pin name="LHDP" x="10.16" y="12.7" visible="pin" length="middle" rot="R180"/>
-<pin name="A" x="10.16" y="0" visible="pin" length="middle" rot="R180"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="IN-12B" prefix="N">
-<description>IN-12B: medium numeric &lt;b&gt;topview&lt;/b&gt; nixie tube</description>
-<gates>
-<gate name="G$1" symbol="IN-12B" x="2.54" y="0"/>
-</gates>
-<devices>
-<device name="" package="IN-12">
-<connects>
-<connect gate="G$1" pin="0" pad="0"/>
-<connect gate="G$1" pin="1" pad="1"/>
-<connect gate="G$1" pin="2" pad="2"/>
-<connect gate="G$1" pin="3" pad="3"/>
-<connect gate="G$1" pin="4" pad="4"/>
-<connect gate="G$1" pin="5" pad="5"/>
-<connect gate="G$1" pin="6" pad="6"/>
-<connect gate="G$1" pin="7" pad="7"/>
-<connect gate="G$1" pin="8" pad="8"/>
-<connect gate="G$1" pin="9" pad="9"/>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="LHDP" pad="LHDP"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="SparkFun-Jumpers">
 <description>&lt;h3&gt;SparkFun Jumpers&lt;/h3&gt;
 In this library you'll find jumpers, or other semipermanent means of changing current paths. The least permanent form is the solder jumper. These can be changed by adding, removing, or moving solder. In cases that are less likely to be changed we have jumpers that are connected with traces. These can be cut with a razor, or reconnected with solder. Reference designator JP.
@@ -2715,6 +2628,86 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </deviceset>
 </devicesets>
 </library>
+<library name="exixe12">
+<description>Generated from &lt;b&gt;exixe12.sch&lt;/b&gt;&lt;p&gt;
+by exp-lbrs.ulp</description>
+<packages>
+<package name="IN-12">
+<description>May be used with socket: &lt;b&gt;SK-136&lt;/b&gt;</description>
+<circle x="0" y="0" radius="2.54" width="0.127" layer="21"/>
+<wire x1="-8.89" y1="6.6675" x2="7.9375" y2="6.6675" width="0.127" layer="21" curve="-103.699894"/>
+<wire x1="7.9375" y1="-6.35" x2="-8.89" y2="-6.35" width="0.127" layer="21" curve="-108.924838"/>
+<wire x1="7.9375" y1="-6.35" x2="-8.89" y2="-6.35" width="0.254" layer="21" curve="-110.891013"/>
+<wire x1="-8.89" y1="6.6675" x2="7.9375" y2="6.6675" width="0.254" layer="21" curve="-104.398074"/>
+<wire x1="7.9375" y1="6.6675" x2="7.9375" y2="-6.35" width="0.254" layer="21"/>
+<wire x1="-8.89" y1="-6.35" x2="-8.89" y2="6.6675" width="0.254" layer="21"/>
+<pad name="0" x="5.0475" y="-4.5" drill="1.2" diameter="2.54"/>
+<pad name="1" x="-4.3175" y="-7.8175" drill="1.2" diameter="2.54"/>
+<pad name="2" x="-6" y="-4.5" drill="1.2" diameter="2.54"/>
+<pad name="3" x="-6.127" y="0" drill="1.2" diameter="2.54"/>
+<pad name="4" x="-6" y="4.5" drill="1.2" diameter="2.54"/>
+<pad name="5" x="-4.3175" y="7.8175" drill="1.2" diameter="2.54"/>
+<pad name="6" x="-0.3175" y="8.8175" drill="1.2" diameter="2.54"/>
+<pad name="7" x="3.6825" y="7.8175" drill="1.2" diameter="2.54"/>
+<pad name="8" x="5.0475" y="4.5" drill="1.2" diameter="2.54"/>
+<pad name="9" x="5.1745" y="0" drill="1.2" diameter="2.54"/>
+<pad name="A" x="3.6825" y="-7.8175" drill="1.2" diameter="2.54"/>
+<pad name="LHDP" x="-0.3175" y="-8.8175" drill="1.2" diameter="2.54"/>
+<text x="10.3188" y="-2.8575" size="1.27" layer="25" rot="R90">&gt;NAME</text>
+<hole x="0" y="0" drill="5"/>
+</package>
+</packages>
+<symbols>
+<symbol name="IN-12B">
+<wire x1="-7.62" y1="-10.795" x2="-7.62" y2="13.335" width="0.4064" layer="94"/>
+<wire x1="-7.62" y1="-10.795" x2="5.08" y2="-10.795" width="0.4064" layer="94" curve="180"/>
+<wire x1="5.08" y1="-10.795" x2="5.08" y2="13.335" width="0.4064" layer="94"/>
+<wire x1="-7.62" y1="13.335" x2="5.08" y2="13.335" width="0.4064" layer="94" curve="-180"/>
+<pin name="0" x="-12.7" y="-10.16" visible="pin" length="middle"/>
+<pin name="1" x="-12.7" y="12.7" visible="pin" length="middle"/>
+<pin name="2" x="-12.7" y="10.16" visible="pin" length="middle"/>
+<pin name="3" x="-12.7" y="7.62" visible="pin" length="middle"/>
+<pin name="4" x="-12.7" y="5.08" visible="pin" length="middle"/>
+<pin name="5" x="-12.7" y="2.54" visible="pin" length="middle"/>
+<pin name="6" x="-12.7" y="0" visible="pin" length="middle"/>
+<pin name="7" x="-12.7" y="-2.54" visible="pin" length="middle"/>
+<pin name="8" x="-12.7" y="-5.08" visible="pin" length="middle"/>
+<pin name="9" x="-12.7" y="-7.62" visible="pin" length="middle"/>
+<pin name="A" x="10.16" y="0" visible="pin" length="middle" rot="R180"/>
+<pin name="LHDP" x="10.16" y="12.7" visible="pin" length="middle" rot="R180"/>
+<text x="-4.445" y="20.955" size="1.778" layer="95">&gt;NAME</text>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="IN-12B" prefix="N">
+<description>IN-12B: medium numeric &lt;b&gt;topview&lt;/b&gt; nixie tube</description>
+<gates>
+<gate name="G$1" symbol="IN-12B" x="2.54" y="0"/>
+</gates>
+<devices>
+<device name="" package="IN-12">
+<connects>
+<connect gate="G$1" pin="0" pad="0"/>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
+<connect gate="G$1" pin="4" pad="4"/>
+<connect gate="G$1" pin="5" pad="5"/>
+<connect gate="G$1" pin="6" pad="6"/>
+<connect gate="G$1" pin="7" pad="7"/>
+<connect gate="G$1" pin="8" pad="8"/>
+<connect gate="G$1" pin="9" pad="9"/>
+<connect gate="G$1" pin="A" pad="A"/>
+<connect gate="G$1" pin="LHDP" pad="LHDP"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -2779,7 +2772,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="R16" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="0"/>
 <part name="R18" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="4K7"/>
 <part name="+3V6" library="joyAnalog" deviceset="+3V3" device=""/>
-<part name="N1" library="0-nixies-russian" deviceset="IN-12B" device=""/>
+<part name="N1" library="exixe12" deviceset="IN-12B" device=""/>
 <part name="R19" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="68K"/>
 <part name="JP3" library="SparkFun-Jumpers" deviceset="JUMPER-SMT_2_NO" device="_NO-SILK"/>
 <part name="TP1" library="nixx" deviceset="PTR1" device="TP13R"/>
