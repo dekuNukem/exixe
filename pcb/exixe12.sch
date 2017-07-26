@@ -2781,6 +2781,7 @@ by exp-lbrs.ulp</description>
 <part name="TP4" library="nixx" deviceset="PTR1" device="TP13R"/>
 <part name="TP5" library="nixx" deviceset="PTR1" device="TP13R"/>
 <part name="TP6" library="nixx" deviceset="PTR1" device="TP13R"/>
+<part name="R12" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="47K"/>
 </parts>
 <sheets>
 <sheet>
@@ -2850,6 +2851,7 @@ by exp-lbrs.ulp</description>
 <instance part="TP4" gate="G$1" x="449.58" y="53.34" rot="R90"/>
 <instance part="TP5" gate="G$1" x="462.28" y="50.8" rot="R90"/>
 <instance part="TP6" gate="G$1" x="449.58" y="91.44" rot="R90"/>
+<instance part="R12" gate="G$1" x="238.76" y="53.34"/>
 </instances>
 <busses>
 </busses>
@@ -3132,15 +3134,12 @@ by exp-lbrs.ulp</description>
 </net>
 <net name="NIXIE_DOT_LEFT" class="0">
 <segment>
-<pinref part="Q11" gate="A" pin="C"/>
-<wire x1="228.6" y1="53.34" x2="228.6" y2="55.88" width="0.1524" layer="91"/>
-<wire x1="228.6" y1="55.88" x2="241.3" y2="55.88" width="0.1524" layer="91"/>
-<label x="231.14" y="55.88" size="1.778" layer="95"/>
-</segment>
-<segment>
 <wire x1="236.22" y1="-20.32" x2="248.92" y2="-20.32" width="0.1524" layer="91"/>
 <label x="238.76" y="-20.32" size="1.778" layer="95"/>
 <pinref part="N1" gate="G$1" pin="LHDP"/>
+<pinref part="R12" gate="G$1" pin="2"/>
+<wire x1="243.84" y1="53.34" x2="248.92" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="248.92" y1="53.34" x2="248.92" y2="-20.32" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="+3V3" class="0">
@@ -3510,6 +3509,13 @@ by exp-lbrs.ulp</description>
 <pinref part="U$2" gate="G$1" pin="PB3"/>
 <pinref part="TP5" gate="G$1" pin="TP"/>
 <wire x1="424.18" y1="50.8" x2="459.74" y2="50.8" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$22" class="0">
+<segment>
+<pinref part="Q11" gate="A" pin="C"/>
+<pinref part="R12" gate="G$1" pin="1"/>
+<wire x1="228.6" y1="53.34" x2="233.68" y2="53.34" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

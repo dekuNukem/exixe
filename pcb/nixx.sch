@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.2.0">
+<eagle version="8.2.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -2725,6 +2725,9 @@ http://www.zetex.com&lt;p&gt;
 <part name="TP2" library="testpad" deviceset="PTR1" device="TP13R" value="PTR1TP13R"/>
 <part name="TP3" library="testpad" deviceset="PTR1" device="TP13R" value="PTR1TP13R"/>
 <part name="TP4" library="testpad" deviceset="PTR1" device="TP13R" value="PTR1TP13R"/>
+<part name="R20" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="4K7"/>
+<part name="R21" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="4K7"/>
+<part name="R25" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="4K7"/>
 </parts>
 <sheets>
 <sheet>
@@ -2803,6 +2806,9 @@ http://www.zetex.com&lt;p&gt;
 <instance part="TP2" gate="G$1" x="381" y="53.34" rot="R270"/>
 <instance part="TP3" gate="G$1" x="441.96" y="43.18" rot="R90"/>
 <instance part="TP4" gate="G$1" x="441.96" y="40.64" rot="R90"/>
+<instance part="R20" gate="G$1" x="238.76" y="53.34"/>
+<instance part="R21" gate="G$1" x="238.76" y="27.94"/>
+<instance part="R25" gate="G$1" x="279.4" y="7.62"/>
 </instances>
 <busses>
 </busses>
@@ -3110,10 +3116,9 @@ http://www.zetex.com&lt;p&gt;
 <label x="233.68" y="-20.32" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="Q11" gate="A" pin="C"/>
-<wire x1="228.6" y1="53.34" x2="228.6" y2="55.88" width="0.1524" layer="91"/>
-<wire x1="228.6" y1="55.88" x2="241.3" y2="55.88" width="0.1524" layer="91"/>
-<label x="231.14" y="55.88" size="1.778" layer="95"/>
+<pinref part="R20" gate="G$1" pin="2"/>
+<wire x1="261.62" y1="53.34" x2="243.84" y2="53.34" width="0.1524" layer="91"/>
+<label x="248.92" y="53.34" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="NIXIE_DOT_RIGHT" class="0">
@@ -3123,10 +3128,9 @@ http://www.zetex.com&lt;p&gt;
 <label x="233.68" y="-43.18" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="Q12" gate="A" pin="C"/>
-<wire x1="228.6" y1="27.94" x2="228.6" y2="30.48" width="0.1524" layer="91"/>
-<wire x1="228.6" y1="30.48" x2="241.3" y2="30.48" width="0.1524" layer="91"/>
-<label x="231.14" y="30.48" size="1.778" layer="95"/>
+<pinref part="R21" gate="G$1" pin="2"/>
+<wire x1="261.62" y1="27.94" x2="243.84" y2="27.94" width="0.1524" layer="91"/>
+<label x="248.92" y="27.94" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="+3V3" class="0">
@@ -3539,6 +3543,20 @@ http://www.zetex.com&lt;p&gt;
 <pinref part="R24" gate="G$1" pin="2"/>
 <wire x1="345.44" y1="-68.58" x2="363.22" y2="-68.58" width="0.1524" layer="91"/>
 <label x="347.98" y="-68.58" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="N$17" class="0">
+<segment>
+<pinref part="Q12" gate="A" pin="C"/>
+<pinref part="R21" gate="G$1" pin="1"/>
+<wire x1="228.6" y1="27.94" x2="233.68" y2="27.94" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$18" class="0">
+<segment>
+<pinref part="Q11" gate="A" pin="C"/>
+<pinref part="R20" gate="G$1" pin="1"/>
+<wire x1="228.6" y1="53.34" x2="233.68" y2="53.34" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
