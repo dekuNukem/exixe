@@ -876,7 +876,6 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <element name="R21" library="joyAnalog" package="0805" value="4K7" x="6.223" y="18.034" smashed="yes" rot="MR180">
 <attribute name="NAME" x="5.461" y="17.2085" size="0.8128" layer="26" rot="MR180"/>
 </element>
-<element name="R25" library="joyAnalog" package="0805" value="4K7" x="-6.731" y="-3.81"/>
 </elements>
 <signals>
 <signal name="+180V">

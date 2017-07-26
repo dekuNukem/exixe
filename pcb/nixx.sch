@@ -2727,7 +2727,6 @@ http://www.zetex.com&lt;p&gt;
 <part name="TP4" library="testpad" deviceset="PTR1" device="TP13R" value="PTR1TP13R"/>
 <part name="R20" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="4K7"/>
 <part name="R21" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="4K7"/>
-<part name="R25" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="4K7"/>
 </parts>
 <sheets>
 <sheet>
@@ -2808,7 +2807,6 @@ http://www.zetex.com&lt;p&gt;
 <instance part="TP4" gate="G$1" x="441.96" y="40.64" rot="R90"/>
 <instance part="R20" gate="G$1" x="238.76" y="53.34"/>
 <instance part="R21" gate="G$1" x="238.76" y="27.94"/>
-<instance part="R25" gate="G$1" x="279.4" y="7.62"/>
 </instances>
 <busses>
 </busses>
