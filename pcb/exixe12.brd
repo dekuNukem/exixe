@@ -191,8 +191,8 @@
 </polygon>
 <polygon width="0.254" layer="42">
 <vertex x="7.366" y="36.0172"/>
-<vertex x="8.5344" y="32.5628"/>
-<vertex x="8.7884" y="29.21"/>
+<vertex x="8.0264" y="33.02"/>
+<vertex x="8.0264" y="28.6004"/>
 <vertex x="7.1628" y="27.4828"/>
 <vertex x="7.1628" y="24.892"/>
 <vertex x="12.6492" y="19.2024"/>
@@ -205,9 +205,9 @@
 <vertex x="14.5796" y="20.0152"/>
 <vertex x="13.4112" y="19.812"/>
 <vertex x="8.0264" y="25.2984"/>
-<vertex x="9.5504" y="29.1592"/>
-<vertex x="9.398" y="33.0708"/>
-<vertex x="8.0264" y="36.6268"/>
+<vertex x="8.89" y="28.1432"/>
+<vertex x="8.89" y="33.1216"/>
+<vertex x="7.9248" y="36.4744"/>
 <vertex x="7.2644" y="36.3728"/>
 <vertex x="7.366" y="36.068"/>
 </polygon>
@@ -853,14 +853,13 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <contactref element="R19" pad="1"/>
 <wire x1="7.758" y1="38.989" x2="7.758" y2="37.338" width="0.3048" layer="1"/>
 <via x="7.7216" y="36.068" extent="1-16" drill="0.5"/>
-<wire x1="8.8392" y1="33.02" x2="7.7216" y2="36.068" width="0.254" layer="16"/>
+<wire x1="7.7216" y1="36.068" x2="8.4836" y2="33.02" width="0.254" layer="16"/>
 <wire x1="7.758" y1="37.338" x2="7.758" y2="36.1044" width="0.254" layer="1"/>
 <wire x1="7.758" y1="36.1044" x2="7.7216" y2="36.068" width="0.254" layer="1"/>
 <wire x1="7.4676" y1="25.0974" x2="14.0825" y2="18.4825" width="0.254" layer="16"/>
-<wire x1="7.4676" y1="25.0974" x2="7.4676" y2="27.3812" width="0.254" layer="16"/>
-<wire x1="9.144" y1="32.7152" x2="8.8392" y2="33.02" width="0.254" layer="16"/>
-<wire x1="7.4676" y1="27.3812" x2="9.144" y2="29.0576" width="0.254" layer="16"/>
-<wire x1="9.144" y1="29.0576" x2="9.144" y2="32.7152" width="0.254" layer="16"/>
+<wire x1="7.4676" y1="27.3812" x2="7.4676" y2="25.0974" width="0.254" layer="16"/>
+<wire x1="8.4836" y1="33.02" x2="8.4836" y2="28.3972" width="0.254" layer="16"/>
+<wire x1="8.4836" y1="28.3972" x2="7.4676" y2="27.3812" width="0.254" layer="16"/>
 </signal>
 <signal name="GND">
 <contactref element="Q1" pad="2"/>
@@ -1077,7 +1076,6 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <wire x1="10.7696" y1="29.3624" x2="10.7696" y2="30.8926" width="0.1524" layer="1"/>
 <wire x1="10.7696" y1="30.8926" x2="11.95" y2="32.073" width="0.1524" layer="1"/>
 <via x="15.0368" y="15.0368" extent="1-16" drill="0.5"/>
-<wire x1="15.0876" y1="16.2416" x2="15.0478" y2="16.129" width="0.1524" layer="1"/>
 <wire x1="15.0478" y1="16.129" x2="15.0478" y2="15.0478" width="0.1524" layer="1"/>
 <wire x1="15.0478" y1="15.0478" x2="15.0368" y2="15.0368" width="0.1524" layer="1"/>
 </signal>
@@ -1270,11 +1268,11 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 </signal>
 <signal name="STM_1">
 <contactref element="R1" pad="1"/>
-<wire x1="8.763" y1="19.05" x2="8.763" y2="20.633" width="0.1524" layer="1"/>
-<wire x1="8.763" y1="20.633" x2="8.818" y2="20.7896" width="0.1524" layer="1"/>
 <contactref element="U$2" pad="31"/>
 <wire x1="8" y1="14.2926" x2="8" y2="18.287" width="0.1524" layer="1"/>
 <wire x1="8" y1="18.287" x2="8.763" y2="19.05" width="0.1524" layer="1"/>
+<wire x1="8.763" y1="19.05" x2="8.763" y2="20.7346" width="0.1524" layer="1"/>
+<wire x1="8.763" y1="20.7346" x2="8.818" y2="20.7896" width="0.1524" layer="1"/>
 </signal>
 <signal name="N$21">
 <contactref element="D1" pad="2"/>
@@ -1399,7 +1397,7 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <signal name="N$22">
 <contactref element="Q11" pad="3"/>
 <contactref element="R12" pad="1"/>
-<via x="10.1854" y="19.4708" extent="1-16" drill="0.5"/>
+<via x="10.1854" y="19.4708" extent="1-16" drill="0.4"/>
 <wire x1="11.049" y1="19.4708" x2="10.1854" y2="19.4708" width="0.1524" layer="1"/>
 <wire x1="9.9932" y1="20.6756" x2="10.1854" y2="20.6756" width="0.1524" layer="16"/>
 <wire x1="10.1854" y1="20.6756" x2="10.1854" y2="19.4708" width="0.1524" layer="16"/>
@@ -1409,6 +1407,7 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <approved hash="4,1,063c0b0c0cd5f915"/>
 <approved hash="17,41,4da055d854d84ca0"/>
 <approved hash="8,16,4d7c75be47dd6008"/>
+<approved hash="8,16,c32182d189d840fe"/>
 <approved hash="8,1,dfeb80e922ea9d7a"/>
 </errors>
 </board>
