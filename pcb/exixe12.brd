@@ -213,6 +213,8 @@
 </polygon>
 <text x="10.414" y="14.224" size="1.27" layer="26" font="vector" rot="MR0">exixe12</text>
 <text x="10.414" y="11.176" size="1.27" layer="26" font="vector" rot="MR0">dekuNukem</text>
+<text x="15.4432" y="7.2644" size="1.016" layer="25" font="vector">TX</text>
+<text x="11.3284" y="9.0932" size="1.016" layer="26" font="vector" rot="MR0">RX</text>
 </plain>
 <libraries>
 <library name="pinhead">
@@ -1187,14 +1189,15 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <wire x1="9.6" y1="14.2926" x2="9.6" y2="15.442" width="0.1524" layer="1"/>
 <wire x1="9.6" y1="15.442" x2="9.906" y2="15.748" width="0.1524" layer="1"/>
 <wire x1="11.7602" y1="16.637" x2="11.7602" y2="20.066" width="0.1524" layer="1"/>
-<wire x1="13.208" y1="31.496" x2="13.589" y2="31.877" width="0.1524" layer="1"/>
-<wire x1="13.589" y1="31.877" x2="15.875" y2="33.02" width="0.1524" layer="1"/>
+<wire x1="15.875" y1="33.02" x2="13.589" y2="31.877" width="0.1524" layer="1"/>
 <wire x1="15.875" y1="33.02" x2="16.906" y2="33.02" width="0.1524" layer="1"/>
 <wire x1="16.906" y1="33.02" x2="16.942" y2="32.984" width="0.1524" layer="1"/>
 <wire x1="9.906" y1="15.748" x2="10.8712" y2="15.748" width="0.1524" layer="1"/>
 <wire x1="10.8712" y1="15.748" x2="11.7602" y2="16.637" width="0.1524" layer="1"/>
-<wire x1="11.7602" y1="20.066" x2="13.208" y2="21.5138" width="0.1524" layer="1"/>
-<wire x1="13.208" y1="21.5138" x2="13.208" y2="31.496" width="0.1524" layer="1"/>
+<wire x1="13.208" y1="21.5138" x2="11.7602" y2="20.066" width="0.1524" layer="1"/>
+<wire x1="13.589" y1="31.877" x2="13.589" y2="28.1178" width="0.1524" layer="1"/>
+<wire x1="13.589" y1="28.1178" x2="13.208" y2="27.7368" width="0.1524" layer="1"/>
+<wire x1="13.208" y1="27.7368" x2="13.208" y2="21.5138" width="0.1524" layer="1"/>
 </signal>
 <signal name="STM_8">
 <contactref element="R8" pad="1"/>
