@@ -2727,6 +2727,8 @@ http://www.zetex.com&lt;p&gt;
 <part name="TP4" library="testpad" deviceset="PTR1" device="TP13R" value="PTR1TP13R"/>
 <part name="R20" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="4K7"/>
 <part name="R21" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="4K7"/>
+<part name="R25" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="68K"/>
+<part name="GND16" library="joyAnalog" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -2807,6 +2809,8 @@ http://www.zetex.com&lt;p&gt;
 <instance part="TP4" gate="G$1" x="441.96" y="40.64" rot="R90"/>
 <instance part="R20" gate="G$1" x="238.76" y="53.34"/>
 <instance part="R21" gate="G$1" x="238.76" y="27.94"/>
+<instance part="R25" gate="G$1" x="429.26" y="33.02" rot="R90"/>
+<instance part="GND16" gate="1" x="429.26" y="25.4"/>
 </instances>
 <busses>
 </busses>
@@ -2903,6 +2907,10 @@ http://www.zetex.com&lt;p&gt;
 <pinref part="JP1" gate="A" pin="6"/>
 <pinref part="GND15" gate="1" pin="GND"/>
 <wire x1="431.8" y1="-43.18" x2="441.96" y2="-43.18" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="R25" gate="G$1" pin="1"/>
+<pinref part="GND16" gate="1" pin="GND"/>
 </segment>
 </net>
 <net name="N$1" class="0">
@@ -3296,7 +3304,10 @@ http://www.zetex.com&lt;p&gt;
 <segment>
 <pinref part="U$2" gate="G$1" pin="PB8"/>
 <label x="426.72" y="38.1" size="1.778" layer="95"/>
-<wire x1="439.42" y1="38.1" x2="424.18" y2="38.1" width="0.1524" layer="91"/>
+<wire x1="439.42" y1="38.1" x2="429.26" y2="38.1" width="0.1524" layer="91"/>
+<pinref part="R25" gate="G$1" pin="2"/>
+<wire x1="429.26" y1="38.1" x2="424.18" y2="38.1" width="0.1524" layer="91"/>
+<junction x="429.26" y="38.1"/>
 </segment>
 </net>
 <net name="STM_6" class="0">

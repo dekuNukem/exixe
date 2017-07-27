@@ -847,6 +847,9 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <attribute name="VALUE" x="10.1092" y="19.2786" size="0.4064" layer="28" rot="MR0"/>
 <attribute name="VALUE" x="10.1092" y="19.2786" size="0.4064" layer="28" rot="MR0"/>
 </element>
+<element name="R17" library="joyAnalog" package="0805" value="47K" x="8.89" y="11.43" smashed="yes" rot="MR0">
+<attribute name="NAME" x="12.5476" y="10.7823" size="0.8128" layer="26" rot="MR0"/>
+</element>
 </elements>
 <signals>
 <signal name="+180V">
@@ -911,6 +914,10 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <wire x1="7.62" y1="24.5364" x2="7.62" y2="28.024" width="0.2032" layer="1"/>
 <wire x1="8.7376" y1="23.4188" x2="9.8044" y2="23.4188" width="0.2032" layer="1"/>
 <wire x1="9.8044" y1="23.4188" x2="9.8044" y2="21.8654" width="0.2032" layer="1"/>
+<contactref element="R17" pad="1"/>
+<via x="9.8044" y="12.8524" extent="1-16" drill="0.5"/>
+<wire x1="9.79" y1="11.43" x2="9.79" y2="12.838" width="0.1524" layer="16"/>
+<wire x1="9.79" y1="12.838" x2="9.8044" y2="12.8524" width="0.1524" layer="16"/>
 </signal>
 <signal name="N$1">
 <contactref element="Q1" pad="1"/>
@@ -1272,10 +1279,16 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <signal name="STM_1">
 <contactref element="R1" pad="1"/>
 <contactref element="U$2" pad="31"/>
-<wire x1="8" y1="14.2926" x2="8" y2="18.287" width="0.1524" layer="1"/>
+<wire x1="8" y1="18.287" x2="8" y2="14.2926" width="0.1524" layer="1"/>
 <wire x1="8" y1="18.287" x2="8.763" y2="19.05" width="0.1524" layer="1"/>
 <wire x1="8.763" y1="19.05" x2="8.763" y2="20.7346" width="0.1524" layer="1"/>
 <wire x1="8.763" y1="20.7346" x2="8.818" y2="20.7896" width="0.1524" layer="1"/>
+<contactref element="R17" pad="2"/>
+<via x="7.9756" y="12.8524" extent="1-16" drill="0.5"/>
+<wire x1="7.9756" y1="12.8524" x2="7.9756" y2="11.9524" width="0.1524" layer="16"/>
+<wire x1="7.9756" y1="11.9524" x2="7.99" y2="11.43" width="0.1524" layer="16"/>
+<wire x1="8" y1="14.2926" x2="8" y2="12.8768" width="0.1524" layer="1"/>
+<wire x1="8" y1="12.8768" x2="7.9756" y2="12.8524" width="0.1524" layer="1"/>
 </signal>
 <signal name="N$21">
 <contactref element="D1" pad="2"/>

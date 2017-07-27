@@ -8,7 +8,7 @@
 </settings>
 <grid distance="5" unitdist="mil" unit="mil" style="lines" multiple="1" display="no" altdistance="1" altunitdist="mil" altunit="mil"/>
 <layers>
-<layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
+<layer number="1" name="Top" color="4" fill="1" visible="no" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="yes"/>
 <layer number="3" name="Route3" color="4" fill="3" visible="no" active="yes"/>
 <layer number="4" name="Route4" color="1" fill="4" visible="no" active="yes"/>
@@ -876,6 +876,9 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <element name="R21" library="joyAnalog" package="0805" value="4K7" x="6.223" y="18.034" smashed="yes" rot="MR180">
 <attribute name="NAME" x="5.461" y="17.2085" size="0.8128" layer="26" rot="MR180"/>
 </element>
+<element name="R25" library="joyAnalog" package="0805" value="68K" x="10.287" y="13.843" smashed="yes" rot="MR90">
+<attribute name="NAME" x="11.3665" y="13.843" size="0.8128" layer="26" rot="MR90"/>
+</element>
 </elements>
 <signals>
 <signal name="+180V">
@@ -966,6 +969,10 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <wire x1="12.954" y1="12.192" x2="10.287" y2="9.525" width="0.2032" layer="1"/>
 <wire x1="12.842" y1="37.454" x2="14.334" y2="37.454" width="0.2032" layer="1"/>
 <wire x1="14.334" y1="37.454" x2="15.08" y2="38.2" width="0.2032" layer="1"/>
+<contactref element="R25" pad="1"/>
+<via x="10.795" y="11.938" extent="1-16" drill="0.5"/>
+<wire x1="10.287" y1="12.943" x2="10.287" y2="12.446" width="0.2032" layer="16"/>
+<wire x1="10.287" y1="12.446" x2="10.795" y2="11.938" width="0.2032" layer="16"/>
 </signal>
 <signal name="N$1">
 <contactref element="Q1" pad="1"/>
@@ -1270,8 +1277,14 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <wire x1="9.017" y1="20.447" x2="8.636" y2="20.066" width="0.2032" layer="1"/>
 <wire x1="8.636" y1="20.066" x2="8.636" y2="18.542" width="0.2032" layer="1"/>
 <wire x1="8.636" y1="18.542" x2="8.001" y2="17.907" width="0.2032" layer="1"/>
-<wire x1="8.001" y1="17.907" x2="8.001" y2="14.6746" width="0.2032" layer="1"/>
+<wire x1="8.001" y1="17.907" x2="8.001" y2="16.129" width="0.2032" layer="1"/>
+<wire x1="8.001" y1="16.129" x2="8.001" y2="14.6746" width="0.2032" layer="1"/>
 <wire x1="8.001" y1="14.6746" x2="8" y2="14.6736" width="0.2032" layer="1"/>
+<contactref element="R25" pad="2"/>
+<wire x1="8.001" y1="16.129" x2="8.763" y2="16.129" width="0.2032" layer="1"/>
+<via x="8.763" y="16.129" extent="1-16" drill="0.5"/>
+<wire x1="8.763" y1="16.129" x2="8.901" y2="16.129" width="0.2032" layer="16"/>
+<wire x1="8.901" y1="16.129" x2="10.287" y2="14.743" width="0.2032" layer="16"/>
 </signal>
 <signal name="STM_6">
 <contactref element="R6" pad="1"/>
