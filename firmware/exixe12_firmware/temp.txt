@@ -1,0 +1,15 @@
+  if(HAL_TIM_Base_Start(&htim14) != HAL_OK)
+    while(1)
+      ;
+
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+{
+    if(htim2.Instance->CCR3 > 127)
+      htim2.Instance->CCR3 = 0;
+    else
+      htim2.Instance->CCR3 = htim2.Instance->CCR3 + 1;
+}
+
+  htim2.Instance->CCR3 = 0;
+    htim2.Instance->CCR4 = 127 - 32;
+    htim1.Instance->CCR4 = 127;

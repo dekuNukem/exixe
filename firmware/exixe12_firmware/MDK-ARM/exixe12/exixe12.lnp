@@ -1,0 +1,27 @@
+--cpu Cortex-M0
+"exixe12\stm32f0xx_hal_cortex.o"
+"exixe12\stm32f0xx_hal_pwr_ex.o"
+"exixe12\stm32f0xx_hal_pwr.o"
+"exixe12\stm32f0xx_hal_flash_ex.o"
+"exixe12\stm32f0xx_hal_gpio.o"
+"exixe12\stm32f0xx_hal_i2c.o"
+"exixe12\stm32f0xx_hal_rcc_ex.o"
+"exixe12\stm32f0xx_hal_i2c_ex.o"
+"exixe12\stm32f0xx_hal_spi.o"
+"exixe12\stm32f0xx_hal_flash.o"
+"exixe12\stm32f0xx_hal_tim.o"
+"exixe12\stm32f0xx_hal_tim_ex.o"
+"exixe12\stm32f0xx_hal_dma.o"
+"exixe12\stm32f0xx_hal_spi_ex.o"
+"exixe12\stm32f0xx_hal_rcc.o"
+"exixe12\stm32f0xx_hal.o"
+"exixe12\main.o"
+"exixe12\stm32f0xx_hal_msp.o"
+"exixe12\stm32f0xx_it.o"
+"exixe12\helpers.o"
+"exixe12\startup_stm32f042x6.o"
+"exixe12\system_stm32f0xx.o"
+--library_type=microlib --strict --scatter "exixe12\exixe12.sct"
+--diag_suppress=L6329 --summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "exixe12.map" -o exixe12\exixe12.axf
