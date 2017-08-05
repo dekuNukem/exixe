@@ -46,6 +46,17 @@
 
 /* Private define ------------------------------------------------------------*/
 
+#define NIX_4_Pin GPIO_PIN_0
+#define NIX_4_GPIO_Port GPIOF
+#define NIX_2_Pin GPIO_PIN_1
+#define NIX_2_GPIO_Port GPIOF
+#define NIX_0_Pin GPIO_PIN_12
+#define NIX_0_GPIO_Port GPIOA
+#define NIX_7_Pin GPIO_PIN_6
+#define NIX_7_GPIO_Port GPIOB
+#define NIX_DL_Pin GPIO_PIN_7
+#define NIX_DL_GPIO_Port GPIOB
+
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */

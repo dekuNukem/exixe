@@ -125,13 +125,18 @@ int main(void)
   HAL_TIM_Base_Start(&htim17);
   HAL_TIM_Base_Start_IT(&htim17);
   HAL_Delay(10);
+  // work: DL, 7, 2, 0, 4
+  // HAL_GPIO_WritePin(NIX_2_GPIO_Port, NIX_2_Pin, GPIO_PIN_SET);
 
   while (1)
   {
   /* USER CODE END WHILE */
 
   /* USER CODE BEGIN 3 */
-    
+    if(pwm_soft_counter > 90)
+      HAL_GPIO_WritePin(NIX_2_GPIO_Port, NIX_2_Pin, GPIO_PIN_SET);
+    else
+      HAL_GPIO_WritePin(NIX_2_GPIO_Port, NIX_2_Pin, GPIO_PIN_RESET);
   }
   /* USER CODE END 3 */
 
@@ -484,30 +489,30 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOF, GPIO_PIN_0|GPIO_PIN_1, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOF, NIX_4_Pin|NIX_2_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_12, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(NIX_0_GPIO_Port, NIX_0_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_6|GPIO_PIN_7, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOB, NIX_7_Pin|NIX_DL_Pin, GPIO_PIN_RESET);
 
-  /*Configure GPIO pins : PF0 PF1 */
-  GPIO_InitStruct.Pin = GPIO_PIN_0|GPIO_PIN_1;
+  /*Configure GPIO pins : NIX_4_Pin NIX_2_Pin */
+  GPIO_InitStruct.Pin = NIX_4_Pin|NIX_2_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOF, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : PA12 */
-  GPIO_InitStruct.Pin = GPIO_PIN_12;
+  /*Configure GPIO pin : NIX_0_Pin */
+  GPIO_InitStruct.Pin = NIX_0_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+  HAL_GPIO_Init(NIX_0_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : PB6 PB7 */
-  GPIO_InitStruct.Pin = GPIO_PIN_6|GPIO_PIN_7;
+  /*Configure GPIO pins : NIX_7_Pin NIX_DL_Pin */
+  GPIO_InitStruct.Pin = NIX_7_Pin|NIX_DL_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
@@ -518,7 +523,7 @@ static void MX_GPIO_Init(void)
 /* USER CODE BEGIN 4 */
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
-  pwm_soft_counter += 2;
+  pwm_soft_counter = (pwm_soft_counter + 1) & 0x7f;
 }
 /* USER CODE END 4 */
 

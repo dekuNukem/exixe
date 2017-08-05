@@ -13,7 +13,6 @@ clock_test\ds18b20.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
 clock_test\ds18b20.o: ../Drivers/CMSIS/Include/core_cmFunc.h
 clock_test\ds18b20.o: ../Drivers/CMSIS/Device/ST/STM32F0xx/Include/system_stm32f0xx.h
 clock_test\ds18b20.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h
-clock_test\ds18b20.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
 clock_test\ds18b20.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 clock_test\ds18b20.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc_ex.h
 clock_test\ds18b20.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio.h
@@ -46,9 +45,8 @@ clock_test\ds18b20.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 clock_test\ds18b20.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
 clock_test\ds18b20.o: ../Inc/delay_us.h
 clock_test\ds18b20.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
-clock_test\ds18b20.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
-clock_test\ds18b20.o: ../Drivers/CMSIS/Include/core_cmFunc.h
 clock_test\ds18b20.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+clock_test\ds18b20.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 clock_test\ds18b20.o: ../Inc/FreeRTOSConfig.h
 clock_test\ds18b20.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
 clock_test\ds18b20.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h

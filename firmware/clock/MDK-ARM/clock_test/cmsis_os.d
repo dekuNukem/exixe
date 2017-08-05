@@ -1,11 +1,9 @@
 clock_test\cmsis_os.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c
 clock_test\cmsis_os.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
 clock_test\cmsis_os.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
-clock_test\cmsis_os.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
-clock_test\cmsis_os.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
-clock_test\cmsis_os.o: ../Drivers/CMSIS/Include/core_cmFunc.h
-clock_test\cmsis_os.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
 clock_test\cmsis_os.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+clock_test\cmsis_os.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+clock_test\cmsis_os.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 clock_test\cmsis_os.o: ../Inc/FreeRTOSConfig.h
 clock_test\cmsis_os.o: ../Inc/main.h
 clock_test\cmsis_os.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
@@ -19,3 +17,4 @@ clock_test\cmsis_os.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/timers
 clock_test\cmsis_os.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h
 clock_test\cmsis_os.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h
 clock_test\cmsis_os.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
+clock_test\cmsis_os.o: ../Drivers/CMSIS/Include/cmsis_armcc.h

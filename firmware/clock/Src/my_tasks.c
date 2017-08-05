@@ -247,7 +247,10 @@ void gps_temp_parse_task_start(void const * argument)
     if(loop_count == 0)
       ds18b20_start_conversion();
     if(loop_count == 8)
+    {
       raw_temp = ds18b20_get_temp() >> 4;
+      printf("temp: %d\n", raw_temp);
+    }
     loop_count = (loop_count + 1) % 10;
     osDelay(100);
   }

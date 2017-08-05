@@ -4,6 +4,11 @@
   * @version        : v2.0_Cube
   * @brief          : Header for usbd_conf file.
   ******************************************************************************
+  * This notice applies to any and all portions of this file
+  * that are not between comment pairs USER CODE BEGIN and
+  * USER CODE END. Other portions of this file, whether 
+  * inserted by the user or by software development tools
+  * are owned by their respective copyright owners.
   *
   * Copyright (c) 2017 STMicroelectronics International N.V. 
   * All rights reserved.
@@ -80,8 +85,6 @@
 #define USBD_DEBUG_LEVEL     0
 /*---------- -----------*/
 #define USBD_SELF_POWERED     1
-/*---------- -----------*/
-#define USBD_CDC_INTERVAL     1000
 /*---------- -----------*/
 #define MAX_STATIC_ALLOC_SIZE     512
 /****************************************/

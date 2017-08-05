@@ -1,5 +1,5 @@
 /*
-    FreeRTOS V8.2.3 - Copyright (C) 2015 Real Time Engineers Ltd.
+    FreeRTOS V9.0.0 - Copyright (C) 2016 Real Time Engineers Ltd.
     All rights reserved
 
     VISIT http://www.FreeRTOS.org TO ENSURE YOU ARE USING THE LATEST VERSION.
@@ -115,7 +115,7 @@ static UBaseType_t uxCriticalNesting = 0xaaaaaaaa;
 /*
  * Setup the timer to generate the tick interrupts.
  */
-static void prvSetupTimerInterrupt( void );
+void vPortSetupTimerInterrupt( void );
 
 /*
  * Exception handlers.
@@ -218,10 +218,13 @@ __asm void prvPortStartFirstTask( void )
 	msr psp, r0				/* This is now the new top of stack to use in the task. */
 	movs r0, #2				/* Switch to the psp stack. */
 	msr CONTROL, r0
+	isb
 	pop {r0-r5}				/* Pop the registers that are saved automatically. */
 	mov lr, r5				/* lr is now in r5. */
+	pop {r3}				/* The return address is now in r3. */
+	pop {r2}				/* Pop and discard the XPSR. */
 	cpsie i					/* The first task has its context and interrupts can be enabled. */
-	pop {pc}				/* Finally, pop the PC to jump to the user defined task code. */
+	bx r3					/* Finally, jump to the user defined task code. */
 
 	ALIGN
 }
@@ -238,7 +241,7 @@ BaseType_t xPortStartScheduler( void )
 
 	/* Start the timer that generates the tick ISR.  Interrupts are disabled
 	here already. */
-	prvSetupTimerInterrupt();
+	vPortSetupTimerInterrupt();
 
 	/* Initialise the critical nesting count ready for the first task. */
 	uxCriticalNesting = 0;
@@ -523,23 +526,26 @@ uint32_t ulPreviousMask;
 /*-----------------------------------------------------------*/
 
 /*
- * Setup the systick timer to generate the tick interrupts at the required
+ * Setup the SysTick timer to generate the tick interrupts at the required
  * frequency.
  */
-void prvSetupTimerInterrupt( void )
-{
+#if configOVERRIDE_DEFAULT_TICK_CONFIGURATION == 0
+
+	void vPortSetupTimerInterrupt( void )
+	{
 			/* Calculate the constants required to configure the tick interrupt. */
-		#if configUSE_TICKLESS_IDLE == 1
-		{
-			ulTimerCountsForOneTick = ( configSYSTICK_CLOCK_HZ / configTICK_RATE_HZ );
-			xMaximumPossibleSuppressedTicks = portMAX_24_BIT_NUMBER / ulTimerCountsForOneTick;
-			ulStoppedTimerCompensation = portMISSED_COUNTS_FACTOR / ( configCPU_CLOCK_HZ / configSYSTICK_CLOCK_HZ );
-		}
-		#endif /* configUSE_TICKLESS_IDLE */
+			#if configUSE_TICKLESS_IDLE == 1
+			{
+				ulTimerCountsForOneTick = ( configSYSTICK_CLOCK_HZ / configTICK_RATE_HZ );
+				xMaximumPossibleSuppressedTicks = portMAX_24_BIT_NUMBER / ulTimerCountsForOneTick;
+				ulStoppedTimerCompensation = portMISSED_COUNTS_FACTOR / ( configCPU_CLOCK_HZ / configSYSTICK_CLOCK_HZ );
+			}
+			#endif /* configUSE_TICKLESS_IDLE */
 		
-	/* Configure SysTick to interrupt at the requested rate. */
-	portNVIC_SYSTICK_LOAD = ( configCPU_CLOCK_HZ / configTICK_RATE_HZ ) - 1UL;
-	portNVIC_SYSTICK_CTRL = portNVIC_SYSTICK_CLK | portNVIC_SYSTICK_INT | portNVIC_SYSTICK_ENABLE;
-}
+		/* Configure SysTick to interrupt at the requested rate. */
+		portNVIC_SYSTICK_LOAD = ( configCPU_CLOCK_HZ / configTICK_RATE_HZ ) - 1UL;
+		portNVIC_SYSTICK_CTRL = portNVIC_SYSTICK_CLK | portNVIC_SYSTICK_INT | portNVIC_SYSTICK_ENABLE;
+		}
+#endif /* configOVERRIDE_DEFAULT_TICK_CONFIGURATION */
 /*-----------------------------------------------------------*/
 
