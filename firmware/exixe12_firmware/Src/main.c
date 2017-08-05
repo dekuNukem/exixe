@@ -46,6 +46,7 @@
 
 /* Private variables ---------------------------------------------------------*/
 SPI_HandleTypeDef hspi1;
+DMA_HandleTypeDef hdma_spi1_rx;
 
 TIM_HandleTypeDef htim1;
 TIM_HandleTypeDef htim2;
@@ -61,6 +62,7 @@ uint32_t pwm_soft_counter;
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
+static void MX_DMA_Init(void);
 static void MX_SPI1_Init(void);
 static void MX_TIM1_Init(void);
 static void MX_TIM2_Init(void);
@@ -108,6 +110,7 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
+  MX_DMA_Init();
   MX_SPI1_Init();
   MX_TIM1_Init();
   MX_TIM2_Init();
@@ -125,18 +128,37 @@ int main(void)
   HAL_TIM_Base_Start(&htim17);
   HAL_TIM_Base_Start_IT(&htim17);
   HAL_Delay(10);
-  // work: DL, 7, 2, 0, 4
-  // HAL_GPIO_WritePin(NIX_2_GPIO_Port, NIX_2_Pin, GPIO_PIN_SET);
-
   while (1)
   {
+    if(HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_15) == GPIO_PIN_SET)
+      HAL_SPI_Receive_DMA(&hspi1, spi_recv_buf, SPI_BUF_SIZE);
   /* USER CODE END WHILE */
 
   /* USER CODE BEGIN 3 */
-    if(pwm_soft_counter > 90)
+    if(pwm_soft_counter < soft_pwm_stat[10])
+      HAL_GPIO_WritePin(NIX_0_GPIO_Port, NIX_0_Pin, GPIO_PIN_SET);
+    else
+      HAL_GPIO_WritePin(NIX_0_GPIO_Port, NIX_0_Pin, GPIO_PIN_RESET);
+
+    if(pwm_soft_counter < soft_pwm_stat[7])
+      HAL_GPIO_WritePin(NIX_7_GPIO_Port, NIX_7_Pin, GPIO_PIN_SET);
+    else
+      HAL_GPIO_WritePin(NIX_7_GPIO_Port, NIX_7_Pin, GPIO_PIN_RESET);
+
+    if(pwm_soft_counter < soft_pwm_stat[4])
+      HAL_GPIO_WritePin(NIX_4_GPIO_Port, NIX_4_Pin, GPIO_PIN_SET);
+    else
+      HAL_GPIO_WritePin(NIX_4_GPIO_Port, NIX_4_Pin, GPIO_PIN_RESET);
+
+    if(pwm_soft_counter < soft_pwm_stat[2])
       HAL_GPIO_WritePin(NIX_2_GPIO_Port, NIX_2_Pin, GPIO_PIN_SET);
     else
       HAL_GPIO_WritePin(NIX_2_GPIO_Port, NIX_2_Pin, GPIO_PIN_RESET);
+
+    if(pwm_soft_counter < soft_pwm_stat[11])
+      HAL_GPIO_WritePin(NIX_DL_GPIO_Port, NIX_DL_Pin, GPIO_PIN_SET);
+    else
+      HAL_GPIO_WritePin(NIX_DL_GPIO_Port, NIX_DL_Pin, GPIO_PIN_RESET);
   }
   /* USER CODE END 3 */
 
@@ -458,9 +480,9 @@ static void MX_TIM17_Init(void)
 {
 
   htim17.Instance = TIM17;
-  htim17.Init.Prescaler = 48;
+  htim17.Init.Prescaler = 47;
   htim17.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim17.Init.Period = 80;
+  htim17.Init.Period = 10;
   htim17.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim17.Init.RepetitionCounter = 0;
   htim17.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
@@ -468,6 +490,21 @@ static void MX_TIM17_Init(void)
   {
     _Error_Handler(__FILE__, __LINE__);
   }
+
+}
+
+/** 
+  * Enable DMA controller clock
+  */
+static void MX_DMA_Init(void) 
+{
+  /* DMA controller clock enable */
+  __HAL_RCC_DMA1_CLK_ENABLE();
+
+  /* DMA interrupt init */
+  /* DMA1_Channel2_3_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(DMA1_Channel2_3_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(DMA1_Channel2_3_IRQn);
 
 }
 
@@ -521,6 +558,14 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
+void HAL_SPI_RxCpltCallback(SPI_HandleTypeDef *hspi)
+{
+  if((spi_recv_buf[0] & 0xfe) != SPI_CMD_UPDATE)
+    HAL_NVIC_SystemReset();
+  set_pwm(spi_recv_buf);
+  HAL_SPI_Receive_DMA(&hspi1, spi_recv_buf, SPI_BUF_SIZE);
+}
+
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
   pwm_soft_counter = (pwm_soft_counter + 1) & 0x7f;

@@ -40,6 +40,7 @@
 /* USER CODE END 0 */
 
 /* External variables --------------------------------------------------------*/
+extern DMA_HandleTypeDef hdma_spi1_rx;
 extern TIM_HandleTypeDef htim17;
 
 /******************************************************************************/
@@ -122,6 +123,20 @@ void SysTick_Handler(void)
 /* For the available peripheral interrupt handler names,                      */
 /* please refer to the startup file (startup_stm32f0xx.s).                    */
 /******************************************************************************/
+
+/**
+* @brief This function handles DMA1 channel 2 and 3 interrupts.
+*/
+void DMA1_Channel2_3_IRQHandler(void)
+{
+  /* USER CODE BEGIN DMA1_Channel2_3_IRQn 0 */
+
+  /* USER CODE END DMA1_Channel2_3_IRQn 0 */
+  HAL_DMA_IRQHandler(&hdma_spi1_rx);
+  /* USER CODE BEGIN DMA1_Channel2_3_IRQn 1 */
+
+  /* USER CODE END DMA1_Channel2_3_IRQn 1 */
+}
 
 /**
 * @brief This function handles TIM17 global interrupt.

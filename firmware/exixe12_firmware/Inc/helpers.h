@@ -11,7 +11,7 @@
 #define SPI_CMD_UPDATE 0xaa
 
 extern uint8_t spi_recv_buf[SPI_BUF_SIZE];
-extern uint8_t pwm_stats[SPI_BUF_SIZE];
+extern uint8_t soft_pwm_stat[SPI_BUF_SIZE];
 
 void set_pwm(uint8_t pwm_arr[SPI_BUF_SIZE]);
 void timer_init(void);

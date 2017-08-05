@@ -5,96 +5,58 @@
 #include "shared.h"
 
 uint8_t spi_recv_buf[SPI_BUF_SIZE];
-uint8_t pwm_stats[SPI_BUF_SIZE];
+uint8_t soft_pwm_stat[SPI_BUF_SIZE];
 
 void set_pwm(uint8_t pwm_arr[SPI_BUF_SIZE])
 {
-  pwm_stats[0] = SPI_CMD_UPDATE;
   // if the most significant bit is 1, change the pwm duty cycle
-  // 127 fully off, 0 fully on
   if(pwm_arr[13] & 0x80)
-  {
     htim2.Instance->CCR3 = 127 - (pwm_arr[13] & 0x7f); // R
-    pwm_stats[13] = pwm_arr[13];
-  }
+
   if(pwm_arr[14] & 0x80)
-  {
     htim2.Instance->CCR4 = 127 - (pwm_arr[14] & 0x7f); // G
-    pwm_stats[14] = pwm_arr[14];
-  }
+
   if(pwm_arr[15] & 0x80)
-  {
     htim1.Instance->CCR4 = 127 - (pwm_arr[15] & 0x7f); // B
-    pwm_stats[15] = pwm_arr[15];
-  }
+
   if(pwm_arr[1] & 0x80)
-  {
     htim16.Instance->CCR1 = pwm_arr[1] & 0x7f; // 1
-    pwm_stats[1] = pwm_arr[1];
-  }
+
   if(pwm_arr[3] & 0x80)
-  {
     htim2.Instance->CCR1 = pwm_arr[3] & 0x7f; // 3
-    pwm_stats[3] = pwm_arr[3];
-  }
+
   if(pwm_arr[5] & 0x80)
-  {
     htim2.Instance->CCR2 = pwm_arr[5] & 0x7f; // 5
-    pwm_stats[5] = pwm_arr[5];
-  }
+
   if(pwm_arr[6] & 0x80)
-  {
     htim1.Instance->CCR1 = pwm_arr[6] & 0x7f; // 6
-    pwm_stats[6] = pwm_arr[6];
-  }
+
   if(pwm_arr[8] & 0x80)
-  {
     htim3.Instance->CCR2 = pwm_arr[8] & 0x7f; // 8
-    pwm_stats[8] = pwm_arr[8];
-  }
+
   if(pwm_arr[9] & 0x80)
-  {
     htim3.Instance->CCR1 = pwm_arr[9] & 0x7f; // 9
-    pwm_stats[9] = pwm_arr[9];
-  }
 
-  // if(pwm_arr[10] & 0x80)
-  // {
-  //   htim2.Instance->CCR2 = pwm_arr[10] & 0x7f; // 0
-  //   pwm_stats[10] = pwm_arr[10];
-  // }
+  if(pwm_arr[10] & 0x80)
+    soft_pwm_stat[10] = pwm_arr[10] & 0x7f; // 0
 
-  // if(pwm_arr[7] & 0x80)
-  // {
-  //   htim3.Instance->CCR2 = pwm_arr[7] & 0x7f; // 7
-  //   pwm_stats[7] = pwm_arr[7];
-  // }
+  if(pwm_arr[7] & 0x80)
+    soft_pwm_stat[7] = pwm_arr[7] & 0x7f; // 7
   
+  if(pwm_arr[4] & 0x80)
+    soft_pwm_stat[4] = pwm_arr[4] & 0x7f; // 4
   
-  // if(pwm_arr[4] & 0x80)
-  // {
-  //   htim3.Instance->CCR1 = pwm_arr[4] & 0x7f; // 4
-  //   pwm_stats[4] = pwm_arr[4];
-  // }
-  
-  // if(pwm_arr[2] & 0x80)
-  // {
-  //   htim1.Instance->CCR2 = pwm_arr[2] & 0x7f; // 2
-  //   pwm_stats[2] = pwm_arr[2];
-  // }
-  // if(pwm_arr[11] & 0x80)
-  // {
-  //   htim16.Instance->CCR1 = pwm_arr[11] & 0x7f; // left dot
-  //   pwm_stats[11] = pwm_arr[11];
-  // }
+  if(pwm_arr[2] & 0x80)
+    soft_pwm_stat[2] = pwm_arr[2] & 0x7f; // 2
+
+  if(pwm_arr[11] & 0x80)
+    soft_pwm_stat[11] = pwm_arr[11] & 0x7f; // left dot
 }
 
 void timer_init(void)
 {
-  memset(pwm_stats, 0x80, SPI_BUF_SIZE);
-  // pwm_stats[3] = 0xBf;
-  // work: 1 5 6 8 9 3
-  set_pwm(pwm_stats);
+  memset(soft_pwm_stat, 0x80, SPI_BUF_SIZE);
+  set_pwm(soft_pwm_stat);
 
   HAL_TIM_Base_Start(&htim1);
   HAL_TIM_PWM_Init(&htim1);
