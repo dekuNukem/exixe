@@ -145,7 +145,7 @@ void animation_task_start(void const * argument)
         spi_buf[j] = (((uint8_t)(rgb_animation[curr_tube].pwm_status[j - SPI_CMD_DOT_END] / brightness_modifier)) >> 1) | 0x80;
       spi_send(spi_buf, SPI_CMD_SIZE, curr_tube);
     }
-    brightness_modifier = get_modifier();
+    brightness_modifier = 1;//get_modifier();
     osDelay(17);
   }
 }

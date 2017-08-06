@@ -1,0 +1,81 @@
+Configuration	exixe12
+STM32CubeMX 	4.22.0
+Date	08/06/2017
+MCU	STM32F042K6Tx
+
+
+
+PERIPHERALS	MODES	FUNCTIONS	PINS
+SPI1	Full-Duplex Slave	SPI1_MISO	PA6
+SPI1	Full-Duplex Slave	SPI1_MOSI	PA7
+SPI1	Full-Duplex Slave	SPI1_SCK	PA5
+SPI1	Hardware NSS Input Signal	SPI1_NSS	PA15
+SYS	Serial_Wire	SYS_SWCLK	PA14
+SYS	Serial_Wire	SYS_SWDIO	PA13
+SYS	SysTick	SYS_VS_Systick	VP_SYS_VS_Systick
+TIM1	Internal Clock	TIM1_VS_ClockSourceINT	VP_TIM1_VS_ClockSourceINT
+TIM1	PWM Generation CH1	TIM1_CH1	PA8
+TIM1	PWM Generation CH4	TIM1_CH4	PA11
+TIM2	Internal Clock	TIM2_VS_ClockSourceINT	VP_TIM2_VS_ClockSourceINT
+TIM2	PWM Generation CH1	TIM2_CH1	PA0
+TIM2	PWM Generation CH2	TIM2_CH2	PA1
+TIM2	PWM Generation CH3	TIM2_CH3	PA2
+TIM2	PWM Generation CH4	TIM2_CH4	PA3
+TIM3	Internal Clock	TIM3_VS_ClockSourceINT	VP_TIM3_VS_ClockSourceINT
+TIM3	PWM Generation CH1	TIM3_CH1	PB4
+TIM3	PWM Generation CH2	TIM3_CH2	PB5
+TIM16	Enable_Timer	TIM16_VS_ClockSourceINT	VP_TIM16_VS_ClockSourceINT
+TIM16	PWM Generation CH1	TIM16_CH1	PB8
+TIM17	Enable_Timer	TIM17_VS_ClockSourceINT	VP_TIM17_VS_ClockSourceINT
+
+
+
+Pin Nb	PINs	FUNCTIONs	LABELs
+2	PF0-OSC_IN	GPIO_Output	NIX_4
+3	PF1-OSC_OUT	GPIO_Output	NIX_2
+6	PA0	TIM2_CH1	
+7	PA1	TIM2_CH2	
+8	PA2	TIM2_CH3	
+9	PA3	TIM2_CH4	
+11	PA5	SPI1_SCK	
+12	PA6	SPI1_MISO	
+13	PA7	SPI1_MOSI	
+18	PA8	TIM1_CH1	
+21	PA11	TIM1_CH4	
+22	PA12	GPIO_Output	NIX_0
+23	PA13	SYS_SWDIO	
+24	PA14	SYS_SWCLK	
+25	PA15	SPI1_NSS	
+27	PB4	TIM3_CH1	
+28	PB5	TIM3_CH2	
+29	PB6	GPIO_Output	NIX_7
+30	PB7	GPIO_Output	NIX_DL
+31	PB8	TIM16_CH1	
+
+
+
+SOFTWARE PROJECT
+
+Project Settings : 
+Project Name : exixe12
+Project Folder : C:\Users\Allen\Desktop\repos\exixe\firmware\exixe12_firmware
+Toolchain / IDE : MDK-ARM V5
+Firmware Package Name and Version : STM32Cube FW_F0 V1.8.0
+
+
+Code Generation Settings : 
+STM32Cube Firmware Library Package : Copy only the necessary library files
+Generate peripheral initialization as a pair of '.c/.h' files per peripheral : No
+Backup previously generated files when re-generating : No
+Delete previously generated files when not re-generated : Yes
+Set all free pins as analog (to optimize the power consumption) : No
+
+
+Toolchains Settings : 
+Compiler Optimizations : Balanced Size/Speed
+
+
+
+
+
+
