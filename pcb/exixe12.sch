@@ -2723,38 +2723,38 @@ by exp-lbrs.ulp</description>
 <part name="Q1" library="nixx" deviceset="BF820" device=""/>
 <part name="P+2" library="nixx" deviceset="+180V" device=""/>
 <part name="P+1" library="nixx" deviceset="+180V" device=""/>
-<part name="R1" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="4K7"/>
+<part name="R1" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="10K"/>
 <part name="C1" library="joyAnalog" deviceset="CAP" device="0805" value="1uF"/>
 <part name="GND1" library="joyAnalog" deviceset="GND" device=""/>
 <part name="Q2" library="nixx" deviceset="BF820" device=""/>
-<part name="R2" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="4K7"/>
+<part name="R2" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="10K"/>
 <part name="GND2" library="joyAnalog" deviceset="GND" device=""/>
 <part name="Q3" library="nixx" deviceset="BF820" device=""/>
-<part name="R3" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="4K7"/>
+<part name="R3" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="10K"/>
 <part name="GND3" library="joyAnalog" deviceset="GND" device=""/>
 <part name="Q4" library="nixx" deviceset="BF820" device=""/>
-<part name="R4" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="4K7"/>
+<part name="R4" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="10K"/>
 <part name="GND4" library="joyAnalog" deviceset="GND" device=""/>
 <part name="Q5" library="nixx" deviceset="BF820" device=""/>
-<part name="R5" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="4K7"/>
+<part name="R5" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="10K"/>
 <part name="GND5" library="joyAnalog" deviceset="GND" device=""/>
 <part name="Q6" library="nixx" deviceset="BF820" device=""/>
-<part name="R6" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="4K7"/>
+<part name="R6" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="10K"/>
 <part name="GND6" library="joyAnalog" deviceset="GND" device=""/>
 <part name="Q7" library="nixx" deviceset="BF820" device=""/>
-<part name="R7" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="4K7"/>
+<part name="R7" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="10K"/>
 <part name="GND7" library="joyAnalog" deviceset="GND" device=""/>
 <part name="Q8" library="nixx" deviceset="BF820" device=""/>
-<part name="R8" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="4K7"/>
+<part name="R8" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="10K"/>
 <part name="GND8" library="joyAnalog" deviceset="GND" device=""/>
 <part name="Q9" library="nixx" deviceset="BF820" device=""/>
-<part name="R9" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="4K7"/>
+<part name="R9" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="10K"/>
 <part name="GND9" library="joyAnalog" deviceset="GND" device=""/>
 <part name="Q10" library="nixx" deviceset="BF820" device=""/>
-<part name="R10" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="4K7"/>
+<part name="R10" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="10K"/>
 <part name="GND10" library="joyAnalog" deviceset="GND" device=""/>
 <part name="Q11" library="nixx" deviceset="BF820" device=""/>
-<part name="R11" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="4K7"/>
+<part name="R11" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="10K"/>
 <part name="GND11" library="joyAnalog" deviceset="GND" device=""/>
 <part name="GND13" library="joyAnalog" deviceset="GND" device=""/>
 <part name="+3V1" library="joyAnalog" deviceset="+3V3" device=""/>
@@ -2768,22 +2768,20 @@ by exp-lbrs.ulp</description>
 <part name="R13" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="68K"/>
 <part name="+3V4" library="joyAnalog" deviceset="+3V3" device=""/>
 <part name="R14" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="470"/>
-<part name="R15" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="470"/>
-<part name="R16" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="0"/>
-<part name="R18" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="4K7"/>
+<part name="R15" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="1K"/>
+<part name="R16" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="470"/>
+<part name="R18" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="10K"/>
 <part name="+3V6" library="joyAnalog" deviceset="+3V3" device=""/>
 <part name="N1" library="exixe12" deviceset="IN-12B" device=""/>
 <part name="R19" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="68K"/>
 <part name="JP3" library="SparkFun-Jumpers" deviceset="JUMPER-SMT_2_NO" device="_NO-SILK"/>
 <part name="TP1" library="nixx" deviceset="PTR1" device="TP13R"/>
-<part name="TP2" library="nixx" deviceset="PTR1" device="TP13R"/>
-<part name="TP3" library="nixx" deviceset="PTR1" device="TP13R"/>
-<part name="TP4" library="nixx" deviceset="PTR1" device="TP13R"/>
-<part name="TP5" library="nixx" deviceset="PTR1" device="TP13R"/>
-<part name="TP6" library="nixx" deviceset="PTR1" device="TP13R"/>
-<part name="R12" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="47K"/>
+<part name="R12" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="510K"/>
 <part name="R17" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="47K"/>
 <part name="GND12" library="joyAnalog" deviceset="GND" device=""/>
+<part name="TP2" library="nixx" deviceset="PTR1" device="TP13R"/>
+<part name="TP3" library="nixx" deviceset="PTR1" device="TP13R"/>
+<part name="TP5" library="nixx" deviceset="PTR1" device="TP13R"/>
 </parts>
 <sheets>
 <sheet>
@@ -2848,14 +2846,12 @@ by exp-lbrs.ulp</description>
 <instance part="R19" gate="G$1" x="401.32" y="-38.1"/>
 <instance part="JP3" gate="G$1" x="414.02" y="-38.1"/>
 <instance part="TP1" gate="G$1" x="459.74" y="76.2" rot="R90"/>
-<instance part="TP2" gate="G$1" x="447.04" y="73.66" rot="R90"/>
-<instance part="TP3" gate="G$1" x="436.88" y="55.88" rot="R90"/>
-<instance part="TP4" gate="G$1" x="449.58" y="53.34" rot="R90"/>
-<instance part="TP5" gate="G$1" x="462.28" y="50.8" rot="R90"/>
-<instance part="TP6" gate="G$1" x="449.58" y="91.44" rot="R90"/>
 <instance part="R12" gate="G$1" x="238.76" y="53.34"/>
 <instance part="R17" gate="G$1" x="439.42" y="33.02" rot="R90"/>
 <instance part="GND12" gate="1" x="439.42" y="25.4"/>
+<instance part="TP2" gate="G$1" x="452.12" y="43.18" rot="R90"/>
+<instance part="TP3" gate="G$1" x="368.3" y="55.88" rot="R270"/>
+<instance part="TP5" gate="G$1" x="368.3" y="53.34" rot="R270"/>
 </instances>
 <busses>
 </busses>
@@ -3300,9 +3296,9 @@ by exp-lbrs.ulp</description>
 <label x="144.78" y="22.86" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U$2" gate="G$1" pin="PB6"/>
-<wire x1="444.5" y1="43.18" x2="424.18" y2="43.18" width="0.1524" layer="91"/>
-<label x="429.26" y="43.18" size="1.778" layer="95"/>
+<label x="429.26" y="45.72" size="1.778" layer="95"/>
+<pinref part="U$2" gate="G$1" pin="PB5"/>
+<wire x1="444.5" y1="45.72" x2="424.18" y2="45.72" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="STM_8" class="0">
@@ -3312,9 +3308,9 @@ by exp-lbrs.ulp</description>
 <label x="144.78" y="-2.54" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U$2" gate="G$1" pin="PB5"/>
-<wire x1="444.5" y1="45.72" x2="424.18" y2="45.72" width="0.1524" layer="91"/>
-<label x="429.26" y="45.72" size="1.778" layer="95"/>
+<label x="429.26" y="48.26" size="1.778" layer="95"/>
+<pinref part="U$2" gate="G$1" pin="PB4"/>
+<wire x1="444.5" y1="48.26" x2="424.18" y2="48.26" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="STM_9" class="0">
@@ -3324,9 +3320,9 @@ by exp-lbrs.ulp</description>
 <label x="144.78" y="-27.94" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U$2" gate="G$1" pin="PB4"/>
-<wire x1="444.5" y1="48.26" x2="424.18" y2="48.26" width="0.1524" layer="91"/>
-<label x="429.26" y="48.26" size="1.778" layer="95"/>
+<label x="429.26" y="50.8" size="1.778" layer="95"/>
+<pinref part="U$2" gate="G$1" pin="PB3"/>
+<wire x1="444.5" y1="50.8" x2="424.18" y2="50.8" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="STM_10" class="0">
@@ -3336,9 +3332,9 @@ by exp-lbrs.ulp</description>
 <label x="144.78" y="-55.88" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U$2" gate="G$1" pin="PA12"/>
-<wire x1="439.42" y1="68.58" x2="424.18" y2="68.58" width="0.1524" layer="91"/>
-<label x="426.72" y="68.58" size="1.778" layer="95"/>
+<label x="426.72" y="71.12" size="1.778" layer="95"/>
+<pinref part="U$2" gate="G$1" pin="PA11"/>
+<wire x1="439.42" y1="71.12" x2="424.18" y2="71.12" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="STM_5" class="0">
@@ -3349,8 +3345,11 @@ by exp-lbrs.ulp</description>
 </segment>
 <segment>
 <pinref part="U$2" gate="G$1" pin="PA1"/>
-<wire x1="439.42" y1="99.06" x2="424.18" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="452.12" y1="99.06" x2="424.18" y2="99.06" width="0.1524" layer="91"/>
 <label x="426.72" y="99.06" size="1.778" layer="95"/>
+<pinref part="U$2" gate="G$1" pin="PA4"/>
+<wire x1="452.12" y1="99.06" x2="452.12" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="452.12" y1="91.44" x2="424.18" y2="91.44" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="STM_4" class="0">
@@ -3360,9 +3359,9 @@ by exp-lbrs.ulp</description>
 <label x="78.74" y="-27.94" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U$2" gate="G$1" pin="PF0/OSC_IN"/>
-<wire x1="368.3" y1="55.88" x2="383.54" y2="55.88" width="0.1524" layer="91"/>
-<label x="370.84" y="55.88" size="1.778" layer="95"/>
+<label x="429.26" y="53.34" size="1.778" layer="95"/>
+<pinref part="U$2" gate="G$1" pin="PB1"/>
+<wire x1="444.5" y1="53.34" x2="424.18" y2="53.34" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="STM_3" class="0">
@@ -3384,9 +3383,9 @@ by exp-lbrs.ulp</description>
 <label x="78.74" y="22.86" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U$2" gate="G$1" pin="PF1/OSC_OUT"/>
-<wire x1="368.3" y1="53.34" x2="383.54" y2="53.34" width="0.1524" layer="91"/>
-<label x="370.84" y="53.34" size="1.778" layer="95"/>
+<label x="429.26" y="55.88" size="1.778" layer="95"/>
+<pinref part="U$2" gate="G$1" pin="PB0"/>
+<wire x1="444.5" y1="55.88" x2="424.18" y2="55.88" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="STM_1" class="0">
@@ -3418,9 +3417,9 @@ by exp-lbrs.ulp</description>
 <label x="502.92" y="-7.62" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U$2" gate="G$1" pin="PA11"/>
-<wire x1="439.42" y1="71.12" x2="424.18" y2="71.12" width="0.1524" layer="91"/>
-<label x="426.72" y="71.12" size="1.778" layer="95"/>
+<label x="426.72" y="73.66" size="1.778" layer="95"/>
+<pinref part="U$2" gate="G$1" pin="PA10"/>
+<wire x1="439.42" y1="73.66" x2="424.18" y2="73.66" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="PWM_GREEN" class="0">
@@ -3487,46 +3486,32 @@ by exp-lbrs.ulp</description>
 <label x="447.04" y="76.2" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$16" class="0">
-<segment>
-<pinref part="U$2" gate="G$1" pin="PA10"/>
-<pinref part="TP2" gate="G$1" pin="TP"/>
-<wire x1="444.5" y1="73.66" x2="424.18" y2="73.66" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$14" class="0">
-<segment>
-<pinref part="U$2" gate="G$1" pin="PA4"/>
-<pinref part="TP6" gate="G$1" pin="TP"/>
-<wire x1="424.18" y1="91.44" x2="447.04" y2="91.44" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$17" class="0">
-<segment>
-<pinref part="U$2" gate="G$1" pin="PB0"/>
-<pinref part="TP3" gate="G$1" pin="TP"/>
-<wire x1="424.18" y1="55.88" x2="434.34" y2="55.88" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$18" class="0">
-<segment>
-<pinref part="U$2" gate="G$1" pin="PB1"/>
-<pinref part="TP4" gate="G$1" pin="TP"/>
-<wire x1="424.18" y1="53.34" x2="447.04" y2="53.34" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$20" class="0">
-<segment>
-<pinref part="U$2" gate="G$1" pin="PB3"/>
-<pinref part="TP5" gate="G$1" pin="TP"/>
-<wire x1="424.18" y1="50.8" x2="459.74" y2="50.8" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="N$22" class="0">
 <segment>
 <pinref part="Q11" gate="A" pin="C"/>
 <pinref part="R12" gate="G$1" pin="1"/>
 <wire x1="228.6" y1="53.34" x2="233.68" y2="53.34" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$14" class="0">
+<segment>
+<pinref part="U$2" gate="G$1" pin="PB6"/>
+<wire x1="424.18" y1="43.18" x2="449.58" y2="43.18" width="0.1524" layer="91"/>
+<pinref part="TP2" gate="G$1" pin="TP"/>
+</segment>
+</net>
+<net name="N$16" class="0">
+<segment>
+<pinref part="U$2" gate="G$1" pin="PF0/OSC_IN"/>
+<wire x1="370.84" y1="55.88" x2="383.54" y2="55.88" width="0.1524" layer="91"/>
+<pinref part="TP3" gate="G$1" pin="TP"/>
+</segment>
+</net>
+<net name="N$17" class="0">
+<segment>
+<pinref part="TP5" gate="G$1" pin="TP"/>
+<pinref part="U$2" gate="G$1" pin="PF1/OSC_OUT"/>
+<wire x1="370.84" y1="53.34" x2="383.54" y2="53.34" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

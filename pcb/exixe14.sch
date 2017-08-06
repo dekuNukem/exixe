@@ -2659,41 +2659,41 @@ http://www.zetex.com&lt;p&gt;
 <part name="Q1" library="nixx" deviceset="BF820" device=""/>
 <part name="P+2" library="nixx" deviceset="+180V" device=""/>
 <part name="P+1" library="nixx" deviceset="+180V" device=""/>
-<part name="R1" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="4K7"/>
+<part name="R1" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="10K"/>
 <part name="C1" library="joyAnalog" deviceset="CAP" device="0805" value="1uF"/>
 <part name="GND1" library="joyAnalog" deviceset="GND" device=""/>
 <part name="Q2" library="nixx" deviceset="BF820" device=""/>
-<part name="R2" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="4K7"/>
+<part name="R2" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="10K"/>
 <part name="GND2" library="joyAnalog" deviceset="GND" device=""/>
 <part name="Q3" library="nixx" deviceset="BF820" device=""/>
-<part name="R3" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="4K7"/>
+<part name="R3" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="10K"/>
 <part name="GND3" library="joyAnalog" deviceset="GND" device=""/>
 <part name="Q4" library="nixx" deviceset="BF820" device=""/>
-<part name="R4" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="4K7"/>
+<part name="R4" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="10K"/>
 <part name="GND4" library="joyAnalog" deviceset="GND" device=""/>
 <part name="Q5" library="nixx" deviceset="BF820" device=""/>
-<part name="R5" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="4K7"/>
+<part name="R5" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="10K"/>
 <part name="GND5" library="joyAnalog" deviceset="GND" device=""/>
 <part name="Q6" library="nixx" deviceset="BF820" device=""/>
 <part name="R6" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="4K7"/>
 <part name="GND6" library="joyAnalog" deviceset="GND" device=""/>
 <part name="Q7" library="nixx" deviceset="BF820" device=""/>
-<part name="R7" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="4K7"/>
+<part name="R7" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="10K"/>
 <part name="GND7" library="joyAnalog" deviceset="GND" device=""/>
 <part name="Q8" library="nixx" deviceset="BF820" device=""/>
-<part name="R8" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="4K7"/>
+<part name="R8" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="10K"/>
 <part name="GND8" library="joyAnalog" deviceset="GND" device=""/>
 <part name="Q9" library="nixx" deviceset="BF820" device=""/>
-<part name="R9" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="4K7"/>
+<part name="R9" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="10K"/>
 <part name="GND9" library="joyAnalog" deviceset="GND" device=""/>
 <part name="Q10" library="nixx" deviceset="BF820" device=""/>
-<part name="R10" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="4K7"/>
+<part name="R10" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="10K"/>
 <part name="GND10" library="joyAnalog" deviceset="GND" device=""/>
 <part name="Q11" library="nixx" deviceset="BF820" device=""/>
-<part name="R11" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="4K7"/>
+<part name="R11" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="10K"/>
 <part name="GND11" library="joyAnalog" deviceset="GND" device=""/>
 <part name="Q12" library="nixx" deviceset="BF820" device=""/>
-<part name="R12" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="4K7"/>
+<part name="R12" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="10K"/>
 <part name="GND12" library="joyAnalog" deviceset="GND" device=""/>
 <part name="GND13" library="joyAnalog" deviceset="GND" device=""/>
 <part name="+3V1" library="joyAnalog" deviceset="+3V3" device=""/>
@@ -2710,8 +2710,8 @@ http://www.zetex.com&lt;p&gt;
 <part name="R14" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="470"/>
 <part name="R15" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="1K"/>
 <part name="R16" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="470"/>
-<part name="R17" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="4K7"/>
-<part name="R18" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="4K7"/>
+<part name="R17" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="10K"/>
+<part name="R18" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="10K"/>
 <part name="+3V5" library="joyAnalog" deviceset="+3V3" device=""/>
 <part name="+3V6" library="joyAnalog" deviceset="+3V3" device=""/>
 <part name="TP1" library="testpad" deviceset="PTR1" device="TP13R" value="PTR1TP13R"/>
@@ -2719,16 +2719,16 @@ http://www.zetex.com&lt;p&gt;
 <part name="R23" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="100K"/>
 <part name="T1" library="zetex" deviceset="PNPSOT323" device=""/>
 <part name="Q13" library="nixx" deviceset="BF820" device=""/>
-<part name="R24" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="4K7"/>
+<part name="R24" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="10K"/>
 <part name="GND18" library="joyAnalog" deviceset="GND" device=""/>
 <part name="R19" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="1M"/>
 <part name="TP2" library="testpad" deviceset="PTR1" device="TP13R" value="PTR1TP13R"/>
 <part name="TP3" library="testpad" deviceset="PTR1" device="TP13R" value="PTR1TP13R"/>
-<part name="TP4" library="testpad" deviceset="PTR1" device="TP13R" value="PTR1TP13R"/>
-<part name="R20" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="4K7"/>
-<part name="R21" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="4K7"/>
+<part name="R20" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="510K"/>
+<part name="R21" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="510K"/>
 <part name="R25" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="68K"/>
 <part name="GND16" library="joyAnalog" deviceset="GND" device=""/>
+<part name="TP4" library="testpad" deviceset="PTR1" device="TP13R" value="PTR1TP13R"/>
 </parts>
 <sheets>
 <sheet>
@@ -2806,11 +2806,11 @@ http://www.zetex.com&lt;p&gt;
 <instance part="R19" gate="G$1" x="378.46" y="-58.42" rot="R270"/>
 <instance part="TP2" gate="G$1" x="381" y="53.34" rot="R270"/>
 <instance part="TP3" gate="G$1" x="441.96" y="43.18" rot="R90"/>
-<instance part="TP4" gate="G$1" x="441.96" y="40.64" rot="R90"/>
 <instance part="R20" gate="G$1" x="238.76" y="53.34"/>
 <instance part="R21" gate="G$1" x="238.76" y="27.94"/>
 <instance part="R25" gate="G$1" x="429.26" y="33.02" rot="R90"/>
 <instance part="GND16" gate="1" x="429.26" y="25.4"/>
+<instance part="TP4" gate="G$1" x="452.12" y="50.8" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -3267,14 +3267,6 @@ http://www.zetex.com&lt;p&gt;
 <junction x="330.2" y="-33.02"/>
 </segment>
 </net>
-<net name="UART_RX" class="0">
-<segment>
-<pinref part="U$2" gate="G$1" pin="PB7"/>
-<wire x1="439.42" y1="40.64" x2="424.18" y2="40.64" width="0.1524" layer="91"/>
-<label x="426.72" y="40.64" size="1.778" layer="95"/>
-<pinref part="TP4" gate="G$1" pin="TP"/>
-</segment>
-</net>
 <net name="UART_TX" class="0">
 <segment>
 <pinref part="U$2" gate="G$1" pin="PB6"/>
@@ -3290,9 +3282,9 @@ http://www.zetex.com&lt;p&gt;
 <label x="193.04" y="48.26" size="1.778" layer="95"/>
 </segment>
 <segment>
-<label x="426.72" y="50.8" size="1.778" layer="95"/>
-<pinref part="U$2" gate="G$1" pin="PB3"/>
-<wire x1="439.42" y1="50.8" x2="424.18" y2="50.8" width="0.1524" layer="91"/>
+<label x="426.72" y="48.26" size="1.778" layer="95"/>
+<pinref part="U$2" gate="G$1" pin="PB4"/>
+<wire x1="439.42" y1="48.26" x2="424.18" y2="48.26" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="STM_DOT_RIGHT" class="0">
@@ -3329,9 +3321,9 @@ http://www.zetex.com&lt;p&gt;
 <label x="144.78" y="22.86" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U$2" gate="G$1" pin="PB4"/>
-<wire x1="439.42" y1="48.26" x2="424.18" y2="48.26" width="0.1524" layer="91"/>
-<label x="426.72" y="48.26" size="1.778" layer="95"/>
+<label x="426.72" y="45.72" size="1.778" layer="95"/>
+<pinref part="U$2" gate="G$1" pin="PB5"/>
+<wire x1="439.42" y1="45.72" x2="424.18" y2="45.72" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="STM_8" class="0">
@@ -3389,9 +3381,9 @@ http://www.zetex.com&lt;p&gt;
 <label x="78.74" y="-27.94" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U$2" gate="G$1" pin="PB5"/>
-<wire x1="439.42" y1="45.72" x2="424.18" y2="45.72" width="0.1524" layer="91"/>
-<label x="426.72" y="45.72" size="1.778" layer="95"/>
+<label x="426.72" y="40.64" size="1.778" layer="95"/>
+<pinref part="U$2" gate="G$1" pin="PB7"/>
+<wire x1="439.42" y1="40.64" x2="424.18" y2="40.64" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="STM_3" class="0">
@@ -3566,6 +3558,13 @@ http://www.zetex.com&lt;p&gt;
 <pinref part="Q11" gate="A" pin="C"/>
 <pinref part="R20" gate="G$1" pin="1"/>
 <wire x1="228.6" y1="53.34" x2="233.68" y2="53.34" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$25" class="0">
+<segment>
+<pinref part="U$2" gate="G$1" pin="PB3"/>
+<pinref part="TP4" gate="G$1" pin="TP"/>
+<wire x1="424.18" y1="50.8" x2="449.58" y2="50.8" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
