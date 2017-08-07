@@ -791,7 +791,7 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <attribute name="NAME" x="13.7541" y="21.717" size="0.8128" layer="25" font="vector" rot="R90"/>
 </element>
 <element name="C2" library="joyAnalog" package="0805" value="100nF" x="5.5118" y="14.7574" smashed="yes" rot="R90">
-<attribute name="NAME" x="4.5847" y="13.8684" size="0.8128" layer="25" font="vector" rot="R90"/>
+<attribute name="NAME" x="4.6863" y="14.224" size="0.8128" layer="25" font="vector" rot="R90"/>
 </element>
 <element name="JP1" library="nixx" package="1X07" value="" x="10" y="38.2" smashed="yes">
 <attribute name="VALUE" x="1.11" y="35.025" size="1.27" layer="27"/>
