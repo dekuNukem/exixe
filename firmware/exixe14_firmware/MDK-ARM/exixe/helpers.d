@@ -17,7 +17,6 @@ exixe\helpers.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
 exixe\helpers.o: ../Drivers/CMSIS/Include/core_cmFunc.h
 exixe\helpers.o: ../Drivers/CMSIS/Device/ST/STM32F0xx/Include/system_stm32f0xx.h
 exixe\helpers.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h
-exixe\helpers.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
 exixe\helpers.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc_ex.h
 exixe\helpers.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio.h
 exixe\helpers.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio_ex.h

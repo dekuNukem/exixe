@@ -1,7 +1,7 @@
 [PreviousGenFiles]
-HeaderPath=C:/Users/Allen/Desktop/old/clock/Inc
+HeaderPath=C:/Users/Allen/Desktop/repos/exixe/firmware/clock/Inc
 HeaderFiles=stm32f0xx_it.h;stm32f0xx_hal_conf.h;main.h;FreeRTOSConfig.h;usb_device.h;usbd_conf.h;usbd_desc.h;usbd_cdc_if.h;
-SourcePath=C:/Users/Allen/Desktop/old/clock/Src
+SourcePath=C:/Users/Allen/Desktop/repos/exixe/firmware/clock/Src
 SourceFiles=stm32f0xx_it.h;stm32f0xx_hal_conf.h;main.h;stm32f0xx_it.c;stm32f0xx_hal_msp.c;main.c;FreeRTOSConfig.h;usb_device.h;usbd_conf.h;usbd_desc.h;usbd_cdc_if.h;freertos.c;usb_device.c;usbd_conf.c;usbd_desc.c;usbd_cdc_if.c;stm32f0xx_hal_timebase_TIM.c;
 
 [PreviousLibFiles]

@@ -13,7 +13,6 @@ exixe\main.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
 exixe\main.o: ../Drivers/CMSIS/Include/core_cmFunc.h
 exixe\main.o: ../Drivers/CMSIS/Device/ST/STM32F0xx/Include/system_stm32f0xx.h
 exixe\main.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal.h
-exixe\main.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
 exixe\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 exixe\main.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_rcc_ex.h
 exixe\main.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_gpio.h
@@ -36,4 +35,3 @@ exixe\main.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart.h
 exixe\main.o: ../Drivers/STM32F0xx_HAL_Driver/Inc/stm32f0xx_hal_uart_ex.h
 exixe\main.o: ../Inc/shared.h
 exixe\main.o: ../Inc/helpers.h
-exixe\main.o: ../Inc/delay_us.h

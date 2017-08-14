@@ -24,7 +24,6 @@
 "exixe\stm32f0xx_hal_msp.o"
 "exixe\main.o"
 "exixe\helpers.o"
-"exixe\delay_us.o"
 --library_type=microlib --strict --scatter "exixe\exixe.sct"
 --diag_suppress=L6329 --summary_stderr --info summarysizes --map --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
