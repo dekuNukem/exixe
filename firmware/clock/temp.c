@@ -1,4 +1,12 @@
-  if(ls_value > 800 || ls_value < 0)
+
+  // while(1)
+  // {
+  //   printf("hello world\n");
+  //   HAL_IWDG_Refresh(iwdg_ptr);
+  //   HAL_Delay(500);
+  // }
+
+    if(ls_value > 800 || ls_value < 0)
     return 1;
   // return 6 - (ls_value * 0.0083);
   // return 8 - ((double)ls_value * 0.0117);

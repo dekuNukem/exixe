@@ -152,12 +152,6 @@ int main(void)
   my_usb_init();
   delay_us_init(&htim2);
   HAL_IWDG_Refresh(iwdg_ptr);
-  // while(1)
-  // {
-  //   printf("hello world\n");
-  //   HAL_IWDG_Refresh(iwdg_ptr);
-  //   HAL_Delay(500);
-  // }
   setup_task();
   HAL_IWDG_Refresh(iwdg_ptr);
   /* USER CODE END 2 */
@@ -422,7 +416,7 @@ static void MX_SPI1_Init(void)
   hspi1.Init.CLKPolarity = SPI_POLARITY_LOW;
   hspi1.Init.CLKPhase = SPI_PHASE_1EDGE;
   hspi1.Init.NSS = SPI_NSS_SOFT;
-  hspi1.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_16;
+  hspi1.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_8;
   hspi1.Init.FirstBit = SPI_FIRSTBIT_MSB;
   hspi1.Init.TIMode = SPI_TIMODE_DISABLE;
   hspi1.Init.CRCCalculation = SPI_CRCCALCULATION_DISABLE;

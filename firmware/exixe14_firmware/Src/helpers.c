@@ -9,14 +9,18 @@ uint8_t spi_recv_buf[SPI_BUF_SIZE];
 void set_pwm(uint8_t pwm_arr[SPI_BUF_SIZE])
 {
   // if the most significant bit is 1, change the pwm duty cycle
-  if(pwm_arr[13] & 0x80)
-    htim3.Instance->CCR4 = 127 - (pwm_arr[13] & 0x7f); // R
-  if(pwm_arr[14] & 0x80)
-    htim14.Instance->CCR1 = 127 - (pwm_arr[14] & 0x7f); // G
+  
+  
   if(pwm_arr[15] & 0x80)
     htim3.Instance->CCR3 = 127 - (pwm_arr[15] & 0x7f); // B
-  if(pwm_arr[1] & 0x80)
-    htim1.Instance->CCR4 = pwm_arr[1] & 0x7f; // 1
+  if(pwm_arr[14] & 0x80)
+    htim14.Instance->CCR1 = 127 - (pwm_arr[14] & 0x7f); // G
+  if(pwm_arr[13] & 0x80)
+    htim3.Instance->CCR4 = 127 - (pwm_arr[13] & 0x7f); // R
+  if(pwm_arr[12] & 0x80)
+    htim16.Instance->CCR1 = pwm_arr[12] & 0x7f; // right dot
+  if(pwm_arr[11] & 0x80)
+    htim3.Instance->CCR1 = pwm_arr[11] & 0x7f; // left dot
   if(pwm_arr[10] & 0x80)
     htim2.Instance->CCR2 = pwm_arr[10] & 0x7f; // 0
   if(pwm_arr[9] & 0x80)
@@ -24,21 +28,19 @@ void set_pwm(uint8_t pwm_arr[SPI_BUF_SIZE])
   if(pwm_arr[8] & 0x80)
     htim2.Instance->CCR4 = pwm_arr[8] & 0x7f; // 8
   if(pwm_arr[7] & 0x80)
-    htim3.Instance->CCR2 = pwm_arr[7] & 0x7f; // 7
+    htim17.Instance->CCR1 = pwm_arr[7] & 0x7f; // 7
   if(pwm_arr[6] & 0x80)
-    htim2.Instance->CCR1 = pwm_arr[6] & 0x7f; // 5
+    htim2.Instance->CCR1 = pwm_arr[6] & 0x7f; // 6
   if(pwm_arr[5] & 0x80)
-    htim1.Instance->CCR3 = pwm_arr[5] & 0x7f; // 6
+    htim1.Instance->CCR3 = pwm_arr[5] & 0x7f; // 5
   if(pwm_arr[4] & 0x80)
-    htim17.Instance->CCR1 = pwm_arr[4] & 0x7f; // 4
+    htim3.Instance->CCR2 = pwm_arr[4] & 0x7f; // 4
   if(pwm_arr[3] & 0x80)
     htim1.Instance->CCR1 = pwm_arr[3] & 0x7f; // 3
   if(pwm_arr[2] & 0x80)
     htim1.Instance->CCR2 = pwm_arr[2] & 0x7f; // 2
-  if(pwm_arr[12] & 0x80)
-    htim16.Instance->CCR1 = pwm_arr[12] & 0x7f; // right dot
-  if(pwm_arr[11] & 0x80)
-    htim3.Instance->CCR1 = pwm_arr[11] & 0x7f; // left dot
+  if(pwm_arr[1] & 0x80)
+    htim1.Instance->CCR4 = pwm_arr[1] & 0x7f; // 1
 }
 
 void timer_init(void)
