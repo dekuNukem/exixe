@@ -817,13 +817,13 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <element name="R13" library="joyAnalog" package="0805" value="68K" x="5.715" y="35.56" smashed="yes" rot="R180">
 <attribute name="NAME" x="6.731" y="34.7599" size="0.7112" layer="25" font="vector" rot="R180"/>
 </element>
-<element name="R14" library="joyAnalog" package="0805" value="470" x="17.399" y="6.731" smashed="yes" rot="R270">
+<element name="R14" library="joyAnalog" package="0805" value="330" x="17.399" y="6.731" smashed="yes" rot="R270">
 <attribute name="NAME" x="16.3195" y="8.255" size="0.8128" layer="25" font="vector" rot="R90"/>
 </element>
-<element name="R15" library="joyAnalog" package="0805" value="1K" x="3.048" y="4.953" smashed="yes">
+<element name="R15" library="joyAnalog" package="0805" value="680" x="3.048" y="4.953" smashed="yes">
 <attribute name="NAME" x="2.9718" y="5.8293" size="0.8128" layer="25" font="vector"/>
 </element>
-<element name="R16" library="joyAnalog" package="0805" value="470" x="19.05" y="6.731" smashed="yes" rot="R270">
+<element name="R16" library="joyAnalog" package="0805" value="330" x="19.05" y="6.731" smashed="yes" rot="R270">
 <attribute name="NAME" x="17.3863" y="8.2804" size="0.8128" layer="25" font="vector" rot="R90"/>
 </element>
 <element name="R17" library="joyAnalog" package="0805" value="10K" x="5.588" y="6.223" smashed="yes" rot="MR180">
@@ -838,7 +838,7 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <element name="R22" library="joyAnalog" package="0805" value="1M" x="9.017" y="39.116" smashed="yes">
 <attribute name="NAME" x="7.62" y="39.6875" size="0.6096" layer="25" rot="R180"/>
 </element>
-<element name="R23" library="joyAnalog" package="0805" value="100K" x="8.255" y="36.703" smashed="yes" rot="R90">
+<element name="R23" library="joyAnalog" package="0805" value="68K" x="8.255" y="36.703" smashed="yes" rot="R90">
 <attribute name="NAME" x="8.9662" y="35.2425" size="0.6096" layer="25" rot="R180"/>
 </element>
 <element name="T1" library="zetex" package="SOT323" value="" x="5.715" y="38.1" smashed="yes" rot="R270">

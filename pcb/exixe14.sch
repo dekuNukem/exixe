@@ -2707,16 +2707,16 @@ http://www.zetex.com&lt;p&gt;
 <part name="D1" library="nixx" deviceset="RGB_LED_CA" device="-150141M173100-R&amp;G&amp;B"/>
 <part name="R13" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="68K"/>
 <part name="+3V4" library="joyAnalog" deviceset="+3V3" device=""/>
-<part name="R14" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="470"/>
-<part name="R15" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="1K"/>
-<part name="R16" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="470"/>
+<part name="R14" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="330"/>
+<part name="R15" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="680"/>
+<part name="R16" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="330"/>
 <part name="R17" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="10K"/>
 <part name="R18" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="10K"/>
 <part name="+3V5" library="joyAnalog" deviceset="+3V3" device=""/>
 <part name="+3V6" library="joyAnalog" deviceset="+3V3" device=""/>
 <part name="TP1" library="testpad" deviceset="PTR1" device="TP13R" value="PTR1TP13R"/>
 <part name="R22" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="1M"/>
-<part name="R23" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="100K"/>
+<part name="R23" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="68K"/>
 <part name="T1" library="zetex" deviceset="PNPSOT323" device=""/>
 <part name="Q13" library="nixx" deviceset="BF820" device=""/>
 <part name="R24" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="10K"/>
