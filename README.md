@@ -1,122 +1,46 @@
-M8Q time calibration
+# exixe: Low-cost miniature driver module for Nixie tubes
 
-ws2812 underlight
+![Alt text](https://i.imgur.com/JjhNDUQ.jpg)
 
-tempture sensor
+![Alt text](https://i.imgur.com/I1maqhw.jpg)
 
-8 tubes, in-14
+exixe is a driver module for IN-12 and IN-14 Nixie tubes, I developed them while building my own Nixie clock. 
 
-MM DD HH mm
+## Features
 
-HH mm SS temp
+Compared to the traditional approach, exixe board offers significant advantages:
 
-3D printing?
+#### Small and modular
+* 2x4 cm (0.79x1.57 inches)
+* Breadboard friendly
+* Easy integration
 
-guardian theme?
+#### Low-cost
+* $3 in components
+* No need for obscure vintage driver chips
 
-bluetooth
+#### SPI interface
+* High speed, up to 8MHz SCLK
+* Available on virtually all embedded systems including Arduino and Raspberry Pi
+* Simple 16-byte command packet
 
-eeprom
+#### Advanced control
+* Powered by STM32
+* Hardware PWM on all cathodes for silky smooth dimming and animations
+* Overdrive feature for poisoned cathodes
 
-light senser
+#### RGB backlit
+* ...well because RGB
 
-stm32f042K 14 PWM channels!
+## Technical details
 
-SPI 3MHz MAX, 16 byte command
+tube needs...
 
-USB C connector
+over drive...
 
-disable boot0 in option byte 
-SWD cross talk in jumper wire
 
-rg 470ohm
-b 0ohm
+stm32f042k6t6, 32 pin, enough pin... timer pwm channels
 
-htim14.Instance->CCR1 = pwm_value;
-pwm_value must be smaller than counter period
+## SPI command protocol
 
-3528 rgb led
-
-http://www.mouser.co.uk/ProductDetail/Wurth-Electronics/150141M173100/?qs=sGAEpiMZZMuCm2JlHBGeflo8zLeA%2ffbJXCK04oeb2W5E0T0m7VNM2Q%3d%3d
-
-48MHz sysclock
-Prescaler 1920
-period 127
-194Hz
-
-0		0xab
-1		1
-2		2
-3		3
-4		4
-5		5
-6		6
-7		7
-8		8
-9		9
-10		0
-11		left dot
-12		right dot
-13		red
-14		green
-15		blue
-
-up to 20MHZ
-
-Thanks to this diode, when an EMC stress oc
-curs, the level of the noise is clamped to V
-DD
-. 
-As a consequence, channels implemented on FT I/O show a better noise immunity
-
-ref-packages
-
-find smt 8MHz and 32.768KHz crystals
-
-remove tx rx header put backing transistors there
-
-remove eeprom 
-put pf0 pf1 tx rx on test points
-
-change drc will change pad size
-
-eixie reset after a short delay when invalid header
-gps fix led
-
-polygon rank higher will isolate lower
-
-use driven shield, no ground or signal underneath
-
-test reversed tx rx
-
-test rtos
-
-looks like reset is needed for correct SPI snyc
-
-current state, 16 bytes,
-new state, 16 bytes
-compare difference between the two, then do fade animation
-send animation SPI updates 60fps
-
-animation is active if animation_frame_end is bigger than current frame counter
-
-animation type
-0: fade to black then fade into another digit
-1: 2 digits crossfade
-
-2 frame arrays, start digit brightness, end digit brightness
-
-en pin on power supply normally off connected to a gpio?
-
-PA8 PA9 PA10 is messed up fix them in the next revision
-
-heat shrink tube for LED cover
-
-PC13 seems to be damanged by 1wire, use it for GPS reset
-
-ZDA – Time and Date 
-UTC, day, month, year and local time zone
-
-add IWDG
-
-looks like I don't need baking function for new IN-12, keep a jumper though
+exixe expects a fixed 16-byte command, which should be
