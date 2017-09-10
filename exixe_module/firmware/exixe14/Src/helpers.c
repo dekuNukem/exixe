@@ -9,8 +9,6 @@ uint8_t spi_recv_buf[SPI_BUF_SIZE];
 void set_pwm(uint8_t pwm_arr[SPI_BUF_SIZE])
 {
   // if the most significant bit is 1, change the pwm duty cycle
-  
-  
   if(pwm_arr[15] & 0x80)
     htim3.Instance->CCR3 = 127 - (pwm_arr[15] & 0x7f); // B
   if(pwm_arr[14] & 0x80)

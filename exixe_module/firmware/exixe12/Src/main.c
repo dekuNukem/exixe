@@ -83,16 +83,6 @@ void HAL_TIM_MspPostInit(TIM_HandleTypeDef *htim);
 /* USER CODE END PFP */
 
 /* USER CODE BEGIN 0 */
-
-void kick_dog(void)
-{
-  static int32_t next_kick = 0;
-  if(HAL_GetTick() > next_kick)
-  {
-    HAL_IWDG_Refresh(&hiwdg);
-    next_kick = HAL_GetTick() + 100;
-  }
-}
 /* USER CODE END 0 */
 
 int main(void)
@@ -140,7 +130,7 @@ int main(void)
   HAL_Delay(10);
   while (1)
   {
-    kick_dog();
+    HAL_IWDG_Refresh(&hiwdg);
     if(HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_15) == GPIO_PIN_SET)
       HAL_SPI_Receive_DMA(&hspi1, spi_recv_buf, SPI_BUF_SIZE);
   /* USER CODE END WHILE */

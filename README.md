@@ -20,17 +20,22 @@ Compared to the traditional approach, exixe board offers significant advantages:
 * No need for obscure vintage driver chips
 
 #### SPI interface
-* High speed, up to 8MHz SCLK
+* High speed, up to 24MHz SCLK
 * Available on virtually all embedded systems including Arduino and Raspberry Pi
 * Simple 16-byte command packet
 
 #### Advanced control
-* Powered by STM32
-* Hardware PWM on all cathodes for silky smooth dimming and animations
+* Powered by ARM Cortex uC
+* Hardware PWM on all cathodes for smooth dimming and animations
 * Overdrive feature for poisoned cathodes
 
-#### RGB backlit
+#### RGB backlight
 * ...well because RGB
+
+#### No multiplexing
+* Brighter display
+* Longer tube life
+
 
 ## Technical details
 
@@ -42,5 +47,7 @@ over drive...
 stm32f042k6t6, 32 pin, enough pin... timer pwm channels
 
 ## SPI command protocol
+
+Clock polarity
 
 exixe expects a fixed 16-byte command, which should be

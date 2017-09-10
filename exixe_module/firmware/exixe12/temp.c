@@ -3,7 +3,15 @@ int fputc(int ch, FILE *f)
     HAL_UART_Transmit(&huart1, (unsigned char *)&ch, 1, 100);
     return ch;
 }
-
+void kick_dog(void)
+{
+  static int32_t next_kick = 0;
+  if(HAL_GetTick() > next_kick)
+  {
+    HAL_IWDG_Refresh(&hiwdg);
+    next_kick = HAL_GetTick() + 100;
+  }
+}
 // printf("hello\n");
     HAL_UART_Transmit(&huart1, "aaa\n", 4, 100);
     HAL_Delay(500);`
