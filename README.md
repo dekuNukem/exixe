@@ -8,7 +8,7 @@ exixe is a miniature driver module for IN-12 and IN-14 Nixie tubes.
 
 Instead of using obscure out-of-production driver chips, it uses a STM32 to handle digit display and dimming of all cathodes with hardware PWM. The module is controlled via standard SPI protocol, and has onboard RGB LED for backlight effects.
 
-exixe is cheap, small and modular for easy integration. And because each tube has its own driver, there is no need for multiplexing, reducing the power consumption, simplifying the circuit design, increases perceived tube brightness, and prolongs the tube life.
+exixe is cheap, small and modular for easy integration. And because each tube has its own driver, there is no need for multiplexing, thus reducing the power consumption, simplifying the circuit design, increases perceived tube brightness, and prolongs the tube life.
 
 ## Features
 
@@ -44,12 +44,21 @@ Compared to the traditional approach, exixe modules offers significant advantage
 
 ## Technical details
 
+At the heart of the module is a STM32F042K6T6 microcontroller, which is connected to the cathodes of the Nixie tube through high-voltage transistors to turn them on or off. Thanks to the abundance of timers, every single cathode gets their own hardware PWM, which is much more consistent and smooth than software toggling.
+
+The PWM frequency is 200Hz by default, it works well and can be changed by adjusting timer predivider values.
+
+The microcontroller acts as a SPI slave and reads 16-byte commands from the master devices. Details of which can be found on the next section.
+
+Please note that you still need a high-voltage supply around 180V for Nixie tubes to start glowing. You can design one yourself for your project, or use a pre-made module that takes 5V and outputs 180V.
+
 tube needs...
 
 over drive...
 
+only one digit should light up at a given time along with one dot
 
-stm32f042k6t6, 32 pin, enough pin... timer pwm channels
+both have same pinout
 
 ## SPI command protocol
 
