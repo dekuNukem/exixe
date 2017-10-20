@@ -431,11 +431,12 @@ ARM Macro Assembler    Page 7
               00000000 
               00000000 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M0 --apcs=interw
-ork --depend=exixe\startup_stm32f042x6.d -oexixe\startup_stm32f042x6.o -I.\RTE\
-_exixe -IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include -IC:\Keil_v5\ARM\PAC
-K\Keil\STM32F0xx_DFP\1.5.0\Device\Include --predefine="__MICROLIB SETA 1" --pre
-define="__UVISION_VERSION SETA 523" --predefine="_RTE_ SETA 1" --predefine="STM
-32F042x6 SETA 1" --list=startup_stm32f042x6.lst startup_stm32f042x6.s
+ork --depend=exixe\startup_stm32f042x6.d -oexixe\startup_stm32f042x6.o -IC:\Use
+rs\Allen\Desktop\repos\exixe\exixe_module\firmware\exixe14\MDK-ARM\RTE -IC:\Kei
+l_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include -IC:\Keil_v5\ARM\PACK\Keil\STM32F0x
+x_DFP\1.5.0\Device\Include --predefine="__MICROLIB SETA 1" --predefine="__UVISI
+ON_VERSION SETA 517" --predefine="_RTE_ SETA 1" --predefine="STM32F042x6 SETA 1
+" --list=startup_stm32f042x6.lst startup_stm32f042x6.s
 
 
 
