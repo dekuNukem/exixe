@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.2.2">
+<eagle version="8.3.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
+<setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
@@ -2733,6 +2734,7 @@ http://www.zetex.com&lt;p&gt;
 <sheets>
 <sheet>
 <plain>
+<text x="408.94" y="-66.04" size="1.778" layer="94">MSB92</text>
 </plain>
 <instances>
 <instance part="N1" gate="G$1" x="220.98" y="-30.48"/>
