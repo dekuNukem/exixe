@@ -4,7 +4,7 @@
 
 exixe is a miniature driver module for IN-12 and IN-14 Nixie tubes.
 
-Instead of using obscure out-of-production driver chips, it uses a STM32 to handle digit display and dimming of all cathodes with hardware PWM. The module is controlled via standard SPI protocol, and has onboard RGB LED for backlight effects.
+Instead of using obscure out-of-production driver chips, it uses a STM32 to handle display and dimming of all digits with hardware PWM. The module is controlled via standard SPI protocol, and has onboard RGB LED for backlight effects.
 
 exixe is cheap, small and modular for easy integration. And because each tube has its own driver, there is no need for multiplexing, thus reducing the power consumption, simplifying the circuit design, increases perceived brightness, and prolongs the tube life.
 
@@ -32,7 +32,7 @@ Compared to the traditional approach, exixe modules offers significant advantage
 
 #### Tube overdrive
 * Optionally allows twice the cathode current
-* For poisoned cathodes in secondhand tubes
+* For poisoned cathodes in second-hand tubes
 
 #### RGB backlight
 * Because RGB
@@ -90,7 +90,7 @@ exixe expects a fixed 16-byte command, which should be sent within one CS activa
 
 * Brightness values are 7-bit integer from 0 to 127, 0 being off and 127 being brightest.
 
-* OD and dots are not available on exixe-12, changing them will have no effect.
+* SPI commands are the same for exixe-12 and exixe-14, however OD and dots are not available on exixe-12, changing them will have no effect.
 
 ### Notes
 
@@ -108,6 +108,16 @@ Detailed timing for the first byte:
 ![Alt text](resources/spi_data_format_detail.png)
 
 ## Board pinout
+
+![Alt text](resources/pinout_photo.jpg)
+
+![Alt text](resources/pinout_table.png)
+
+* Officially, exixe modules are NOT 5V compatible.
+* However it shouldn't cause damage if you put a 2.2K resistor in series of the 5V signal.
+* Still, the module must be powered at 3.3V.
+* Insert the Nixie tube so its anode lead is in the anode hole, and TEST THE TUBE BEFORE SOLDERING it in place.
+* Pinout and dimension are the same for exixe-12 and exixe-14.
 
 ## PCB components
 
