@@ -8,7 +8,9 @@ exixe is a miniature driver module for IN-12 and IN-14 Nixie tubes.
 
 Instead of using obscure out-of-production driver chips, it uses a STM32 to handle display and dimming of all digits with hardware PWM. The module is controlled via standard SPI protocol, and has onboard RGB LED for backlight effects.
 
-exixe is cheap, small and modular for easy integration. And because each tube has its own driver, there is no need for multiplexing, thus reducing the power consumption, simplifying the circuit design, increases perceived brightness, and prolongs the tube life.
+exixe is cheap, small and modular for easy integration. It is compatible with Arduino, Raspberry Pi, ESP8266, and virtually all embedded dev boards today.
+
+Since each tube has its own driver, there is no need for multiplexing. Thus reducing the power consumption, simplifying the circuit design, increases perceived brightness, and prolongs the tube life.
 
 ## Features
 
@@ -30,7 +32,7 @@ Compared to the traditional approach, exixe modules offers significant advantage
 
 #### Advanced control
 * Powered by ARM Cortex-M0 microcontroller
-* Hardware PWM on all cathodes for smooth dimming and animations
+* Hardware PWM on all cathodes and LEDs for smooth dimming and animations
 
 #### Tube overdrive
 * Optionally allows twice the cathode current
@@ -55,17 +57,7 @@ The microcontroller acts as a SPI slave and reads 16-byte commands from the mast
 
 In normal operation each cathode has a 68K current resistor, allowing 2.6mA at 180V. However, if you're using IN-14 tubes chances are they are second-hand, and most I see doesn't light up all the way on digit 2 and 3. They are slightly poisoned and needs a bit more current to light up properly. Therefore exixe-14 features an overdrive command that allows twice that current to pass through.
 
-Digit 3 at 2.5mA:
-
-![Alt text](resources/no_od.jpg)
-
-Digit 3 at 5.3mA with overdrive enabled:
-
-![Alt text](resources/with_od.jpg)
-
-Overdrive is controlled by a SPI command.
-
-Please note that you still need a high-voltage supply around 180V for Nixie tubes to start glowing. You can design one yourself for your project, or use a pre-made module that takes 5V and outputs 180V. Just search "5V nixie power" on ebay, here's [one example](https://www.ebay.com/itm/DC-5V-12V-to-170V-DC-High-Voltage-NIXIE-Power-Supply-Module-PSU-NIXIE-TUBE-ERA-/322511957768?hash=item4b1735ef08:g:ftQAAOSwYTVZmjZb).
+Please note that you still need a high-voltage power supply around 180V for Nixie tubes to start glowing. You can design one yourself for your project, or use a pre-made module that takes 5V and outputs 180V. Just search "5V nixie power" on ebay, here's [one example](https://www.ebay.com/itm/DC-5V-12V-to-170V-DC-High-Voltage-NIXIE-Power-Supply-Module-PSU-NIXIE-TUBE-ERA-/322511957768?hash=item4b1735ef08:g:ftQAAOSwYTVZmjZb).
 
 ## SPI command protocol
 
@@ -76,7 +68,7 @@ Please note that you still need a high-voltage supply around 180V for Nixie tube
 * Clock is LOW when inactive (CPOL = 0)
 * MOSI data valid on clock rising edge (CPHA = 0)
 * Enable is active LOW
-* Max clock rate 24MHz (per datasheet, I only tested up to 8MHz)
+* Max clock rate 24MHz (according to datasheet, I only tested up to 8MHz)
 
 ### SPI data format
 
