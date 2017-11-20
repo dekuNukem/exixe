@@ -1,6 +1,8 @@
 # exixe: Low-cost miniature Nixie tube driver modules
 
-![Alt text](https://i.imgur.com/JjhNDUQ.jpg)
+![Alt text](resources/title.jpg)
+
+![Alt text](resources/breadboard.jpg)
 
 exixe is a miniature driver module for IN-12 and IN-14 Nixie tubes.
 
