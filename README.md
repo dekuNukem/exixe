@@ -4,6 +4,10 @@
 
 ![Alt text](resources/breadboard.jpg)
 
+[a nanosecond precision clock using exixe modules](https://github.com/dekuNukem/exixe_clock)
+
+![Alt text](resources/clocks.jpg)
+
 exixe is a miniature driver module for IN-12 and IN-14 Nixie tubes.
 
 Instead of using obscure out-of-production driver chips, it uses a STM32 to handle display and dimming of all digits with hardware PWM. The module is controlled via standard SPI protocol, and has onboard RGB LED for backlight effects.
@@ -11,6 +15,7 @@ Instead of using obscure out-of-production driver chips, it uses a STM32 to hand
 exixe is cheap, small and modular for easy integration. It is compatible with Arduino, Raspberry Pi, ESP8266, and virtually all embedded dev boards today.
 
 Since each tube has its own driver, there is no need for multiplexing. Thus reducing the power consumption, simplifying the circuit design, increases perceived brightness, and prolongs the tube life.
+
 
 ## Features
 
