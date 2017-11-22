@@ -119,9 +119,11 @@ Detailed timing for the first byte:
 
 ## Buying some
 
-Currently I don't have plans of putting it in production, however I might consider a small run if there's enough interest.
+I can custom make some exixe modules for you in small quantities. However, soldering them together and testing them takes a long time, so it's going to be more expensive than just the cost of materials.
 
-Meanwhile, I do have some extra empty PCBs in panels of 8, so if you want one I can sell one to you. You still need to source the rest of the components and solder it together though.
+As for a larger scale, I don't have plans of putting it in production right now, however I might consider a small run if there's enough interest.
+
+Also, I do have some extra empty PCBs in panels of 8, so if you want I can sell one to you. You still need to source the rest of the components and solder it together though.
 
 ![Alt text](resources/empty_pcb.jpg)
 
