@@ -2777,8 +2777,8 @@ by exp-lbrs.ulp</description>
 <part name="R19" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="68K"/>
 <part name="JP3" library="SparkFun-Jumpers" deviceset="JUMPER-SMT_2_NO" device="_NO-SILK"/>
 <part name="TP1" library="nixx" deviceset="PTR1" device="TP13R"/>
-<part name="R12" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="510K"/>
-<part name="R17" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="47K"/>
+<part name="R12" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="68K"/>
+<part name="R17" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="68K"/>
 <part name="GND12" library="joyAnalog" deviceset="GND" device=""/>
 <part name="TP2" library="nixx" deviceset="PTR1" device="TP13R"/>
 <part name="TP3" library="nixx" deviceset="PTR1" device="TP13R"/>

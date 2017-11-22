@@ -4,8 +4,6 @@
 
 ![Alt text](resources/breadboard.jpg)
 
-[a nanosecond precision clock using exixe modules](https://github.com/dekuNukem/exixe_clock)
-
 ![Alt text](resources/clocks.jpg)
 
 exixe is a miniature driver module for IN-12 and IN-14 Nixie tubes.
@@ -16,6 +14,7 @@ exixe is cheap, small and modular for easy integration. It is compatible with Ar
 
 Since each tube has its own driver, there is no need for multiplexing. Thus reducing the power consumption, simplifying the circuit design, increases perceived brightness, and prolongs the tube life.
 
+*[Click here](https://github.com/dekuNukem/exixe_clock) for my nanosecond precision clock using exixe modules in the above picture*
 
 ## Features
 
@@ -125,4 +124,5 @@ Detailed timing for the first byte:
 * Microcontroller is [STM32F042K6T6](https://www.mouser.co.uk/Search/ProductDetail.aspx?R=STM32F042K6T6virtualkey51120000virtualkey511-STM32F042K6T6)
 * LED is [Wurth Electronics 150141M173100](https://www.mouser.co.uk/Search/ProductDetail.aspx?R=150141M173100virtualkey51100000virtualkey710-150141M173100)
 
+Full BOM here: [exixe12](resources/exixe12_bom.xlsx), [exixe14](resources/exixe14_bom.xlsx)
 
