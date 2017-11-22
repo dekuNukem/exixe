@@ -117,6 +117,14 @@ Detailed timing for the first byte:
 * Insert the Nixie tube so its anode lead is in the anode hole, and TEST THE TUBE BEFORE SOLDERING it in place.
 * Pinout and dimension are the same for exixe-12 and exixe-14.
 
+## Buying some
+
+Currently I don't have plans of putting it in production, however I might consider a small run if there's enough interest.
+
+Meanwhile, I do have some extra empty PCBs in panels of 8, so if you want one I can sell one to you. You still need to source the rest of the components and solder it together though.
+
+![Alt text](resources/empty_pcb.jpg)
+
 ## PCB components
 
 * The NPN transistor used on every cathode is [BF820](https://www.mouser.co.uk/Search/ProductDetail.aspx?R=BF820W%2c135virtualkey66800000virtualkey771-BF820W135)
