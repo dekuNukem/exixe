@@ -138,3 +138,4 @@ Email me at `dekunukem gmail com` for inquires.
 
 Full BOM here: [exixe12](resources/exixe12_bom.xlsx), [exixe14](resources/exixe14_bom.xlsx)
 
+Making some exixe modules yourself is fairly straightforward, just order the PCBs and parts and solder them together. Since the component count is not small and they are densely populated, I suggest order the PCB in panels of 6 or 8 and get a matching stencil to apply the paste. Use of reflow oven or skillet reflow is also recommended, since soldering each and every component by hand is basically torture.
