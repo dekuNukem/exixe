@@ -14,7 +14,11 @@ exixe is cheap, small and modular for easy integration. It is compatible with Ar
 
 Since each tube has its own driver, there is no need for multiplexing. Thus reducing the power consumption, simplifying the circuit design, increases perceived brightness, and prolongs the tube life.
 
-*[Click here](https://github.com/dekuNukem/exixe_clock) for my nanosecond precision clock using exixe modules in the above picture*
+## Video
+
+Here's a short video of exixe14 modules in action on the [high precision clock](https://github.com/dekuNukem/exixe_clock) shown in the above picture:
+
+https://www.youtube.com/watch?v=r3d2alzgjKc
 
 ## Features
 
