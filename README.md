@@ -6,9 +6,9 @@
 
 ![Alt text](resources/clocks.jpg)
 
-exixe is a miniature driver module for IN-12 and IN-14 Nixie tubes.
+exixe is a low-cost miniature driver module for IN-12 and IN-14 Nixie tubes.
 
-Instead of using obscure out-of-production driver chips, it uses a STM32 to handle display and dimming of all digits with hardware PWM. The module is controlled via standard SPI protocol, and has onboard RGB LED for backlight effects.
+Instead of using obscure out-of-production driver chips, it uses a STM32 to handle display and dimming of all digits with hardware PWM. The module is controlled via standard SPI protocol, and has onboard RGB LED backlight.
 
 exixe is cheap, small and modular for easy integration. It is compatible with Arduino, Raspberry Pi, ESP8266, and virtually all embedded dev boards today.
 
@@ -114,7 +114,7 @@ Detailed timing for the first byte:
 * Officially, exixe modules are NOT 5V compatible.
 * However it shouldn't cause damage if you put a 2.2K resistor in series of the 5V signal.
 * Still, the module must be powered at 3.3V.
-* Insert the Nixie tube so its anode lead is in the anode hole, and TEST THE TUBE BEFORE SOLDERING it in place.
+* When assembling insert the Nixie tube so its anode lead is in the anode hole, and TEST THE TUBE BEFORE SOLDERING it in place.
 * Pinout and dimension are the same for exixe-12 and exixe-14.
 
 ## Buying some
@@ -129,13 +129,13 @@ Also, I do have some extra empty PCBs in panels of 8, so if you want I can sell 
 
 Email me at `dekunukem gmail com` for inquires.
 
-## PCB components
+## Making one
+
+Full BOM here: [exixe12](resources/exixe12_bom.xlsx), [exixe14](resources/exixe14_bom.xlsx)
 
 * The NPN transistor used on every cathode is [BF820](https://www.mouser.co.uk/Search/ProductDetail.aspx?R=BF820W%2c135virtualkey66800000virtualkey771-BF820W135)
 * The single PNP transistor used in overdrive circuit is [MSB92](https://www.mouser.co.uk/Search/ProductDetail.aspx?R=MSB92ASWT1Gvirtualkey58410000virtualkey863-MSB92ASWT1G)
 * Microcontroller is [STM32F042K6T6](https://www.mouser.co.uk/Search/ProductDetail.aspx?R=STM32F042K6T6virtualkey51120000virtualkey511-STM32F042K6T6)
 * LED is [Wurth Electronics 150141M173100](https://www.mouser.co.uk/Search/ProductDetail.aspx?R=150141M173100virtualkey51100000virtualkey710-150141M173100)
-
-Full BOM here: [exixe12](resources/exixe12_bom.xlsx), [exixe14](resources/exixe14_bom.xlsx)
 
 Making some exixe modules yourself is fairly straightforward, just order the PCBs and parts and solder them together. Since the component count is not small and they are densely populated, I suggest order the PCB in panels of 6 or 8 and get a matching stencil to apply the paste. Use of reflow oven or skillet reflow is also recommended, since soldering each and every component by hand is basically torture.
