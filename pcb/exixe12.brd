@@ -7,7 +7,7 @@
 <setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="2" unitdist="mil" unit="mil" style="lines" multiple="1" display="no" altdistance="1" altunitdist="mil" altunit="mil"/>
+<grid distance="1" unitdist="mil" unit="mil" style="lines" multiple="1" display="no" altdistance="1" altunitdist="mil" altunit="mil"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="yes"/>
@@ -48,9 +48,9 @@
 <layer number="37" name="tTest" color="7" fill="1" visible="no" active="yes"/>
 <layer number="38" name="bTest" color="7" fill="1" visible="no" active="yes"/>
 <layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="yes"/>
-<layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="yes"/>
+<layer number="40" name="bKeepout" color="1" fill="11" visible="yes" active="yes"/>
 <layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="yes"/>
-<layer number="42" name="bRestrict" color="1" fill="10" visible="no" active="yes"/>
+<layer number="42" name="bRestrict" color="1" fill="10" visible="yes" active="yes"/>
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="yes"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
@@ -179,19 +179,19 @@
 <polygon width="0.1524" layer="41">
 <vertex x="3.5052" y="39.878"/>
 <vertex x="7.9756" y="39.878"/>
-<vertex x="8.2804" y="39.5732"/>
-<vertex x="8.2804" y="36.2712"/>
-<vertex x="7.9248" y="35.9156"/>
-<vertex x="7.4676" y="35.9156"/>
-<vertex x="7.0104" y="36.3728"/>
-<vertex x="1.778" y="36.3728"/>
+<vertex x="8.4328" y="39.5732"/>
+<vertex x="8.4328" y="35.9156"/>
+<vertex x="8.0264" y="35.4076"/>
+<vertex x="7.366" y="35.4076"/>
+<vertex x="7.0104" y="36.2204"/>
+<vertex x="1.8288" y="36.2204"/>
 <vertex x="0.6604" y="37.4904"/>
 <vertex x="0.6604" y="39.0144"/>
 <vertex x="1.524" y="39.878"/>
 <vertex x="3.556" y="39.878"/>
 </polygon>
 <polygon width="0.254" layer="42">
-<vertex x="7.366" y="36.0172"/>
+<vertex x="6.9596" y="36.2204"/>
 <vertex x="8.0264" y="33.02"/>
 <vertex x="8.0264" y="28.6004"/>
 <vertex x="7.1628" y="27.4828"/>
@@ -208,9 +208,8 @@
 <vertex x="8.0264" y="25.2984"/>
 <vertex x="8.89" y="28.1432"/>
 <vertex x="8.89" y="33.1216"/>
-<vertex x="7.9248" y="36.4744"/>
-<vertex x="7.2644" y="36.3728"/>
-<vertex x="7.366" y="36.068"/>
+<vertex x="8.2296" y="36.6268"/>
+<vertex x="7.2644" y="36.6268"/>
 </polygon>
 <text x="19.05" y="5.334" size="1.27" layer="26" font="vector" rot="MR0">exixe12</text>
 <text x="19.05" y="3.81" size="1.27" layer="26" font="vector" rot="MR0">dekuNukem 2017</text>
@@ -218,6 +217,17 @@
 <text x="9.7536" y="8.7884" size="0.8128" layer="26" font="vector" rot="MR0">PF1</text>
 <text x="4.5212" y="13.3604" size="0.8128" layer="26" font="vector" rot="MR180">PF0</text>
 <text x="12.3952" y="10.8712" size="0.8128" layer="26" font="vector" rot="MR0">PB6</text>
+<circle x="14.097" y="18.4912" radius="1.5748" width="0.254" layer="25"/>
+<polygon width="0.3048" layer="42">
+<vertex x="1.27" y="40.132"/>
+<vertex x="3.302" y="40.132"/>
+<vertex x="3.81" y="39.624"/>
+<vertex x="3.81" y="36.83"/>
+<vertex x="3.302" y="36.322"/>
+<vertex x="2.032" y="36.322"/>
+<vertex x="1.27" y="37.084"/>
+</polygon>
+<text x="12.446" y="19.9644" size="1.016" layer="25" font="vector">A</text>
 </plain>
 <libraries>
 <library name="pinhead">
@@ -851,15 +861,15 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <contactref element="R13" pad="1"/>
 <contactref element="N1" pad="A"/>
 <contactref element="R19" pad="1"/>
-<wire x1="7.758" y1="38.989" x2="7.758" y2="37.338" width="0.3048" layer="1"/>
+<wire x1="7.758" y1="37.338" x2="7.758" y2="38.989" width="0.3048" layer="1"/>
 <via x="7.7216" y="36.068" extent="1-16" drill="0.5"/>
 <wire x1="7.7216" y1="36.068" x2="8.4836" y2="33.02" width="0.254" layer="16"/>
-<wire x1="7.758" y1="37.338" x2="7.758" y2="36.1044" width="0.254" layer="1"/>
-<wire x1="7.758" y1="36.1044" x2="7.7216" y2="36.068" width="0.254" layer="1"/>
 <wire x1="7.4676" y1="25.0974" x2="14.0825" y2="18.4825" width="0.254" layer="16"/>
 <wire x1="7.4676" y1="27.3812" x2="7.4676" y2="25.0974" width="0.254" layer="16"/>
 <wire x1="8.4836" y1="33.02" x2="8.4836" y2="28.3972" width="0.254" layer="16"/>
 <wire x1="8.4836" y1="28.3972" x2="7.4676" y2="27.3812" width="0.254" layer="16"/>
+<wire x1="7.7216" y1="36.068" x2="7.7216" y2="37.338" width="0.3048" layer="1"/>
+<wire x1="7.7216" y1="37.338" x2="7.758" y2="37.338" width="0.3048" layer="1"/>
 </signal>
 <signal name="GND">
 <contactref element="Q1" pad="2"/>
@@ -1397,8 +1407,9 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <contactref element="JP3" pad="2"/>
 <wire x1="2.38" y1="38.2" x2="4.1894" y2="38.2" width="0.3048" layer="1"/>
 <wire x1="4.1894" y1="38.2" x2="4.445" y2="38.4556" width="0.3048" layer="1"/>
-<wire x1="4.445" y1="38.4556" x2="5.5626" y2="37.338" width="0.3048" layer="1"/>
-<wire x1="5.5626" y1="37.338" x2="5.958" y2="37.338" width="0.3048" layer="1"/>
+<wire x1="4.445" y1="38.4556" x2="4.445" y2="37.8714" width="0.3048" layer="1"/>
+<wire x1="4.445" y1="37.8714" x2="4.9784" y2="37.338" width="0.3048" layer="1"/>
+<wire x1="4.9784" y1="37.338" x2="5.958" y2="37.338" width="0.3048" layer="1"/>
 </signal>
 <signal name="N$2">
 <contactref element="R19" pad="2"/>
@@ -1444,8 +1455,8 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 </signals>
 <errors>
 <approved hash="4,1,063c0b0c0cd5f915"/>
-<approved hash="17,41,4da055d854d84ca0"/>
 <approved hash="8,16,4d7c75be47dd6008"/>
+<approved hash="17,41,4da055d854d84ca0"/>
 <approved hash="8,16,c32182d189d840fe"/>
 <approved hash="8,1,8852a0feee6d35ad"/>
 <approved hash="8,1,dfeb80e922ea9d7a"/>
