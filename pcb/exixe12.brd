@@ -48,9 +48,9 @@
 <layer number="37" name="tTest" color="7" fill="1" visible="no" active="yes"/>
 <layer number="38" name="bTest" color="7" fill="1" visible="no" active="yes"/>
 <layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="yes"/>
-<layer number="40" name="bKeepout" color="1" fill="11" visible="yes" active="yes"/>
+<layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="yes"/>
 <layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="yes"/>
-<layer number="42" name="bRestrict" color="1" fill="10" visible="yes" active="yes"/>
+<layer number="42" name="bRestrict" color="1" fill="10" visible="no" active="yes"/>
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="yes"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
@@ -837,8 +837,6 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 </element>
 <element name="R12" library="joyAnalog" package="0805" value="68K" x="8.7884" y="20.6756" smashed="yes" rot="MR0">
 <attribute name="NAME" x="9.7028" y="21.5519" size="0.8128" layer="26" rot="MR0"/>
-<attribute name="VALUE" x="9.8044" y="19.2786" size="0.4064" layer="28" rot="MR0"/>
-<attribute name="VALUE" x="9.8044" y="19.2786" size="0.4064" layer="28" rot="MR0"/>
 </element>
 <element name="R17" library="joyAnalog" package="0805" value="68K" x="8.89" y="14.224" smashed="yes" rot="MR0">
 <attribute name="NAME" x="12.7508" y="13.9827" size="0.8128" layer="26" rot="MR0"/>
