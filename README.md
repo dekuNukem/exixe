@@ -115,11 +115,25 @@ Detailed timing for the first byte:
 
 ![Alt text](resources/pinout_table.png)
 
-* Officially, exixe modules are NOT 5V compatible.
-* However it shouldn't cause damage if you put a 2.2K resistor in series of the 5V signal.
-* Still, the module must be powered at 3.3V.
+* Officially, exixe modules are NOT 5V compatible, all signals are 3.3V level.
+* However it shouldn't cause damage if you put a 4.7K resistor in series with 5V signals.
+* Still, the module itself must be powered at 3.3V.
 * When assembling insert the Nixie tube so its anode lead is in the anode hole, and TEST THE TUBE BEFORE SOLDERING it in place.
 * Pinout and dimension are the same for exixe-12 and exixe-14.
+
+## Getting started
+
+Since I have already sold a few exixe modules, here is a short introduction on how to get started with exixe modules:
+
+### Wiring it up
+
+You should first wire it up and test to see if the board is working before soldering on the nixie tubes.
+
+First take a look at the pinout above, connect the GND to GND, and 3.3V power to 3V. If you turn it on at this stage the LED should be faintly on, and nothing else should happen.
+
+Then let's connect the SPI lines. Connect MO to MOSI line, SCK to SCK line, and CS to CS line. MISO is not used so you can leave it off. Leave HV pin unconnected for now as well. If you are unfamiliar with SPI, or need a refresher, [sparkfun's introduction](https://learn.sparkfun.com/tutorials/serial-peripheral-interface-spi) is really helpful, and [the wikipedia page has more details](https://en.wikipedia.org/wiki/Serial_Peripheral_Interface_Bus).
+
+
 
 ## Buying some
 
@@ -133,7 +147,7 @@ Also, I do have some extra empty PCBs in panels of 8, so if you want I can sell 
 
 Email me at `dekunukem gmail com` for inquires.
 
-## Making one
+## Making Some
 
 Full BOM here: [exixe12](resources/exixe12_bom.xlsx), [exixe14](resources/exixe14_bom.xlsx)
 

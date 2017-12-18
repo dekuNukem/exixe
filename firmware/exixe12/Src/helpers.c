@@ -15,6 +15,8 @@ void set_pwm(uint8_t pwm_arr[SPI_BUF_SIZE])
     htim2.Instance->CCR4 = 127 - (pwm_arr[14] & 0x7f); // G
   if(pwm_arr[13] & 0x80)
     htim2.Instance->CCR3 = 127 - (pwm_arr[13] & 0x7f); // R
+  if(pwm_arr[12] & 0x80)
+    htim17.Instance->CCR1 = pwm_arr[12] & 0x7f; // right dot
   if(pwm_arr[11] & 0x80)
     htim17.Instance->CCR1 = pwm_arr[11] & 0x7f; // left dot
   if(pwm_arr[10] & 0x80)
