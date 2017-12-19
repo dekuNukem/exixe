@@ -48,7 +48,7 @@ Detailed timing for the first byte:
 
 * Pinout and dimension are the same for exixe-12 and exixe-14.
 * Officially, exixe modules are NOT 5V compatible, all signals are 3.3V level.
-* However it does seem to work with 5V Arduinos with no short term damage. Anyway, I suggest using 3.3V Arduinos, or put a 4.7K resistor in series to limit current.
+* However it does seem to work with 5V Arduinos without short term damage. Anyway, I suggest using 3.3V Arduinos, or putting a 4.7K resistor in series to limit current.
 * Still, the module itself must be powered at 3.3V.
 * When assembling insert the Nixie tube so its anode lead is in the anode hole, and TEST THE TUBE BEFORE SOLDERING it in place.
 
