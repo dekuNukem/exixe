@@ -67,7 +67,7 @@ Please see [getting_started.md](/getting_started.md)
 
 I can custom make some exixe modules for you in small quantities. However, soldering them together and testing them takes a long time, so it's going to be more expensive than just the cost of materials.
 
-As for a larger scale, I don't have plans of putting it in production right now, however I might consider a small run if there is enough interest.
+As for a larger scale, I am considering a small run in China, however it is going to take a while, so don't count on it for now.
 
 Also, I do have some extra empty PCBs in panels of 8, so if you want I can sell one to you. You still need to source the rest of the components and solder it together though.
 
