@@ -40,4 +40,4 @@ And the second one loops through all the digits from 0 to 9:
 
 ![Alt text](resources/example2.gif)
 
-That's pretty much it! You can let your imagination run free now. You can probably adapt the functions in [show_all_digits](/arduino_examples/2_show_all_digits) for more complex display routines, or write some fancy crossfade transitions. And if you're not using Arduino, the code is simple enough to adept to other embedded systems, it's just plain C after all.
+That's pretty much it! You can let your imagination run free now. You can probably adopt the functions in [show_all_digits](/arduino_examples/2_show_all_digits) for more complex display routines, or write some fancy crossfade transition animations like [here](https://www.youtube.com/watch?v=r3d2alzgjKc). And if you're not using Arduino, the code is simple enough to adept to other embedded systems, it's just plain C after all.
