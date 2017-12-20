@@ -865,13 +865,13 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <attribute name="TP_SIGNAL_NAME" value="" x="8.636" y="10.287" size="1" layer="38" rot="MR0"/>
 <attribute name="VALUE" x="9.144" y="12.192" size="0.0254" layer="28" rot="MR0"/>
 </element>
-<element name="R20" library="joyAnalog" package="0805" value="68K" x="13.97" y="18.288" smashed="yes" rot="MR180">
+<element name="R20" library="joyAnalog" package="0805" value="10K" x="13.97" y="18.288" smashed="yes" rot="MR180">
 <attribute name="NAME" x="15.494" y="18.6309" size="0.8128" layer="26" rot="MR180"/>
 </element>
-<element name="R21" library="joyAnalog" package="0805" value="68K" x="6.223" y="18.034" smashed="yes" rot="MR180">
+<element name="R21" library="joyAnalog" package="0805" value="10K" x="6.223" y="18.034" smashed="yes" rot="MR180">
 <attribute name="NAME" x="5.461" y="17.2085" size="0.8128" layer="26" rot="MR180"/>
 </element>
-<element name="R25" library="joyAnalog" package="0805" value="68K" x="10.287" y="13.843" smashed="yes" rot="MR90">
+<element name="R25" library="joyAnalog" package="0805" value="10K" x="10.287" y="13.843" smashed="yes" rot="MR90">
 <attribute name="NAME" x="11.9634" y="15.5829" size="0.8128" layer="26" rot="MR0"/>
 </element>
 <element name="TP4" library="testpad" package="TP13R" value="PTR1TP13R" x="14.2494" y="15.7988" smashed="yes" rot="MR0">
@@ -1231,15 +1231,15 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <signal name="NRST">
 <contactref element="IC1" pad="4"/>
 <contactref element="JP2" pad="1"/>
-<via x="4.064" y="10.033" extent="1-16" drill="0.5"/>
-<wire x1="5.7074" y1="10.781" x2="4.812" y2="10.781" width="0.2032" layer="1"/>
-<wire x1="4.812" y1="10.781" x2="4.064" y2="10.033" width="0.2032" layer="1"/>
-<wire x1="4.064" y1="10.033" x2="4.688" y2="9.409" width="0.2032" layer="16"/>
+<via x="4.064" y="10.1854" extent="1-16" drill="0.5"/>
 <wire x1="2.38" y1="1.8" x2="2.38" y2="3.142" width="0.2032" layer="16"/>
 <wire x1="2.38" y1="3.142" x2="4.699" y2="5.461" width="0.2032" layer="16"/>
 <wire x1="4.699" y1="6.212" x2="4.699" y2="5.461" width="0.2032" layer="16"/>
-<wire x1="4.688" y1="9.409" x2="4.688" y2="6.223" width="0.2032" layer="16"/>
-<wire x1="4.688" y1="6.223" x2="4.699" y2="6.212" width="0.2032" layer="16"/>
+<wire x1="4.699" y1="6.212" x2="4.688" y2="6.223" width="0.2032" layer="16"/>
+<wire x1="4.6596" y1="10.781" x2="4.064" y2="10.1854" width="0.2032" layer="1"/>
+<wire x1="5.7074" y1="10.781" x2="4.6596" y2="10.781" width="0.2032" layer="1"/>
+<wire x1="4.688" y1="9.5614" x2="4.064" y2="10.1854" width="0.2032" layer="16"/>
+<wire x1="4.688" y1="6.223" x2="4.688" y2="9.5614" width="0.2032" layer="16"/>
 </signal>
 <signal name="UART_TX">
 <contactref element="IC1" pad="29"/>

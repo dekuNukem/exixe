@@ -2723,9 +2723,9 @@ http://www.zetex.com&lt;p&gt;
 <part name="R19" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="1M"/>
 <part name="TP2" library="testpad" deviceset="PTR1" device="TP13R" value="PTR1TP13R"/>
 <part name="TP3" library="testpad" deviceset="PTR1" device="TP13R" value="PTR1TP13R"/>
-<part name="R20" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="68K"/>
-<part name="R21" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="68K"/>
-<part name="R25" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="68K"/>
+<part name="R20" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="10K"/>
+<part name="R21" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="10K"/>
+<part name="R25" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="10K"/>
 <part name="GND16" library="joyAnalog" deviceset="GND" device=""/>
 <part name="TP4" library="testpad" deviceset="PTR1" device="TP13R" value="PTR1TP13R"/>
 </parts>
