@@ -14,9 +14,9 @@ MISO is not used so you can leave it off. Leave HV pin unconnected for now as we
 
 Now you can go through the [provided Arduino examples](/arduino_examples). Try the [LED test](/arduino_examples/0_LED_test) first. Compile and upload the sketch, the LED on the exixe module should turn purple. You can play around with the RGB values in the sketch to change it to other colors.
 
-If the board is not responding, take a look at the SPI commands in [technical_details.md](/technical_details.md) to make sure the SPI is configured properly. Use a logic analyzer to see what's going on if you have one, make sure the RST pin is HIGH, and CS pin is asserted properly.
-
 ![Alt text](resources/example0.jpg)
+
+If the board is not responding, take a look at the SPI commands in [technical_details.md](/technical_details.md) to make sure the SPI is configured properly. Use a logic analyzer to see what's going on if you have one, make sure the RST pin is HIGH, and CS pin is asserted properly.
 
 ### High voltage supply and tube testing
 
