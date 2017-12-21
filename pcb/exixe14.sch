@@ -1953,7 +1953,7 @@ http://www.zetex.com&lt;p&gt;
 <part name="P+2" library="nixx" deviceset="+180V" device=""/>
 <part name="P+1" library="nixx" deviceset="+180V" device=""/>
 <part name="R1" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="10K"/>
-<part name="C1" library="joyAnalog" deviceset="CAP" device="0805" value="1uF"/>
+<part name="C1" library="joyAnalog" deviceset="CAP" device="0805" value="100nF"/>
 <part name="GND1" library="joyAnalog" deviceset="GND" device=""/>
 <part name="Q2" library="nixx" deviceset="BF820" device=""/>
 <part name="R2" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="10K"/>
