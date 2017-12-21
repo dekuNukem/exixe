@@ -4,7 +4,7 @@ Since I have already sold a few exixe modules, here is a short introduction on h
 
 ### Wiring it up
 
-You should first wire it up and test to see if the board is working before soldering on the nixie tubes.
+You should first test to see if the board is working before soldering on the Nixie tubes.
 
 First take a look at the pinout in [technical_details.md](/technical_details.md), connect the GND to GND, and 3.3V power to 3V3. If you turn it on at this stage the LED should be faintly on, and nothing else should happen.
 
@@ -20,7 +20,7 @@ If the board is not responding, take a look at the SPI commands in [technical_de
 
 ### High voltage supply and tube testing
 
-I suggest buying a premade miniature high voltage power supply for Nixie tubes like [this one](https://www.ebay.com/itm/DC-5V-12V-to-170V-DC-High-Voltage-NIXIE-Power-Supply-Module-PSU-NIXIE-TUBE-ERA-/322511957768?hash=item4b1735ef08:g:ftQAAOSwYTVZmjZb). They are not that expensive, pretty efficient, runs on 5V, and saves tons of trouble of designing one yourself. Just search "5V nixie power supply" on ebay. 
+I suggest buying a premade miniature high voltage power supply for Nixie tubes like [this one](https://www.ebay.com/itm/DC-5V-12V-to-170V-DC-High-Voltage-NIXIE-Power-Supply-Module-PSU-NIXIE-TUBE-ERA-/322511957768?hash=item4b1735ef08:g:ftQAAOSwYTVZmjZb). They are not that expensive, pretty efficient, runs on 5V, and saves tons of trouble of designing one yourself. Just search "5V Nixie power supply" on ebay. 
 
 Needless to say the high voltage needed to drive Nixie tubes is dangerous. Those high voltage modules above probably won't generate enough current to kill you, but you do feel a tingle if your finger is dry, and a rather nasty shock if it's damp, so do watch out where you put your fingers.
 
