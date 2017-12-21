@@ -730,7 +730,7 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <element name="R1" library="joyAnalog" package="0805" value="10K" x="8.818" y="21.6896" smashed="yes" rot="R90">
 <attribute name="NAME" x="9.5862" y="19.977284375" size="0.8128" layer="25" font="vector" rot="R180"/>
 </element>
-<element name="C1" library="joyAnalog" package="0805" value="1uF" x="15.2146" y="5.7658" smashed="yes">
+<element name="C1" library="joyAnalog" package="0805" value="100nF" x="15.2146" y="5.7658" smashed="yes">
 <attribute name="NAME" x="15.5448" y="6.8707" size="0.8128" layer="25" font="vector"/>
 </element>
 <element name="Q2" library="nixx" package="SOT323" value="" x="3.4224" y="19.0964" smashed="yes">
