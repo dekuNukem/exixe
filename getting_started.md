@@ -16,7 +16,7 @@ Now you can go through the [provided Arduino examples](/arduino_examples). Try t
 
 ![Alt text](resources/example0.jpg)
 
-If the board is not responding, take a look at the SPI commands in [technical_details.md](/technical_details.md) to make sure the SPI is configured properly. Use a logic analyzer to see what's going on if you have one, make sure the RST pin is HIGH, and CS pin is asserted properly.
+If the board is not responding, take a look at the SPI commands in [technical_details.md](/technical_details.md) to make sure the SPI is configured properly, and the commands are valid. Use a logic analyzer to see what's going on if you have one, make sure the RST pin is HIGH, and CS pin is asserted properly.
 
 ### High voltage supply and tube testing
 
