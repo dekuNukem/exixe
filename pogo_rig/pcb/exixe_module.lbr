@@ -215,6 +215,25 @@
 <text x="13.6398" y="9.017" size="1.27" layer="21">PA9</text>
 <pad name="PA1" x="7.228" y="6.985" drill="0.635" diameter="1.4224" rot="R90"/>
 <text x="8.3058" y="6.35" size="1.27" layer="21">PA1</text>
+<text x="6.5278" y="16.129" size="1.27" layer="22" rot="MR0">1</text>
+<text x="3.2258" y="21.209" size="1.27" layer="22" rot="MR0">2</text>
+<text x="2.9718" y="25.781" size="1.27" layer="22" rot="MR0">3</text>
+<text x="3.2258" y="30.099" size="1.27" layer="22" rot="MR0">4</text>
+<text x="5.0038" y="33.401" size="1.27" layer="22" rot="MR0">5</text>
+<text x="10.5918" y="36.195" size="1.27" layer="22" rot="MR0">6</text>
+<text x="16.1798" y="33.401" size="1.27" layer="22" rot="MR0">7</text>
+<text x="15.5448" y="35.941" size="1.27" layer="22" rot="MR0">G</text>
+<text x="18.5674" y="35.941" size="1.27" layer="22" rot="MR0">3V</text>
+<text x="17.7038" y="30.099" size="1.27" layer="22" rot="MR0">8</text>
+<text x="17.7038" y="25.527" size="1.27" layer="22" rot="MR0">9</text>
+<text x="17.4498" y="20.193" size="1.27" layer="22" rot="MR0">0</text>
+<text x="18.3388" y="16.129" size="1.27" layer="22" rot="MR0">ANODE</text>
+<text x="11.2268" y="14.859" size="1.27" layer="22" rot="MR0">DL</text>
+<text x="3.8862" y="11.811" size="1.27" layer="22" rot="MR180">PF0</text>
+<text x="4.1402" y="9.906" size="1.27" layer="22" rot="MR180">PF1</text>
+<text x="10.9728" y="6.35" size="1.27" layer="22" rot="MR0">PA1</text>
+<text x="16.5608" y="9.017" size="1.27" layer="22" rot="MR0">PA9</text>
+<text x="14.0208" y="12.192" size="1.27" layer="22" rot="MR0">PB6</text>
 </package>
 <package name="EXIXE14_PAC">
 <wire x1="0" y1="38.095" x2="0" y2="1.905" width="0.127" layer="21"/>
@@ -279,6 +298,26 @@
 <text x="7.6708" y="13.589" size="1.27" layer="21">PB6</text>
 <pad name="DOT_RIGHT" x="7.123" y="19.8997" drill="0.635" diameter="1.4224" rot="R90"/>
 <text x="6.1468" y="17.018" size="1.27" layer="21">DR</text>
+<text x="5.1308" y="12.954" size="1.27" layer="22" rot="MR0">PF1</text>
+<text x="10.5918" y="13.589" size="1.27" layer="22" rot="MR0">PB6</text>
+<text x="15.5448" y="13.589" size="1.27" layer="22" rot="MR0">PB3</text>
+<text x="5.5372" y="9.779" size="1.27" layer="22" rot="MR180">PF0</text>
+<text x="1.397" y="35.941" size="1.27" layer="21">HV</text>
+<text x="15.4178" y="35.941" size="1.27" layer="22" rot="MR0">G</text>
+<text x="18.5674" y="35.941" size="1.27" layer="22" rot="MR0">3V</text>
+<text x="8.0518" y="17.018" size="1.27" layer="22" rot="MR0">DR</text>
+<text x="3.9878" y="20.574" size="1.27" layer="22" rot="MR0">1</text>
+<text x="2.5908" y="24.003" size="1.27" layer="22" rot="MR0">2</text>
+<text x="2.8448" y="27.432" size="1.27" layer="22" rot="MR0">3</text>
+<text x="4.4958" y="30.226" size="1.27" layer="22" rot="MR0">4</text>
+<text x="8.1788" y="32.512" size="1.27" layer="22" rot="MR0">5</text>
+<text x="12.4968" y="32.766" size="1.27" layer="22" rot="MR0">6</text>
+<text x="15.7988" y="30.988" size="1.27" layer="22" rot="MR0">7</text>
+<text x="18.0848" y="28.067" size="1.27" layer="22" rot="MR0">8</text>
+<text x="18.7198" y="24.003" size="1.27" layer="22" rot="MR0">9</text>
+<text x="17.4498" y="20.193" size="1.27" layer="22" rot="MR0">0</text>
+<text x="14.0208" y="17.018" size="1.27" layer="22" rot="MR0">DL</text>
+<text x="9.398" y="20.2438" size="1.27" layer="22" rot="MR90">ANODE</text>
 </package>
 </packages>
 <symbols>
