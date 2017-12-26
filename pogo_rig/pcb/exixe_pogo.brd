@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="1" unitdist="mil" unit="mil" style="lines" multiple="1" display="no" altdistance="2" altunitdist="mil" altunit="mil"/>
+<grid distance="5" unitdist="mil" unit="mil" style="lines" multiple="1" display="no" altdistance="2" altunitdist="mil" altunit="mil"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="yes"/>
@@ -182,9 +182,7 @@
 <rectangle x1="7.62" y1="46.863" x2="11.049" y2="52.197" layer="42"/>
 <rectangle x1="38.481" y1="30.988" x2="43.815" y2="40.132" layer="42"/>
 <rectangle x1="38.862" y1="35.941" x2="41.021" y2="39.751" layer="41"/>
-<rectangle x1="38.862" y1="34.671" x2="42.799" y2="36.068" layer="41"/>
 <rectangle x1="41.402" y1="31.115" x2="43.561" y2="34.671" layer="41"/>
-<rectangle x1="7.62" y1="49.022" x2="10.541" y2="58.42" layer="41"/>
 <text x="29.337" y="0.762" size="1.27" layer="25" rot="R90">EXCLK</text>
 <text x="26.797" y="0.762" size="1.27" layer="25" rot="R90">EXDIO</text>
 <text x="31.877" y="0.762" size="1.27" layer="25" rot="R90">3V3</text>
@@ -217,6 +215,8 @@ dekuNukem
 2017</text>
 <text x="36.322" y="27.051" size="1.27" layer="26" rot="MR180">PF0</text>
 <text x="36.322" y="25.019" size="1.27" layer="26" rot="MR180">PF1</text>
+<rectangle x1="38.862" y1="34.6456" x2="43.561" y2="35.9664" layer="41"/>
+<rectangle x1="7.366" y1="48.768" x2="10.922" y2="58.7248" layer="41"/>
 </plain>
 <libraries>
 <library name="exixe_module">
@@ -1538,10 +1538,6 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <wire x1="43.8404" y1="42.5196" x2="45" y2="43.6792" width="0.2032" layer="1"/>
 <wire x1="45" y1="43.6792" x2="45" y2="43.8101" width="0.2032" layer="1"/>
 <wire x1="70.9676" y1="34.1884" x2="69.85" y2="35.306" width="0.2032" layer="1"/>
-<wire x1="59.309" y1="35.306" x2="51.562" y2="43.053" width="0.2032" layer="1"/>
-<wire x1="51.562" y1="43.053" x2="45.7571" y2="43.053" width="0.2032" layer="1"/>
-<wire x1="45.7571" y1="43.053" x2="45" y2="43.8101" width="0.2032" layer="1"/>
-<wire x1="69.85" y1="35.306" x2="59.309" y2="35.306" width="0.2032" layer="1"/>
 <wire x1="77.0825" y1="30.4825" x2="74.0066" y2="27.4066" width="0.2032" layer="1"/>
 <wire x1="74.0066" y1="27.4066" x2="72.39" y2="27.4066" width="0.2032" layer="1"/>
 <wire x1="72.39" y1="27.4066" x2="70.9676" y2="28.829" width="0.2032" layer="1"/>
@@ -1549,6 +1545,10 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <wire x1="17.033" y1="31.2241" x2="18.1327" y2="30.1244" width="0.2032" layer="1"/>
 <wire x1="18.1327" y1="30.1244" x2="27.8892" y2="30.1244" width="0.2032" layer="1"/>
 <wire x1="27.8892" y1="30.1244" x2="40.2844" y2="42.5196" width="0.2032" layer="1"/>
+<wire x1="58.801" y1="35.306" x2="51.562" y2="42.545" width="0.2032" layer="1"/>
+<wire x1="51.562" y1="42.545" x2="46.2651" y2="42.545" width="0.2032" layer="1"/>
+<wire x1="46.2651" y1="42.545" x2="45" y2="43.8101" width="0.2032" layer="1"/>
+<wire x1="69.85" y1="35.306" x2="58.801" y2="35.306" width="0.2032" layer="1"/>
 </signal>
 <signal name="N$12">
 <contactref element="U$2" pad="DOT_RIGHT"/>
@@ -1701,9 +1701,9 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <signal name="+180V">
 <contactref element="JP1" pad="HV"/>
 <contactref element="JP2" pad="HV"/>
-<wire x1="39.92" y1="38" x2="39.92" y2="35.56" width="0.3048" layer="1"/>
-<wire x1="39.92" y1="35.56" x2="42.4688" y2="35.56" width="0.3048" layer="1"/>
-<wire x1="42.4688" y1="35.56" x2="42.4688" y2="33" width="0.3048" layer="1"/>
+<wire x1="39.92" y1="38" x2="39.92" y2="35.56" width="0.4064" layer="1"/>
+<wire x1="39.92" y1="35.56" x2="42.4688" y2="35.56" width="0.4064" layer="1"/>
+<wire x1="42.4688" y1="35.56" x2="42.4688" y2="33" width="0.4064" layer="1"/>
 <wire x1="42.4688" y1="33" x2="42.46" y2="33" width="0.3048" layer="1"/>
 <contactref element="U$1" pad="HV"/>
 <contactref element="U$2" pad="HV"/>
@@ -1715,8 +1715,8 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <wire x1="9.38" y1="50.2" x2="9.38" y2="47.752" width="0.4064" layer="16"/>
 <wire x1="9.38" y1="47.752" x2="36.068" y2="47.752" width="0.4064" layer="16"/>
 <contactref element="R4" pad="2"/>
-<wire x1="9.38" y1="50.2" x2="10.044" y2="50.864" width="0.3048" layer="1"/>
-<wire x1="10.044" y1="50.864" x2="10.044" y2="52.832" width="0.3048" layer="1"/>
+<wire x1="9.38" y1="50.2" x2="10.044" y2="50.864" width="0.4064" layer="1"/>
+<wire x1="10.044" y1="50.864" x2="10.044" y2="52.832" width="0.4064" layer="1"/>
 </signal>
 <signal name="EXIXE_SWCLK">
 <contactref element="JP3" pad="3"/>
@@ -1800,8 +1800,8 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <signal name="N$17">
 <contactref element="R4" pad="1"/>
 <contactref element="JP5" pad="1"/>
-<wire x1="8.244" y1="52.832" x2="8.244" y2="54.98" width="0.3048" layer="1"/>
-<wire x1="8.244" y1="54.98" x2="9.271" y2="56.007" width="0.3048" layer="1"/>
+<wire x1="8.244" y1="52.832" x2="8.244" y2="54.98" width="0.4064" layer="1"/>
+<wire x1="8.244" y1="54.98" x2="9.271" y2="56.007" width="0.4064" layer="1"/>
 </signal>
 <signal name="N$20">
 <contactref element="IC2" pad="2"/>
