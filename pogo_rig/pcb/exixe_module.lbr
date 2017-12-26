@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="5" unitdist="mil" unit="mil" style="lines" multiple="1" display="no" altdistance="5" altunitdist="mil" altunit="mil"/>
+<grid distance="50" unitdist="mil" unit="mil" style="lines" multiple="1" display="no" altdistance="5" altunitdist="mil" altunit="mil"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -161,16 +161,16 @@
 <wire x1="20" y1="38.095" x2="18.095" y2="40" width="0.127" layer="21" curve="90"/>
 <wire x1="18.095" y1="40" x2="1.905" y2="40" width="0.127" layer="21"/>
 <wire x1="1.905" y1="40" x2="0" y2="38.095" width="0.127" layer="21" curve="90"/>
-<pad name="3V" x="17.62" y="38.2" drill="0.635" diameter="1.4224" rot="R90"/>
-<pad name="CLK" x="17.62" y="1.8" drill="0.635" diameter="1.4224" rot="R90"/>
-<pad name="CS" x="12.54" y="1.8" drill="0.635" diameter="1.4224" rot="R90"/>
-<pad name="DIO" x="15.08" y="1.8" drill="0.635" diameter="1.4224" rot="R90"/>
-<pad name="GND" x="15.08" y="38.2" drill="0.635" diameter="1.4224" rot="R90"/>
-<pad name="HV" x="2.38" y="38.2" drill="0.635" diameter="1.4224" rot="R90"/>
-<pad name="MISO" x="7.46" y="1.8" drill="0.635" diameter="1.4224" rot="R90"/>
-<pad name="MOSI" x="10" y="1.8" drill="0.635" diameter="1.4224" rot="R90"/>
-<pad name="RST" x="2.38" y="1.8" drill="0.635" diameter="1.4224" rot="R90"/>
-<pad name="SCK" x="4.92" y="1.8" drill="0.635" diameter="1.4224" rot="R90"/>
+<pad name="3V" x="17.62" y="38.2" drill="0.635" diameter="1.778" rot="R90"/>
+<pad name="CLK" x="17.62" y="1.8" drill="0.635" diameter="1.778" rot="R90"/>
+<pad name="CS" x="12.54" y="1.8" drill="0.635" diameter="1.778" rot="R90"/>
+<pad name="DIO" x="15.08" y="1.8" drill="0.635" diameter="1.778" rot="R90"/>
+<pad name="GND" x="15.08" y="38.2" drill="0.635" diameter="1.778" rot="R90"/>
+<pad name="HV" x="2.38" y="38.2" drill="0.635" diameter="1.778" rot="R90"/>
+<pad name="MISO" x="7.46" y="1.8" drill="0.635" diameter="1.778" rot="R90"/>
+<pad name="MOSI" x="10" y="1.8" drill="0.635" diameter="1.778" rot="R90"/>
+<pad name="RST" x="2.38" y="1.8" drill="0.635" diameter="1.778" rot="R90"/>
+<pad name="SCK" x="4.92" y="1.8" drill="0.635" diameter="1.778" rot="R90"/>
 <text x="1.397" y="35.941" size="1.27" layer="21">HV</text>
 <text x="14.6558" y="35.941" size="1.27" layer="21">G</text>
 <text x="16.6624" y="35.941" size="1.27" layer="21">3V</text>
@@ -181,22 +181,22 @@
 <text x="13.208" y="2.921" size="1.27" layer="21" rot="R90">CS</text>
 <text x="15.748" y="2.921" size="1.27" layer="21" rot="R90">DIO</text>
 <text x="18.288" y="2.921" size="1.27" layer="21" rot="R90">CLK</text>
-<pad name="DIGIT_6" x="10.0825" y="35.1175" drill="0.635" diameter="1.4224" rot="R90"/>
-<pad name="ANODE" x="14.0825" y="18.4825" drill="0.635" diameter="1.4224" rot="R90"/>
-<pad name="DIGIT_1" x="6.0825" y="18.4825" drill="0.635" diameter="1.4224" rot="R90"/>
-<pad name="DIGIT_2" x="4.4" y="21.8" drill="0.635" diameter="1.4224" rot="R90"/>
-<pad name="DIGIT_3" x="4.273" y="26.3" drill="0.635" diameter="1.4224" rot="R90"/>
-<pad name="DIGIT_4" x="4.4" y="30.8" drill="0.635" diameter="1.4224" rot="R90"/>
-<pad name="DIGIT_5" x="6.0825" y="34.1175" drill="0.635" diameter="1.4224" rot="R90"/>
-<pad name="DIGIT_7" x="14.0825" y="34.1175" drill="0.635" diameter="1.4224" rot="R90"/>
-<pad name="DIGIT_8" x="15.4475" y="30.8" drill="0.635" diameter="1.4224" rot="R90"/>
-<pad name="DIGIT_9" x="15.5745" y="26.3" drill="0.635" diameter="1.4224" rot="R90"/>
-<pad name="DIGIT_0" x="15.4475" y="21.7305" drill="0.635" diameter="1.4224" rot="R90"/>
-<pad name="DOT_LEFT" x="10.0825" y="17.4825" drill="0.635" diameter="1.4224" rot="R90"/>
+<pad name="DIGIT_6" x="10.0825" y="35.1175" drill="0.635" diameter="1.778" rot="R90"/>
+<pad name="ANODE" x="14.0825" y="18.4825" drill="0.635" diameter="1.778" rot="R90"/>
+<pad name="DIGIT_1" x="6.0825" y="18.4825" drill="0.635" diameter="1.778" rot="R90"/>
+<pad name="DIGIT_2" x="4.4" y="21.8" drill="0.635" diameter="1.778" rot="R90"/>
+<pad name="DIGIT_3" x="4.273" y="26.3" drill="0.635" diameter="1.778" rot="R90"/>
+<pad name="DIGIT_4" x="4.4" y="30.8" drill="0.635" diameter="1.778" rot="R90"/>
+<pad name="DIGIT_5" x="6.0825" y="34.1175" drill="0.635" diameter="1.778" rot="R90"/>
+<pad name="DIGIT_7" x="14.0825" y="34.1175" drill="0.635" diameter="1.778" rot="R90"/>
+<pad name="DIGIT_8" x="15.4475" y="30.8" drill="0.635" diameter="1.778" rot="R90"/>
+<pad name="DIGIT_9" x="15.5745" y="26.3" drill="0.635" diameter="1.778" rot="R90"/>
+<pad name="DIGIT_0" x="15.4475" y="21.7305" drill="0.635" diameter="1.778" rot="R90"/>
+<pad name="DOT_LEFT" x="10.0825" y="17.4825" drill="0.635" diameter="1.778" rot="R90"/>
 <pad name="PF1" x="8.625" y="9.525" drill="0.635" diameter="1.4224" rot="R90"/>
-<pad name="PB6" x="9.79" y="12.7" drill="0.635" diameter="1.4224" rot="R90"/>
+<pad name="PB6" x="9.79" y="12.7" drill="0.635" diameter="1.778" rot="R90"/>
 <pad name="PF0" x="7.99" y="11.176" drill="0.635" diameter="1.4224" rot="R90"/>
-<pad name="PA9" x="12.446" y="9.768" drill="0.635" diameter="1.4224" rot="R90"/>
+<pad name="PA9" x="12.446" y="9.768" drill="0.635" diameter="1.778" rot="R90"/>
 <text x="5.7658" y="16.129" size="1.27" layer="21">1</text>
 <text x="2.4638" y="21.209" size="1.27" layer="21">2</text>
 <text x="2.2098" y="25.781" size="1.27" layer="21">3</text>
@@ -213,7 +213,7 @@
 <text x="6.6802" y="11.811" size="1.27" layer="21" rot="R180">PF0</text>
 <text x="7.1882" y="9.906" size="1.27" layer="21" rot="R180">PF1</text>
 <text x="13.6398" y="9.017" size="1.27" layer="21">PA9</text>
-<pad name="PA1" x="7.228" y="6.985" drill="0.635" diameter="1.4224" rot="R90"/>
+<pad name="PA1" x="7.228" y="6.985" drill="0.635" diameter="1.778" rot="R90"/>
 <text x="8.3058" y="6.35" size="1.27" layer="21">PA1</text>
 <text x="6.5278" y="16.129" size="1.27" layer="22" rot="MR0">1</text>
 <text x="3.2258" y="21.209" size="1.27" layer="22" rot="MR0">2</text>
@@ -244,16 +244,16 @@
 <wire x1="20" y1="38.095" x2="18.095" y2="40" width="0.127" layer="21" curve="90"/>
 <wire x1="18.095" y1="40" x2="1.905" y2="40" width="0.127" layer="21"/>
 <wire x1="1.905" y1="40" x2="0" y2="38.095" width="0.127" layer="21" curve="90"/>
-<pad name="3V" x="17.62" y="38.2" drill="0.635" diameter="1.4224" rot="R90"/>
-<pad name="CLK" x="17.62" y="1.8" drill="0.635" diameter="1.4224" rot="R90"/>
-<pad name="CS" x="12.54" y="1.8" drill="0.635" diameter="1.4224" rot="R90"/>
-<pad name="DIO" x="15.08" y="1.8" drill="0.635" diameter="1.4224" rot="R90"/>
-<pad name="GND" x="15.08" y="38.2" drill="0.635" diameter="1.4224" rot="R90"/>
-<pad name="HV" x="2.38" y="38.2" drill="0.635" diameter="1.4224" rot="R90"/>
-<pad name="MISO" x="7.46" y="1.8" drill="0.635" diameter="1.4224" rot="R90"/>
-<pad name="MOSI" x="10" y="1.8" drill="0.635" diameter="1.4224" rot="R90"/>
-<pad name="RST" x="2.38" y="1.8" drill="0.635" diameter="1.4224" rot="R90"/>
-<pad name="SCK" x="4.92" y="1.8" drill="0.635" diameter="1.4224" rot="R90"/>
+<pad name="3V" x="17.62" y="38.2" drill="0.635" diameter="1.778" rot="R90"/>
+<pad name="CLK" x="17.62" y="1.8" drill="0.635" diameter="1.778" rot="R90"/>
+<pad name="CS" x="12.54" y="1.8" drill="0.635" diameter="1.778" rot="R90"/>
+<pad name="DIO" x="15.08" y="1.8" drill="0.635" diameter="1.778" rot="R90"/>
+<pad name="GND" x="15.08" y="38.2" drill="0.635" diameter="1.778" rot="R90"/>
+<pad name="HV" x="2.38" y="38.2" drill="0.635" diameter="1.778" rot="R90"/>
+<pad name="MISO" x="7.46" y="1.8" drill="0.635" diameter="1.778" rot="R90"/>
+<pad name="MOSI" x="10" y="1.8" drill="0.635" diameter="1.778" rot="R90"/>
+<pad name="RST" x="2.38" y="1.8" drill="0.635" diameter="1.778" rot="R90"/>
+<pad name="SCK" x="4.92" y="1.8" drill="0.635" diameter="1.778" rot="R90"/>
 <text x="1.397" y="35.941" size="1.27" layer="21">HV</text>
 <text x="14.6558" y="35.941" size="1.27" layer="21">G</text>
 <text x="16.6624" y="35.941" size="1.27" layer="21">3V</text>
@@ -264,22 +264,22 @@
 <text x="13.208" y="2.921" size="1.27" layer="21" rot="R90">CS</text>
 <text x="15.748" y="2.921" size="1.27" layer="21" rot="R90">DIO</text>
 <text x="18.288" y="2.921" size="1.27" layer="21" rot="R90">CLK</text>
-<pad name="DIGIT_6" x="11.4813" y="31.3911" drill="0.635" diameter="1.4224" rot="R90"/>
-<pad name="ANODE" x="10.033" y="19.2241" drill="0.635" diameter="1.4224" rot="R90"/>
-<pad name="DIGIT_1" x="4.9058" y="21.8647" drill="0.635" diameter="1.4224" rot="R90"/>
-<pad name="DIGIT_2" x="3.8552" y="24.6349" drill="0.635" diameter="1.4224" rot="R90"/>
-<pad name="DIGIT_3" x="4.2123" y="27.576" drill="0.635" diameter="1.4224" rot="R90"/>
-<pad name="DIGIT_4" x="5.8953" y="30.0142" drill="0.635" diameter="1.4224" rot="R90"/>
-<pad name="DIGIT_5" x="8.5187" y="31.3911" drill="0.635" diameter="1.4224" rot="R90"/>
-<pad name="DIGIT_7" x="14.1047" y="30.0142" drill="0.635" diameter="1.4224" rot="R90"/>
-<pad name="DIGIT_8" x="15.7877" y="27.576" drill="0.635" diameter="1.4224" rot="R90"/>
-<pad name="DIGIT_9" x="16.1448" y="24.6349" drill="0.635" diameter="1.4224" rot="R90"/>
-<pad name="DIGIT_0" x="15.0942" y="21.8647" drill="0.635" diameter="1.4224" rot="R90"/>
-<pad name="DOT_LEFT" x="12.8766" y="19.9001" drill="0.635" diameter="1.4224" rot="R90"/>
-<pad name="PF1" x="3.8752" y="11.938" drill="0.635" diameter="1.4224" rot="R90"/>
-<pad name="PB3" x="14.086" y="15.8496" drill="0.635" diameter="1.4224" rot="R90"/>
-<pad name="PF0" x="6.974" y="10.9728" drill="0.635" diameter="1.4224" rot="R90"/>
-<pad name="PB6" x="8.774" y="12.7" drill="0.635" diameter="1.4224" rot="R90"/>
+<pad name="DIGIT_6" x="11.4813" y="31.3911" drill="0.635" diameter="1.778" rot="R90"/>
+<pad name="ANODE" x="10.033" y="19.2241" drill="0.635" diameter="1.778" rot="R90"/>
+<pad name="DIGIT_1" x="4.9058" y="21.8647" drill="0.635" diameter="1.778" rot="R90"/>
+<pad name="DIGIT_2" x="3.8552" y="24.6349" drill="0.635" diameter="1.778" rot="R90"/>
+<pad name="DIGIT_3" x="4.2123" y="27.576" drill="0.635" diameter="1.778" rot="R90"/>
+<pad name="DIGIT_4" x="5.8953" y="30.0142" drill="0.635" diameter="1.778" rot="R90"/>
+<pad name="DIGIT_5" x="8.5187" y="31.3911" drill="0.635" diameter="1.778" rot="R90"/>
+<pad name="DIGIT_7" x="14.1047" y="30.0142" drill="0.635" diameter="1.778" rot="R90"/>
+<pad name="DIGIT_8" x="15.7877" y="27.576" drill="0.635" diameter="1.778" rot="R90"/>
+<pad name="DIGIT_9" x="16.1448" y="24.6349" drill="0.635" diameter="1.778" rot="R90"/>
+<pad name="DIGIT_0" x="15.0942" y="21.8647" drill="0.635" diameter="1.778" rot="R90"/>
+<pad name="DOT_LEFT" x="12.8766" y="19.9001" drill="0.635" diameter="1.778" rot="R90"/>
+<pad name="PF1" x="3.8752" y="11.938" drill="0.635" diameter="1.778" rot="R90"/>
+<pad name="PB3" x="14.086" y="15.8496" drill="0.635" diameter="1.778" rot="R90"/>
+<pad name="PF0" x="6.974" y="10.9728" drill="0.635" diameter="1.778" rot="R90"/>
+<pad name="PB6" x="8.774" y="12.7" drill="0.635" diameter="1.778" rot="R90"/>
 <text x="3.2258" y="20.574" size="1.27" layer="21">1</text>
 <text x="1.8288" y="24.003" size="1.27" layer="21">2</text>
 <text x="2.2098" y="27.432" size="1.27" layer="21">3</text>
@@ -296,7 +296,7 @@
 <text x="8.3312" y="9.779" size="1.27" layer="21" rot="R180">PF0</text>
 <text x="2.5908" y="12.954" size="1.27" layer="21">PF1</text>
 <text x="7.6708" y="13.589" size="1.27" layer="21">PB6</text>
-<pad name="DOT_RIGHT" x="7.123" y="19.8997" drill="0.635" diameter="1.4224" rot="R90"/>
+<pad name="DOT_RIGHT" x="7.123" y="19.8997" drill="0.635" diameter="1.778" rot="R90"/>
 <text x="6.1468" y="17.018" size="1.27" layer="21">DR</text>
 <text x="5.1308" y="12.954" size="1.27" layer="22" rot="MR0">PF1</text>
 <text x="10.5918" y="13.589" size="1.27" layer="22" rot="MR0">PB6</text>
