@@ -9,7 +9,7 @@ Full BOM here: [exixe12](resources/exixe12_bom.xlsx), [exixe14](resources/exixe1
 * Microcontroller is [STM32F042K6T6](https://www.mouser.co.uk/Search/ProductDetail.aspx?R=STM32F042K6T6virtualkey51120000virtualkey511-STM32F042K6T6)
 * LED is [Wurth Electronics 150141M173100](https://www.mouser.co.uk/Search/ProductDetail.aspx?R=150141M173100virtualkey51100000virtualkey710-150141M173100)
 
-# Upload Firmware
+## Upload Firmware
 
 Once you have soldered the board together, you will need to uplaod the firmware to the STM32 microcontroller in order for the boards to function.
 

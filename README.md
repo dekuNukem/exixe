@@ -2,7 +2,7 @@
 
 ![Alt text](resources/title.jpg)
 
-![Alt text](resources/breadboard.jpg)
+![Alt text](resources/example2.gif)
 
 ![Alt text](resources/clocks.jpg)
 
@@ -19,6 +19,8 @@ Since each tube has its own driver, there is no need for multiplexing. Thus redu
 Here's a short video of exixe14 modules in action on the [high precision clock](https://github.com/dekuNukem/exixe_clock) shown in the above picture:
 
 https://www.youtube.com/watch?v=r3d2alzgjKc
+
+## Contact
 
 Questions, inquires, or want to buy some? Feel free to email me at `dekunukem gmail com`.
 
