@@ -2,6 +2,8 @@
 
 ![Alt text](resources/title.jpg)
 
+![Alt text](resources/breadboard.jpg)
+
 ![Alt text](resources/example2.gif)
 
 ![Alt text](resources/clocks.jpg)
