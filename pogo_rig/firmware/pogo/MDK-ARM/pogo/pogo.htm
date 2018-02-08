@@ -3,7 +3,7 @@
 <title>Static Call Graph - [pogo\pogo.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image pogo\pogo.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060061: Last Updated: Wed Jan 03 19:58:01 2018
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060061: Last Updated: Tue Feb 06 13:03:54 2018
 <BR><P>
 <H3>Maximum Stack Usage =        172 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -150,6 +150,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[26]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_InitTick
 <LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_SetConfig
 <LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;display_digit
+<LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;test
 <LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
 <LI><a href="#[2f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_GetSysClockFreq
 </UL>
@@ -495,12 +496,13 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;test
 </UL>
 
-<P><STRONG><a name="[4a]"></a>test</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, helpers.o(i.test))
+<P><STRONG><a name="[4a]"></a>test</STRONG> (Thumb, 74 bytes, Stack size 8 bytes, helpers.o(i.test))
 <BR><BR>[Stack]<UL><LI>Max Depth = 128<LI>Call Chain = test &rArr; display_digit &rArr; HAL_SPI_Transmit &rArr; SPI_EndRxTxTransaction &rArr; SPI_WaitFlagStateUntilTimeout
 </UL>
 <BR>[Calls]<UL><LI><a href="#[23]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Delay
 <LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_led
 <LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;display_digit
+<LI><a href="#[29]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>

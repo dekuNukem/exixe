@@ -1,3 +1,13 @@
+## Board pinout
+
+![Alt text](resources/pinout_photo.jpg)
+
+![Alt text](resources/pinout_table.png)
+
+* Pinout and dimension are the same for exixe-12 and exixe-14.
+* Officially, exixe modules are NOT 5V compatible, all signals are 3.3V level. However it does seem to work with 5V Arduinos without short term damage.
+* Still, the module itself must be powered at 3.3V.
+
 ## SPI command protocol
 
 ### SPI configurations
@@ -39,18 +49,6 @@ Setting digit 4 to fully on while other digits are off, no overdrive, orange LED
 Detailed timing for the first byte:
 
 ![Alt text](resources/spi_data_format_detail.png)
-
-## Board pinout
-
-![Alt text](resources/pinout_photo.jpg)
-
-![Alt text](resources/pinout_table.png)
-
-* Pinout and dimension are the same for exixe-12 and exixe-14.
-* Officially, exixe modules are NOT 5V compatible, all signals are 3.3V level.
-* However it does seem to work with 5V Arduinos without short term damage. Anyway, I suggest using 3.3V Arduinos, or putting a 4.7K resistor in series to limit current.
-* Still, the module itself must be powered at 3.3V.
-* When assembling insert the Nixie tube so its anode lead is in the anode hole, and TEST THE TUBE BEFORE SOLDERING it in place.
 
 ## Technical details
 

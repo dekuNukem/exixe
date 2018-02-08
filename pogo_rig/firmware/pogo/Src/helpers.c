@@ -68,7 +68,6 @@ void display_digit(uint8_t digit, uint8_t brightness)
 void test(void)
 {
   count++;
-  count = 6;
   if(count % 3 == 0)
     set_led(127, 0, 0);
   else if (count % 3 == 1)
