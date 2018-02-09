@@ -1,14 +1,34 @@
-## Getting started
+# Getting started with exixe modules
 
-Since I have already sold a few exixe modules, here is a short introduction on how to get started with them:
+Congratulations on the new toy! Here is a brief guide on how to get started into the world of Nixie tubes.
 
-### Wiring it up
+## Prerequisites
 
-You should first test to see if the board is working before soldering on the Nixie tubes.
+There are a couple of things you need before we get going, so let's get them out of the way first:
 
-First take a look at the pinout in [technical_details.md](/technical_details.md), connect the GND to GND, and 3.3V power to 3V3. If you turn it on at this stage the LED should be faintly on, and nothing else should happen.
+### Nixie Tubes
 
-Then let's connect the SPI lines. Connect MO to MOSI line, SCK to SCK line, and CS to CS line. For Arduino Uno, MOSI is pin 11, SCK is pin 13, CS is pin 10. Consult the pinout page if you're using other boards.
+[Read this short guide to see what to buy.](buying_nixie_tubes.md)
+
+### High Voltage Power Supply
+
+Nixie tubes need around 180V to start glowing. That means you need a high voltage supply for them to work.
+
+You can design one yourself, although I recommend saving the trouble and getting a premade module [like this one](https://www.ebay.com/itm/DC-5V-12V-to-170V-DC-High-Voltage-NIXIE-Power-Supply-Module-PSU-NIXIE-TUBE-ERA-/322511957768?hash=item4b1735ef08:g:ftQAAOSwYTVZmjZb). They are tiny, inexpensive, efficient, and run on 5V. Just search [5V Nixie power supply](https://www.ebay.com/sch/i.html?_from=R40&_nkw=5V+Nixie+power+supply) on ebay or google. 
+
+In the end, you should have the tube, corresponding exixe board, headers, and the high voltage supply:
+
+![Alt text](resources/all.jpg)
+
+## Testing the exixe module
+
+Let's make sure the board is working first before soldering on the Nixie tubes.
+
+Solder on the headers, then take a look at the pinout in [technical_details.md](/technical_details.md).
+
+First we hook up the power pins. Connect the GND to GND, and 3.3V power to 3V3. 
+
+Next are the SPI lines. Connect MO to MOSI line, SCK to SCK line, and CS to CS line. For Arduino UNO, MOSI is pin 11, SCK is pin 13, CS is pin 10. Consult the pinout page if you're using other boards.
 
 MISO is not used so you can leave it off. Leave HV pin unconnected for now as well. If you are unfamiliar with SPI, or need a refresher, [sparkfun's introduction](https://learn.sparkfun.com/tutorials/serial-peripheral-interface-spi) is really helpful, and [the wikipedia page](https://en.wikipedia.org/wiki/Serial_Peripheral_Interface_Bus) has more details.
 
@@ -19,8 +39,6 @@ Now you can go through the [provided Arduino examples](/arduino_examples). Try t
 If the board is not responding, take a look at the SPI commands in [technical_details.md](/technical_details.md) to make sure the SPI is configured properly, and the commands are valid. Use a logic analyzer to see what's going on if you have one, make sure the RST pin is HIGH, and CS pin is asserted properly.
 
 ### High voltage supply and tube testing
-
-I suggest buying a premade miniature high voltage power supply for Nixie tubes like [this one](https://www.ebay.com/itm/DC-5V-12V-to-170V-DC-High-Voltage-NIXIE-Power-Supply-Module-PSU-NIXIE-TUBE-ERA-/322511957768?hash=item4b1735ef08:g:ftQAAOSwYTVZmjZb). They are not that expensive, pretty efficient, runs on 5V, and saves tons of trouble of designing one yourself. Just search "5V Nixie power supply" on ebay. 
 
 Needless to say the high voltage needed to drive Nixie tubes is dangerous. Those high voltage modules above probably won't generate enough current to kill you, but you do feel a tingle if your finger is dry, and a rather nasty shock if it's damp, so do watch out where you put your fingers.
 
