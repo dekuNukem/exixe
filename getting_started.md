@@ -64,7 +64,7 @@ Try keep the tube straight. For IN-14 leave around 5mm of pins between the PCB a
 
 ![Alt text](resources/soldered.jpg)
 
-It's also a good idea wrap the bottom of IN-14 tubes with heat-shrink tubing or electric tape like the one on the right, to prevent backlight leaking.
+It's also a good idea to wrap the bottom of IN-14 tubes with heat-shrink tubing or electric tape like the one on the right, to prevent backlight leaking.
 
 ## Try some examples!
 
