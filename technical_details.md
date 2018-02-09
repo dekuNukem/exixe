@@ -38,7 +38,10 @@ exixe expects a fixed 16-byte command, which should be sent within one CS activa
 ### Notes
 
 * Only one single digit should be on at any given time, apart from during transition animations.
+
 * Dots can be turned on alongside digits.
+
+* If you are unfamiliar with SPI, or need a refresher, [sparkfun's introduction](https://learn.sparkfun.com/tutorials/serial-peripheral-interface-spi) is really helpful, and [the wikipedia page](https://en.wikipedia.org/wiki/Serial_Peripheral_Interface_Bus) has more details.
 
 ### Sample timing capture
 
