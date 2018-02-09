@@ -6,14 +6,14 @@ Nixie tubes have been out of production for nearly 30 years. And thanks to the r
 
 ![Alt text](resources/tubes.jpg)
 
-IN-14 is a side-view tube, while IN-12 is front-view. The digits inside are exactly the same in term of size and shape but IN-14 is more expensive thanks to its traditional tube shape. Still, those two mercury-enhanced USSR tubes have excellent reliability, often last for decades when properly driven.
+IN-14 is a side-view tube, while IN-12 is front-view. The digits inside are exactly the same, but IN-14 is more expensive thanks to its traditional tube shape. Still, those two mercury-enhanced USSR tubes have excellent reliability and easily last decades when properly driven.
 
 exixe14 is compatible with IN-14 tubes, while exixe12 is for IN-12 tubes:
 
 ![Alt text](resources/exixetubes.jpg)
 
 
-You can find them on ebay by searching [IN-12 Nixie](https://www.ebay.com/sch/i.html?_from=R40&_nkw=in-12+nixie) or [IN-14 Nixie](https://www.ebay.com/sch/i.html?_from=R40&_nkw=in-14+nixie). Most of the sellers are from Ukraine, and often you have a choice of NOS (new old stock) or used tubes.
+You can find those tubes on ebay by searching [IN-12 Nixie](https://www.ebay.com/sch/i.html?_from=R40&_nkw=in-12+nixie) or [IN-14 Nixie](https://www.ebay.com/sch/i.html?_from=R40&_nkw=in-14+nixie). Most of the sellers are from Ukraine, and often you have a choice of NOS (new old stock) or used tubes.
 
 ## NOS or used?
 

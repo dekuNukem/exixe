@@ -1,7 +1,5 @@
 # Getting started with exixe modules
 
-Congratulations on the new toy! Here is a brief guide on how to get started into the world of Nixie tubes.
-
 ## Prerequisites
 
 There are a couple of things you need before we get going, so let's get them out of the way first:
