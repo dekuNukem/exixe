@@ -10,7 +10,7 @@ There are a couple of things you need before we get going, so let's get them out
 
 ### High Voltage Power Supply
 
-Nixie tubes need around 180V to start glowing. That means you need a high voltage supply for them to work.
+Nixie tubes need around 180V to start glowing. That means you need a high voltage supply.
 
 You can design one yourself, although I recommend saving the trouble and getting a premade module [like this one](https://www.ebay.com/itm/DC-5V-12V-to-180V-DC-High-Voltage-NIXIE-Power-Supply-Module-PSU-NIXIE-TUBE-ERA-/322511957768?hash=item4b1735ef08:g:ftQAAOSwYTVZmjZb). They are tiny, inexpensive, efficient, and run on 5V. Just search [5V Nixie power supply](https://www.ebay.com/sch/i.html?_from=R40&_nkw=5V+Nixie+power+supply) on ebay or google. 
 
@@ -36,9 +36,9 @@ If the board is not responding, take a look at the SPI commands in [technical_de
 
 ### Testing tubes
 
-I recommend testing your tubes first to make sure all digits light up. You can probably get away with this if you're using NOS tubes, but for used ones this is essential.
+I recommend testing your tubes first to make sure all digits light up. You can probably get away with not doing this if you're using NOS tubes, but for used ones this is essential.
 
-Connect +5V to 5V input of the high voltage module, and GND to GND. You should get around 180V at the HV output pin. Be very careful not to touch that. It might not kill you but you'll definitely feel that.
+Connect +5V to 5V input of the high voltage module, and GND to GND. You should get around 180V at the HV output pin. Be very careful not to touch that. It might not kill you but you'll definitely feel a shock.
 
 Next locate the anode on you tube:
 
@@ -50,11 +50,11 @@ To test the tube, connect the anode to 180V **THROUGH A 68K RESISTOR**, then tou
 
 ![Alt text](resources/test_sch.png)
 
-Be very careful not to touch exposed metal pins, you might want to wear a glove just to be sure.
+Be very careful not to touch exposed metal pins, a pair of glove might help if you want to be sure.
 
 ## Solder it on
 
-After making sure the tube is good, you can insert it to the module. Match anode pin to the anode hole, then line up everything else:
+After confirming the tube is good, you can insert it to the module. Match anode pin to the anode hole, then line up everything else:
 
 ![Alt text](resources/anodes.jpg)
 
