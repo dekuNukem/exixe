@@ -68,14 +68,18 @@ It's also a good idea to wrap the bottom of IN-14 tubes with heat-shrink tubing 
 
 ## Try some examples!
 
-Once that's done, connect 180V to the HV pin of exixe module, make sure your Arduino, high voltage supply, and exixe module all share the same GND. Then try [show_digit4](/arduino_examples/1_show_digit4) and [show_all_digits](/arduino_examples/2_show_all_digits).
+Once that's done, connect 180V to the HV pin of exixe module, make sure your Arduino, high voltage supply, and exixe module all share the same GND. 
 
-The first one just shows the digit 4:
+First try [show4 sketch](/arduino_examples/1_show4), which just shows digit 4:
 
 ![Alt text](resources/example1.jpg)
 
-And the second one loops through all the digits from 0 to 9:
+I have also written a simple Arduino library, copy the [exixe library folder](/arduino_examples/exixe) into `My Documents\Arduino\libraries\` to use it.
 
-![Alt text](resources/example2.gif)
+After library is installed you can try the [lopp_digit example](/arduino_examples/2_loop_digit), which loops through all the digits from 0 to 9:
 
-That's pretty much it! You can let your imagination run free now. You can probably adopt the functions in [show_all_digits](/arduino_examples/2_show_all_digits) for more complex display routines, or write some fancy crossfade transition animations like [here](https://www.youtube.com/watch?v=r3d2alzgjKc). And if you're not using Arduino, the code is simple enough to adept to other embedded systems.
+![Alt text](resources/example2.gif) 
+
+Finally, take a look at [multiple tubes example](/arduino_examples/3_multiple_tubes) if you're using more than 1 tube.
+
+That's pretty much it! You can let your imagination run free now. Go wild and have fun!
