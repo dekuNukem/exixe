@@ -22,10 +22,10 @@ Used tubes are desoldered from old instruments. You don't know how long they hav
 
 For IN-14 tubes, I recommend buying new ones if you can afford it. If not, used ones work too but you do need to buy a few more than you need in case of duds.
 
-IN-12 tubes are cheap enough that there is no reason to buy used ones at all. It has 2 variants: IN-12A and IN-12B. They are exactly the same except IN-12B has a left decimal point. Both work with exixe12 modules. 
+IN-12 tubes are cheap enough that there are no reason to buy used ones at all. Its 2 variants IN-12A and IN-12B are exactly the same except IN-12B has a left decimal point. Both work with exixe12 modules. 
 
 ## Handling Nixie tubes
 
 They are made of glass, so don't break them. They also have mercury vapor in them, so really don't break them.
 
-Nixie tubes use a tiny amount of power and don't run hot at all, so it's alright to touch the glass while they are running. You can use rubbing rubbing alcohol and paper towel to clean the glass, although the alcohol might take the markings off.
+Nixie tubes use a tiny amount of power and don't run hot at all, so it's alright to touch the glass while they are running. You can use rubbing alcohol and paper towel to clean the glass, although the alcohol might take the markings off.
