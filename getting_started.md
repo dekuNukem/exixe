@@ -76,10 +76,12 @@ First try [show4 sketch](/arduino_examples/1_show4), which just shows digit 4:
 
 I have also written a simple Arduino library, copy the [exixe library folder](/arduino_examples/exixe) into `My Documents\Arduino\libraries\` to use it.
 
-After library is installed you can try the [lopp_digit example](/arduino_examples/2_loop_digit), which loops through all the digits from 0 to 9:
+After library is installed you can try the [loop_digit example](/arduino_examples/2_loop_digit), which loops through all the digits from 0 to 9:
 
 ![Alt text](resources/example2.gif) 
 
-Finally, take a look at [multiple tubes example](/arduino_examples/3_multiple_tubes) if you're using more than 1 tube.
+Finally, take a look at [multiple tubes example](/arduino_examples/3_multiple_tubes) if you're using more than 1 tube:
+
+![Alt text](resources/dual.gif) 
 
 That's pretty much it! You can let your imagination run free now. Go wild and have fun!
