@@ -26,7 +26,9 @@ Solder on the headers, then take a look at the pinout in [technical_details.md](
 
 First we hook up the power pins. Connect the GND to GND, and 3.3V power to 3V3. 
 
-Next are the SPI lines. Connect MO to MOSI line, SCK to SCK line, and CS to CS line. For Arduino UNO, MOSI is pin 11, SCK is pin 13, CS is pin 10. Consult the datasheet if you're using other boards.
+Next are the SPI lines. Connect MO to MOSI line, SCK to SCK line, and CS to CS line. For Arduino UNO example below, MOSI is pin 11, SCK is pin 13, CS is pin 10. Consult the datasheet if you're using other boards.
+
+![Alt text](resources/led_test_sch.png)
 
 Then try the [LED test](/arduino_examples/0_LED_test). Compile and upload the sketch in Arduino IDE. The LED on the exixe module should turn purple. You can play around with the RGB values in the sketch to change it to other colors.
 
@@ -69,6 +71,8 @@ It's also a good idea to wrap the bottom of IN-14 tubes with heat-shrink tubing 
 ## Try some examples!
 
 Once that's done, connect 180V to the HV pin of exixe module, make sure your Arduino, high voltage supply, and exixe module all share the same GND. 
+
+![Alt text](resources/hvsch.png)
 
 First try [show4 sketch](/arduino_examples/1_show4), which just shows digit 4:
 
