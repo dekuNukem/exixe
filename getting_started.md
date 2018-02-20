@@ -40,13 +40,13 @@ If the board is not responding, take a look at the SPI commands in [technical_de
 
 I recommend testing your tubes first to make sure all digits light up. You can probably get away with not doing this if you're using NOS tubes, but for used ones this is essential.
 
-Connect +5V to 5V input of the high voltage module, and GND to GND. You should get around 180V at the HV output pin. Be very careful not to touch that. It might not kill you but you'll definitely feel a shock.
-
-Next locate the anode on you tube:
+First locate the anode on you tube:
 
 ![Alt text](resources/anode.jpg)
 
 On IN-14 the anode pin is on the very back of the tube and is white inside the glass. On IN-12 an arrow on the glass points to the anode pin, which is rather convenient.
+
+Next, connect +5V to 5V input of the high voltage module, and GND to GND. You should get around 180V at the HV output pin. Be very careful not to touch that. It might not kill you but you'll definitely feel a shock.
 
 To test the tube, connect the anode to 180V **THROUGH A 68K RESISTOR**, then touch each cathode with GND and see if the corresponding digit lights up:
 
