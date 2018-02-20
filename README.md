@@ -4,7 +4,9 @@
 
 ![Alt text](resources/breadboard.jpg)
 
-![Alt text](resources/example2.gif)
+![Alt text](resources/bread14.jpg)
+
+![Alt text](resources/dual.gif)
 
 ![Alt text](resources/clocks.jpg)
 
@@ -53,12 +55,13 @@ Compared to the traditional approach, exixe modules offers significant advantage
 #### Tube overdrive
 * Optionally allows twice the cathode current
 * For poisoned cathodes in second-hand tubes
+* [Before](resources/no_overdrive.jpg) and [after](resources/with_overdrive.jpg).
 
 #### No multiplexing
 * Brighter display
 * Longer tube life
 * Simpler design
-* Less power consumption
+* Lower power consumption
 
 ## Getting started
 
