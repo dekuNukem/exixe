@@ -6,8 +6,6 @@
 
 ![Alt text](resources/bread14.jpg)
 
-![Alt text](resources/dual.gif)
-
 ![Alt text](resources/clocks.jpg)
 
 exixe is a miniature driver module for IN-12 and IN-14 Nixie tubes.
@@ -21,16 +19,6 @@ exixe is cheap, small and modular for easy integration. It is compatible with Ar
 I did a small production run of exixe modules, and now you can buy them directly on Tindie:
 
 https://www.tindie.com/products/dekuNukem/exixe-miniture-nixie-tube-driver-modules/
-
-## Video
-
-Here's a short video of exixe14 modules in action on the [high precision clock](https://github.com/dekuNukem/exixe_clock) shown in the above picture:
-
-https://www.youtube.com/watch?v=r3d2alzgjKc
-
-## Contact
-
-Questions, inquires? Feel free to email me at `dekunukem gmail com`.
 
 ## Features
 
@@ -74,3 +62,19 @@ Please see [technical_details.md](/technical_details.md)
 ## Making some yourself
 
 Please see [making_some.md](/making_some.md)
+
+## Contact
+
+Questions, inquires? Feel free to email me at `dekunukem gmail com`.
+
+## Video
+
+Here's a short video of exixe14 modules in action on the [high precision clock](https://github.com/dekuNukem/exixe_clock):
+
+https://www.youtube.com/watch?v=r3d2alzgjKc
+
+## More photos
+
+![Alt text](resources/dual.gif)
+
+![Alt text](resources/exixetubes.jpg)

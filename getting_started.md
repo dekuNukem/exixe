@@ -70,6 +70,8 @@ It's also a good idea to wrap the bottom of IN-14 tubes with heat-shrink tubing 
 
 ## Try some examples!
 
+[Click here](https://github.com/dekuNukem/exixe/archive/master.zip) to download a copy of this repo, you'll need the Arduino files.
+
 Once that's done, connect 180V to the HV pin of exixe module, make sure your Arduino, high voltage supply, and exixe module all share the same GND. 
 
 ![Alt text](resources/hvsch.png)

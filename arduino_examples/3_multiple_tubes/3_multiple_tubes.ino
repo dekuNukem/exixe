@@ -1,3 +1,14 @@
+/*
+  Demo for exixe modules
+  https://github.com/dekuNukem/exixe
+  
+  exixe "Getting Started" guide
+  https://github.com/dekuNukem/exixe/blob/master/getting_started.md
+
+  Demo 2: Loop digits on two tubes, using the exixe library
+*/
+
+
 #include "exixe.h"
 
 int cs1 = 10;

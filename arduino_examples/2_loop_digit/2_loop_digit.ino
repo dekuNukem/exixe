@@ -1,3 +1,13 @@
+/*
+  Demo for exixe modules
+  https://github.com/dekuNukem/exixe
+  
+  exixe "Getting Started" guide
+  https://github.com/dekuNukem/exixe/blob/master/getting_started.md
+
+  Demo 2: Show every digit in a loop, using the exixe library
+*/
+
 #include "exixe.h"
 
 // change this to the cs pin you're using

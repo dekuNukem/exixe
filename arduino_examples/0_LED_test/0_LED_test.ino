@@ -1,3 +1,13 @@
+/*
+  Demo for exixe modules
+  https://github.com/dekuNukem/exixe
+  
+  exixe "Getting Started" guide
+  https://github.com/dekuNukem/exixe/blob/master/getting_started.md
+
+  Demo 0: Show a purple LED
+*/
+
 #include <SPI.h>
 #define SPI_BUF_SIZE 16
 

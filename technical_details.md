@@ -1,3 +1,7 @@
+## Specs
+
+![Alt text](resources/spec_table.png)
+
 ## Board pinout
 
 ![Alt text](resources/pinout_photo.jpg)
@@ -16,8 +20,9 @@
 * 8 bits per transfer
 * Clock is LOW when inactive (CPOL = 0)
 * MOSI data valid on clock rising edge (CPHA = 0)
-* Enable is active LOW
 * Max clock rate 24MHz (according to datasheet, I only tested up to 8MHz)
+* Enable is active LOW
+* MISO is not used.
 
 ### SPI data format
 
@@ -27,7 +32,7 @@ exixe expects a fixed 16-byte command, which should be sent within one CS activa
 
 * Byte 0 is sent first, byte 15 sent last.
 
-* Set OD to 0 for regular current(2.6mA), 1 to enable tube overdrive (5.3mA)
+* Set OD to 0 for regular current(2.5mA), 1 to enable overdrive (5mA)
 
 * Set EN to 1 for the following value to take effect, 0 for no change.
 
