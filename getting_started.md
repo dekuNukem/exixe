@@ -30,7 +30,9 @@ Next are the SPI lines. Connect MO to MOSI line, SCK to SCK line, and CS to CS l
 
 ![Alt text](resources/led_test_sch.png)
 
-Then try the [LED test](/arduino_examples/0_LED_test). Compile and upload the sketch in Arduino IDE. The LED on the exixe module should turn purple. You can play around with the RGB values in the sketch to change it to other colors.
+Then try the [LED test](/arduino_examples/0_LED_test). Change the `slaveSelectPin` variable if you're using a different pin. Compile and upload the sketch in Arduino IDE. 
+
+The LED on the exixe module should turn purple. You can play around with the RGB values in the sketch to change it to other colors.
 
 ![Alt text](resources/example0.jpg)
 
@@ -76,18 +78,28 @@ Once that's done, connect 180V to the HV pin of exixe module, make sure your Ard
 
 ![Alt text](resources/hvsch.png)
 
-First try [show4 sketch](/arduino_examples/1_show4), which just shows digit 4:
+First try [show4 sketch](/arduino_examples/1_show4), this is a bare-bone implementation that just shows digit 4:
 
 ![Alt text](resources/example1.jpg)
 
-I have also written a simple Arduino library, copy the [exixe library folder](/arduino_examples/exixe) into `My Documents\Arduino\libraries\` to use it.
+To make life easier, I have written written an Arduino library. Copy the [exixe library folder](/arduino_library/exixe) into `My Documents\Arduino\libraries\` to use it.
 
-After library is installed you can try the [loop_digit example](/arduino_examples/2_loop_digit), which loops through all the digits from 0 to 9:
+After library is installed, try the [loop digit](/arduino_examples/2_loop_digit_simple) example, which loops through all the digits from 0 to 9:
 
-![Alt text](resources/example2.gif) 
+![Alt text](resources/1s.gif)
 
-Finally, take a look at [multiple tubes example](/arduino_examples/3_multiple_tubes) if you're using more than 1 tube:
+After that, you can try [loop digit crossfade](/arduino_examples/3_loop_digit_crossfade) to use fancy crossfade animation:
 
-![Alt text](resources/dual.gif) 
+![Alt text](resources/1c.gif)
+
+If you're using more than one tube, take a look at [multiple tubes](/arduino_examples/4_multiple_tubes_simple) example:
+
+![Alt text](resources/2s.gif)
+
+Note that the multiple modules share the same SCK and MOSI line, only CS line is different.
+
+Finally, the [multiple tubes crossfade](/arduino_examples/5_multiple_tubes_crossfade) example:
+
+![Alt text](resources/2c.gif)
 
 That's pretty much it! You can let your imagination run free now. Go wild and have fun!

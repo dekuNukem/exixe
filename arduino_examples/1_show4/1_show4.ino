@@ -5,13 +5,14 @@
   exixe "Getting Started" guide
   https://github.com/dekuNukem/exixe/blob/master/getting_started.md
 
-  Demo 1: Show digit 4 on Nixie tube with orange backligt
+  Demo 1: Show digit 4 with orange backlight
 */
 
 #include <SPI.h>
 #define SPI_BUF_SIZE 16
 
 uint8_t spi_buf[SPI_BUF_SIZE];
+// change this to the cs pin you're using
 const int slaveSelectPin = 10;
 
 void setup()

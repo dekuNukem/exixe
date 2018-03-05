@@ -12,6 +12,7 @@
 #define SPI_BUF_SIZE 16
 
 uint8_t spi_buf[SPI_BUF_SIZE];
+// change this to the cs pin you're using
 const int slaveSelectPin = 10;
 
 void setup()
