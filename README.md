@@ -69,7 +69,9 @@ Please see [making_some.md](/making_some.md)
 
 ## Contact
 
-Questions, inquires? Feel free to email me at `dekunukem gmail com`.
+Questions? Feel free to [open an issue](https://github.com/dekuNukem/exixe/issues). This is the preferred way since it helps other people too.
+
+You can also email me at `dekunukem gmail com` for inquires.
 
 ## More photos
 
