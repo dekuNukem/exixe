@@ -17,7 +17,6 @@ exixe::exixe(int my_cs)
   digitalWrite(cs_pin, HIGH);
   SPI.begin();
   SPI.beginTransaction(SPISettings(8000000, MSBFIRST, SPI_MODE0));
-  show_digit(0, 0, 0);
 }
 
 void exixe::spi_write()
@@ -65,7 +64,6 @@ void exixe::show_digit(unsigned char digit, unsigned char brightness, unsigned c
   spi_buf[0] = overdrive ? EXIXE_SPI_HEADER_OD : EXIXE_SPI_HEADER; // first byte, header
   spi_buf[digit] = 0x80 | brightness; // set digit brightness
 
-  animation_src_digit = digit;
   spi_write();
 }
 
@@ -99,34 +97,24 @@ void exixe::set_dots(unsigned char left_brightness, unsigned char right_brightne
   spi_write();
 }
 
-void exixe::crossfade_init(unsigned char digit, unsigned int duration_frames, unsigned char brightness, unsigned char overdrive)
+void exixe::crossfade(unsigned char source_digit, unsigned char destination_digit, unsigned int duration_frames, unsigned char brightness, unsigned char overdrive)
 {
-  animation_dest_digit = cap_digit(digit);
-  animation_start = millis() / EXIXE_ANIMATION_FPS;
-  animation_duration = duration_frames;
-  animation_brightness = brightness & 0x7f;
-  animation_overdrive = overdrive;
-  animation_step = (float)animation_brightness / (float)animation_duration;
-}
-
-unsigned char exixe::crossfade_run()
-{
-  unsigned long current_frame = (millis() / EXIXE_ANIMATION_FPS) - animation_start;
+  brightness &= 0x7f;
+  float step = (float)brightness / (float)duration_frames;
   
-  if(current_frame > animation_duration)
-  {
-    animation_src_digit = animation_dest_digit;
-    return EXIXE_ANIMATION_FINISHED;
-  }
+  source_digit = cap_digit(source_digit);
+  destination_digit = cap_digit(destination_digit);
 
   memset(spi_buf, 0, EXIXE_SPI_BUF_SIZE);
   memset(spi_buf, 0x80, EXIXE_SPI_BUF_SIZE - 5);
-  spi_buf[0] = animation_overdrive ? EXIXE_SPI_HEADER_OD : EXIXE_SPI_HEADER;
-  
-  unsigned char temp = cap_float(animation_step * (float)current_frame);
-  spi_buf[animation_src_digit] = 0x80 | (animation_brightness - temp);
-  spi_buf[animation_dest_digit] = 0x80 | temp;
-  spi_write();
+  spi_buf[0] = overdrive ? EXIXE_SPI_HEADER_OD : EXIXE_SPI_HEADER;
 
-  return EXIXE_ANIMATION_IN_PROGRESS;
+  for (int i = 0; i < duration_frames; ++i)
+  {
+    unsigned char temp = cap_float(step * (float)i);
+    spi_buf[source_digit] = 0x80 | (brightness - temp);
+    spi_buf[destination_digit] = 0x80 | temp;
+    spi_write();
+    delay(16);
+  }
 }
