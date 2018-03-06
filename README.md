@@ -81,5 +81,5 @@ exixe-12 working with an Arduino Micro, showing a smooth crossfade animation:
 
 exixe-14 in action on a [finished clock](https://github.com/dekuNukem/exixe_clock):
 
-![Alt text](https://i.imgur.com/VQdhYZS.gif)
+![Alt text](resources/clock.gif)
 
