@@ -1,9 +1,9 @@
 /*
-  Demo for exixe modules
+  exixe modules:
   https://github.com/dekuNukem/exixe
-  
-  exixe "Getting Started" guide
-  https://github.com/dekuNukem/exixe/blob/master/getting_started.md
+
+  library docs:
+  https://github.com/dekuNukem/exixe/tree/master/arduino_library
 
   Demo 4: Loop digits on two tubes
 */

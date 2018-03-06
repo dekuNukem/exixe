@@ -12,7 +12,7 @@ exixe is a miniature driver module for IN-12 and IN-14 Nixie tubes.
 
 It aims to simplify Nixie tube related projects by eliminating the need for obscure vintage driver chips and multiplexing circuits. Instead, you can control every digit and the RGB backlight via SPI using only 3 wires and 1 line of code.
 
-exixe is cheap, small and modular for easy integration. It is compatible with Arduino, Raspberry Pi, ESP8266, and virtually all embedded dev boards today.
+exixe is cheap, small and modular for easy integration. It is compatible with Arduino, Raspberry Pi, and virtually all embedded dev boards today.
 
 ## Buy exixe on Tindie!
 
@@ -54,6 +54,10 @@ Compared to the traditional approach, exixe modules offers significant advantage
 ## Getting started
 
 Please see [getting_started.md](/getting_started.md)
+
+## Arduino Library
+
+Please [click here](arduino_library/README.md)
 
 ## Pinout, SPI command format and technical details
 
