@@ -71,14 +71,15 @@ Please see [making_some.md](/making_some.md)
 
 Questions, inquires? Feel free to email me at `dekunukem gmail com`.
 
-## Video
-
-Here's a short video of exixe14 modules in action on the [high precision clock](https://github.com/dekuNukem/exixe_clock):
-
-https://www.youtube.com/watch?v=r3d2alzgjKc
-
 ## More photos
+
+![Alt text](resources/exixetubes.jpg)
+
+exixe-12 working with an Arduino Micro, showing a smooth crossfade animation:
 
 ![Alt text](resources/2c.gif)
 
-![Alt text](resources/exixetubes.jpg)
+exixe-14 in action on a [finished clock](https://github.com/dekuNukem/exixe_clock):
+
+![Alt text](https://i.imgur.com/VQdhYZS.gif)
+
