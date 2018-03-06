@@ -78,7 +78,7 @@ It's also a good idea to wrap the bottom of IN-14 tubes with heat-shrink tubing 
 
 ## Try some examples!
 
-After getting the [LED test](/arduino_examples/1_LED_test) example working, connect 180V to the HV pin of exixe module, make sure your Arduino, high voltage supply, and exixe module all share the same GND. 
+After getting the [LED test](/arduino_examples/1_LED_test) working, connect 180V to the HV pin of exixe module, make sure your Arduino, high voltage supply, and exixe module all share the same GND. 
 
 ![Alt text](resources/hvsch.png)
 

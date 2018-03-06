@@ -72,6 +72,6 @@ A number of examples are [provided here](../arduino_examples). Take a look at th
 
 * Call this at **least every 33ms** for a smooth animation.
 
-* This function is **non-blocking** and will return immediately, this allows you to do some other tasks while animation is underway. Just make sure to call it frequently enough as above.
+* This function is **non-blocking** and will return immediately, this allows you to do some other tasks while animation is underway. Just make sure to call it frequently enough as mentioned above.
 
 * Check its return value to see if animation is finished. Once done it should return `EXIXE_ANIMATION_FINISHED`, otherwise `EXIXE_ANIMATION_IN_PROGRESS` is returned.

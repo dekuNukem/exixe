@@ -57,7 +57,7 @@ Please see [getting_started.md](/getting_started.md)
 
 ## Arduino Library
 
-Please [click here](arduino_library/README.md)
+Please [click here](arduino_library)
 
 ## Pinout, SPI command format and technical details
 
@@ -79,6 +79,6 @@ https://www.youtube.com/watch?v=r3d2alzgjKc
 
 ## More photos
 
-![Alt text](resources/dual.gif)
+![Alt text](resources/2c.gif)
 
 ![Alt text](resources/exixetubes.jpg)
