@@ -4,19 +4,23 @@
 
 There are a couple of things you need before we get going, so let's get them out of the way first:
 
-### Nixie Tubes
+#### Nixie Tubes
 
 [Read this short guide to see what to buy.](buying_nixie_tubes.md)
 
-### High Voltage Power Supply
+#### High Voltage Power Supply
 
 Nixie tubes need around 180V to start glowing. That means you need a high voltage supply.
 
 You can design one yourself, although I recommend saving the trouble and getting a premade module [like this one](https://www.ebay.com/itm/DC-5V-12V-to-180V-DC-High-Voltage-NIXIE-Power-Supply-Module-PSU-NIXIE-TUBE-ERA-/322511957768?hash=item4b1735ef08:g:ftQAAOSwYTVZmjZb). They are tiny, inexpensive, efficient, and run on 5V. Just search [5V Nixie power supply](https://www.ebay.com/sch/i.html?_from=R40&_nkw=5V+Nixie+power+supply) on ebay or google. 
 
-In the end, you should have the tube, corresponding exixe board, headers, and the high voltage supply:
+## What you should have
+
+By now, you should have the tube, corresponding exixe board, headers, and the high voltage supply:
 
 ![Alt text](resources/all.jpg)
+
+Good! Now we can get going.
 
 ## Installing the Arduino library
 
