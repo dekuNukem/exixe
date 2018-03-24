@@ -63,6 +63,12 @@ Please [click here](arduino_library)
 
 Please see [technical_details.md](/technical_details.md)
 
+## Using other tubes
+
+You can also use exixe module with tubes other than IN-14 and IN-12, with some modification.
+
+Please see [adopting_other_tubes.md](/adopting_other_tubes.md)
+
 ## Making some yourself
 
 Please see [making_some.md](/making_some.md)
