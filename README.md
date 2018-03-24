@@ -67,7 +67,7 @@ Please see [technical_details.md](/technical_details.md)
 
 You can also use exixe module with tubes other than IN-14 and IN-12, with some modification.
 
-Please see [adopting_other_tubes.md](/adopting_other_tubes.md)
+Please see [unsupported_tubes.md](/unsupported_tubes.md)
 
 ## Making some yourself
 

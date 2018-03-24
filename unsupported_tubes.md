@@ -12,7 +12,6 @@ I recommend using exixe-12 with unsupported tubes. It is cheaper and have larger
 
 Get 1 or 2 at first to see if it works with your tube. [Click me to buy some](https://www.tindie.com/products/dekuNukem/exixe-miniture-nixie-tube-driver-modules/).
 
-
 ## Pin connections
 
 Most likely the new tube will have a different pinout, and you won't be able to plug it in the module itself. As a result you need to use some extension wires to solder the correct pin into the correct hole. Consult this photo:
@@ -50,6 +49,8 @@ You can find the location of R13 and R19 on the photo in the `Pin connections` s
 ## Examples
 
 An user have successfully adopted exixe-12 to work with Burroughs 5031/80376844A tubes. He used an external 10K resistor, and here is a video of it in action:
+
+![Alt text](resources/alttube.png)
 
 https://www.youtube.com/watch?v=TBaXTYCC1QY
 
