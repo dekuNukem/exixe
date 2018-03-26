@@ -1,0 +1,25 @@
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+exixe	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+show_digit	KEYWORD2
+set_led	KEYWORD2
+set_dots	KEYWORD2
+crossfade_init	KEYWORD2
+crossfade_run	KEYWORD2
+clear	KEYWORD2
+
+#######################################
+# Instances (KEYWORD2)
+#######################################
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+

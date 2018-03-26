@@ -18,7 +18,7 @@ exixe my_tube = exixe(cs_pin);
 void setup()
 {
   my_tube.clear();
-  my_tube.set_led(32, 127, 127); // purple
+  my_tube.set_led(127, 0, 127); // purple
 }
 
 void loop()
