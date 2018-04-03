@@ -15,9 +15,13 @@ exixe::exixe(int my_cs)
   memset(spi_buf, 0, EXIXE_SPI_BUF_SIZE);
   pinMode(cs_pin, OUTPUT);
   digitalWrite(cs_pin, HIGH);
+  animation_src_digit = 0;
+}
+
+void exixe::spi_init()
+{
   SPI.begin();
   SPI.beginTransaction(SPISettings(8000000, MSBFIRST, SPI_MODE0));
-  show_digit(0, 0, 0);
 }
 
 void exixe::spi_write()

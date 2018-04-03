@@ -1,6 +1,8 @@
 #ifndef exixe_h
 #define exixe_h
 
+#include "Arduino.h"
+
 #define EXIXE_SPI_BUF_SIZE (16)
 #define EXIXE_SPI_HEADER (0xaa)
 #define EXIXE_SPI_HEADER_OD (0xab)
@@ -12,6 +14,7 @@ class exixe
 {
   public:
     exixe(int my_cs);
+    void spi_init();
     void show_digit(unsigned char digit, unsigned char brightness, unsigned char overdrive);
     void set_led(unsigned char red, unsigned char green, unsigned char blue);
     void set_dots(unsigned char left_brightness, unsigned char right_brightness);

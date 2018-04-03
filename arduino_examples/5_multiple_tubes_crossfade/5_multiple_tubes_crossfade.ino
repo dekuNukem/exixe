@@ -8,7 +8,6 @@
   Demo 5: Loop digits on two tubes with crossfade animation
 */
 
-
 #include "exixe.h"
 
 // change those to the cs pins you're using
@@ -21,10 +20,11 @@ exixe my_tube2 = exixe(cs2);
 
 void setup()
 {
+  // ONLY CALL THIS ONCE
+  my_tube1.spi_init();
+
   my_tube1.clear();
   my_tube2.clear();
-  my_tube1.set_led(127, 0, 127); // purple;
-  my_tube2.set_led(127, 127, 0); // yellow;
 }
 
 void loop()
@@ -49,5 +49,7 @@ void loop()
       break;
   }
 
+  my_tube1.set_led(127, 0, 127); // purple;
+  my_tube2.set_led(127, 127, 0); // yellow;
   delay(250);
 }

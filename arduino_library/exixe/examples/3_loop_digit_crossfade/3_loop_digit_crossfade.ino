@@ -17,8 +17,8 @@ exixe my_tube = exixe(cs_pin);
 
 void setup()
 {
+  my_tube.spi_init();
   my_tube.clear();
-  my_tube.set_led(127, 0, 127); // purple
 }
 
 void loop()
@@ -40,5 +40,7 @@ void loop()
   // check its return value to see if the animation is finished
   while(my_tube.crossfade_run() == EXIXE_ANIMATION_IN_PROGRESS)
     ;
+
+  my_tube.set_led(127, 64, 0); // orange
   delay(250);
 }

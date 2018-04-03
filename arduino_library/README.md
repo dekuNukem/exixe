@@ -16,6 +16,10 @@ Select the `exixe.zip` you just downloaded, and it should install automatically.
 
 A number of examples are [provided here](../arduino_examples). Take a look at the [getting started guide](../getting_started.md) to see how to use them.
 
+#### `spi_init()`
+
+* Initializes SPI peripheral, only call this once(even if you use multiple tubes) at the beginning of the sketch.
+
 #### `show_digit(uint8_t digit, uint8_t brightness, uint8_t overdrive)`
 
 * This sets `digit` in the tube to `brightness`.

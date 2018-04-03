@@ -16,10 +16,11 @@ exixe my_tube = exixe(cs_pin);
 
 void setup()
 {
-  my_tube.set_led(127, 0, 127); // purple
+  my_tube.spi_init();
 }
 
 void loop()
 {
-
+  my_tube.set_led(127, 0, 127); // purple
+  delay(500);
 }
