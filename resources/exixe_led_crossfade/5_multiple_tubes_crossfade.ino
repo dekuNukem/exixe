@@ -8,12 +8,19 @@
   Demo 5: Loop digits on two tubes with crossfade animation
 */
 
+#define RAINBOW_COLORS 6
+
 #include "exixe.h"
 
 // change those to the cs pins you're using
 int cs1 = 10;
 int cs2 = 9;
 unsigned char count;
+
+unsigned char cl_red[RAINBOW_COLORS] = {148, 0, 0, 255, 255, 255};
+unsigned char cl_green[RAINBOW_COLORS] = {0, 0, 255, 255, 127, 0};
+unsigned char cl_blue[RAINBOW_COLORS] = {211, 255, 0, 0, 0, 0};
+
 
 exixe my_tube1 = exixe(cs1);
 exixe my_tube2 = exixe(cs2);
@@ -25,14 +32,17 @@ void setup()
 
   my_tube1.clear();
   my_tube2.clear();
+  randomSeed(analogRead(0));
 }
 
 void loop()
 {
   count = (count + 1) % 10; // keep count between 0 to 9
+  unsigned char cc1 = random(RAINBOW_COLORS);
+  unsigned char cc2 = random(RAINBOW_COLORS);
 
-  my_tube1.crossfade_init(count, 15, 127, 0);
-  my_tube2.crossfade_init(10-count, 15, 127, 0);
+  my_tube1.crossfade_init(count, 15, 127, 0, cl_red[cc1]/2, cl_green[cc1]/2, cl_blue[cc1]/2);
+  my_tube2.crossfade_init(10-count, 15, 127, 0, cl_red[cc2]/2, cl_green[cc2]/2, cl_blue[cc2]/2);
 
   /*
       again, crossfade_run() is non-blocking, that means
@@ -49,8 +59,5 @@ void loop()
       break;
   }
 
-  my_tube1.set_led(127, 40, 0); // orange;
-  my_tube2.set_led(127, 0, 127); // purple;
-  
   delay(500);
 }

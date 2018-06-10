@@ -11,9 +11,9 @@ Full BOM here: [exixe12](resources/exixe12_bom.xlsx), [exixe14](resources/exixe1
 
 ## Upload Firmware
 
-Once you have soldered the board together, you will need to uplaod the firmware to the STM32 microcontroller in order for the boards to function.
+Once you have soldered the board together, you will need to upload the firmware to the STM32 microcontroller in order for the boards to function.
 
-To do that you need a ST-Link V2 programmer, they are dirt cheap on ebay (around $4), just search "ST-Link V2". It should look like this:
+To do that you need a ST-Link V2 programmer. Just search "ST-Link V2" on ebay, they are dirt cheap (around $3). It should look like this:
 
 ![Alt text](resources/st-link-dongle.jpg)
 
