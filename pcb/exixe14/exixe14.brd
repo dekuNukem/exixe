@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.3.2">
+<eagle version="9.0.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
@@ -207,11 +207,11 @@
 <text x="14.605" y="35.179" size="1.143" layer="25" font="vector">G</text>
 <text x="18.669" y="18.542" size="0.9652" layer="25" font="vector" rot="R270">dekuNukem</text>
 <text x="17.399" y="15.113" size="0.9652" layer="25" font="vector" rot="R270">2017</text>
-<text x="2.2606" y="14.351" size="1.524" layer="25" font="vector" rot="R90">14</text>
+<text x="2.286" y="15.113" size="1.524" layer="25" font="vector" rot="R90">14</text>
 <rectangle x1="3.175" y1="34.671" x2="12.192" y2="40.005" layer="41"/>
 <rectangle x1="9.017" y1="32.004" x2="10.922" y2="35.179" layer="41"/>
 <rectangle x1="11.557" y1="38.354" x2="13.081" y2="39.751" layer="41"/>
-<text x="2.2606" y="7.2898" size="1.778" layer="25" font="vector" rot="R90">eixie</text>
+<text x="2.286" y="7.2898" size="1.778" layer="25" font="vector" rot="R90">exixe</text>
 <polygon width="0.1524" layer="41">
 <vertex x="7.8232" y="35.052"/>
 <vertex x="9.3472" y="33.528"/>
@@ -610,10 +610,11 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <param name="slThermalsForVias" value="0"/>
 <param name="dpMaxLengthDifference" value="10mm"/>
 <param name="dpGapFactor" value="2.5"/>
-<param name="checkGrid" value="0"/>
 <param name="checkAngle" value="1"/>
 <param name="checkFont" value="1"/>
 <param name="checkRestrict" value="1"/>
+<param name="checkStop" value="0"/>
+<param name="checkValues" value="0"/>
 <param name="useDiameter" value="13"/>
 <param name="maxErrors" value="50"/>
 </designrules>
