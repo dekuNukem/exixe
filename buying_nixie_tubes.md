@@ -2,7 +2,7 @@
 
 ## Choices, choices...
 
-Nixie tubes have been out of production for nearly 30 years. And thanks to the recent revival of Nixie clocks, the price of large tubes has gone astronomical. So if you want your project anywhere near reasonably priced and reliable, there are really only 2 tubes you can choose from, IN-12 or IN-14:
+Nixie tubes have been out of production for nearly 30 years. And thanks to the recent revival of Nixie clocks, the price of large tubes has gone through the roof. So if you want your project anywhere near reasonably priced and reliable, there are really only 2 tubes you can choose from, IN-12 or IN-14:
 
 ![Alt text](resources/tubes.jpg)
 

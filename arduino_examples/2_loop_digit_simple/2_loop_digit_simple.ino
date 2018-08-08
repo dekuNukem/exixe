@@ -25,12 +25,12 @@ void setup()
 void loop()
 {
   count++;
-  /*
-	1st arg: Digit to show, 0 to 9
-	2nd arg: Digit brightness, 0 to 127
-	3rd arg: Overdrive, 0 disable 1 enable
-  */
   my_tube.set_led(127, 0, 127); // purple
+  /*
+  1st arg: Digit to show, 0 to 9
+  2nd arg: Digit brightness, 0 to 127
+  3rd arg: Overdrive, 0 disable 1 enable
+  */
   my_tube.show_digit(count, 127, 0);
   delay(500);
 }
