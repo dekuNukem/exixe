@@ -2,6 +2,8 @@
 
 ![Alt text](resources/title.jpg)
 
+![Alt text](resources/exixetubes.jpg)
+
 ![Alt text](resources/breadboard.jpg)
 
 ![Alt text](resources/bread14.jpg)
@@ -63,9 +65,15 @@ Please [click here](arduino_library)
 
 Please see [technical_details.md](/technical_details.md)
 
+## Supported tubes
+
+exixe-14 module is primarily designed for IN-14 Nixie tubes, but will also work with IN-16 and IN-19 tubes.
+
+exixe-12 module is primarily designed for IN-12 Nixie tubes, but works with IN-15 tubes as well.
+
 ## Using other tubes
 
-You can also use exixe module with tubes other than IN-14 and IN-12, with some modification.
+You can also use exixe module with unsupported tubes, with some modification.
 
 Please see [unsupported_tubes.md](/unsupported_tubes.md)
 
@@ -81,7 +89,6 @@ You can also email me at `dekunukem gmail com` for inquires.
 
 ## More photos
 
-![Alt text](resources/exixetubes.jpg)
 
 exixe-12 working with an Arduino Micro, showing a smooth crossfade animation:
 

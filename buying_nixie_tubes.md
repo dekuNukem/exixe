@@ -24,6 +24,14 @@ For IN-14 tubes, I recommend buying new ones if you can afford it. If not, used 
 
 IN-12 tubes are cheap enough that there are no reason to buy used ones at all. Its 2 variants IN-12A and IN-12B are exactly the same except IN-12B has a left decimal point. Both work with exixe12 modules. 
 
+## Symbol Tubes
+
+There are a number of special tubes that has symbols inside them instead of numbers, usually for displaying the unit on a measuring equipment. Those tubes are cheaper than usual, but there aren't much you can do with them.
+
+One example is the [IN-19 Nixie tube](http://www.tube-tester.com/sites/nixie/data/IN-19A/in-19a.htm). It is based on IN-14, so you can use it with exixe-14 modules, except all the numbers comes out as symbols instead. You can find a details about it on [in-19_pin_mapping.md](in-19_pin_mapping.md)
+
+Another example is [IN-15 Nixie tube](http://www.tube-tester.com/sites/nixie/data/in-15a.htm), which is based on IN-12, which is perfect for exixe-12 modules.
+
 ## Handling Nixie tubes
 
 They are made of glass, so don't break them. They also have mercury vapor in them, so really don't break them.

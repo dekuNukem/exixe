@@ -2,7 +2,7 @@
 
 ## Prerequisites
 
-There are a couple of things you need before we get going, so let's get them out of the way first:
+You do need a couple of things before we get going, so let's get them out of the way first:
 
 #### Nixie Tubes
 
@@ -67,6 +67,8 @@ To test the tube, connect the anode to 180V **THROUGH A 68K RESISTOR**, then tou
 Be very careful not to touch exposed metal pins, a pair of glove might help if you want to be sure.
 
 ## Solder it on
+
+*If you're using IN-19 tube, please see [this guide](in-19_pin_mapping.md) for more information, otherwise read on.*
 
 After confirming the tube is good, you can insert it to the module. Match anode pin to the anode hole, then line up everything else:
 
