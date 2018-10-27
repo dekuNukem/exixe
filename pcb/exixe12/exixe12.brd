@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.0.0">
+<eagle version="9.1.3">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
@@ -224,6 +224,7 @@
 <vertex x="1.27" y="37.084"/>
 </polygon>
 <text x="12.446" y="19.9644" size="1.016" layer="25" font="vector">A</text>
+<text x="1.778" y="35.56" size="1.016" layer="26" font="vector" rot="MR270">NOV18</text>
 </plain>
 <libraries>
 <library name="pinhead">
@@ -621,6 +622,9 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <param name="checkRestrict" value="1"/>
 <param name="checkStop" value="0"/>
 <param name="checkValues" value="0"/>
+<param name="checkNames" value="1"/>
+<param name="checkWireStubs" value="1"/>
+<param name="checkPolygonWidth" value="0"/>
 <param name="useDiameter" value="13"/>
 <param name="maxErrors" value="50"/>
 </designrules>
@@ -1478,6 +1482,13 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <via x="7.228" y="6.985" extent="1-16" drill="0.4"/>
 </signal>
 </signals>
+<mfgpreviewcolors>
+<mfgpreviewcolor name="soldermaskcolor" color="0xC8008000"/>
+<mfgpreviewcolor name="silkscreencolor" color="0xFFFEFEFE"/>
+<mfgpreviewcolor name="backgroundcolor" color="0xFF282828"/>
+<mfgpreviewcolor name="coppercolor" color="0xFFFFBF00"/>
+<mfgpreviewcolor name="substratecolor" color="0xFF786E46"/>
+</mfgpreviewcolors>
 <errors>
 <approved hash="8,16,c9e8828aa1197932"/>
 <approved hash="8,16,793d2ca68a9f127c"/>
