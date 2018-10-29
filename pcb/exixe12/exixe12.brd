@@ -817,9 +817,6 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <element name="R16" library="joyAnalog" package="0805" value="330" x="18.034" y="13.9192" smashed="yes" rot="R270">
 <attribute name="NAME" x="19.1262" y="12.3063" size="0.8128" layer="25" font="vector" rot="R180"/>
 </element>
-<element name="R18" library="joyAnalog" package="0805" value="10K" x="14.1478" y="16.129" smashed="yes">
-<attribute name="NAME" x="12.4079" y="16.256" size="0.8128" layer="25" font="vector" rot="R90"/>
-</element>
 <element name="N1" library="exixe12" package="IN-12" value="IN-12B" x="10.4" y="26.3" smashed="yes"/>
 <element name="R19" library="joyAnalog" package="0805" value="68K" x="6.858" y="38.989" smashed="yes" rot="R180">
 <attribute name="NAME" x="8.8519" y="38.1508" size="0.6096" layer="25" rot="R90"/>
@@ -1084,7 +1081,6 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <vertex x="0" y="0"/>
 </polygon>
 <contactref element="D1" pad="1"/>
-<contactref element="R18" pad="2"/>
 <contactref element="JP1" pad="7"/>
 <via x="4.3688" y="13.7668" extent="1-16" drill="0.4"/>
 <via x="7.112" y="9.5504" extent="1-16" drill="0.5"/>
@@ -1094,9 +1090,6 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <wire x1="14.2926" y1="5.7878" x2="14.2926" y2="7.2" width="0.254" layer="1"/>
 <wire x1="14.2926" y1="5.7878" x2="14.3146" y2="5.7658" width="0.254" layer="1"/>
 <via x="10.668" y="29.3624" extent="1-16" drill="0.45"/>
-<via x="15.0368" y="15.0368" extent="1-16" drill="0.5"/>
-<wire x1="15.0478" y1="16.129" x2="15.0478" y2="15.0478" width="0.1524" layer="1"/>
-<wire x1="15.0478" y1="15.0478" x2="15.0368" y2="15.0368" width="0.1524" layer="1"/>
 <wire x1="4.3688" y1="13.7668" x2="5.4212" y2="13.7668" width="0.3048" layer="1"/>
 <wire x1="5.4212" y1="13.7668" x2="5.5118" y2="13.8574" width="0.3048" layer="1"/>
 <wire x1="5.5118" y1="13.8574" x2="5.5118" y2="12.9956" width="0.3048" layer="1"/>
@@ -1149,17 +1142,14 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 </signal>
 <signal name="SPI_CS">
 <contactref element="JP2" pad="5"/>
-<contactref element="R18" pad="1"/>
 <contactref element="IC1" pad="25"/>
 <via x="14.5288" y="14.0208" extent="1-16" drill="0.5"/>
-<wire x1="14.257" y1="14.2926" x2="12.8" y2="14.2926" width="0.1524" layer="1"/>
 <wire x1="14.257" y1="14.2926" x2="14.5288" y2="14.0208" width="0.1524" layer="1"/>
 <wire x1="14.5288" y1="5.1816" x2="12.5476" y2="3.2004" width="0.1524" layer="16"/>
 <wire x1="12.5476" y1="3.2004" x2="12.5476" y2="1.8076" width="0.1524" layer="16"/>
 <wire x1="12.5476" y1="1.8076" x2="12.54" y2="1.8" width="0.1524" layer="16"/>
 <wire x1="14.5288" y1="14.0208" x2="14.5288" y2="5.1816" width="0.1524" layer="16"/>
-<wire x1="12.8" y1="14.2926" x2="12.8" y2="15.6812" width="0.1524" layer="1"/>
-<wire x1="12.8" y1="15.6812" x2="13.2478" y2="16.129" width="0.1524" layer="1"/>
+<wire x1="12.8" y1="14.2926" x2="14.257" y2="14.2926" width="0.1524" layer="1"/>
 </signal>
 <signal name="SWD_DIO">
 <contactref element="JP2" pad="6"/>

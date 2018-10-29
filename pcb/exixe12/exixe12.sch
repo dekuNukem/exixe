@@ -2075,8 +2075,6 @@ by exp-lbrs.ulp</description>
 <part name="R14" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="330"/>
 <part name="R15" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="680"/>
 <part name="R16" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="330"/>
-<part name="R18" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="10K"/>
-<part name="+3V6" library="joyAnalog" deviceset="+3V3" device=""/>
 <part name="N1" library="exixe12" deviceset="IN-12B" device=""/>
 <part name="R19" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="68K"/>
 <part name="JP3" library="SparkFun-Jumpers" deviceset="JUMPER-SMT_2_NO" device="_NO-SILK"/>
@@ -2150,8 +2148,6 @@ by exp-lbrs.ulp</description>
 <instance part="R14" gate="G$1" x="495.3" y="0"/>
 <instance part="R15" gate="G$1" x="495.3" y="7.62"/>
 <instance part="R16" gate="G$1" x="495.3" y="-7.62"/>
-<instance part="R18" gate="G$1" x="347.98" y="-38.1" rot="R90"/>
-<instance part="+3V6" gate="G$1" x="347.98" y="-30.48" rot="MR0"/>
 <instance part="N1" gate="G$1" x="226.06" y="-33.02"/>
 <instance part="R19" gate="G$1" x="401.32" y="-38.1"/>
 <instance part="JP3" gate="G$1" x="414.02" y="-38.1"/>
@@ -2477,10 +2473,6 @@ by exp-lbrs.ulp</description>
 <wire x1="459.74" y1="0" x2="467.36" y2="0" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="R18" gate="G$1" pin="2"/>
-<pinref part="+3V6" gate="G$1" pin="+3V3"/>
-</segment>
-<segment>
 <pinref part="C2" gate="G$1" pin="1"/>
 <pinref part="C1" gate="G$1" pin="1"/>
 <wire x1="83.82" y1="86.36" x2="68.58" y2="86.36" width="0.1524" layer="91"/>
@@ -2559,9 +2551,6 @@ by exp-lbrs.ulp</description>
 <pinref part="JP2" gate="A" pin="5"/>
 <wire x1="307.34" y1="-43.18" x2="330.2" y2="-43.18" width="0.1524" layer="91"/>
 <label x="307.34" y="-43.18" size="1.778" layer="95"/>
-<pinref part="R18" gate="G$1" pin="1"/>
-<wire x1="330.2" y1="-43.18" x2="347.98" y2="-43.18" width="0.1524" layer="91"/>
-<junction x="330.2" y="-43.18"/>
 </segment>
 <segment>
 <label x="426.72" y="60.96" size="1.778" layer="95"/>

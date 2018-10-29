@@ -821,9 +821,6 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <element name="R16" library="joyAnalog" package="0805" value="330" x="19.05" y="6.731" smashed="yes" rot="R270">
 <attribute name="NAME" x="17.3863" y="8.2804" size="0.8128" layer="25" font="vector" rot="R90"/>
 </element>
-<element name="R18" library="joyAnalog" package="0805" value="10K" x="13.716" y="5.334" smashed="yes" rot="MR180">
-<attribute name="NAME" x="12.5222" y="7.0485" size="0.8128" layer="26" font="vector" rot="MR180"/>
-</element>
 <element name="R22" library="joyAnalog" package="0805" value="1M" x="9.017" y="39.116" smashed="yes">
 <attribute name="NAME" x="7.62" y="39.6875" size="0.6096" layer="25" rot="R180"/>
 </element>
@@ -1123,7 +1120,6 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <wire x1="14.2926" y1="7.581" x2="14.086" y2="7.3744" width="0.2032" layer="1"/>
 <wire x1="14.086" y1="7.3744" x2="14.086" y2="6.096" width="0.2032" layer="1"/>
 <wire x1="3.683" y1="14.721" x2="3.672" y2="14.732" width="0.2032" layer="1"/>
-<contactref element="R18" pad="2"/>
 <wire x1="5.7074" y1="13.181" x2="5.4264" y2="13.462" width="0.2032" layer="1"/>
 <wire x1="5.4264" y1="13.462" x2="3.81" y2="13.462" width="0.2032" layer="1"/>
 <wire x1="3.81" y1="13.462" x2="3.672" y2="13.6" width="0.2032" layer="1"/>
@@ -1180,9 +1176,6 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 </signal>
 <signal name="SPI_CS">
 <contactref element="JP2" pad="5"/>
-<contactref element="R18" pad="1"/>
-<wire x1="12.54" y1="1.8" x2="12.54" y2="5.058" width="0.2032" layer="16"/>
-<wire x1="12.816" y1="5.334" x2="12.54" y2="5.058" width="0.2032" layer="16"/>
 <contactref element="IC1" pad="25"/>
 <via x="11.684" y="13.081" extent="1-16" drill="0.5"/>
 <wire x1="12.827" y1="14.6466" x2="12.8" y2="14.6736" width="0.2032" layer="1"/>
@@ -1192,8 +1185,8 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <wire x1="11.684" y1="13.081" x2="11.684" y2="11.557" width="0.2032" layer="16"/>
 <wire x1="11.684" y1="11.557" x2="11.176" y2="11.049" width="0.2032" layer="16"/>
 <wire x1="11.176" y1="11.049" x2="11.176" y2="7.112" width="0.2032" layer="16"/>
-<wire x1="11.176" y1="7.112" x2="12.816" y2="5.472" width="0.2032" layer="16"/>
-<wire x1="12.816" y1="5.472" x2="12.816" y2="5.334" width="0.2032" layer="16"/>
+<wire x1="11.176" y1="7.112" x2="12.54" y2="5.748" width="0.2032" layer="16"/>
+<wire x1="12.54" y1="5.748" x2="12.54" y2="1.8" width="0.2032" layer="16"/>
 </signal>
 <signal name="SWD_DIO">
 <contactref element="JP2" pad="6"/>
