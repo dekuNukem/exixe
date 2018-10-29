@@ -15,7 +15,7 @@ void hv_off(void);
 void dut_reset(void);
 void test(void);
 void set_led(uint8_t red, uint8_t green, uint8_t blue);
-void display_digit(uint8_t digit, uint8_t brightness);
+void display_digit(uint8_t digit, uint8_t brightness, uint8_t overdrive);
 void display_dot(uint8_t dot, uint8_t brightness);
 
 #ifdef __cplusplus

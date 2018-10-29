@@ -7,7 +7,7 @@
 <setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="5" unitdist="mil" unit="mil" style="lines" multiple="1" display="no" altdistance="1" altunitdist="mil" altunit="mil"/>
+<grid distance="2" unitdist="mil" unit="mil" style="lines" multiple="1" display="no" altdistance="1" altunitdist="mil" altunit="mil"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="yes" active="yes"/>
@@ -53,7 +53,7 @@
 <layer number="42" name="bRestrict" color="1" fill="10" visible="yes" active="yes"/>
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="yes"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
-<layer number="45" name="Holes" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
 <layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
 <layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
 <layer number="48" name="Document" color="7" fill="1" visible="no" active="yes"/>
@@ -179,13 +179,13 @@
 <polygon width="0.1524" layer="41">
 <vertex x="3.5052" y="39.878"/>
 <vertex x="7.9756" y="39.878"/>
-<vertex x="8.4328" y="39.5732"/>
-<vertex x="8.4328" y="35.9156"/>
+<vertex x="8.7376" y="39.369996875"/>
+<vertex x="8.7376" y="36.2966"/>
 <vertex x="8.0264" y="35.4076"/>
 <vertex x="7.366" y="35.4076"/>
 <vertex x="7.0104" y="36.2204"/>
-<vertex x="1.8288" y="36.2204"/>
-<vertex x="0.6604" y="37.4904"/>
+<vertex x="1.6804625" y="36.2204"/>
+<vertex x="0.6604" y="37.329165625"/>
 <vertex x="0.6604" y="39.0144"/>
 <vertex x="1.524" y="39.878"/>
 <vertex x="3.556" y="39.878"/>
@@ -825,9 +825,6 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <attribute name="NAME" x="8.8519" y="38.1508" size="0.6096" layer="25" rot="R90"/>
 </element>
 <element name="JP3" library="SparkFun-Jumpers" package="SMT-JUMPER_2_NO_NO-SILK" value="JUMPER-SMT_2_NO_NO-SILK" x="4.445" y="38.862" smashed="yes" rot="R270"/>
-<element name="R12" library="joyAnalog" package="0805" value="10K" x="8.7884" y="20.6756" smashed="yes" rot="MR0">
-<attribute name="NAME" x="9.7028" y="21.5519" size="0.8128" layer="26" rot="MR0"/>
-</element>
 <element name="R17" library="joyAnalog" package="0805" value="10K" x="8.89" y="14.224" smashed="yes" rot="MR0">
 <attribute name="NAME" x="7.112" y="13.843" size="0.8128" layer="26" rot="MR0"/>
 </element>
@@ -1070,9 +1067,9 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 </signal>
 <signal name="NIXIE_DOT_LEFT">
 <contactref element="N1" pad="LHDP"/>
-<contactref element="R12" pad="2"/>
-<wire x1="7.8884" y1="20.6756" x2="7.8884" y2="19.6766" width="0.1524" layer="16"/>
-<wire x1="7.8884" y1="19.6766" x2="10.0825" y2="17.4825" width="0.1524" layer="16"/>
+<contactref element="Q11" pad="3"/>
+<wire x1="11.049" y1="19.4708" x2="10.0825" y2="18.5043" width="0.1524" layer="1"/>
+<wire x1="10.0825" y1="18.5043" x2="10.0825" y2="17.4825" width="0.1524" layer="1"/>
 </signal>
 <signal name="+3V3">
 <contactref element="IC1" pad="1"/>
@@ -1441,14 +1438,6 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <wire x1="12.954" y1="9.525" x2="12.689" y2="9.525" width="0.1524" layer="1"/>
 <wire x1="12.689" y1="9.525" x2="12.446" y2="9.768" width="0.1524" layer="1"/>
 <via x="12.446" y="9.768" extent="1-16" drill="0.45"/>
-</signal>
-<signal name="N$22">
-<contactref element="Q11" pad="3"/>
-<contactref element="R12" pad="1"/>
-<via x="10.1854" y="19.4708" extent="1-16" drill="0.4"/>
-<wire x1="11.049" y1="19.4708" x2="10.1854" y2="19.4708" width="0.1524" layer="1"/>
-<wire x1="9.6884" y1="20.6756" x2="10.1854" y2="20.1786" width="0.1524" layer="16"/>
-<wire x1="10.1854" y1="20.1786" x2="10.1854" y2="19.4708" width="0.1524" layer="16"/>
 </signal>
 <signal name="N$14">
 <contactref element="IC1" pad="29"/>

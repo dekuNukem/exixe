@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.3.2">
+<eagle version="9.1.3">
 <drawing>
 <settings>
-<setting alwaysvectorfont="no"/>
+<setting alwaysvectorfont="yes"/>
 <setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
@@ -2080,7 +2080,6 @@ by exp-lbrs.ulp</description>
 <part name="N1" library="exixe12" deviceset="IN-12B" device=""/>
 <part name="R19" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="68K"/>
 <part name="JP3" library="SparkFun-Jumpers" deviceset="JUMPER-SMT_2_NO" device="_NO-SILK"/>
-<part name="R12" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="10K"/>
 <part name="R17" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="10K"/>
 <part name="GND12" library="joyAnalog" deviceset="GND" device=""/>
 <part name="R20" library="joyAnalog" deviceset="RESISTOR" device="0805-RES" value="10K"/>
@@ -2156,7 +2155,6 @@ by exp-lbrs.ulp</description>
 <instance part="N1" gate="G$1" x="226.06" y="-33.02"/>
 <instance part="R19" gate="G$1" x="401.32" y="-38.1"/>
 <instance part="JP3" gate="G$1" x="414.02" y="-38.1"/>
-<instance part="R12" gate="G$1" x="238.76" y="53.34"/>
 <instance part="R17" gate="G$1" x="439.42" y="33.02" rot="R90"/>
 <instance part="GND12" gate="1" x="439.42" y="25.4"/>
 <instance part="R20" gate="G$1" x="452.12" y="99.06" rot="R180"/>
@@ -2458,9 +2456,9 @@ by exp-lbrs.ulp</description>
 <wire x1="236.22" y1="-20.32" x2="248.92" y2="-20.32" width="0.1524" layer="91"/>
 <label x="238.76" y="-20.32" size="1.778" layer="95"/>
 <pinref part="N1" gate="G$1" pin="LHDP"/>
-<pinref part="R12" gate="G$1" pin="2"/>
-<wire x1="243.84" y1="53.34" x2="248.92" y2="53.34" width="0.1524" layer="91"/>
 <wire x1="248.92" y1="53.34" x2="248.92" y2="-20.32" width="0.1524" layer="91"/>
+<pinref part="Q11" gate="A" pin="C"/>
+<wire x1="228.6" y1="53.34" x2="248.92" y2="53.34" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="+3V3" class="0">
@@ -2823,13 +2821,6 @@ by exp-lbrs.ulp</description>
 <wire x1="457.2" y1="76.2" x2="424.18" y2="76.2" width="0.1524" layer="91"/>
 <label x="447.04" y="76.2" size="1.778" layer="95"/>
 <pinref part="R21" gate="G$1" pin="2"/>
-</segment>
-</net>
-<net name="N$22" class="0">
-<segment>
-<pinref part="Q11" gate="A" pin="C"/>
-<pinref part="R12" gate="G$1" pin="1"/>
-<wire x1="228.6" y1="53.34" x2="233.68" y2="53.34" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$14" class="0">

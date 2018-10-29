@@ -41,7 +41,7 @@ void set_led(uint8_t red, uint8_t green, uint8_t blue)
   HAL_GPIO_WritePin(SPI1_CS_GPIO_Port, SPI1_CS_Pin, GPIO_PIN_SET);
 }
 
-void display_digit(uint8_t digit, uint8_t brightness)
+void display_digit(uint8_t digit, uint8_t brightness, uint8_t overdrive)
 {
   uint8_t spi_buf[SPI_BUF_SIZE];
   memset(spi_buf, 0x80, SPI_BUF_SIZE); // set the EN bit of each byte to 1
@@ -52,14 +52,20 @@ void display_digit(uint8_t digit, uint8_t brightness)
   digit = digit % 10; // digit is now between 0 and 9
   digit++; // digit is now between 1 and 10, we can use it as the index for the SPI buffer now
   spi_buf[digit] |= brightness; // set that digit to brightness
-
-  if(digit % 2)
-    spi_buf[11] = 0x80 | brightness;
-  else
-    spi_buf[12] = 0x80 | brightness;
-
-  if(digit == 2 || digit == 3)
+  if(overdrive)
     spi_buf[0] = 0xab;
+  HAL_GPIO_WritePin(SPI1_CS_GPIO_Port, SPI1_CS_Pin, GPIO_PIN_RESET);
+  HAL_SPI_Transmit(&hspi1, spi_buf, SPI_BUF_SIZE, 100);
+  HAL_GPIO_WritePin(SPI1_CS_GPIO_Port, SPI1_CS_Pin, GPIO_PIN_SET);
+}
+
+void set_dot(uint8_t left, uint8_t right)
+{
+  uint8_t spi_buf[SPI_BUF_SIZE];
+  memset(spi_buf, 0x0, SPI_BUF_SIZE); // set the EN bit of each byte to 1
+  spi_buf[0] = SPI_CMD_HEADER; // first byte, header
+  spi_buf[11] = 0x80 | left;
+  spi_buf[12] = 0x80 | right;
   HAL_GPIO_WritePin(SPI1_CS_GPIO_Port, SPI1_CS_Pin, GPIO_PIN_RESET);
   HAL_SPI_Transmit(&hspi1, spi_buf, SPI_BUF_SIZE, 100);
   HAL_GPIO_WritePin(SPI1_CS_GPIO_Port, SPI1_CS_Pin, GPIO_PIN_SET);
@@ -74,6 +80,17 @@ void test(void)
     set_led(0, 127, 0);
   else if (count % 3 == 2)
     set_led(0, 0, 127);
-  display_digit(count, 127);
-  HAL_Delay(500);
+
+  uint8_t overdrive = 0;
+  if(count == 2 || count == 3)
+  	overdrive = 1;
+
+  display_digit(count, 120, overdrive);
+
+  if(count % 2)
+    set_dot(127, 0);
+  else
+    set_dot(0, 127);
+
+  HAL_Delay(300);
 }
