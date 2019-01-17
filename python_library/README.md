@@ -28,7 +28,7 @@ cd py-spidev <br>
 sudo python setup.py install <br>
 sudo python3 setup.py install
 
-#Usage 
+# Usage 
 The code has some good documentation that I dont want to repeat but this will be a general overview on how to use the library. 
 1.	Create SPI initialization
 > spi = spidev.SpiDev() <br>
