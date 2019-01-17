@@ -108,7 +108,7 @@ Finally, the [multiple tubes crossfade](/arduino_examples/5_multiple_tubes_cross
 
 ## Resources
 
-Consult the [Arduino library docs](arduino_library/README.md) to see how to use library functions. And explore the [sample sketches](/arduino_examples).
+Consult the [Arduino library docs](arduino_library/README.md) and [Python library docs](python_library/README.md) to see how to use library functions. And explore the [arduino sample sketches](/arduino_examples) and [python samples](/python_examples).
 
 If you want to keep it simple, there are some self-contained [barebone examples](/arduino_examples/barebone) too.
 
