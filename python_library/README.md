@@ -23,17 +23,17 @@ The SPI peripheral is not turned on by default. To enable it, do the following.
 
 **From source:**
 > sudo apt-get update sudo apt-get install python-dev 
-git clone git://github.com/doceme/py-spidev
-cd py-spidev
-sudo python setup.py install
-sudo python3 setup.py install
+> git clone git://github.com/doceme/py-spidev
+> cd py-spidev
+> sudo python setup.py install
+> sudo python3 setup.py install
 
 #Usage 
 The code has some good documentation that I dont want to repeat but this will be a general overview on how to use the library. 
 1.	Create SPI initialization
 > spi = spidev.SpiDev()
-spi.open(0,0)
-spi.max_speed = 7800000
+> spi.open(0,0)
+> spi.max_speed = 7800000
 
 2.	Identify CS pin to control the individual exixe
 3.	Create exixe object
@@ -41,4 +41,4 @@ spi.max_speed = 7800000
 
 4.	Control object
 > exixe_1.set_digit(5)
-exixe_1.set_led(127,0,0) # turn led to red
+> exixe_1.set_led(127,0,0) # turn led to red
