@@ -61,6 +61,10 @@ Please see [getting_started.md](/getting_started.md)
 
 Please [click here](arduino_library)
 
+## Raspberry Pi/Python Library
+
+Please [click here](python_library)
+
 ## Pinout, SPI command format and technical details
 
 Please see [technical_details.md](/technical_details.md)
