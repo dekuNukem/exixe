@@ -5,7 +5,7 @@ This is a simple Python library for exixe modules intended to be used on a Raspb
 # Requirements
 In order to use this library, you must have python installed, SPI interface turned on the Raspberry Pi and spidev python library installed.
 
-#Configuration
+# Configuration
 
 ## Turning on SPI
 The SPI peripheral is not turned on by default. To enable it, do the following.
