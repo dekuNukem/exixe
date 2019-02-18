@@ -1,7 +1,5 @@
 # exixe: Low-cost miniature Nixie tube driver modules
 
-![Alt text](resources/title.jpg)
-
 ![Alt text](resources/exixetubes.jpg)
 
 ![Alt text](resources/breadboard.jpg)
@@ -102,3 +100,4 @@ exixe-14 in action on a [finished clock](https://github.com/dekuNukem/exixe_cloc
 
 ![Alt text](resources/clock.gif)
 
+![Alt text](resources/title.jpg)

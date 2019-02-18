@@ -2,6 +2,8 @@
 
 ![Alt text](resources/spec_table.png)
 
+Power consumption: 50mA per module at LED full brightness.
+
 ## Board pinout
 
 ![Alt text](resources/pinout_photo.jpg)

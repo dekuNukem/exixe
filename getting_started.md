@@ -82,6 +82,14 @@ Try keeping the tube straight. For IN-14 leave around 5mm of pins between the PC
 
 It's also a good idea to wrap the bottom of IN-14 tubes with heat-shrink tubing or electric tape like the one on the right, to prevent backlight leaking.
 
+## Power consumption considerations
+
+For the 3.3V power supply, please budget **at least 50mA** for *each* exixe module.
+
+This is especially important if you're using Arduino UNO or other 5V Arduinos. The 3.3V power pin on those can only supply [50mA of current](resources/current.jpg), which is only enough for a single exixe module. If you connect more than one, things start to behave strangely.
+
+You can either switch to a 3.3V Arduino where no such limit exists, or use a [5V to 3.3V regulator](https://www.sparkfun.com/products/526). Don't forget about the input and output capacitors, [they are important](https://electronics.stackexchange.com/questions/232935/why-is-there-always-a-capacitor-on-input-and-output-of-a-voltage-regulator)!
+
 ## Try some examples!
 
 After getting the [LED test](/arduino_examples/1_LED_test) working, connect 180V to the HV pin of exixe module, make sure your Arduino, high voltage supply, and exixe module all share the same GND. 
