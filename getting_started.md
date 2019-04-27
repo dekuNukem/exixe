@@ -30,9 +30,11 @@ If you're not using Arduino, there are some [barebone examples](/arduino_example
 
 ## Testing the bare module
 
-Let's make sure the board works before hooking up high voltage and installing the tubes.
+Let's make sure the board works before soldering the tubes.
 
-Solder on the headers, then take a look at the pinout in [technical_details.md](/technical_details.md).
+When handling the bare circuit board there is a risk of [electrostatic discharge](https://en.wikipedia.org/wiki/Electrostatic_discharge), where the static electricity(SE) on your body discharges and damages the board. This is especially a concern during dry weather. My suggestion is simply **wash your hands**, by doing so you discharge your existing SE through the metal water pipe, your hands are moist to prevent further SE build-up, and your clean hands won't leave greasy fingerprints all over the place, win-win-win!
+
+So do that, solder on the headers, and take a look at the pinout in [technical_details.md](/technical_details.md). Turn off the power when hooking up the board, only turn it on after all connections are complete and double-checked!
 
 First we hook up the power pins. Connect the GND to GND, and 3.3V power to 3V. 
 
@@ -40,7 +42,7 @@ Next are the SPI lines. Connect MO to MOSI line, SCK to SCK line, and CS to CS l
 
 ![Alt text](resources/led_test_sch.png)
 
-Then try the [LED test](/arduino_examples/1_LED_test). Change the `cs_pin` variable if you're using a different one. Compile and upload in Arduino IDE. 
+Double check the connection, power on, and try the [LED test](/arduino_examples/1_LED_test). Change the `cs_pin` variable if you're using a different one. Compile and upload in Arduino IDE. 
 
 The LED on the exixe module should turn purple. You can play around with the RGB values for other colors.
 
@@ -92,7 +94,7 @@ You can either switch to a 3.3V Arduino where no such limit exists, or use a [5V
 
 ## Try some examples!
 
-After getting the [LED test](/arduino_examples/1_LED_test) working, connect 180V to the HV pin of exixe module, make sure your Arduino, high voltage supply, and exixe module all share the same GND. 
+With tube soldered on, and [LED test](/arduino_examples/1_LED_test) working, connect 180V to the HV pin of exixe module, make sure your Arduino, high voltage supply, and exixe module all share the same GND. 
 
 ![Alt text](resources/hvsch.png)
 
