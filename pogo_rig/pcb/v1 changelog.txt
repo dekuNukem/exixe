@@ -1,0 +1,7 @@
+removed unnecessary test points
+changed pogo pin footprint
+now using USBC connector
+removed unused headers
+removed unused LEDs
+designed for STM32F042, added DFU button
+
