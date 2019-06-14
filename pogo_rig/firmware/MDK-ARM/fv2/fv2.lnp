@@ -1,0 +1,27 @@
+--cpu Cortex-M0
+"fv2\startup_stm32f042x6.o"
+"fv2\main.o"
+"fv2\stm32f0xx_it.o"
+"fv2\stm32f0xx_hal_msp.o"
+"fv2\helpers.o"
+"fv2\stm32f0xx_hal_spi.o"
+"fv2\stm32f0xx_hal_spi_ex.o"
+"fv2\stm32f0xx_hal_tim.o"
+"fv2\stm32f0xx_hal_tim_ex.o"
+"fv2\stm32f0xx_hal_rcc.o"
+"fv2\stm32f0xx_hal_rcc_ex.o"
+"fv2\stm32f0xx_hal.o"
+"fv2\stm32f0xx_hal_i2c.o"
+"fv2\stm32f0xx_hal_i2c_ex.o"
+"fv2\stm32f0xx_hal_gpio.o"
+"fv2\stm32f0xx_hal_dma.o"
+"fv2\stm32f0xx_hal_cortex.o"
+"fv2\stm32f0xx_hal_pwr.o"
+"fv2\stm32f0xx_hal_pwr_ex.o"
+"fv2\stm32f0xx_hal_flash.o"
+"fv2\stm32f0xx_hal_flash_ex.o"
+"fv2\system_stm32f0xx.o"
+--library_type=microlib --strict --scatter "fv2\fv2.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "fv2.map" -o fv2\fv2.axf

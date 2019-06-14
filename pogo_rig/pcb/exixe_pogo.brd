@@ -2662,7 +2662,10 @@ These rules have been curated by SparkFuns DFM commitee. After doing much resear
 <attribute name="VALUE" x="34.198390625" y="30.255846875" size="0.4064" layer="27" rot="R225"/>
 </element>
 <element name="SW2" library="3pos_slide_switch" package="342_SWICH_FOOT_HOLE" value="324_SW324_SWITCH_FOOT_HOLE" x="32.893" y="30.7594" rot="R225"/>
-<element name="C4" library="clock" package="0805" value="" x="38.354" y="10.16" rot="R180"/>
+<element name="C4" library="clock" package="0805" value="" x="38.354" y="10.16" smashed="yes" rot="R180">
+<attribute name="NAME" x="38.8112" y="9.2583" size="0.8128" layer="25" rot="R180"/>
+<attribute name="VALUE" x="39.37" y="11.557" size="0.4064" layer="27" rot="R180"/>
+</element>
 </elements>
 <signals>
 <signal name="GND">
