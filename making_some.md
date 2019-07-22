@@ -50,4 +50,4 @@ Then click start to upload the firmware:
 
 ![Alt text](resources/stlink_4.png)
 
-That's pretty much it if you don't want to recompile the firmware. If you do however you'll need to download the [Keil MDK](https://www.keil.com/demo/eval/arm.htm), it's slightly more involved, and I'll write a tutorial if interest arises. 
+That's pretty much it if you don't want to recompile the firmware. If you do however you'll need to download the [Keil MDK](https://www.keil.com/demo/eval/arm.htm), it's slightly more involved, [see this guide](https://github.com/dekuNukem/STM32_tutorials) for details.
