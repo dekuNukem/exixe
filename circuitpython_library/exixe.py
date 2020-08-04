@@ -14,7 +14,7 @@ EXIXE_ANIMATION_IN_PROGRESS = 1
 EXIXE_ANIMATION_FINISHED = 0
 MAX_BRIGHTNESS = 127
 
-millis = lambda: int(round(time.time() * 1000))
+millis = lambda: int(round(time.monotonic() * 1000))
 
 
 def cap_digit(digit):
@@ -162,6 +162,7 @@ class Exixe:
         if current_frame > self.animation_duration:
             self.animation_src_digit = self.animation_dest_digit
             self.animation_in_progress = False
+            self.set_digit(self.animation_src_digit, self.animation_brightness)
             return EXIXE_ANIMATION_FINISHED
         self.clear_digit()
         self.set_en_bit_to_1()
