@@ -116,7 +116,7 @@ Finally, the [multiple tubes crossfade](/arduino_examples/5_multiple_tubes_cross
 
 ![Alt text](resources/2c.gif)
 
-## Common Issues
+## Troubleshooting
 
 If your exixe modules are behaving inconsistently, such as flickering or not responding to SPI commands, there are a couple of areas to check:
 
@@ -126,9 +126,9 @@ If your exixe modules are behaving inconsistently, such as flickering or not res
 
 * If you're using a breadboard, be ware of dead holes! It happened to one of my customers, so if you're truly desperate, try moving stuff around, or use a different breadboard.
 
-* Some HV modules can produce significant noise on its output and corrupt SPI signals. Try leaving it out and see if situation improves(by playing with LED colours). You can reduce the noise by putting a ferrite bead along the HV wire, or try using decoupling capacitors. Make sure the voltage rating is adequate!
+* Some HV modules can produce significant noise on its output and corrupt SPI signals. Try leaving it out and see if situation improves (by playing with LED colours). You can reduce the noise by putting a ferrite bead along the HV wire, or try using decoupling capacitors. Make sure the voltage rating is adequate!
 
-* Try using a logic analyzer or oscilloscope to see exactly what is happening on SPI lines. Make sure the [SPI configuration is correct](/technical_details.md#spi-command-protocol), and compare the waveform with [the correct sample capture](/technical_details.md#sample-timing-capture).
+* Try using a logic analyzer or oscilloscope to see what exactly is happening on SPI lines. Make sure the [SPI configuration is correct](/technical_details.md#spi-command-protocol), and compare the waveform with [the correct sample capture](/technical_details.md#sample-timing-capture).
 
 * If all else fails, start simple with a single module, no HV, and [barebone example](/arduino_examples/barebone). If that works, start adding more stuff in. This might give you a better idea of which part is causing the problem.
 
