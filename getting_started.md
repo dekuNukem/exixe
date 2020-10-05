@@ -124,7 +124,7 @@ If your exixe modules are behaving inconsistently, such as flickering or not res
 
 * Double check your connections. Make sure everything shares the same GND, and all the SPI lines are properly connected.
 
-* If you're using a breadboard, be ware of dead holes! It happened to one of my customers, so if you're truly desperate, try moving stuff around, or use a different breadboard.
+* If you're using a breadboard, beware of dead holes! It happened to one of my customers, so if you're truly desperate, try moving stuff around, or use a different breadboard.
 
 * Some HV modules can produce significant noise on its output and corrupt SPI signals. Try leaving it out and see if situation improves (by playing with LED colours). You can reduce the noise by putting a ferrite bead along the HV wire, or try using decoupling capacitors. Make sure the voltage rating is adequate!
 
