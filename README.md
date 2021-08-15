@@ -1,5 +1,7 @@
 # exixe: Low-cost miniature Nixie tube driver modules
 
+[Get exixe](https://www.tindie.com/products/dekuNukem/exixe-miniture-nixie-tube-driver-modules/) | User Manual(/getting_started.md)
+
 ![Alt text](resources/exixetubes.jpg)
 
 ![Alt text](resources/breadboard.jpg)
